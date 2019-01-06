@@ -1,0 +1,56 @@
+{
+  "AdministrixMod:ConductorRitualBaton": {
+    "NAME": "Conductor's Ritual Baton",
+    "FLAVOR": "A golden shaku, really, and your favourite dramatic gesturing aide. Control the fight's tempo.",
+    "DESCRIPTIONS": [
+      "The first time each turn you play #b",
+      " Attacks or #b",
+      " Skills, #yTranpose one."
+    ]
+  },
+
+  "AdministrixMod:PrescriptionBottle": {
+    "NAME": "Prescription Bottle",
+    "FLAVOR": "Self-medication may have been necessary for survival, but that sister-in-arms god/doctor was a far better replacement.",
+    "DESCRIPTIONS": [
+      "Every #b",
+      " turns, gain #b1 #yArtifact."
+    ]
+  },
+
+  "AdministrixMod:GoldenChickadee": {
+    "NAME": "Golden Chickadee",
+    "FLAVOR": "You hatched ages ago, of course.",
+    "DESCRIPTIONS": [
+      "Upon pickup, #yUpgrade #b",
+      " random #yRare cards. ",
+      "Whenever you add a #yRare card into your deck, #yUpgrade it."
+    ]
+  },
+
+  "AdministrixMod:ElixirOfImmorality": {
+    "NAME": "Elixir Of Immorality",
+    "FLAVOR": "You've long surpassed that other wicked hermit's medicines. Still, her work has some (dubious) potency left...",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. ",
+      "At the start of turn #b2, gain #b", " #yWilting. ",
+      "At the start of turn #b4, gain #b", " #yFrail."
+    ]
+  },
+
+  "AdministrixMod:AlphaAttackCounter": {
+    "NAME": "Attack Counter",
+    "FLAVOR": "(A proper custom UI element for Duality and the Shaku will come up eventually.)",
+    "DESCRIPTIONS": [
+      "This does nothing besides count how many Attacks you've played each turn."
+    ]
+  },
+
+  "AdministrixMod:AlphaSkillCounter": {
+    "NAME": "Skill Counter",
+    "FLAVOR": "(Probably will also steal away Yin and Yang into such to reduce the endless power count.)",
+    "DESCRIPTIONS": [
+      "This does nothing besides count how many Skills you've played each turn."
+    ]
+  }
+}

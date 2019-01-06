@@ -1,0 +1,187 @@
+{
+  "AdministrixMod:Affinity": {
+    "NAME": "Affinity",
+    "DESCRIPTIONS": [
+      "If you have more Yin than Yang: whenever you gain Yin, deal #b",
+      " damage to all enemies twice. NL If you have more Yang than Yin: whenever you gain Yang, gain #b",
+      " Block."
+    ]
+  },
+  "AdministrixMod:Convergence": {
+    "NAME": "Convergence",
+    "DESCRIPTIONS": [
+      "At the start of each turn, add #b",
+      " #yDaybreaks and #yNightfalls to your hand.",
+      " #yDaybreak and #yNightfall to your hand."
+    ]
+  },
+  "AdministrixMod:ConvergencePlus": {
+    "NAME": "Convergence+",
+    "DESCRIPTIONS": [
+      "At the start of each turn, add #b",
+      " upgraded #yDaybreaks and #yNightfalls to your hand.",
+      " upgraded #yDaybreak and #yNightfall to your hand."
+    ]
+  },
+  "AdministrixMod:DescentPlus": {
+    "NAME": "Descent+",
+    "DESCRIPTIONS": [
+      "At the start of each turn, add 1 #yupgraded #yNightfall to your hand for the next #b",
+      " turns.",
+      "At the start of your next turn, add 1 #yupgraded #yNightfall to your hand."
+    ]
+  },
+  "AdministrixMod:Duality": {
+    "NAME": "Duality",
+    "DESCRIPTIONS": [
+      "When you play an equal, non-zero number of Attack and Skills this turn, gain #b",
+      " temporary #yStrength and #yDexterity next turn. ",
+      "(Played #b",
+      " #yAttacks and #b",
+      " #yAttack and #b",
+      " #ySkills. )",
+      " #ySkills. )"
+    ]
+  },
+  "AdministrixMod:EggCracker": {
+    "NAME": "Egg Cracker",
+    "DESCRIPTIONS": [
+      "When you play #yCracking #yPangu #b",
+      " more time, remove all Debuffs.",
+      " more times, remove all Debuffs."
+    ]
+  },
+  "AdministrixMod:FlamesOfFaith": {
+    "NAME": "Flames of Faith",
+    "DESCRIPTIONS": [
+      "Every time you play ",
+      " #yAttacks, gain #b",
+      " #yThorns."
+    ]
+  },
+  "AdministrixMod:Glamour": {
+    "NAME": "Glamour",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " random 0-cost (this turn) Rare cards into your hand and discard #b",
+      " random 0-cost (this turn) Rare card into your hand and discard #b",
+      " cards.",
+      " card."
+    ]
+  },
+  "AdministrixMod:GlamourPlus": {
+    "NAME": "Glamour+",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " random 0-cost (this combat) Rare cards into your hand and discard #b",
+      " random 0-cost (this combat) Rare card into your hand and discard #b",
+      " cards.",
+      " card."
+    ]
+  },
+  "AdministrixMod:ImmortalClarity": {
+    "NAME": "Immortal Clarity",
+    "DESCRIPTIONS": [
+      "At the start of next turn, add ",
+      " to your hand.",
+      "At the start of each turn, add ",
+      " to your hand, for the next #b",
+      " turns.",
+      " NL (Playing another Immortal Clarity will remove this power.)"
+    ]
+  },
+  "AdministrixMod:LightningEmbrace": {
+    "NAME": "Lightning's Embrace",
+    "DESCRIPTIONS": [
+      "Every time you play ",
+      " #yAttacks, gain #b",
+      " #yPlated #yArmor."
+    ]
+  },
+  "AdministrixMod:MastermindPower": {
+    "NAME": "Mastermind",
+    "DESCRIPTIONS": [
+      "Double all #yPlot effects this turn",
+      ".",
+      " and next turn.",
+      " for the next #b",
+      " turns."
+    ]
+  },
+  "AdministrixMod:MistEater": {
+    "NAME": "Mist Eater",
+    "DESCRIPTIONS": [
+      "When you play #yFeast #yof #yDew #b",
+      " more time, gain #b4 #yAffinity.",
+      " more times, gain #b4 #yAffinity."
+    ]
+  },
+  "AdministrixMod:Moulting": {
+    "NAME": "Moulting",
+    "DESCRIPTIONS": [
+      "Whenever a card discards cards, gain #b",
+      " of the higher of your #yYin or your #yYang."
+    ]
+  },
+  "AdministrixMod:NextTurnDrawReduction": {
+    "NAME": "Next Turn Draw Reduction",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " less cards next turn.",
+      " less card next turn."
+    ]
+  },
+  "AdministrixMod:PermanentDrawReduction": {
+    "NAME": "Permanent Draw Reduction",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " less cards each turn.",
+      " less card each turn."
+    ]
+  },
+  "AdministrixMod:SpectralThief": {
+    "NAME": "Spectral Thief",
+    "DESCRIPTIONS": [
+      "When you play #yRegent's #yEdict #b",
+      " more time, steal an enemy's #yStrength.",
+      " more times, steal an enemy's #yStrength."
+    ]
+  },
+  "AdministrixMod:StarSwordSoulPower": {
+    "NAME": "Star Sword Soul",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain #b",
+      " Duality, #b",
+      " Affinity, and draw #b",
+      " cards.",
+      " card."
+    ]
+  },
+  "AdministrixMod:Wilting": {
+    "NAME": "Wilting",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, take #b",
+      " damage, for #b",
+      " more turns.",
+      " more turns."
+    ]
+  },
+  "AdministrixMod:Yang": {
+    "NAME": "Yang",
+    "DESCRIPTIONS": [
+      "Each turn, the higher value between #yYin and #yYang decreases by 1."
+    ]
+  },
+  "AdministrixMod:Yin": {
+    "NAME": "Yin",
+    "DESCRIPTIONS": [
+      "Each turn, the higher value between #yYin and #yYang decreases by 1."
+    ]
+  },
+  "AdministrixMod:LastEntry": {
+    "NAME": "LastEntry",
+    "DESCRIPTIONS": [
+      "Another end-of-file entry."
+    ]
+  }
+}

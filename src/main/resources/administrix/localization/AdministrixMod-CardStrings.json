@@ -1,0 +1,361 @@
+{
+  "AdministrixMod:Strike_Administrix": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+
+  "AdministrixMod:BlueCloak": {
+    "NAME": "Blue Cloak",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Discard 1 card. NL [#cc99ff]{[] Plot: Apply 1 Weak to all enemies. [#cc99ff]}[]"
+  },
+  "AdministrixMod:Daybreak": {
+    "NAME": "Daybreak",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Yang. NL Exhaust. NL Ethereal."
+  },
+  "AdministrixMod:CrackingPangu": {
+    "NAME": "Cracking Pangu",
+    "DESCRIPTION": "Deal !D! damage. NL Every three times you play any Cracking Pangu(+) this combat, remove all Debuffs."
+  },
+  "AdministrixMod:DiversionaryTactic": {
+    "NAME": "Diversion Tactic",
+    "DESCRIPTION": "Deal !D! damage. NL Discard 1 card. NL Retain your hand this turn."
+  },
+  "AdministrixMod:ExtolVirtue": {
+    "NAME": "Extol Virtue",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have any Artifact, gain !M! more."
+  },
+  "AdministrixMod:ImmortalGrace": {
+    "NAME": "Immortal Grace",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your hand for the rest of this combat. [#cc99ff]}[]",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your deck for the rest of this combat. [#cc99ff]}[]"
+  },
+  "AdministrixMod:PlateOfAntiquity": {
+    "NAME": "Plate Of Antiquity",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Dexterity. NL Lose !M! Dexterity at the end of this turn."
+  },
+  "AdministrixMod:RebukeDesires": {
+    "NAME": "Rebuke Desires",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy doesn't intend to attack, gain !M! Artifact.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL If the enemy doesn't intend to attack, gain !M! Artifact."
+  },
+  "AdministrixMod:RegentEdict": {
+    "NAME": "Regent's Edict",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play any Regent's Edict(+) three times this combat, steal the enemy's Strength and Exhaust this card."
+  },
+  "AdministrixMod:ShadowPlay": {
+    "NAME": "Shadow Play",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 2 cards. NL Discard 1 card. NL Gain 4 Yin. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw 2 cards. NL Discard 1 card. NL Gain 4 Yin."
+  },
+
+  "AdministrixMod:ChooseYourEnd": {
+    "NAME": "Choose Your End",
+    "DESCRIPTION": "Deal !D! damage. NL Add a Red Cloak and Blue Cloak to your hand. NL Exhaust."
+  },
+  "AdministrixMod:FiendishCrimson": {
+    "NAME": "Fiendish Crimson",
+    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL Gain 2 Frail. NL Exhaust."
+  },
+  "AdministrixMod:JustRewards": {
+    "NAME": "Just Rewards",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply 1 Vulnerable to ALL enemies. NL Add !M! Daybreaks to your hand."
+  },
+  "AdministrixMod:NewWardrobe": {
+    "NAME": "New Wardrobe",
+    "DESCRIPTION": "Swap your Yin & Yang. NL Deal damage to all enemies equal to the difference between them.",
+    "UPGRADE_DESCRIPTION": "Swap your Yang & Yin. NL Deal damage to all enemies equal to the difference between them. NL Retain.",
+    "EXTENDED_DESCRIPTION": [
+      " (Deal !D! damage)."
+    ]
+  },
+  "AdministrixMod:ReachToHeaven": {
+    "NAME": "Reach to Heaven",
+    "DESCRIPTION": "Discard X cards. NL Deal !D! damage X times. NL Deal !D! to all enemies X times. NL Gain !M! Yang X times."
+  },
+  "AdministrixMod:RisingSunPrince": {
+    "NAME": "Rising Sun's Prince",
+    "DESCRIPTION": "Deal !D! damage twice to ALL enemies. NL [#cc99ff]{[] Plot: ALL enemies lose !M! Strength this turn. [#cc99ff]}[]"
+  },
+  "AdministrixMod:SeventeenArticleLaser": {
+    "NAME": "17-Article Laser",
+    "DESCRIPTION": "Deal !D! damage. NL Transpose one.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Transpose one. NL Gain 17 of the lower of your Yin or your Yang."
+  },
+  "AdministrixMod:UnstableVigor": {
+    "NAME": "Unstable Vigor",
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Wilting. NL Gain !M! Strength. NL Lose !M! Strength at end of turn."
+  },
+  "AdministrixMod:WickedPunishment": {
+    "NAME": "Wicked Punishment",
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw 2 cards. NL Gain !M! Yin twice."
+  },
+
+  "AdministrixMod:GirlsDoItBetter": {
+    "NAME": "Girls Do It Better",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Enemy loses Strength equal to two-thirds of your Strength, rounded down. NL Exhaust."
+  },
+  "AdministrixMod:HaveItAll": {
+    "NAME": "Have It All",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage to all enemies. NL Gain !M! Affinity. NL Draw 1 card. NL Discard 1 card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block twice. NL Deal !D! damage to all enemies twice. NL Gain !M! Affinity. NL Draw 1 card. NL Discard 1 card."
+  },
+  "AdministrixMod:LifeforceNet": {
+    "NAME": "Lifeforce Net",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deal !D! damage to a random enemy twice. NL Obtain 1 Fairy in a Bottle. NL Exhaust."
+  },
+  "AdministrixMod:NewbornDivinity": {
+    "NAME": "Newborn Divinity",
+    "DESCRIPTION": "Ethereal. NL Deal damage equal to !M! times the amount of Yang you have more of than Yin. NL Remove all Debuffs.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
+  },
+  "AdministrixMod:Schism": {
+    "NAME": "Schism",
+    "DESCRIPTION": "Deal damage equal to half your Block to ALL enemies. NL Gain half your current Block next turn. NL Lose all Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to half your Block to ALL enemies. NL Gain half your current Block next turn. NL Lose all Block.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deal !D! damage, gain !B! Block.)"
+    ]
+  },
+
+  "AdministrixMod:Defend_Administrix": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "AdministrixMod:HiddenPower": {
+    "NAME": "Hidden Power",
+    "DESCRIPTION": "Gain !M! Affinity."
+  },
+  "AdministrixMod:RedCloak": {
+    "NAME": "Red Cloak",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Discard 1 card. NL [#cc99ff]{[] Plot: Apply 1 Vulnerable to all enemies. [#cc99ff]}[]"
+  },
+  "AdministrixMod:Nightfall": {
+    "NAME": "Nightfall",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Yin. NL Exhaust. NL Ethereal."
+  },
+  "AdministrixMod:DuskAndDawn": {
+    "NAME": "Dusk and Dawn",
+    "DESCRIPTION": "Add a Daybreak and a Nightfall to your hand. NL If you have any Duality, draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Add an upgraded Daybreak and Nightfall to your hand. NL If you have any Duality, draw 1 card."
+  },
+  "AdministrixMod:ImmortalPurity": {
+    "NAME": "Immortal Purity",
+    "DESCRIPTION": "Gain !B! Block. NL Discard 1 card. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your hand for the rest of this combat. [#cc99ff]}[]",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Discard 1 card. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your deck for the rest of this combat. [#cc99ff]}[]"
+  },
+  "AdministrixMod:LightOfYourLife": {
+    "NAME": "Light of Your Life",
+    "DESCRIPTION": "Transpose one. NL Draw !M! card. NL Gain 4 Yang. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Transpose one. NL Draw !M! card. NL Gain 4 Yang."
+  },
+  "AdministrixMod:SealAway": {
+    "NAME": "Seal Away",
+    "DESCRIPTION": "Draw !M! cards. NL Upgrade all cards in your hand. NL Discard your hand."
+  },
+  "AdministrixMod:SipOfSparks": {
+    "NAME": "Sip of Sparks",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength. NL Lose !M! Strength at the end of this turn."
+  },
+  "AdministrixMod:SyncreticSurge": {
+    "NAME": "Syncretic Surge",
+    "DESCRIPTION": "Put a card from your hand to the top of your draw pile. NL Add a Daybreak to your hand for every Skill you've played this turn (including this one).",
+    "UPGRADE_DESCRIPTION": "Put a card from your hand to the top of your draw pile. NL Add a upgraded Daybreak to your hand for every Skill you've played this turn (including this one).",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Add !M! Daybreaks.)",
+      " NL (Add !M! Daybreak.)"
+    ]
+  },
+  "AdministrixMod:SyncreticPlunge": {
+    "NAME": "Syncretic Plunge",
+    "DESCRIPTION": "Put a card from your discard pile on top of your draw pile. NL Add a Nightfall to your hand for every Attack you've played this turn.",
+    "UPGRADE_DESCRIPTION": "Put a card from your discard pile on top of your draw pile. NL Add a upgraded Nightfall to your hand for every Attack you've played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Add !M! Nightfalls.)",
+      " NL (Add !M! Nightfall.)"
+    ]
+  },
+  "AdministrixMod:TouchOfCinnabar": {
+    "NAME": "Touch of Cinnabar",
+    "DESCRIPTION": "Gain 3 Plated Armor. NL Gain 2 Frail. NL Gain !M! Artifact."
+  },
+  "AdministrixMod:Transition": {
+    "NAME": "Transition",
+    "DESCRIPTION": "Discard 2 cards. NL Gain [R] next turn. NL [#cc99ff]{[] Plot: Draw 1 card next turn. [#cc99ff]}[]"
+  },
+
+  "AdministrixMod:ArmillarySphere": {
+    "NAME": "Armillary Sphere",
+    "DESCRIPTION": "Gain !B! Block next turn. NL Gain !M! Artifact. NL [#cc99ff]{[] Plot: Gain !B! Block. [#cc99ff]}[]"
+  },
+  "AdministrixMod:BishamonBlessing": {
+    "NAME": "Bishamon's Blessing",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yang. NL Apply 1 Vulnerable to all enemies. [#cc99ff]}[]",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yang. NL Apply 1 Vulnerable to all enemies. NL Draw 1 card. [#cc99ff]}[]",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card."
+    ]
+  },
+  "AdministrixMod:BloodlessSapphire": {
+    "NAME": "Bloodless Sapphire",
+    "DESCRIPTION": "Gain !B! Block. NL Heal !M! HP. NL Gain 2 Wilting. NL Exhaust."
+  },
+  "AdministrixMod:DreamsMausoleum": {
+    "NAME": "Dreams Mausoleum",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !M! Artifact. NL [#cc99ff]{[] Plot: This card costs 1 [R] less this combat. [#cc99ff]}[]"
+  },
+  "AdministrixMod:FeastOfDew": {
+    "NAME": "Feast of Dew",
+    "DESCRIPTION": "Draw !M! cards. NL Whenever you play any Feast of Dew(+) three times this combat, gain 4 Affinity.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Add a copy of this card to your hand. NL Exhaust. NL Whenever you play any Feast of Dew(+) three times this combat, gain 4 Affinity."
+  },
+  "AdministrixMod:Grandeur": {
+    "NAME": "Grandeur",
+    "DESCRIPTION": "Innate. NL Gain !M! Strength and !M! Dexterity, and lose such at the end of this turn. NL Draw 1 card. NL Exhaust."
+  },
+  "AdministrixMod:GuanyinBlessing": {
+    "NAME": "Guanyin's Blessing",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yin. NL Apply 1 Weak to all enemies. [#cc99ff]}[]",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yin. NL Apply 1 Weak to all enemies. NL Draw 1 card. [#cc99ff]}[]",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card."
+    ]
+  },
+  "AdministrixMod:Katabasis": {
+    "NAME": "Katabasis",
+    "DESCRIPTION": "Apply X Weak. NL Add an upgraded Nightfall to your hand each turn for the next X turns.",
+    "UPGRADE_DESCRIPTION": "Apply X+1 Weak. NL Add an upgraded Nightfall to your hand each turn for the next X+1 turns."
+  },
+  "AdministrixMod:Metempsychosis": {
+    "NAME": "Metempsychosis",
+    "DESCRIPTION": "Gain [R] next turn. NL Draw 1 less card next turn. NL Gain 2 Duality. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [R] next turn. NL Draw 1 less card next turn. NL Gain 2 Duality."
+  },
+  "AdministrixMod:MixOfMercury": {
+    "NAME": "Mix of Mercury",
+    "DESCRIPTION": "Gain 2 Thorns. NL Gain 2 Wilting. NL Gain !M! Artifact."
+  },
+  "AdministrixMod:QuietConspiracy": {
+    "NAME": "Quiet Conspiracy",
+    "DESCRIPTION": "If the enemy doesn't intend to attack, look at the top !M! cards of your draw pile, and discard any of them. NL Regardless, draw 2 cards."
+  },
+  "AdministrixMod:Untouchable": {
+    "NAME": "Untouchable",
+    "DESCRIPTION": "Apply 1 Weak. NL If the enemy intends to attack, gain !M! Dexterity, and lose !M! Dexterity at the end of the turn. NL Exhaust."
+  },
+  "AdministrixMod:Wuji": {
+    "NAME": "Wuji",
+    "DESCRIPTION": "Lose all Yang & Yin. NL Gain 1 Duality for each 4 of the lower of your Yin or your Yang.",
+    "UPGRADE_DESCRIPTION": "Lose all Yang & Yin. NL Gain 1 Duality for each 4 of the lower of your Yin or your Yang. NL Retain.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gain !M! Duality.)"
+    ]
+  },
+
+  "AdministrixMod:CastOffRegrets": {
+    "NAME": "Cast Off Regrets",
+    "DESCRIPTION": "Gain 2 Frail. NL Whenever you manually discard a card, gain !M! of the higher of your Yin and your Yang."
+  },
+  "AdministrixMod:Convergence": {
+    "NAME": "Convergence",
+    "DESCRIPTION": "Add a Daybreak and a Nightfall to your hand at the start of each turn.",
+    "UPGRADE_DESCRIPTION": "Add an upgraded Daybreak and an upgraded Nightfall to your hand at the start of each turn."
+  },
+  "AdministrixMod:HarmonicReverence": {
+    "NAME": "Harmonic Reverence",
+    "DESCRIPTION": "Gain !M! Affinity. NL Double both your Yin and your Yang.",
+    "EXTENDED_DESCRIPTION": [
+      "Gain !M! Affinity. NL Double both your Yang and your Yin."
+    ]
+  },
+  "AdministrixMod:Overdrive": {
+    "NAME": "Overdrive",
+    "DESCRIPTION": "Ethereal. NL Gain 4 Duality. NL Gain [R]. NL Lose 1 Strength. NL Lose !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain 4 Duality. NL Gain [R]. NL Lose !M! Dexterity."
+  },
+  "AdministrixMod:XianArts": {
+    "NAME": "Xian Arts",
+    "DESCRIPTION": "Gain !M! Duality."
+  },
+
+  "AdministrixMod:AmassedMasks": {
+    "NAME": "Amassed Masks",
+    "DESCRIPTION": "Add a random Attack card, Skill card, and Power card into your hand. NL They all cost 0 this turn. NL Exhaust."
+  },
+  "AdministrixMod:BattleforgedBonds": {
+    "NAME": "Battleforged Bonds",
+    "DESCRIPTION": "Gain !M! Strength and !M! Dexterity. Lose such at the end of this turn. NL Reduce the cost of all cards in your hand to 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength and !M! Dexterity. Lose such at the end of this turn. NL Reduce the cost of all cards in your hand to 0 this turn. NL Exhaust. NL Retain."
+  },
+  "AdministrixMod:BrewingCloister": {
+    "NAME": "Brewing Cloister",
+    "DESCRIPTION": "Gain !B! Block. NL Obtain a random non-healing potion. NL Exhaust."
+  },
+  "AdministrixMod:FalseDeath": {
+    "NAME": "False Death",
+    "DESCRIPTION": "Discard your draw pile. NL Put !M! cards from your discard pile ontop of your draw pile. NL Gain 3 Wilting. NL Exhaust."
+  },
+  "AdministrixMod:HopeInTheDark": {
+    "NAME": "Hope In The Dark",
+    "DESCRIPTION": "Ethereal. NL Gain Block equal to the amount of Yin you have more of than Yang. NL Remove all Debuffs.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain Block equal to one and a half times the amount of Yin you have more of than Yang. NL Remove all Debuffs.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gain !B! Block.)"
+    ]
+  },
+  "AdministrixMod:LuminaryPath": {
+    "NAME": "Luminary's Path",
+    "DESCRIPTION": "Discard your hand. NL Draw cards and gain [R] equal to the difference between your Yin and your Yang, divided by 10. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Discard your hand. NL Draw cards and gain [R] equal to the difference between your Yin and your Yang, divided by !ax:M2!. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Draw !M! card...)",
+      " NL (Draw !M! cards...)"
+    ]
+  },
+  "AdministrixMod:Mastermind": {
+    "NAME": "Mastermind",
+    "DESCRIPTION": "Transpose one. NL Double all Plot effects this turn and next turn. NL Draw 1 less card next turn. NL Exhaust. NL Retain.",
+    "UPGRADE_DESCRIPTION": "Transpose two. NL Double all Plot effects this turn and next turn. NL Draw 1 less card next turn. NL Exhaust. NL Retain."
+  },
+  "AdministrixMod:TenDesires": {
+    "NAME": "Ten Desires",
+    "DESCRIPTION": "Ethereal. NL Transpose two. NL Draw cards until you have 10 in your hand. NL Discard 2 cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Transpose two. NL Draw cards until you have 10 in your hand. NL Discard 2 cards. NL Exhaust."
+  },
+
+  "AdministrixMod:DeathByGlamour": {
+    "NAME": "Death by Glamour",
+    "DESCRIPTION": "At the start of your turn, add a random Rare card to your hand (which costs 0 that turn), and discard 1 card. NL Draw 1 less card each turn.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Rare card to your hand (which costs 0 this combat), and discard 1 card. NL Draw 1 less card each turn."
+  },
+  "AdministrixMod:FearOfDeath": {
+    "NAME": "Fear of Death",
+    "DESCRIPTION": "Gain 3 Frail. NL Gain 3 Wilting. NL Gain !M! Artifact. NL Discard your hand."
+  },
+  "AdministrixMod:FaithfulFlames": {
+    "NAME": "Faithful Flames",
+    "DESCRIPTION": "Whenever you play 3 Attacks, gain !M! Thorns.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play 3 Attacks, gain !M! Thorns."
+  },
+  "AdministrixMod:ImmortalClarity": {
+    "NAME": "Immortal Clarity",
+    "DESCRIPTION": "Choose a card. NL Add a copy of that card into your hand next turn. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your hand for the rest of this combat. [#cc99ff]}[]",
+    "UPGRADE_DESCRIPTION": "Choose a card. NL Add a copy of that card into your hand each turn for the next !M! turns. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your deck for the rest of this combat. [#cc99ff]}[]"
+  },
+  "AdministrixMod:StarSwordSoul": {
+    "NAME": "Star Sword Soul",
+    "DESCRIPTION": "At the start of your turn, gain 1 Duality, 1 Affinity, and draw 1 additional card.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain 1 Duality, 1 Affinity, and draw 1 additional card. NL Retain."
+  },
+  "AdministrixMod:WifeLightning": {
+    "NAME": "Wife's Lightning",
+    "DESCRIPTION": "Whenever you play 3 Attacks, gain !M! Plated Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play 3 Attacks, gain !M! Plated Armor."
+  },
+
+  "AdministrixMod:LastEntry": {
+    "NAME": "Last Entry",
+    "DESCRIPTION": "Kept until cards are stable to keep this file is stable."
+  }
+}

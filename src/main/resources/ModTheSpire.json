@@ -1,0 +1,10 @@
+{
+  "modid": "Sts-AdministrixMod",
+  "name": "The Administrix",
+  "dependencies": ["basemod"],
+  "author_list": ["regret-index", "Robin-Mk0.5"],
+  "description": "Adds the Administrix, a new character mod for Slay the Spire. The lich princess of the rising sun, derived from the Touhou Project's Toyosatomimi no Miko, focuses heavily on themes of duality, synergy and deck manipulation; she currently has 70/80 cards, 4/10 relics, and 1/2 potions implemented, plus many new keywords.",
+  "version": "0.8.0",
+  "sts_version": "01-03-2019",
+  "mts_version": "3.6.3"
+}

@@ -1,0 +1,51 @@
+{
+	"transpose": {
+		"NAMES": [ "transpose", "Transpose." ],
+		"DESCRIPTION": "Discard cards from your #yDraw #yPile, then move different cards from the #yDiscard #yPile to the bottom of your #yDraw #yPile."
+	},
+
+	"plot": {
+		"NAMES": [ "plot", "「Plot:」", "{Plot:}" ],
+		"DESCRIPTION": "This effect triggers on both drawing and manually discarding this card."
+	},
+
+	"immortal": {
+		"NAMES": [ "immortal", "immortalize" ],
+		"DESCRIPTION": "Immortal cards #yupgrade other Immortal cards and can be #yupgraded any number of times."
+	},
+
+	"wilting": {
+		"NAMES": [ "wilting" ],
+		"DESCRIPTION": "Whenever you play a card, take #b1 damage."
+	},
+
+	"duality": {
+		"NAMES": [ "duality" ],
+		"DESCRIPTION": "Whenever you play an equal, non-zero number of Attacks and Skills in one turn, gain temporary #yStrength and #yDexterity next turn."
+	},
+
+	"yin": {
+		"NAMES": [ "yin" ],
+		"DESCRIPTION": "Yin fuels many cards. The higher value between #yYin and #yYang decreases by 1 each turn."
+	},
+
+	"yang": {
+		"NAMES": [ "yang" ],
+		"DESCRIPTION": "Yang fuels many cards. The high value between #yYin and #yYang decreases by 1 each turn."
+	},
+
+	"affinity": {
+		"NAMES": [ "affinity" ],
+		"DESCRIPTION": "If you have more #yYin than #yYang, then when you gain #yYin, damage all enemies twice. If reversed, then when you gain #yYang, gain #yBlock. "
+	},
+
+	"daybreak": {
+		"NAMES": [ "daybreak", "daybreaks" ],
+		"DESCRIPTION": "Daybreaks are 0-cost #yEthereal attacks that give #yYang and #yExhaust."
+	},
+
+	"nightfall": {
+		"NAMES": [ "nightfall", "nightfalls" ],
+		"DESCRIPTION": "Nightfalls are 0-cost #yEthereal skills that give #yYin and #yExhaust."
+	}
+}

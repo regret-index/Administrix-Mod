@@ -1,0 +1,27 @@
+{
+  "ConspiracyAction": {
+    "TEXT": [
+      "Discard any number of cards from the top of your Draw Pile."
+    ]
+  },
+  "DiscardToDrawAction": {
+    "TEXT": [
+      "Choose two discarded cards to move to the bottom of the Draw Pile."
+    ]
+  },
+  "TransposeAction": {
+    "TEXT": [
+      "Discard a card from your Draw Pile.",
+      "Discard two cards from your Draw Pile.",
+      "Discard cards from your Draw Pile.",
+      "Choose a discarded card to move to the bottom of the Draw Pile.",
+      "Choose two discarded cards to move to the bottom of the Draw Pile.",
+      "Choose discarded cards to move to the bottom of the Draw Pile."
+    ]
+  },
+  "Periods": {
+    "TEXT": [
+      ".."
+    ]
+  }
+}

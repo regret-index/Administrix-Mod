@@ -1,0 +1,300 @@
+
+AdminPowerIcons.png
+size: 2048,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+affinity
+  rotate: false
+  xy: 1341, 42
+  size: 84, 84
+  orig: 128, 128
+  offset: 22, 22
+  index: -1
+affinity_48
+  rotate: false
+  xy: 1965, 94
+  size: 32, 32
+  orig: 48, 48
+  offset: 8, 8
+  index: -1
+convergence
+  rotate: false
+  xy: 717, 38
+  size: 89, 88
+  orig: 128, 128
+  offset: 20, 20
+  index: -1
+convergence_48
+  rotate: false
+  xy: 534, 2
+  size: 33, 33
+  orig: 48, 48
+  offset: 8, 7
+  index: -1
+convergence_plus
+  rotate: false
+  xy: 243, 28
+  size: 99, 98
+  orig: 128, 128
+  offset: 14, 15
+  index: -1
+convergence_plus_48
+  rotate: false
+  xy: 1074, 2
+  size: 37, 37
+  orig: 48, 48
+  offset: 5, 5
+  index: -1
+egg_cracker
+  rotate: false
+  xy: 1252, 47
+  size: 87, 79
+  orig: 128, 128
+  offset: 20, 25
+  index: -1
+egg_cracker_48
+  rotate: false
+  xy: 673, 6
+  size: 33, 30
+  orig: 48, 48
+  offset: 8, 9
+  index: -1
+descent
+  rotate: false
+  xy: 1427, 38
+  size: 78, 88
+  orig: 128, 128
+  offset: 24, 20
+  index: -1
+descent_48
+  rotate: false
+  xy: 743, 3
+  size: 29, 33
+  orig: 48, 48
+  offset: 9, 7
+  index: -1
+draw_reduction1
+  rotate: false
+  xy: 1719, 40
+  size: 62, 86
+  orig: 128, 128
+  offset: 33, 22
+  index: -1
+draw_reduction1_48
+  rotate: false
+  xy: 774, 4
+  size: 23, 32
+  orig: 48, 48
+  offset: 12, 8
+  index: -1
+draw_reduction2
+  rotate: false
+  xy: 1655, 40
+  size: 62, 86
+  orig: 128, 128
+  offset: 33, 22
+  index: -1
+draw_reduction2_48
+  rotate: false
+  xy: 1171, 12
+  size: 23, 32
+  orig: 48, 48
+  offset: 12, 8
+  index: -1
+duality
+  rotate: false
+  xy: 128, 30
+  size: 113, 96
+  orig: 128, 128
+  offset: 11, 24
+  index: -1
+duality_48
+  rotate: false
+  xy: 1923, 95
+  size: 40, 31
+  orig: 48, 48
+  offset: 5, 9
+  index: -1
+flames_of_faith
+  rotate: false
+  xy: 344, 11
+  size: 92, 115
+  orig: 128, 128
+  offset: 19, 8
+  index: -1
+flames_of_faith_48
+  rotate: false
+  xy: 1301, 2
+  size: 35, 43
+  orig: 48, 48
+  offset: 7, 3
+  index: -1
+glamour
+  rotate: false
+  xy: 986, 40
+  size: 86, 86
+  orig: 128, 128
+  offset: 21, 21
+  index: -1
+glamour_48
+  rotate: false
+  xy: 1999, 94
+  size: 32, 32
+  orig: 48, 48
+  offset: 8, 8
+  index: -1
+glamour_plus
+  rotate: false
+  xy: 438, 32
+  size: 94, 94
+  orig: 128, 128
+  offset: 17, 17
+  index: -1
+glamour_plus_48
+  rotate: false
+  xy: 1338, 5
+  size: 35, 35
+  orig: 48, 48
+  offset: 6, 7
+  index: -1
+immortal_clarity
+  rotate: false
+  xy: 2, 11
+  size: 124, 115
+  orig: 128, 128
+  offset: 2, 13
+  index: -1
+immortal_clarity_48
+  rotate: false
+  xy: 1252, 2
+  size: 47, 43
+  orig: 48, 48
+  offset: 1, 5
+  index: -1
+lightning_embrace
+  rotate: false
+  xy: 625, 38
+  size: 90, 88
+  orig: 94, 94
+  offset: 2, 4
+  index: -1
+lightning_embrace_48
+  rotate: false
+  xy: 1875, 81
+  size: 46, 45
+  orig: 48, 48
+  offset: 1, 2
+  index: -1
+mastermind
+  rotate: false
+  xy: 899, 38
+  size: 85, 88
+  orig: 128, 128
+  offset: 19, 22
+  index: -1
+mastermind_48
+  rotate: false
+  xy: 639, 2
+  size: 32, 33
+  orig: 48, 48
+  offset: 7, 8
+  index: -1
+mist_eater
+  rotate: false
+  xy: 534, 37
+  size: 89, 89
+  orig: 128, 128
+  offset: 18, 22
+  index: -1
+mist_eater_48
+  rotate: false
+  xy: 569, 2
+  size: 33, 33
+  orig: 48, 48
+  offset: 7, 9
+  index: -1
+moulting
+  rotate: false
+  xy: 1783, 69
+  size: 90, 57
+  orig: 128, 128
+  offset: 17, 36
+  index: -1
+moulting_48
+  rotate: false
+  xy: 1783, 46
+  size: 34, 21
+  orig: 48, 48
+  offset: 6, 14
+  index: -1
+spectral_thief
+  rotate: false
+  xy: 808, 37
+  size: 89, 89
+  orig: 128, 128
+  offset: 20, 20
+  index: -1
+spectral_thief_48
+  rotate: false
+  xy: 604, 2
+  size: 33, 33
+  orig: 48, 48
+  offset: 8, 8
+  index: -1
+star_sword_soul
+  rotate: false
+  xy: 1074, 41
+  size: 86, 85
+  orig: 128, 128
+  offset: 21, 22
+  index: -1
+star_sword_soul_48
+  rotate: false
+  xy: 1375, 8
+  size: 32, 32
+  orig: 48, 48
+  offset: 8, 8
+  index: -1
+wilting
+  rotate: false
+  xy: 1162, 46
+  size: 88, 80
+  orig: 128, 128
+  offset: 20, 21
+  index: -1
+wilting_48
+  rotate: false
+  xy: 708, 6
+  size: 33, 30
+  orig: 48, 48
+  offset: 8, 8
+  index: -1
+yang
+  rotate: false
+  xy: 1507, 28
+  size: 72, 98
+  orig: 128, 128
+  offset: 28, 15
+  index: -1
+yang_48
+  rotate: false
+  xy: 1142, 2
+  size: 27, 37
+  orig: 48, 48
+  offset: 11, 5
+  index: -1
+yin
+  rotate: false
+  xy: 1581, 28
+  size: 72, 98
+  orig: 128, 128
+  offset: 28, 15
+  index: -1
+yin_48
+  rotate: false
+  xy: 1113, 2
+  size: 27, 37
+  orig: 48, 48
+  offset: 11, 5
+  index: -1
