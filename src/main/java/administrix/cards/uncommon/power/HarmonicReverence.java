@@ -45,10 +45,10 @@ public class HarmonicReverence extends CustomCard
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AffinityPower(p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
-        int yinAmount = p.hasPower("AdministrixMod:Yin") ?
-                        p.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = p.hasPower("AdministrixMod:Yang") ?
-                         p.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = p.hasPower(YinPower.POWER_ID) ?
+                        p.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = p.hasPower(YangPower.POWER_ID) ?
+                         p.getPower(YangPower.POWER_ID).amount : 0;
 
         if (yangAmount > yinAmount)
         {
@@ -73,10 +73,10 @@ public class HarmonicReverence extends CustomCard
     {
         super.applyPowers();
 
-        int yinAmount = AbstractDungeon.player.hasPower("AdministrixMod:Yin") ?
-                AbstractDungeon.player.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = AbstractDungeon.player.hasPower("AdministrixMod:Yang") ?
-                AbstractDungeon.player.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = AbstractDungeon.player.hasPower(YinPower.POWER_ID) ?
+                        AbstractDungeon.player.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = AbstractDungeon.player.hasPower(YangPower.POWER_ID) ?
+                         AbstractDungeon.player.getPower(YangPower.POWER_ID).amount : 0;
 
         if (yangAmount > yinAmount)
         {

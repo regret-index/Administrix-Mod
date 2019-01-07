@@ -53,10 +53,10 @@ public class SeventeenArticleLaser extends CustomCard
         AbstractDungeon.actionManager.addToBottom(new TransposeAction(TRANSPOSE_AMOUNT));
 
         if (this.upgraded) {
-            int yinAmount = p.hasPower("AdministrixMod:Yin") ?
-                            p.getPower("AdministrixMod:Yin").amount : 0;
-            int yangAmount = p.hasPower("AdministrixMod:Yang") ?
-                             p.getPower("AdministrixMod:Yang").amount : 0;
+            int yinAmount = p.hasPower(YinPower.POWER_ID) ?
+                            p.getPower(YinPower.POWER_ID).amount : 0;
+            int yangAmount = p.hasPower(YangPower.POWER_ID) ?
+                             p.getPower(YangPower.POWER_ID).amount : 0;
 
             if (yinAmount > yangAmount)
             {

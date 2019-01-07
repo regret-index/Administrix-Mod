@@ -43,7 +43,7 @@ public class YinPower extends AbstractPower {
     {
         if (this.owner.hasPower(AffinityPower.POWER_ID) &&
             (!this.owner.hasPower(YangPower.POWER_ID) ||
-             this.owner.getPower("AdministrixMod:Yang").amount < this.amount)) {
+             this.owner.getPower(YangPower.POWER_ID).amount < this.amount)) {
 
             this.owner.getPower(AffinityPower.POWER_ID).flash();
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_DEFECT_BEAM"));

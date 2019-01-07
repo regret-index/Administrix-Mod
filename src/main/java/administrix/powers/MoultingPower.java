@@ -29,10 +29,10 @@ public class MoultingPower extends AbstractPower {
 
     @Override
     public void onSpecificTrigger() {
-        int yinAmount = this.owner.hasPower("AdministrixMod:Yin") ?
-                        this.owner.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = this.owner.hasPower("AdministrixMod:Yang") ?
-                         this.owner.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = this.owner.hasPower(YinPower.POWER_ID) ?
+                        this.owner.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = this.owner.hasPower(YangPower.POWER_ID) ?
+                         this.owner.getPower(YangPower.POWER_ID).amount : 0;
 
         if (yinAmount > yangAmount) {
             this.flashWithoutSound();

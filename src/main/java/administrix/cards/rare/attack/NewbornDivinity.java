@@ -1,5 +1,7 @@
 package administrix.cards.rare.attack;
 
+import administrix.powers.YangPower;
+import administrix.powers.YinPower;
 import administrix.vfx.BlazingImpactEffect;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
@@ -49,10 +51,10 @@ public class NewbornDivinity extends CustomCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         // Deal damage scaled to how much more Yin you have than Yang.
-        int yinAmount = p.hasPower("AdministrixMod:Yin") ?
-                        p.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = p.hasPower("AdministrixMod:Yang") ?
-                         p.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = p.hasPower(YinPower.POWER_ID) ?
+                        p.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = p.hasPower(YangPower.POWER_ID) ?
+                         p.getPower(YangPower.POWER_ID).amount : 0;
         int difference = yangAmount - yinAmount;
 
         this.damage = this.baseDamage = (difference > 0) ?
@@ -83,10 +85,10 @@ public class NewbornDivinity extends CustomCard
 
     public void applyPowers()
     {
-        int yinAmount = AbstractDungeon.player.hasPower("AdministrixMod:Yin") ?
-                        AbstractDungeon.player.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = AbstractDungeon.player.hasPower("AdministrixMod:Yang") ?
-                         AbstractDungeon.player.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = AbstractDungeon.player.hasPower(YinPower.POWER_ID) ?
+                        AbstractDungeon.player.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = AbstractDungeon.player.hasPower(YangPower.POWER_ID) ?
+                         AbstractDungeon.player.getPower(YangPower.POWER_ID).amount : 0;
         int difference = yangAmount - yinAmount;
 
         this.damage = this.baseDamage = (difference > 0) ? difference * this.magicNumber : 0;

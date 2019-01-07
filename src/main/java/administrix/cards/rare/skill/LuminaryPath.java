@@ -1,6 +1,8 @@
 package administrix.cards.rare.skill;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.powers.YangPower;
+import administrix.powers.YinPower;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
@@ -52,10 +54,10 @@ public class LuminaryPath extends AbstractAdministrixCard
         // Discard your hand, then draw and gain energy equal to
         // the difference between one's yin and yang divided.
         int divideBy = (this.upgraded) ? UPGRADE_DIVISION_POINT : BASE_DIVISION_POINT;
-        int yinAmount = p.hasPower("AdministrixMod:Yin") ?
-                        p.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = p.hasPower("AdministrixMod:Yang") ?
-                         p.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = p.hasPower(YinPower.POWER_ID) ?
+                        p.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = p.hasPower(YangPower.POWER_ID) ?
+                         p.getPower(YangPower.POWER_ID).amount : 0;
         int difference = (Math.abs(yinAmount - yangAmount)) / divideBy;
 
         int count = BaseMod.MAX_HAND_SIZE;
@@ -81,10 +83,10 @@ public class LuminaryPath extends AbstractAdministrixCard
         super.applyPowers();
 
         int divideBy = (this.upgraded) ? UPGRADE_DIVISION_POINT : BASE_DIVISION_POINT;
-        int yinAmount = AbstractDungeon.player.hasPower("AdministrixMod:Yin") ?
-                        AbstractDungeon.player.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = AbstractDungeon.player.hasPower("AdministrixMod:Yang") ?
-                         AbstractDungeon.player.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = AbstractDungeon.player.hasPower(YinPower.POWER_ID) ?
+                        AbstractDungeon.player.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = AbstractDungeon.player.hasPower(YangPower.POWER_ID) ?
+                         AbstractDungeon.player.getPower(YangPower.POWER_ID).amount : 0;
         int difference = (Math.abs(yinAmount - yangAmount)) / divideBy;
 
         this.baseMagicNumber = this.magicNumber = difference;

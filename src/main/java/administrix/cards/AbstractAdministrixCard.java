@@ -22,7 +22,7 @@ public abstract class AbstractAdministrixCard extends CustomCard {
     }
 
     public int mastermindCheck() {
-        return (AbstractDungeon.player.hasPower("AdministrixMod:MastermindPower")? 2 : 1);
+        return (AbstractDungeon.player.hasPower(MastermindPower.POWER_ID)? 2 : 1);
     }
 
     public void upgradeSecondMagicNumber(int amount) {

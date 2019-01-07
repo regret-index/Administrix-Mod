@@ -1,6 +1,7 @@
 package administrix.cards.rare.power;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.powers.ImmortalClarityPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -40,7 +41,7 @@ public class ImmortalClarity extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (p.hasPower("AdministrixMod:ImmortalClarity")) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "AdministrixMod:ImmortalClarity"));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, ImmortalClarityPower.POWER_ID));
         }
         AbstractDungeon.actionManager.addToBottom(new ImmortalClarityAction
                 (p, p, this.magicNumber));

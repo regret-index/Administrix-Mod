@@ -1,6 +1,8 @@
 package administrix.cards.rare.skill;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.powers.YangPower;
+import administrix.powers.YinPower;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -47,14 +49,14 @@ public class HopeInTheDark extends AbstractAdministrixCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         // Give block scaled to how much Yang you have more of than Yin.
-        int yinAmount = p.hasPower("Yin") ?
-                p.getPower("Yin").amount : 0;
-        int yangAmount = p.hasPower("Yang") ?
-                p.getPower("Yang").amount : 0;
+        int yinAmount = p.hasPower(YinPower.POWER_ID) ?
+                        p.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = p.hasPower(YangPower.POWER_ID) ?
+                         p.getPower(YangPower.POWER_ID).amount : 0;
         int difference = yinAmount - yangAmount;
         double multiplier = (this.upgraded) ? 1.5 : 1.0;
 
-        this.baseBlock = (int) Math.floor((difference > 0) ? difference * multiplier : 0);
+        this.block = this.baseBlock = (int) Math.floor((difference > 0) ? difference * multiplier : 0);
 
         if (difference > 0) {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.2F));
@@ -68,14 +70,14 @@ public class HopeInTheDark extends AbstractAdministrixCard
 
     public void applyPowers()
     {
-        int yinAmount = AbstractDungeon.player.hasPower("Yin") ?
-                        AbstractDungeon.player.getPower("Yin").amount : 0;
-        int yangAmount = AbstractDungeon.player.hasPower("Yang") ?
-                         AbstractDungeon.player.getPower("Yang").amount : 0;
+        int yinAmount = AbstractDungeon.player.hasPower(YinPower.POWER_ID) ?
+                        AbstractDungeon.player.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = AbstractDungeon.player.hasPower(YangPower.POWER_ID) ?
+                         AbstractDungeon.player.getPower(YangPower.POWER_ID).amount : 0;
         int difference = yinAmount - yangAmount;
         double multiplier = (this.upgraded) ? 1.0 : 1.5;
 
-        this.baseBlock = (int) Math.floor((difference > 0) ? difference * multiplier : 0);
+        this.block = this.baseBlock = (int) Math.floor((difference > 0) ? difference * multiplier : 0);
         super.applyPowers();
 
         if (this.baseBlock > 0)

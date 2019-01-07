@@ -39,10 +39,10 @@ public class AttunementTonic extends AbstractPotion {
         target = AbstractDungeon.player;
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
         {
-            int dualityAmount = AbstractDungeon.player.hasPower("AdministrixMod:Duality") ?
-                                AbstractDungeon.player.getPower("AdministrixMod:Duality").amount + 1 : 1;
-            int affinityAmount = AbstractDungeon.player.hasPower("AdministrixMod:Affinity") ?
-                                 AbstractDungeon.player.getPower("AdministrixMod:Affinity").amount + 1 : 1;
+            int dualityAmount = AbstractDungeon.player.hasPower(DualityPower.POWER_ID) ?
+                                AbstractDungeon.player.getPower(DualityPower.POWER_ID).amount + 1 : 1;
+            int affinityAmount = AbstractDungeon.player.hasPower(AffinityPower.POWER_ID) ?
+                                 AbstractDungeon.player.getPower(AffinityPower.POWER_ID).amount + 1 : 1;
 
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new DualityPower(target, this.potency), this.potency));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));

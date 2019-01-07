@@ -1,5 +1,6 @@
 package administrix.cards.common.skill;
 
+import administrix.powers.DualityPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -49,7 +50,7 @@ public class DuskAndDawn extends CustomCard
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Daybreak(), CARD_AMOUNT));
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Nightfall(), CARD_AMOUNT));
         }
-        if (p.hasPower("AdministrixMod:Duality")) {
+        if (p.hasPower(DualityPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMOUNT));
         }
     }

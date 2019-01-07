@@ -1,5 +1,7 @@
 package administrix.cards.uncommon.skill;
 
+import administrix.powers.YangPower;
+import administrix.powers.YinPower;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -42,10 +44,10 @@ public class Wuji extends CustomCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         // Gain Duality equal to 1/4th of the lower of your Yin or your Yang.
-        int yinAmount = p.hasPower("AdministrixMod:Yin") ?
-                        p.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = p.hasPower("AdministrixMod:Yang") ?
-                         p.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = p.hasPower(YinPower.POWER_ID) ?
+                        p.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = p.hasPower(YangPower.POWER_ID) ?
+                         p.getPower(YangPower.POWER_ID).amount : 0;
         int equalPoint = (yinAmount > yangAmount) ? yangAmount : yinAmount;
 
         this.magicNumber = equalPoint / DUALITY_SCALE;
@@ -53,8 +55,8 @@ public class Wuji extends CustomCard
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.WHITE, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.2F));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.2F));
 
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "AdministrixMod:Yin"));
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "AdministrixMod:Yang"));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, YinPower.POWER_ID));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, YangPower.POWER_ID));
 
         if (this.magicNumber > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DualityPower(p, this.magicNumber), this.magicNumber));
@@ -65,10 +67,10 @@ public class Wuji extends CustomCard
     {
         super.applyPowers();
 
-        int yinAmount = AbstractDungeon.player.hasPower("AdministrixMod:Yin") ?
-                        AbstractDungeon.player.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = AbstractDungeon.player.hasPower("AdministrixMod:Yang") ?
-                         AbstractDungeon.player.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = AbstractDungeon.player.hasPower(YinPower.POWER_ID) ?
+                        AbstractDungeon.player.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = AbstractDungeon.player.hasPower(YangPower.POWER_ID) ?
+                         AbstractDungeon.player.getPower(YangPower.POWER_ID).amount : 0;
         int equalPoint = (yinAmount > yangAmount) ? yangAmount : yinAmount;
 
         this.baseMagicNumber = this.magicNumber = equalPoint / DUALITY_SCALE;

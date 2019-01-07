@@ -48,10 +48,10 @@ public class NewWardrobe extends CustomCard
         // Swap your Yin and Yang, checking if you have any of such at all, and
         // deal the difference in damage (with a flashy, scaling effect).
         // Redundant checks are for both cleanliness and controlling power VFX.
-        int yinAmount = p.hasPower("AdministrixMod:Yin") ?
-                        p.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = p.hasPower("AdministrixMod:Yang") ?
-                         p.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = p.hasPower(YinPower.POWER_ID) ?
+                        p.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = p.hasPower(YangPower.POWER_ID) ?
+                         p.getPower(YangPower.POWER_ID).amount : 0;
         int difference = Math.abs(yinAmount - yangAmount);
 
         if (yinAmount > yangAmount) {
@@ -62,19 +62,19 @@ public class NewWardrobe extends CustomCard
 
         if ((yinAmount == 0) && (yangAmount != 0))
         {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "AdministrixMod:Yang"));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, YangPower.POWER_ID));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YinPower(p, yangAmount), yangAmount));
         }
         else if ((yinAmount != 0) && (yangAmount == 0))
         {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "AdministrixMod:Yin"));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, YinPower.POWER_ID));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YangPower(p, yinAmount), yinAmount));
         }
         else if ((yinAmount != 0) && (yangAmount != 0))
         {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "AdministrixMod:Yin"));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, YinPower.POWER_ID));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "AdministrixMod:Yang"));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, YangPower.POWER_ID));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YinPower(p, yangAmount), yangAmount));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
@@ -130,10 +130,10 @@ public class NewWardrobe extends CustomCard
 
     public void applyPowers()
     {
-        int yinAmount = AbstractDungeon.player.hasPower("AdministrixMod:Yin") ?
-                        AbstractDungeon.player.getPower("AdministrixMod:Yin").amount : 0;
-        int yangAmount = AbstractDungeon.player.hasPower("AdministrixMod:Yang") ?
-                         AbstractDungeon.player.getPower("AdministrixMod:Yang").amount : 0;
+        int yinAmount = AbstractDungeon.player.hasPower(YinPower.POWER_ID) ?
+                        AbstractDungeon.player.getPower(YinPower.POWER_ID).amount : 0;
+        int yangAmount = AbstractDungeon.player.hasPower(YangPower.POWER_ID) ?
+                         AbstractDungeon.player.getPower(YangPower.POWER_ID).amount : 0;
         this.damage = this.baseDamage = Math.abs(yinAmount - yangAmount);
         super.applyPowers();
         if (this.baseDamage > 0)

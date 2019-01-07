@@ -49,7 +49,7 @@ public class RegentEdict extends CustomCard
                      m.getPower("Strength").amount > 0) ?
                      m.getPower("Strength").amount : 0;
 
-        if (p.hasPower("AdministrixMod:SpectralThief") && (p.getPower("AdministrixMod:SpectralThief").amount == 2))
+        if (p.hasPower(SpectralThiefPower.POWER_ID) && (p.getPower(SpectralThiefPower.POWER_ID).amount == 2))
         {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
             if (m != null && (stolen > 0 || m.hasPower("Artifact"))) {
