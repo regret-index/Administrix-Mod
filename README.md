@@ -71,7 +71,7 @@ write-up, though, as a reference point. This is on the Github page too, after
 all. (Note that spreadsheet links and copies of the StS extractor are attached
 to each release, for those who wish to spoil themselves completely.)
 
-==== Plot ====
+==== __Plot__ ====
 
  * Cards with this have a __Plot__ effect on drawing them, the same effect on
    manually discarding them, and an entirely different effect on playing them.
@@ -80,7 +80,7 @@ to each release, for those who wish to spoil themselves completely.)
    Two 0-cost cards in the starting deck draw and discard on play, plus apply
    debuff effects through Plot.
 
-== Transpose ==
+== __Transpose__ ==
 
  * To __Transpose__ is to discard a card from the Draw Pile, then move a
    different card from the Discard Pile to the bottom of the Draw Pile. The
