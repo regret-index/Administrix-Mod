@@ -1,7 +1,6 @@
 package administrix.cards.uncommon.skill;
 
 import administrix.cards.AbstractAdministrixCard;
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -27,7 +26,7 @@ public class GuanyinBlessing extends AbstractAdministrixCard
     public static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
     private static final int COST = -2;
     private static final int YIN_AMOUNT = 3;
-    private static final int WEAK_AMOUNT = 1;
+    private static final int VULN_AMOUNT = 1;
     private static final int DRAW_AMOUNT = 1;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.SELF;
@@ -58,7 +57,7 @@ public class GuanyinBlessing extends AbstractAdministrixCard
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new YinPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, WEAK_AMOUNT, false), WEAK_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new VulnerablePower(mo, VULN_AMOUNT, false), VULN_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
             }
             if (this.upgraded) {
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, DRAW_AMOUNT));
@@ -72,7 +71,7 @@ public class GuanyinBlessing extends AbstractAdministrixCard
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new YinPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, WEAK_AMOUNT, false), WEAK_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new VulnerablePower(mo, VULN_AMOUNT, false), VULN_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
             }
             if (this.upgraded) {
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, DRAW_AMOUNT));

@@ -2,7 +2,10 @@ The Administrix, the lich princess of the rising sun,
 is inspired by Toyosatomimi no Miko (豊聡耳 神子),
 a character from the Touhou Project series.
 
---~~== Credits ==~~--
+Latest releases can be found at
+https://api.github.com/repos/regret-index/Administrix-Mod/releases/latest.
+
+--~== Credits ==~--
  * index-j: Content code, endlessly playtesting and debugging.
  * Robin-MK0.5: Card edit art, playtesting, advanced feature debugging,
    constant support
@@ -13,7 +16,7 @@ a character from the Touhou Project series.
  * ZUN: For creating the Touhou Project.
  * Megacrit: For creating Slay the Spire.
 
---~~== Summation ==~~--
+--~== Summation ==~--
 This card set focuses on themes of duality, synergy, and deck manipulation:
  * cards with effects on both drawing and discarding them,
  * many sources of Artifact to grasp onto transient power
@@ -32,20 +35,21 @@ reliable representation and support for multiple interwoven deck archetypes
 readily uses multi-function cards plus flexible and automatic defenses to
 constantly scale up from weaker base cards; playing her can start out slow
 in understanding very fully cards, but she has many ways to gain many buffs
-as she edges closer to becoming a legend.
+as she edges ever closer to becoming a legend.
 
---~~== Known Issues ==~~--
+--~== Known Issues ==~--
  * Playing cards too quickly can sometimes have tooltips or targetting arrows
    mess up the Transpose interface.
  * Rising Sun's Prince can inflict permanent Strength loss against enemies with
    Artifact when drawn in a precise order with other Plot cards.
 
---~~== New keywords ==~~--
+--~== New keywords ==~--
 
 For those who care about such, card spoilers follow here. This character's list
 of keywords is definitely long and complicated enough to deserve this full
 write-up, though, as a reference point. This is on the Github page too, after
-all. A full extraction of cards can be found... somewhere.
+all. (Note that spreadsheet links and copies of the StS extractor are attached
+to each release, for those who wish to spoil themselves completely.)
 
 ==== Plot ====
  * Cards with this have an effect on drawing them, the same effect on manually

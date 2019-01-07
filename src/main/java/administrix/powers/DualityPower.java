@@ -32,33 +32,21 @@ public class DualityPower extends AbstractPower {
         this.region128 = ADMIN_POWERS_ATLAS.findRegion("duality");
     }
 
-    // TODO: The hackjob here relying on relics covers for activating Duality
-    // on the same turn as one obtains it. This ought to be properly recorded
-    // and stored in the character mod itself (compare e.g. Valiant),
-    // as the custom UI element for this + shaku + Y/Y needs to cover.
-
-    /*
     public void atStartOfTurn() {
         attackCount = 0;
         skillCount = 0;
     }
 
-    public void onAfterCardPlayed(AbstractCard c)
-    {
-        if (c.type == AbstractCard.CardType.ATTACK) {
-            attackCount++;
-        } else if (c.type == AbstractCard.CardType.SKILL) {
-            skillCount++;
-        }
-    }
-    */
 
     public void atEndOfRound() {
-        if (AbstractDungeon.player.hasRelic("AlphaAttackCounter") &&
-            AbstractDungeon.player.hasRelic("AlphaSkillCounter") &&
-            AbstractDungeon.player.getRelic("AlphaAttackCounter").counter ==
-            AbstractDungeon.player.getRelic("AlphaSkillCounter").counter &&
-            AbstractDungeon.player.getRelic("AlphaAttackCounter").counter != 0) {
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
+            if (c.type == AbstractCard.CardType.ATTACK) {
+                attackCount++;
+            } else if (c.type == AbstractCard.CardType.SKILL) {
+                skillCount++;
+            }
+        }
+        if (attackCount == skillCount && attackCount != 0) {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.PURPLE, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_FIRE"));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.GOLD, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
@@ -73,7 +61,6 @@ public class DualityPower extends AbstractPower {
         }
     }
 
-    // ...also, this is probably redundant with the counter relics.
     public void updateDescription()
     {
         attackCount = (AbstractDungeon.player.hasRelic("AlphaAttackCounter")) ?

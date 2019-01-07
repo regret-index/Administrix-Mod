@@ -10,7 +10,7 @@
   },
   "AdministrixMod:Daybreak": {
     "NAME": "Daybreak",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Yang. NL Exhaust. NL Ethereal."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Gain !M! Yang. NL Exhaust."
   },
   "AdministrixMod:CrackingPangu": {
     "NAME": "Cracking Pangu",
@@ -133,7 +133,7 @@
   },
   "AdministrixMod:Nightfall": {
     "NAME": "Nightfall",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Yin. NL Exhaust. NL Ethereal."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !M! Yin. NL Exhaust."
   },
   "AdministrixMod:DuskAndDawn": {
     "NAME": "Dusk and Dawn",
@@ -191,8 +191,8 @@
   },
   "AdministrixMod:BishamonBlessing": {
     "NAME": "Bishamon's Blessing",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yang. NL Apply 1 Vulnerable to all enemies. [#cc99ff]}[]",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yang. NL Apply 1 Vulnerable to all enemies. NL Draw 1 card. [#cc99ff]}[]",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yang. NL Apply 1 Weak to all enemies. [#cc99ff]}[]",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yang. NL Apply 1 Weak to all enemies. NL Draw 1 card. [#cc99ff]}[]",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card."
     ]
@@ -216,8 +216,8 @@
   },
   "AdministrixMod:GuanyinBlessing": {
     "NAME": "Guanyin's Blessing",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yin. NL Apply 1 Weak to all enemies. [#cc99ff]}[]",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yin. NL Apply 1 Weak to all enemies. NL Draw 1 card. [#cc99ff]}[]",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yin. NL Apply 1 Vulnerable to all enemies. [#cc99ff]}[]",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yin. NL Apply 1 Vulnerable to all enemies. NL Draw 1 card. [#cc99ff]}[]",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card."
     ]
