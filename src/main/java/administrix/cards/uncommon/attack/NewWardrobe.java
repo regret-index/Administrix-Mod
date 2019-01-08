@@ -95,13 +95,13 @@ public class NewWardrobe extends AbstractAdministrixCard
             } else if (this.damage < 60) {
                 if (yinAmount < yangAmount) {
                     for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                        if (m != null) {
-                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlashySlamEffect(p.hb.cX, p.hb.cY, m.hb.cX, new Color(0.95F, 0.90F, 0.70F, 0.0F)), 0.4F));
+                        if (mo != null) {
+                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlashySlamEffect(p.hb.cX, p.hb.cY, mo.hb.cX, new Color(0.95F, 0.90F, 0.70F, 0.0F)), 0.4F));
                         }
                     }
                 } else {
                     for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                        if (m != null) {
+                        if (mo != null) {
                             AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlashySlamEffect(p.hb.cX, p.hb.cY, mo.hb.cX, new Color(0.30F, 0.05F, 0.35F, 0.0F)), 0.4F));
                         }
                     }
@@ -111,7 +111,7 @@ public class NewWardrobe extends AbstractAdministrixCard
                 if (yinAmount < yangAmount) {
                     for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                         if (mo != null) {
-                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimelessImpactEffect(m.hb.cX, m.hb.cY, new Color(0.95F, 0.9F, 0.8F, 0.8F))));
+                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimelessImpactEffect(mo.hb.cX, mo.hb.cY, new Color(0.95F, 0.9F, 0.8F, 0.8F))));
                         }
                     }
                     AbstractDungeon.actionManager.addToBottom(new WaitAction(1.0F));
@@ -119,7 +119,7 @@ public class NewWardrobe extends AbstractAdministrixCard
                 } else {
                     for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                         if (mo != null) {
-                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimelessImpactEffect(m.hb.cX, m.hb.cY, new Color(0.2F, 0.1F, 0.4F, 0.8F))));
+                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimelessImpactEffect(mo.hb.cX, mo.hb.cY, new Color(0.2F, 0.1F, 0.4F, 0.8F))));
                         }
                     }
                     AbstractDungeon.actionManager.addToBottom(new WaitAction(1.0F));
