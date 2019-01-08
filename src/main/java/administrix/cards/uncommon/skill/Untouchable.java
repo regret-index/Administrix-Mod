@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +15,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class Untouchable extends CustomCard
+public class Untouchable extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Untouchable";
     public static final String NAME = "Untouchable";

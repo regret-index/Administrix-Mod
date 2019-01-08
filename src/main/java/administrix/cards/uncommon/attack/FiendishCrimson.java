@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -18,7 +19,7 @@ import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class FiendishCrimson extends CustomCard
+public class FiendishCrimson extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:FiendishCrimson";
     public static final String NAME = "Fiendish Crimson";

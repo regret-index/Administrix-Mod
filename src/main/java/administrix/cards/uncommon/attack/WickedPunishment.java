@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import administrix.vfx.FlashySlamEffect;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
@@ -19,7 +20,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.YinPower;
 
-public class WickedPunishment extends CustomCard
+public class WickedPunishment extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:WickedPunishment";
     public static final String NAME = "Wicked Punishment";

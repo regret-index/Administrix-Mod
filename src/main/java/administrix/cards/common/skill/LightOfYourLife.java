@@ -1,6 +1,7 @@
 package administrix.cards.common.skill;
 
 import administrix.actions.TransposeAction;
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -14,7 +15,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.YangPower;
 
-public class LightOfYourLife extends CustomCard
+public class LightOfYourLife extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:LightOfYourLife";
     public static final String NAME = "Light of Your Life";

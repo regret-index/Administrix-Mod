@@ -1,5 +1,6 @@
 package administrix.cards.common.attack;
 import administrix.AdministrixMod;
+import administrix.cards.AbstractAdministrixCard;
 import administrix.patches.AbstractCardEnum;
 
 import com.megacrit.cardcrawl.actions.common.*;
@@ -14,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import basemod.abstracts.CustomCard;
 
-public class PlateOfAntiquity extends CustomCard
+public class PlateOfAntiquity extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:PlateOfAntiquity";
     public static final String NAME = "Plate Of Antiquity";

@@ -1,5 +1,6 @@
 package administrix.cards.common.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -13,7 +14,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.YinPower;
 
-public class Nightfall extends CustomCard
+public class Nightfall extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Nightfall";
     public static final String NAME = "Nightfall";

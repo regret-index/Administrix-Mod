@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -14,7 +15,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.MistEaterPower;
 
-public class FeastOfDew extends CustomCard
+public class FeastOfDew extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:FeastOfDew";
     public static final String NAME = "Feast of Dew";

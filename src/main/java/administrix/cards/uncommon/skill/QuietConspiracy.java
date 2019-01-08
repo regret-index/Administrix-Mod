@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,7 +13,7 @@ import administrix.AdministrixMod;
 import administrix.actions.ConspiracyAction;
 import administrix.patches.AbstractCardEnum;
 
-public class QuietConspiracy extends CustomCard
+public class QuietConspiracy extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:QuietConspiracy";
     public static final String NAME = "Quiet Conspiracy";

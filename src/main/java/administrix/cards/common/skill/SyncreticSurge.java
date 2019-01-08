@@ -1,6 +1,7 @@
 package administrix.cards.common.skill;
 
 import administrix.AdministrixMod;
+import administrix.cards.AbstractAdministrixCard;
 import administrix.cards.common.attack.Daybreak;
 import administrix.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
@@ -13,7 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class SyncreticSurge extends CustomCard
+public class SyncreticSurge extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:SyncreticSurge";
     public static final String NAME = "Syncretic Surge";

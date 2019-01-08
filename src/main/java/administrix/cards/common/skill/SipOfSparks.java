@@ -1,5 +1,6 @@
 package administrix.cards.common.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,7 +14,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class SipOfSparks extends CustomCard
+public class SipOfSparks extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:SipOfSparks";
     public static final String NAME = "Sip of Sparks";

@@ -1,5 +1,6 @@
 package administrix.cards.common.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -17,7 +18,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
-public class ExtolVirtue extends CustomCard
+public class ExtolVirtue extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:ExtolVirtue";
     public static final String NAME = "Extol Virtue";

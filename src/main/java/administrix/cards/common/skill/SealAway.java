@@ -1,5 +1,6 @@
 package administrix.cards.common.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
@@ -15,7 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class SealAway extends CustomCard
+public class SealAway extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:SealAway";
     public static final String NAME = "Seal Away";

@@ -25,7 +25,7 @@ public class ConvergencePlusPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.updateDescription();
-        this.region48 = ADMIN_POWERS_ATLAS.findRegion("convergence_48");
+        this.region48 = ADMIN_POWERS_ATLAS.findRegion("convergence_plus_48");
         this.region128 = ADMIN_POWERS_ATLAS.findRegion("convergence_plus");
     }
 

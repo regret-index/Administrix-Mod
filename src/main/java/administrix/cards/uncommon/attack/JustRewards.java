@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import administrix.vfx.SwordBlastEffect;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -19,7 +20,7 @@ import administrix.AdministrixMod;
 import administrix.cards.common.attack.Daybreak;
 import administrix.patches.AbstractCardEnum;
 
-public class JustRewards extends CustomCard
+public class JustRewards extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:JustRewards";
     public static final String NAME = "Just Rewards";

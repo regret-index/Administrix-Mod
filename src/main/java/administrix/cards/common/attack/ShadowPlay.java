@@ -1,5 +1,6 @@
 package administrix.cards.common.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -17,7 +18,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.YinPower;
 
-public class ShadowPlay extends CustomCard
+public class ShadowPlay extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:ShadowPlay";
     public static final String NAME = "Shadow Play";

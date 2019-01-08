@@ -1,5 +1,6 @@
 package administrix.cards.common.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -15,7 +16,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.EggCrackerPower;
 
-public class CrackingPangu extends CustomCard
+public class CrackingPangu extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:CrackingPangu";
     public static final String NAME = "Cracking Pangu";

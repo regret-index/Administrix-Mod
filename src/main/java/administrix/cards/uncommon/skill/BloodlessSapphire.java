@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -13,7 +14,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.WiltingPower;
 
-public class BloodlessSapphire extends CustomCard
+public class BloodlessSapphire extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:BloodlessSapphire";
     public static final String NAME = "Bloodless Sapphire";

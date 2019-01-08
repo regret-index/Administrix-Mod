@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import administrix.vfx.FlashySlamEffect;
 import administrix.vfx.SlimelessImpactEffect;
 import basemod.abstracts.CustomCard;
@@ -20,7 +21,7 @@ import administrix.patches.AbstractCardEnum;
 import administrix.powers.YangPower;
 import administrix.powers.YinPower;
 
-public class NewWardrobe extends CustomCard
+public class NewWardrobe extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:NewWardrobe";
     public static final String NAME = "New Wardrobe";

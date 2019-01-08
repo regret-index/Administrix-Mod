@@ -20,9 +20,6 @@ import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-// ...could probably sort out AbstractAdministrisCard out better,
-// with this being the only use of secondary magic numbers.
-
 public class LuminaryPath extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:LuminaryPath";

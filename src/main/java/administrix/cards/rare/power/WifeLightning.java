@@ -1,5 +1,6 @@
 package administrix.cards.rare.power;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -14,7 +15,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.LightningEmbracePower;
 
-public class WifeLightning extends CustomCard
+public class WifeLightning extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:WifeLightning";
     public static final String NAME = "Wife's Lightning";

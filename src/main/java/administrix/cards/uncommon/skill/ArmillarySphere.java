@@ -51,15 +51,14 @@ public class ArmillarySphere extends AbstractAdministrixCard
 
     // Due to the Plot triggers using AbstractDungeon.player,
     // we have to manually apply Dexterity and Frail here.
-    // FIXME: sometimes this seems off by one...
     public void triggerWhenDrawn()
     {
         this.superFlash();
         int dexCheck = (AbstractDungeon.player.hasPower("Dexterity")) ?
-                AbstractDungeon.player.getPower("Dexterity").amount : 0;
+                       AbstractDungeon.player.getPower("Dexterity").amount : 0;
         double frailCheck = (AbstractDungeon.player.hasPower("Frail")) ? 0.75 : 1;
         this.block += dexCheck;
-        this.block /= frailCheck;
+        this.block *= frailCheck;
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
         }

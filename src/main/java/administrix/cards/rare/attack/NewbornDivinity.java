@@ -1,5 +1,6 @@
 package administrix.cards.rare.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import administrix.powers.YangPower;
 import administrix.powers.YinPower;
 import administrix.vfx.BlazingImpactEffect;
@@ -23,7 +24,7 @@ import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class NewbornDivinity extends CustomCard
+public class NewbornDivinity extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:NewbornDivinity";
     public static final String NAME = "Newborn Divinity";

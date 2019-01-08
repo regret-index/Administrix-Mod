@@ -1,5 +1,6 @@
 package administrix.cards.rare.power;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -16,7 +17,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.WiltingPower;
 
-public class FearOfDeath extends CustomCard
+public class FearOfDeath extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:FearOfDeath";
     public static final String NAME = "Fear Of Death";

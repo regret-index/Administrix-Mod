@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +15,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.WiltingPower;
 
-public class MixOfMercury extends CustomCard
+public class MixOfMercury extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:MixOfMercury";
     public static final String NAME = "Mix Of Mercury";

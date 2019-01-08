@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.power;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,7 +14,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.MoultingPower;
 
-public class CastOffRegrets extends CustomCard
+public class CastOffRegrets extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:CastOffRegrets";
     public static final String NAME = "Cast Off Regrets";

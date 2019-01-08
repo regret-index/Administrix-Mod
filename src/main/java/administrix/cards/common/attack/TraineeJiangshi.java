@@ -1,5 +1,6 @@
 package administrix.cards.common.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -20,13 +21,13 @@ import administrix.patches.AbstractCardEnum;
 
 // Disabled for beta release.
 
-public class TraineeJiangshi extends CustomCard
+public class TraineeJiangshi extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:TraineeJiangshi";
     public static final String NAME = "Trainee Jiangshi";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 1;
-    private static final CardRarity rarity = CardRarity.COMMON;
+    private static final AbstractCard.CardRarity rarity = CardRarity.COMMON;
     private static final CardTarget target = CardTarget.ENEMY;
     private static final CardType type = CardType.ATTACK;
     private static final int ATTACK_DMG = 1;

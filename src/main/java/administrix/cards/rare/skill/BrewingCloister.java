@@ -1,5 +1,6 @@
 package administrix.cards.rare.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -16,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class BrewingCloister extends CustomCard
+public class BrewingCloister extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:BrewingCloister";
     public static final String NAME = "Brewing Cloister";

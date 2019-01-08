@@ -6,7 +6,7 @@ import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-// TODO: Use for every card, functionize plot backgrounds / scroll.
+// TODO: Functionize plot backgrounds / scroll.
 // For the full release, probably.
 
 public abstract class AbstractAdministrixCard extends CustomCard {

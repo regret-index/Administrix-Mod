@@ -1,5 +1,6 @@
 package administrix.cards.common.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -16,7 +17,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.SpectralThiefPower;
 
-public class RegentEdict extends CustomCard
+public class RegentEdict extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:RegentEdict";
     public static final String NAME = "Regent's Edict";

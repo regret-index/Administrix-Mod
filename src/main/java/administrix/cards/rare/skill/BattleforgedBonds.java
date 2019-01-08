@@ -1,5 +1,6 @@
 package administrix.cards.rare.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.unique.ApplyBulletTimeAction;
@@ -16,7 +17,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class BattleforgedBonds extends CustomCard
+public class BattleforgedBonds extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:BattleforgedBonds";
     public static final String NAME = "Battleforged Bonds";

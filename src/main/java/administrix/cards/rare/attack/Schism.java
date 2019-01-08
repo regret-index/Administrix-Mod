@@ -1,6 +1,7 @@
 package administrix.cards.rare.attack;
 
 import administrix.AdministrixMod;
+import administrix.cards.AbstractAdministrixCard;
 import administrix.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -20,7 +21,7 @@ import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 
-public class Schism extends CustomCard
+public class Schism extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Schism";
     public static final String NAME = "Schism";

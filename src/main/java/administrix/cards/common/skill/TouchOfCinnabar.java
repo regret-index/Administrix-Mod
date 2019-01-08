@@ -1,5 +1,6 @@
 package administrix.cards.common.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,7 +16,7 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class TouchOfCinnabar extends CustomCard
+public class TouchOfCinnabar extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:TouchOfCinnabar";
     public static final String NAME = "Touch of Cinnabar";

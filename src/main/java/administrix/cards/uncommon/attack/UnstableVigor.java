@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -17,7 +18,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.WiltingPower;
 
-public class UnstableVigor extends CustomCard
+public class UnstableVigor extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:UnstableVigor";
     public static final String NAME = "Unstable Vigor";

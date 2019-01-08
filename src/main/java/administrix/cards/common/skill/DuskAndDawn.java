@@ -1,5 +1,6 @@
 package administrix.cards.common.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import administrix.powers.DualityPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -14,7 +15,7 @@ import administrix.AdministrixMod;
 import administrix.cards.common.attack.Daybreak;
 import administrix.patches.AbstractCardEnum;
 
-public class DuskAndDawn extends CustomCard
+public class DuskAndDawn extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:DuskAndDawn";
     public static final String NAME = "DuskAndDawn";
@@ -23,7 +24,7 @@ public class DuskAndDawn extends CustomCard
     private static final int COST = 1;
     private static final int CARD_AMOUNT = 1;
     private static final int DRAW_AMOUNT = 1;
-    private static final CardRarity rarity = CardRarity.COMMON;
+    private static final AbstractCard.CardRarity rarity = CardRarity.COMMON;
     private static final CardTarget target = CardTarget.SELF;
 
 

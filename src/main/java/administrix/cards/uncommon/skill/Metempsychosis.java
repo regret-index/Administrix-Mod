@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +15,7 @@ import administrix.patches.AbstractCardEnum;
 import administrix.powers.DualityPower;
 import administrix.powers.NextTurnDrawReductionPower;
 
-public class Metempsychosis extends CustomCard
+public class Metempsychosis extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Metempsychosis";
     public static final String NAME = "Metempsychosis";

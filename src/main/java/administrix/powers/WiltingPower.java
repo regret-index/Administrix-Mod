@@ -61,9 +61,9 @@ public class WiltingPower extends AbstractPower {
     public void updateDescription()
     {
         if (this.amount == 1) {
-            this.description = (DESCRIPTIONS[0] + witherDamage + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[3]);
+            this.description = (DESCRIPTIONS[2] + DESCRIPTIONS[3] + witherDamage + DESCRIPTIONS[4]);
         } else {
-            this.description = (DESCRIPTIONS[0] + witherDamage + DESCRIPTIONS[2]);
+            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[3] + witherDamage + DESCRIPTIONS[4]);
         }
     }
 

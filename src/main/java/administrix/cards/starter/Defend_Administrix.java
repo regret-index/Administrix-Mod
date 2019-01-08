@@ -1,4 +1,5 @@
 package administrix.cards.starter;
+import administrix.cards.AbstractAdministrixCard;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -11,7 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 
-public class Defend_Administrix extends CustomCard{
+public class Defend_Administrix extends AbstractAdministrixCard
+{
     public static final String ID = "AdministrixMod:Defend_Administrix";
     public static final String NAME = "Defend";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);

@@ -1,6 +1,7 @@
 package administrix.cards.uncommon.attack;
 
 import administrix.actions.TransposeAction;
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -19,7 +20,7 @@ import administrix.patches.AbstractCardEnum;
 import administrix.powers.YangPower;
 import administrix.powers.YinPower;
 
-public class SeventeenArticleLaser extends CustomCard
+public class SeventeenArticleLaser extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:SeventeenArticleLaser";
     public static final String NAME = "17-Article Laser";

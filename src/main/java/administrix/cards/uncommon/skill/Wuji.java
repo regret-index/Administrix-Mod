@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import administrix.powers.YangPower;
 import administrix.powers.YinPower;
 import basemod.abstracts.CustomCard;
@@ -18,7 +19,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.DualityPower;
 
-public class Wuji extends CustomCard
+public class Wuji extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Wuji";
     public static final String NAME = "Wuji";

@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.power;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -14,7 +15,7 @@ import administrix.patches.AbstractCardEnum;
 import administrix.powers.ConvergencePlusPower;
 import administrix.powers.ConvergencePower;
 
-public class Convergence extends CustomCard
+public class Convergence extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Convergence";
     public static final String NAME = "Convergence";

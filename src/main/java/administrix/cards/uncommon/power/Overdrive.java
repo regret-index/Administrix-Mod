@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.power;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -16,7 +17,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.DualityPower;
 
-public class Overdrive extends CustomCard
+public class Overdrive extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Overdrive";
     public static final String NAME = "Overdrive";

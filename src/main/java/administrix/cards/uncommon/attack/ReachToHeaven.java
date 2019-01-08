@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -20,7 +21,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.YangPower;
 
-public class ReachToHeaven extends CustomCard
+public class ReachToHeaven extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:ReachToHeaven";
     public static final String NAME = "Reach to Heaven";

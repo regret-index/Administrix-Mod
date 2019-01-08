@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.power;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -15,7 +16,7 @@ import administrix.powers.AffinityPower;
 import administrix.powers.YangPower;
 import administrix.powers.YinPower;
 
-public class HarmonicReverence extends CustomCard
+public class HarmonicReverence extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:HarmonicReverence";
     public static final String NAME = "Harmonic Reverence";

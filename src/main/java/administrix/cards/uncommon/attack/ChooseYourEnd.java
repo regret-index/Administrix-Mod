@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,7 +17,7 @@ import administrix.cards.starter.BlueCloak;
 import administrix.cards.starter.RedCloak;
 import administrix.patches.AbstractCardEnum;
 
-public class ChooseYourEnd extends CustomCard
+public class ChooseYourEnd extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:ChooseYourEnd";
     public static final String NAME = "ChooseYourEnd";

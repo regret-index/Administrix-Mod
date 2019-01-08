@@ -1,5 +1,6 @@
 package administrix.cards.rare.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -18,7 +19,7 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class LifeforceNet extends CustomCard
+public class LifeforceNet extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:LifeforceNet";
     public static final String NAME = "Lifeforce Net";

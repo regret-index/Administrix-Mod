@@ -1,5 +1,6 @@
 package administrix.cards.rare.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.PummelDamageAction;
@@ -21,7 +22,7 @@ import administrix.patches.AbstractCardEnum;
 // Trivia note:
 // the first name for this was "Big Dyke Energy".
 
-public class GirlsDoItBetter extends CustomCard
+public class GirlsDoItBetter extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:GirlsDoItBetter";
     public static final String NAME = "Girls Do It Better";

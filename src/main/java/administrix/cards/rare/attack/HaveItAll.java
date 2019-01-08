@@ -1,5 +1,6 @@
 package administrix.cards.rare.attack;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -17,7 +18,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.AffinityPower;
 
-public class HaveItAll extends CustomCard
+public class HaveItAll extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:HaveItAll";
     public static final String NAME = "Have It All";

@@ -2,6 +2,7 @@ package administrix.cards.common.skill;
 
 import administrix.AdministrixMod;
 
+import administrix.cards.AbstractAdministrixCard;
 import administrix.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -14,7 +15,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 
-public class SyncreticPlunge extends CustomCard
+public class SyncreticPlunge extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:SyncreticPlunge";
     public static final String NAME = "Syncretic Plunge";

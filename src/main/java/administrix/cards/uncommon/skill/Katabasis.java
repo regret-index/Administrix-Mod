@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +15,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.DescentPlusPower;
 
-public class Katabasis extends CustomCard
+public class Katabasis extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Katabasis";
     public static final String NAME = "Katabasis";

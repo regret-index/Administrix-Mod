@@ -1,6 +1,5 @@
 package administrix.cards.common.attack;
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -12,10 +11,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import administrix.AdministrixMod;
+import administrix.cards.AbstractAdministrixCard;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.YangPower;
 
-public class Daybreak extends CustomCard
+public class Daybreak extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Daybreak";
     public static final String NAME = "Daybreak";

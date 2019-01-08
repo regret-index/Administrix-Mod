@@ -160,10 +160,11 @@
   "AdministrixMod:Wilting": {
     "NAME": "Wilting",
     "DESCRIPTIONS": [
-      "Whenever you play a card, take #b",
-      " damage, for #b",
-      " more turns.",
-      " more turns."
+      "For the next #b",
+      " turns, ",
+      "This turn, ",
+      "whenever you play a card, take #b",
+      " damage."
     ]
   },
   "AdministrixMod:Yang": {

@@ -1,5 +1,6 @@
 package administrix.cards.rare.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class AmassedMasks extends CustomCard
+public class AmassedMasks extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:AmassedMasks";
     public static final String NAME = "Amassed Masks";

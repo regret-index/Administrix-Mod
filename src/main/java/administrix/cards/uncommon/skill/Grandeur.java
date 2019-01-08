@@ -1,5 +1,6 @@
 package administrix.cards.uncommon.skill;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,7 +16,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
-public class Grandeur extends CustomCard
+public class Grandeur extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Grandeur";
     public static final String NAME = "Grandeur";

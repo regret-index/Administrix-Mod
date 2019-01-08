@@ -1,5 +1,6 @@
 package administrix.cards.rare.power;
 
+import administrix.cards.AbstractAdministrixCard;
 import administrix.vfx.SpiritFlameEffect;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -16,7 +17,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.StarSwordSoulPower;
 
-public class StarSwordSoul extends CustomCard
+public class StarSwordSoul extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:StarSwordSoul";
     public static final String NAME = "Star Sword Soul";

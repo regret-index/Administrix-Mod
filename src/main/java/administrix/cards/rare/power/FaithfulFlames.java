@@ -1,5 +1,6 @@
 package administrix.cards.rare.power;
 
+import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -14,7 +15,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.FlamesOfFaithPower;
 
-public class FaithfulFlames extends CustomCard
+public class FaithfulFlames extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:FaithfulFlames";
     public static final String NAME = "Faithful Flames";

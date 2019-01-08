@@ -1,5 +1,6 @@
 package administrix.cards.rare.power;
 
+import administrix.cards.AbstractAdministrixCard;
 import administrix.powers.PermanentDrawReduction;
 import administrix.vfx.SpiritFlameEffect;
 import basemod.abstracts.CustomCard;
@@ -19,7 +20,7 @@ import administrix.patches.AbstractCardEnum;
 import administrix.powers.GlamourPlusPower;
 import administrix.powers.GlamourPower;
 
-public class DeathByGlamour extends CustomCard
+public class DeathByGlamour extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:DeathByGlamour";
     public static final String NAME = "Death By Glamour";
