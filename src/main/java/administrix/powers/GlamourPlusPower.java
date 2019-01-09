@@ -23,7 +23,7 @@ public class GlamourPlusPower extends AbstractPower {
         this.amount = amount;
         this.updateDescription();
         this.region48 = ADMIN_POWERS_ATLAS.findRegion("glamour_plus_48");
-        this.region128 = ADMIN_POWERS_ATLAS.findRegion("glamour_plus_128");
+        this.region128 = ADMIN_POWERS_ATLAS.findRegion("glamour_plus");
     }
 
     public void atStartOfTurn()
