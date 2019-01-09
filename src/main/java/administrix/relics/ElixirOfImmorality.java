@@ -28,7 +28,7 @@ public class ElixirOfImmorality
     {
         super(ID, new Texture(AdministrixMod.ELIXIR_OF_IMMORALITY),
               RelicTier.BOSS, LandingSound.MAGICAL);
-        logger.info("initialized");
+        logger.info(ID + " initialized");
     }
 
     @Override

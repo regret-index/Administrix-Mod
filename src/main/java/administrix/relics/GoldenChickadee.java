@@ -31,7 +31,7 @@ public class GoldenChickadee
     {
         super(ID, new Texture(AdministrixMod.GOLDEN_CHICKADEE),
                 RelicTier.UNCOMMON, LandingSound.SOLID);
-        logger.info("initialized");
+        logger.info(ID + " initialized");
     }
 
     @Override

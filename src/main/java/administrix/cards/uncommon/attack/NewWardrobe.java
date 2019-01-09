@@ -83,6 +83,7 @@ public class NewWardrobe extends AbstractAdministrixCard
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
         }
 
+        if (this.upgraded) { difference += 4; }
         this.baseDamage = this.damage = difference;
         applyPowers();
         calculateCardDamage(null);
@@ -135,8 +136,12 @@ public class NewWardrobe extends AbstractAdministrixCard
                         AbstractDungeon.player.getPower(YinPower.POWER_ID).amount : 0;
         int yangAmount = AbstractDungeon.player.hasPower(YangPower.POWER_ID) ?
                          AbstractDungeon.player.getPower(YangPower.POWER_ID).amount : 0;
-        this.damage = this.baseDamage = Math.abs(yinAmount - yangAmount);
+        int difference = Math.abs(yinAmount - yangAmount);
+        if (this.upgraded) { difference += 4; }
+
+        this.damage = this.baseDamage = difference;
         super.applyPowers();
+
         if (this.baseDamage > 0)
         {
             this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
@@ -147,13 +152,12 @@ public class NewWardrobe extends AbstractAdministrixCard
     @Override
     public void onMoveToDiscard()
     {
-        this.rawDescription = DESCRIPTION;
+        if (this.upgraded) {
+            this.rawDescription = (UPGRADE_DESCRIPTION);
+        } else {
+            this.rawDescription = (DESCRIPTION);
+        }
         initializeDescription();
-    }
-
-    @Override
-    public void triggerOnEndOfTurnForPlayingCard() {
-        if (this.upgraded) { this.retain = true; }
     }
 
     public void calculateCardDamage(AbstractMonster mo)
@@ -175,7 +179,6 @@ public class NewWardrobe extends AbstractAdministrixCard
         if (!upgraded)
         {
             this.upgradeName();
-            this.retain = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

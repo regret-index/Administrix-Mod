@@ -39,9 +39,7 @@ public class ConductorRitualBaton
     {
         super(ID, new Texture(AdministrixMod.SHAKU),
                 RelicTier.STARTER, LandingSound.MAGICAL);
-        logger.info("initialized");
-        this.tips.add(new PowerTip((TipHelper.capitalize("transpose")),
-                (String)GameDictionary.keywords.get("transpose")));
+        logger.info(ID + " initialized");
     }
 
     @Override
@@ -62,25 +60,24 @@ public class ConductorRitualBaton
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action)
     {
-        if (card.type == AbstractCard.CardType.ATTACK)
-        {
-            shakuAttackCounter += 1;
-        }
-        else if (card.type == AbstractCard.CardType.SKILL)
-        {
-            shakuSkillCounter += 1;
-        }
-        if (!shakuActivated) {
-            if (shakuAttackCounter == ACTIVATE_COUNT - 1 ||
-                shakuSkillCounter == ACTIVATE_COUNT - 1) {
-                beginLongPulse();
-            } else if (shakuAttackCounter == ACTIVATE_COUNT ||
-                       shakuSkillCounter == ACTIVATE_COUNT) {
-                flash();
-                AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                AbstractDungeon.actionManager.addToBottom(new TransposeAction(1));
-                shakuActivated = true;
-                stopPulse();
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            if (card.type == AbstractCard.CardType.ATTACK) {
+                shakuAttackCounter += 1;
+            } else if (card.type == AbstractCard.CardType.SKILL) {
+                shakuSkillCounter += 1;
+            }
+            if (!shakuActivated) {
+                if (shakuAttackCounter == ACTIVATE_COUNT - 1 ||
+                        shakuSkillCounter == ACTIVATE_COUNT - 1) {
+                    beginLongPulse();
+                } else if (shakuAttackCounter == ACTIVATE_COUNT ||
+                        shakuSkillCounter == ACTIVATE_COUNT) {
+                    flash();
+                    AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                    AbstractDungeon.actionManager.addToBottom(new TransposeAction(1));
+                    shakuActivated = true;
+                    stopPulse();
+                }
             }
         }
     }
@@ -97,7 +94,6 @@ public class ConductorRitualBaton
                 FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(this.counter), this.currentX + 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, Color.WHITE);
             }
         }
-
     }
     */
 

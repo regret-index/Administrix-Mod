@@ -24,7 +24,7 @@ public class AlphaSkillCounter
     {
         super(ID, new Texture(AdministrixMod.SKILL_COUNTER),
                 RelicTier.SPECIAL, LandingSound.MAGICAL);
-        logger.info("initialized");
+        logger.info(ID + " initialized");
     }
 
     @Override

@@ -16,7 +16,7 @@
 
 	"wilting": {
 		"NAMES": [ "wilting" ],
-		"DESCRIPTION": "Whenever you play a card, take #b1 damage."
+		"DESCRIPTION": "Whenever you play a card, take #b1 (blockable) damage."
 	},
 
 	"duality": {

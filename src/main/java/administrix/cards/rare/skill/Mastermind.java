@@ -52,7 +52,9 @@ public class Mastermind extends AbstractAdministrixCard
     {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.RED), 0.4F));
 
-        AbstractDungeon.actionManager.addToBottom(new TransposeAction(this.magicNumber));
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            AbstractDungeon.actionManager.addToBottom(new TransposeAction(this.magicNumber));
+        }
 
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
 

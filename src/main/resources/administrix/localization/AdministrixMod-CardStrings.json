@@ -63,7 +63,7 @@
   "AdministrixMod:NewWardrobe": {
     "NAME": "New Wardrobe",
     "DESCRIPTION": "Swap your Yin & Yang. NL Deal damage to all enemies equal to the difference between them.",
-    "UPGRADE_DESCRIPTION": "Swap your Yang & Yin. NL Deal damage to all enemies equal to the difference between them. NL Retain.",
+    "UPGRADE_DESCRIPTION": "Swap your Yang & Yin. NL Deal damage to all enemies equal to 4 + the difference between them.",
     "EXTENDED_DESCRIPTION": [
       " (Deal !D! damage)."
     ]

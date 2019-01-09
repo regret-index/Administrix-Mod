@@ -27,7 +27,7 @@ public class DiversionaryTactic extends AbstractAdministrixCard
     private static final CardRarity rarity = CardRarity.COMMON;
     private static final CardTarget target = CardTarget.ENEMY;
     private static final CardType type = CardType.ATTACK;
-    private static final int ATTACK_DMG = 5;
+    private static final int ATTACK_DMG = 7;
     private static final int UPGRADE_ATTACK_DMG = 3;
     private static final int DISCARD_AMOUNT = 1;
     private static final int RETAIN_TIME = 1;
