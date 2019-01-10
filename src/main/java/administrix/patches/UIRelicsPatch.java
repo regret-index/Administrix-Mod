@@ -30,14 +30,19 @@ public class UIRelicsPatch {
 
         if (AbstractDungeon.player instanceof Administrix)
         {
-            RelicLibrary.getRelic(AlphaAttackCounter.ID).makeCopy().instantObtain(AbstractDungeon.player, 1, false);
-            RelicLibrary.getRelic(AlphaSkillCounter.ID).makeCopy().instantObtain(AbstractDungeon.player, 2, false);
+            // Only add the attack/skill counter 'relics' if they haven't somehow been added already
+            // (This can apparently cause issues with other mods that rearrange the order of relics)
+            if (!AbstractDungeon.player.hasRelic(AlphaAttackCounter.ID))
+            {
+                RelicLibrary.getRelic(AlphaAttackCounter.ID).makeCopy().instantObtain(AbstractDungeon.player, 1, false);
+                RelicLibrary.getRelic(AlphaSkillCounter.ID).makeCopy().instantObtain(AbstractDungeon.player, 2, false);
 
-            AbstractDungeon.relicsToRemoveOnStart.add(AlphaAttackCounter.ID);
-            AbstractDungeon.relicsToRemoveOnStart.add(AlphaSkillCounter.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(AlphaAttackCounter.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(AlphaSkillCounter.ID);
 
-            UnlockTracker.markRelicAsSeen(AlphaAttackCounter.ID);
-            UnlockTracker.markRelicAsSeen(AlphaSkillCounter.ID);
+                UnlockTracker.markRelicAsSeen(AlphaAttackCounter.ID);
+                UnlockTracker.markRelicAsSeen(AlphaSkillCounter.ID);
+            }
         }
     }
 
