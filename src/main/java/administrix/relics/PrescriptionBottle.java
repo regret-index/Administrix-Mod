@@ -29,7 +29,7 @@ public class PrescriptionBottle
     {
         super(ID, new Texture(AdministrixMod.PRESCRIPTION_BOTTLE),
                 RelicTier.COMMON, LandingSound.SOLID);
-        logger.info("initialized");
+        logger.info(ID + " initialized");
     }
 
     @Override

@@ -51,21 +51,20 @@ public class SeventeenArticleLaser extends AbstractAdministrixCard
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LightningEffect(m.drawX, m.drawY), 0.05F));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
-        AbstractDungeon.actionManager.addToBottom(new TransposeAction(TRANSPOSE_AMOUNT));
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            AbstractDungeon.actionManager.addToBottom(new TransposeAction(TRANSPOSE_AMOUNT));
 
-        if (this.upgraded) {
-            int yinAmount = p.hasPower(YinPower.POWER_ID) ?
-                            p.getPower(YinPower.POWER_ID).amount : 0;
-            int yangAmount = p.hasPower(YangPower.POWER_ID) ?
-                             p.getPower(YangPower.POWER_ID).amount : 0;
+            if (this.upgraded) {
+                int yinAmount = p.hasPower(YinPower.POWER_ID) ?
+                                p.getPower(YinPower.POWER_ID).amount : 0;
+                int yangAmount = p.hasPower(YangPower.POWER_ID) ?
+                                 p.getPower(YangPower.POWER_ID).amount : 0;
 
-            if (yinAmount > yangAmount)
-            {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YangPower(p, this.magicNumber), this.magicNumber));
-            }
-            else if (yangAmount > yinAmount)
-            {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YinPower(p, this.magicNumber), this.magicNumber));
+                if (yinAmount > yangAmount) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YangPower(p, this.magicNumber), this.magicNumber));
+                } else if (yangAmount > yinAmount) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YinPower(p, this.magicNumber), this.magicNumber));
+                }
             }
         }
     }

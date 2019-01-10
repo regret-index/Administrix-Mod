@@ -24,7 +24,7 @@ public class AlphaAttackCounter
     {
         super(ID, new Texture(AdministrixMod.ATTACK_COUNTER),
                 RelicTier.SPECIAL, LandingSound.MAGICAL);
-        logger.info("initialized");
+        logger.info(ID + " initialized");
     }
 
     @Override

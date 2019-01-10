@@ -1,0 +1,16 @@
+v0.8.2
+ * Changelog started.
+ * Bug fixes: Transpose activating post-combat clear,
+   graphics crashes with sufficiently strong New Wardrobes.
+ * Phrasing and typos: Wilting's description mentions block,
+   Baton spells "Transpose" properly.
+ * Diversion Tactic(+): 5 -> 7 damage (8 -> 10 damage).
+ * New Wardrobe+: Gains Retain -> Gains an extra flat 4 damage.
+
+v0.8.1
+ * Compatibility with BaseMod fixed.
+ * Graphical fixes: Convergence+ Icon
+ * Armillary Sphere: Plot-block was fixed up.
+
+v0.8.0
+ * First official release.
