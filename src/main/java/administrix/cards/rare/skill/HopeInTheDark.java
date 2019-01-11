@@ -75,7 +75,7 @@ public class HopeInTheDark extends AbstractAdministrixCard
         int yangAmount = AbstractDungeon.player.hasPower(YangPower.POWER_ID) ?
                          AbstractDungeon.player.getPower(YangPower.POWER_ID).amount : 0;
         int difference = yinAmount - yangAmount;
-        double multiplier = (this.upgraded) ? 1.0 : 1.5;
+        double multiplier = (this.upgraded) ? 1.5 : 1.0;
 
         this.block = this.baseBlock = (int) Math.floor((difference > 0) ? difference * multiplier : 0);
         super.applyPowers();

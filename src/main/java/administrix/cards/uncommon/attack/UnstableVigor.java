@@ -27,8 +27,8 @@ public class UnstableVigor extends AbstractAdministrixCard
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.ENEMY;
     private static final CardType type = CardType.ATTACK;
-    private static final int ATTACK_DMG = 11;
-    private static final int UPGRADE_ATTACK_DMG = 1;
+    private static final int ATTACK_DMG = 12;
+    private static final int UPGRADE_ATTACK_DMG = 2;
     private static final int STRENGTH_AMOUNT = 3;
     private static final int UPGRADE_STRENGTH_AMOUNT = 1;
     private static final int WILTING_AMOUNT = 1;
@@ -47,9 +47,9 @@ public class UnstableVigor extends AbstractAdministrixCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WiltingPower(p, WILTING_AMOUNT, false), WILTING_AMOUNT));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WiltingPower(p, WILTING_AMOUNT, false), WILTING_AMOUNT));
     }
 
     @Override

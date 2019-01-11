@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
+import administrix.relics.AlphaAttackCounter;
+import administrix.relics.AlphaSkillCounter;
 
 import static administrix.AdministrixMod.ADMIN_POWERS_ATLAS;
 
@@ -37,6 +39,7 @@ public class DualityPower extends AbstractPower {
         skillCount = 0;
     }
 
+    public void onAfterCardPlayed(AbstractCard c) { updateDescription(); }
 
     public void atEndOfRound() {
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
@@ -63,10 +66,10 @@ public class DualityPower extends AbstractPower {
 
     public void updateDescription()
     {
-        attackCount = (AbstractDungeon.player.hasRelic("AlphaAttackCounter")) ?
-                       AbstractDungeon.player.getRelic("AlphaAttackCounter").counter : 0;
-        skillCount = (AbstractDungeon.player.hasRelic("AlphaSkillCounter")) ?
-                      AbstractDungeon.player.getRelic("AlphaSkillCounter").counter : 0;
+        attackCount = (AbstractDungeon.player.hasRelic(AlphaAttackCounter.ID)) ?
+                       AbstractDungeon.player.getRelic(AlphaAttackCounter.ID).counter : 0;
+        skillCount = (AbstractDungeon.player.hasRelic(AlphaSkillCounter.ID)) ?
+                      AbstractDungeon.player.getRelic(AlphaSkillCounter.ID).counter : 0;
 
         if (attackCount == 1 && skillCount == 1)
         {

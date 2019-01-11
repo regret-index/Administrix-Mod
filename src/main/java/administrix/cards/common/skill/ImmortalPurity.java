@@ -72,7 +72,7 @@ public class ImmortalPurity extends AbstractAdministrixCard
         this.upgradeBlock(UPGRADE_BLOCK_AMOUNT);
         this.timesUpgraded += 1;
         this.upgraded = true;
-        this.name = (NAME + "+" + this.timesUpgraded);
+        this.name = (CARD_STRINGS.NAME + "+" + this.timesUpgraded);
         initializeTitle();
         this.rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();

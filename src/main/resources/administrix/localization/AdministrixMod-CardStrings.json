@@ -83,7 +83,7 @@
   },
   "AdministrixMod:UnstableVigor": {
     "NAME": "Unstable Vigor",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Wilting. NL Gain !M! Strength. NL Lose !M! Strength at end of turn."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Strength. NL Lose !M! Strength at end of turn. NL Gain 1 Wilting."
   },
   "AdministrixMod:WickedPunishment": {
     "NAME": "Wicked Punishment",
@@ -315,8 +315,8 @@
   },
   "AdministrixMod:Mastermind": {
     "NAME": "Mastermind",
-    "DESCRIPTION": "Transpose one. NL Double all Plot effects this turn and next turn. NL Draw 1 less card next turn. NL Exhaust. NL Retain.",
-    "UPGRADE_DESCRIPTION": "Transpose two. NL Double all Plot effects this turn and next turn. NL Draw 1 less card next turn. NL Exhaust. NL Retain."
+    "DESCRIPTION": "Transpose one. NL Double all Plot effects this turn and next turn. NL Draw 1 less card next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Transpose two. NL Double all Plot effects this turn and next turn. NL Draw 1 less card next turn. NL Exhaust."
   },
   "AdministrixMod:TenDesires": {
     "NAME": "Ten Desires",

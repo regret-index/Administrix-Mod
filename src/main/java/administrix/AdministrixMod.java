@@ -21,6 +21,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.audio.Sfx;
 import com.megacrit.cardcrawl.audio.SoundMaster;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -51,7 +52,6 @@ public class AdministrixMod implements PostInitializeSubscriber,
 
     private static final Color ADMIN_GOLD = CardHelper.getColor(250.0f, 205.0f, 25.0f);
 
-    public static Gson gson;
     private static Map<String, Keyword> keywords;
 
     // Misc stuff
@@ -65,6 +65,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String RELIC_STRINGS = LOCALIZATION_PATH + "AdministrixMod-RelicStrings.json";
     public static final String UI_STRINGS = LOCALIZATION_PATH + "AdministrixMod-UIStrings.json";
     public static final String POTION_STRINGS = LOCALIZATION_PATH + "AdministrixMod-PotionStrings.json";
+    public static final String CHARACTER_STRINGS = LOCALIZATION_PATH + "AdministrixMod-CharacterStrings.json";
 
     // Asset backgrounds
     private static final String ATTACK_LICH_GOLD = IMG_PATH + "512/bg_attack_admin_gold_512.png";
@@ -398,6 +399,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
         logger.info("Adding in the Administrix character.");
 
         logger.info("add " + CharacterEnum.TheAdministrix.toString());
+
         BaseMod.addCharacter(new Administrix(CardCrawlGame.playerName), ADMINISTRIX_BUTTON,
                 ADMINISTRIX_PORTRAIT, CharacterEnum.TheAdministrix);
 
@@ -433,6 +435,11 @@ public class AdministrixMod implements PostInitializeSubscriber,
                                String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
         logger.info("Potion strings read and loaded.");
+
+        String characterStrings = Gdx.files.internal(CHARACTER_STRINGS).readString(
+                                  String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(CharacterStrings.class, characterStrings);
+        logger.info("Character strings read and loaded.");
 
         logger.info("Finished with strings.");
     }

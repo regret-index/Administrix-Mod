@@ -31,7 +31,7 @@ public class Mastermind extends AbstractAdministrixCard
     private static final CardRarity rarity = CardRarity.RARE;
     private static final CardTarget target = CardTarget.SELF;
     private static final CardType type = CardType.SKILL;
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int TRANSPOSE_AMOUNT = 1;
     private static final int UPGRADE_TRANSPOSE_AMOUNT = 1;
     private static final int SCHEMER_AMOUNT = 2;
@@ -44,7 +44,6 @@ public class Mastermind extends AbstractAdministrixCard
                 rarity, target);
         this.magicNumber = this.baseMagicNumber = TRANSPOSE_AMOUNT;
         this.exhaust = true;
-        this.retain = true;
     }
 
     @Override
@@ -68,11 +67,6 @@ public class Mastermind extends AbstractAdministrixCard
     @Override
     public AbstractCard makeCopy() {
         return new Mastermind();
-    }
-
-    @Override
-    public void triggerOnEndOfTurnForPlayingCard() {
-        this.retain = true;
     }
 
     @Override

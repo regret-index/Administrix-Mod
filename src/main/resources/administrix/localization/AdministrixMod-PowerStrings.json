@@ -56,7 +56,10 @@
     "DESCRIPTIONS": [
       "Every time you play ",
       " #yAttacks, gain #b",
-      " #yThorns."
+      " #yThorns.",
+      " NL (Activates after #b",
+      " more Attacks.)",
+      " more Attack.)"
     ]
   },
   "AdministrixMod:Glamour": {
@@ -95,7 +98,10 @@
     "DESCRIPTIONS": [
       "Every time you play ",
       " #yAttacks, gain #b",
-      " #yPlated #yArmor."
+      " #yPlated #yArmor. ",
+      " NL (Activates after #b",
+      " more Attacks.)",
+      " more Attack.)"
     ]
   },
   "AdministrixMod:MastermindPower": {

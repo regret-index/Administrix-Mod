@@ -50,12 +50,20 @@ public class FlamesOfFaithPower extends AbstractPower {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, this.amount), this.amount));
             attackCounter = 0;
         }
+        updateDescription();
     }
 
     public void updateDescription()
     {
-        this.description = (DESCRIPTIONS[0] + THRESHOLD +
-                            DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        if (THRESHOLD - attackCounter == 1) {
+            this.description = (DESCRIPTIONS[0] + THRESHOLD + DESCRIPTIONS[1] +
+                               this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] +
+                               (THRESHOLD - attackCounter)) + DESCRIPTIONS[5];
+        } else {
+            this.description = (DESCRIPTIONS[0] + THRESHOLD + DESCRIPTIONS[1] +
+                               this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] +
+                               (THRESHOLD - attackCounter)) + DESCRIPTIONS[4];
+        }
     }
 
 }

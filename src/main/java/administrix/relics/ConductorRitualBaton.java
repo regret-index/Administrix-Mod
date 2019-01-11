@@ -68,10 +68,10 @@ public class ConductorRitualBaton
             }
             if (!shakuActivated) {
                 if (shakuAttackCounter == ACTIVATE_COUNT - 1 ||
-                        shakuSkillCounter == ACTIVATE_COUNT - 1) {
+                    shakuSkillCounter == ACTIVATE_COUNT - 1) {
                     beginLongPulse();
-                } else if (shakuAttackCounter == ACTIVATE_COUNT ||
-                        shakuSkillCounter == ACTIVATE_COUNT) {
+                } else if (shakuAttackCounter >= ACTIVATE_COUNT ||
+                           shakuSkillCounter >= ACTIVATE_COUNT) {
                     flash();
                     AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                     AbstractDungeon.actionManager.addToBottom(new TransposeAction(1));

@@ -74,7 +74,7 @@ public class ImmortalGrace extends AbstractAdministrixCard
         this.upgradeDamage(UPGRADE_ATTACK_DMG);
         this.timesUpgraded += 1;
         this.upgraded = true;
-        this.name = (NAME + "+" + this.timesUpgraded);
+        this.name = (CARD_STRINGS.NAME + "+" + this.timesUpgraded);
         initializeTitle();
         this.rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();

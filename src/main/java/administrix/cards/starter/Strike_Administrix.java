@@ -27,7 +27,8 @@ public class Strike_Administrix extends AbstractAdministrixCard
 
 
     public Strike_Administrix() {
-        super(ID, NAME, AdministrixMod.STRIKE_AX, COST, CARD_STRINGS.DESCRIPTION,
+        super(ID, CARD_STRINGS.NAME, AdministrixMod.STRIKE_AX, COST,
+                CARD_STRINGS.DESCRIPTION,
                 AbstractCard.CardType.ATTACK,
                 AbstractCardEnum.LichGold, rarity,
                 target);

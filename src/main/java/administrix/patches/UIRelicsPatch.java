@@ -34,8 +34,8 @@ public class UIRelicsPatch {
             // (This can apparently cause issues with other mods that rearrange the order of relics)
             if (!AbstractDungeon.player.hasRelic(AlphaAttackCounter.ID))
             {
-                RelicLibrary.getRelic(AlphaAttackCounter.ID).makeCopy().instantObtain(AbstractDungeon.player, 1, false);
-                RelicLibrary.getRelic(AlphaSkillCounter.ID).makeCopy().instantObtain(AbstractDungeon.player, 2, false);
+                RelicLibrary.getRelic(AlphaAttackCounter.ID).makeCopy().instantObtain(AbstractDungeon.player, AbstractDungeon.player.relics.size(), false);
+                RelicLibrary.getRelic(AlphaSkillCounter.ID).makeCopy().instantObtain(AbstractDungeon.player, AbstractDungeon.player.relics.size(), false);
 
                 AbstractDungeon.relicsToRemoveOnStart.add(AlphaAttackCounter.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(AlphaSkillCounter.ID);

@@ -22,7 +22,7 @@ public class Grandeur extends AbstractAdministrixCard
     public static final String NAME = "Grandeur";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 0;
-    private static final int STAT_AMOUNT = 1;
+    private static final int STAT_AMOUNT = 2;
     private static final int DRAW_AMOUNT = 1;
     private static final int UPGRADE_STAT_AMOUNT = 1;
     private static final CardRarity rarity = CardRarity.UNCOMMON;

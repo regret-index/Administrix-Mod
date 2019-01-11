@@ -1,16 +1,43 @@
-v0.8.2
+== v0.8.3 ==
+ - Bug fixes
+  * Attack / Skill Counter relic addition no longer overrides
+    relics when either is repositioned with relic sorter mods.
+ - Balance
+  * Unstable Vigor now gives Wilting at the end,
+    so a single source of Artifact will keep the Strength
+    (rather than just prevent the Wilting).
+  * Unstable Vigor(+): 11 -> 12 (12 -> 14) damage.
+  * Mastermind(+) both lose Retain, but now both cost 1.
+  * Grandeur(+): 1/1 -> 2/2 Strength/Dexterity (2/2 -> 3/3 Strength / Dexterity)
+ - Cards
+ * Hope In The Dark and its upgraded version no longer calculate off the
+   other version's multiplier in the description.
+ * Duality now properly keeps track of Attacks and Skills played during the
+   turn in its power tooltip.
+ * Wife's Lightning and Faithful Flames now keep track of how many Attacks
+   they'll take before they activate.
+.
+Localization
+ * Strike, Defend, Attunement Tonic, the three Immortal cards,
+   Character select screen, Heart event, and Vampires event text all adjusted
+   to support future localization.
+
+== v0.8.2 ==
  * Changelog started.
  * Bug fixes: Transpose activating post-combat clear,
-   graphics crashes with sufficiently strong New Wardrobes.
+   graphics crashes with sufficiently strong New Wardrobes,
+   on playing Death By Glamour+.
  * Phrasing and typos: Wilting's description mentions block,
    Baton spells "Transpose" properly.
- * Diversion Tactic(+): 5 -> 7 damage (8 -> 10 damage).
- * New Wardrobe+: Gains Retain -> Gains an extra flat 4 damage.
 
-v0.8.1
+ * Diversion Tactic: 5 -> 7 damage. Diversion Tactic+: 8 damage -> 10 damage.
+ * New Wardrobe+: Loses Retain, instead does an extra flat 4 damage.
+
+== v0.8.1 ==
  * Compatibility with BaseMod fixed.
  * Graphical fixes: Convergence+ Icon
- * Armillary Sphere: Plot-block was fixed up.
 
-v0.8.0
+ * Armillary Sphere's plot-block fixed up.
+
+=== v0.8.0 ===
  * First official release.

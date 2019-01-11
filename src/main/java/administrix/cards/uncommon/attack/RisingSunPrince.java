@@ -62,7 +62,7 @@ public class RisingSunPrince extends AbstractAdministrixCard
         for (int i = 0; i < mastermindCheck(); i++) {
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new StrengthPower(mo, -this.magicNumber), -this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-                if (!mo.hasPower("Artifact")) {
+                if (mo != null && !mo.hasPower("Artifact")) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new GainStrengthPower(mo, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
                 }
             }

@@ -24,7 +24,8 @@ public class Defend_Administrix extends AbstractAdministrixCard
     private static final CardTarget target = CardTarget.SELF;
 
     public Defend_Administrix() {
-        super(ID, NAME, AdministrixMod.DEFEND_AX, COST, CARD_STRINGS.DESCRIPTION,
+        super(ID, CARD_STRINGS.NAME, AdministrixMod.DEFEND_AX, COST,
+                CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.LichGold,
                 rarity, target);
         this.tags.add(BaseModCardTags.BASIC_DEFEND);

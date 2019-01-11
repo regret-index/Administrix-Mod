@@ -33,6 +33,7 @@ import administrix.relics.*;
 import basemod.abstracts.CustomPlayer;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
@@ -44,6 +45,16 @@ import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 public class Administrix extends CustomPlayer{
 
     public static final int ENERGY_PER_TURN = 3;
+
+    private static final CharacterStrings charStrings;
+    public static final String NAME;
+    public static final String DESCRIPTION;
+
+    static {
+        charStrings = CardCrawlGame.languagePack.getCharacterString("Administrix");
+        NAME = charStrings.NAMES[0];
+        DESCRIPTION = charStrings.TEXT[0];
+    }
 
     public static final String CHARACTER_IMG_PATH = AdministrixMod.IMG_PATH + "char/";
     public static final String AX_SHOULDER_2 =  CHARACTER_IMG_PATH + "miko_shoulder2.png";
@@ -105,7 +116,7 @@ public class Administrix extends CustomPlayer{
 
     @Override
     public String getLocalizedCharacterName() {
-        return "The Administrix";
+        return NAME;
     }
 
     @Override
@@ -181,8 +192,7 @@ public class Administrix extends CustomPlayer{
 //    }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo("The Administrix",
-                "A lich princess of the rising sun awakens in strange lands once more. NL She is a master manipulator of the Tao and her deck.",
+        return new CharSelectInfo(NAME, DESCRIPTION,
                 STARTING_HP, MAX_HP,0, STARTING_GOLD, HAND_SIZE,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
@@ -234,9 +244,11 @@ public class Administrix extends CustomPlayer{
         return "STARRY-BEAT";
     }
 
+
+
     @Override
     public String getSpireHeartText() {
-        return "NL Your sword and soul shine as one...";
+        return charStrings.TEXT[1];
     }
 
     @Override
@@ -256,6 +268,6 @@ public class Administrix extends CustomPlayer{
 
     @Override
     public String getVampireText() {
-        return "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us,~ ~undying~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~";
+        return charStrings.TEXT[2];
     }
 }
