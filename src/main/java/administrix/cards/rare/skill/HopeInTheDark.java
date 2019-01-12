@@ -57,6 +57,7 @@ public class HopeInTheDark extends AbstractAdministrixCard
         double multiplier = (this.upgraded) ? 1.5 : 1.0;
 
         this.block = this.baseBlock = (int) Math.floor((difference > 0) ? difference * multiplier : 0);
+        super.applyPowers();
 
         if (difference > 0) {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.2F));

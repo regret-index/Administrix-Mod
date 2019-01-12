@@ -14,7 +14,7 @@
   },
   "AdministrixMod:CrackingPangu": {
     "NAME": "Cracking Pangu",
-    "DESCRIPTION": "Deal !D! damage. NL Every three times you play any Cracking Pangu(+) this combat, remove all Debuffs."
+    "DESCRIPTION": "Deal !D! damage. NL Every three times you play any Cracking Pangu(+) this combat, remove all of your Debuffs."
   },
   "AdministrixMod:DiversionaryTactic": {
     "NAME": "Diversion Tactic",
@@ -27,7 +27,7 @@
   "AdministrixMod:ImmortalGrace": {
     "NAME": "Immortal Grace",
     "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your hand for the rest of this combat. [#cc99ff]}[]",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your deck for the rest of this combat. [#cc99ff]}[]"
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL [#cc99ff]{[] Plot: Upgrade all of your Immortal cards for the rest of this combat. [#cc99ff]}[]"
   },
   "AdministrixMod:PlateOfAntiquity": {
     "NAME": "Plate Of Antiquity",
@@ -40,7 +40,7 @@
   },
   "AdministrixMod:RegentEdict": {
     "NAME": "Regent's Edict",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play any Regent's Edict(+) three times this combat, steal the enemy's Strength and Exhaust this card."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play any Regent's Edict(+) three times this combat, steal ALL of the enemy's Strength and Exhaust this card."
   },
   "AdministrixMod:ShadowPlay": {
     "NAME": "Shadow Play",
@@ -105,7 +105,7 @@
   },
   "AdministrixMod:NewbornDivinity": {
     "NAME": "Newborn Divinity",
-    "DESCRIPTION": "Ethereal. NL Deal damage equal to !M! times the amount of Yang you have more of than Yin. NL Remove all Debuffs.",
+    "DESCRIPTION": "Ethereal. NL Deal damage equal to !M! times the amount of Yang you have more of than Yin. NL Remove all of your Debuffs.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
@@ -143,7 +143,7 @@
   "AdministrixMod:ImmortalPurity": {
     "NAME": "Immortal Purity",
     "DESCRIPTION": "Gain !B! Block. NL Discard 1 card. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your hand for the rest of this combat. [#cc99ff]}[]",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Discard 1 card. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your deck for the rest of this combat. [#cc99ff]}[]"
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Discard 1 card. NL [#cc99ff]{[] Plot: Upgrade all of your Immortal cards for the rest of this combat. [#cc99ff]}[]"
   },
   "AdministrixMod:LightOfYourLife": {
     "NAME": "Light of Your Life",
@@ -298,8 +298,8 @@
   },
   "AdministrixMod:HopeInTheDark": {
     "NAME": "Hope In The Dark",
-    "DESCRIPTION": "Ethereal. NL Gain Block equal to the amount of Yin you have more of than Yang. NL Remove all Debuffs.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain Block equal to one and a half times the amount of Yin you have more of than Yang. NL Remove all Debuffs.",
+    "DESCRIPTION": "Ethereal. NL Gain Block equal to the amount of Yin you have more of than Yang. NL Remove all of your Debuffs.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain Block equal to one and a half times the amount of Yin you have more of than Yang, rounded down. NL Remove all of your Debuffs.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gain !B! Block.)"
     ]
@@ -341,7 +341,7 @@
   "AdministrixMod:ImmortalClarity": {
     "NAME": "Immortal Clarity",
     "DESCRIPTION": "Choose a card. NL Add a copy of that card into your hand next turn. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your hand for the rest of this combat. [#cc99ff]}[]",
-    "UPGRADE_DESCRIPTION": "Choose a card. NL Add a copy of that card into your hand each turn for the next !M! turns. NL [#cc99ff]{[] Plot: Upgrade all Immortal cards in your deck for the rest of this combat. [#cc99ff]}[]"
+    "UPGRADE_DESCRIPTION": "Choose a card. NL Add a copy of that card into your hand each turn for the next !M! turns. NL [#cc99ff]{[] Plot: Upgrade all of your Immortal cards for the rest of this combat. [#cc99ff]}[]"
   },
   "AdministrixMod:StarSwordSoul": {
     "NAME": "Star Sword Soul",

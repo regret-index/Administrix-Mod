@@ -2,7 +2,7 @@ The _Administrix_, the lich princess of the rising sun,
 is inspired by Toyosatomimi no Miko (豊聡耳 神子),
 a character from the _Touhou Project_ series.
 
-Latest releases can be found [here](https://api.github.com/repos/regret-index/Administrix-Mod/releases/latest).
+Latest releases can be found [here](https://github.com/regret-index/Administrix-Mod/releases). The versions changelog can be found [here](https://github.com/regret-index/Administrix-Mod/blob/master/changelog.txt).
 
 --== Credits ==--
 ======
@@ -38,7 +38,8 @@ follows:
 --== Summation ==--
 ======
 
-This card set focuses on themes of duality, synergy, and deck manipulation:
+This tricky card set focuses on themes of duality, synergy, and deck 
+manipulation:
 
  * cards with effects on both drawing and discarding them,
  * many sources of Artifact to grasp onto transient power
@@ -137,20 +138,27 @@ to each release, for those who wish to spoil themselves completely.)
  * Playing cards too quickly can sometimes have tooltips or targetting arrows
    mess up the Transpose interface.
  * Both Blessings lack part of the Plot card indicator.
+ * Schism+ and Newborn Divinity+ squish their descriptions against a fraction
+   of the card text box.
+ * The in-game character statistics page prints a blank listing for the 
+   character name.
 
 --== Full Release Plans ==--
 ======
 
+ * Quick mechanics reference + tutorial guide.
  * Balance adjustments as according to feedback.
- * The remaining 10/80 cards (more downsides? more commons? more quantity-checks
-   of Yin / Yang?), 6/10 relics for a full character set (boss ones...), and
-   another potion (a Plot focus?)
+ * The remaining 10/80 cards (more pure-value commons and supports for 
+   muddled Y / Y decks, alongside lingering concepts) 7/11 relics for a full 
+   character set (boss ones...), and another potion (a Plot focus?)
  * A custom UI panel, constantly depicting card types played for Duality
    (instead of the current placeholder relic-based UI) plus tracking Yin & Yang
    in a fashion seperated from Miko's endless power stacks.
- * Further effects improvements. Character select screen, Wuji, some self-debuff
-   cards, and the plainer Rare cards are all intended targets. Some secret
-   effects against bosses, too, perhaps. 
+ * Further effects improvements. Character animation, the character select 
+   screen, Wuji, some self-debuff cards, and the plainer Rare cards are all 
+   intended targets. Some secret effects against bosses, too, perhaps.
+ * A Simplified Chinese Translation has been offered up, and is being readied
+   for.
 
 ...
 

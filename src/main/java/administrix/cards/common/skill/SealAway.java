@@ -23,7 +23,7 @@ public class SealAway extends AbstractAdministrixCard
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 1;
     private static final int DRAW_AMOUNT = 2;
-    private static final int UPGRADE_DRAW_AMOUNT = 1;
+    private static final int UPGRADE_DRAW_AMOUNT = 2;
     private static final CardRarity rarity = CardRarity.COMMON;
     private static final CardTarget target = CardTarget.SELF;
 

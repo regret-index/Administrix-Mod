@@ -1,3 +1,21 @@
+== v0.8.4b ==
+ - Bug fixes
+  * Conductor's Ritual Baton now activates as it should on playing 3 of one, 3
+    of another, then 1 of the original card type.
+  * Hope In The Dark(+) properly applies Frail and Dexterity to its base effect.
+  * Mastermind's power tooltip is fixed for having more than 2 stacks of it.
+  * Cast Off Regrets now triggers properly with Quiet Conspiracy's discard.
+ - Balance
+  * Seal Away+: Draws 3 -> 4 cards.
+ - Effects
+  * Mastermind now has a blue border, not a red one, to avoid associations
+    with taking low-HP damage.
+ - Text
+  * Upgraded Immortal cards have their Plot effects rephrased.
+  * Regent's Edict emphasizes that it steals _all_ of the enemy's strength.
+  * Cracking Pangu, Newborn Divinity, and Hope In The Dark all emphasize that
+    it removes the user's debuffs, and not some target's.
+
 == v0.8.3 ==
  - Bug fixes
   * Attack / Skill Counter relic addition no longer overrides
@@ -10,17 +28,16 @@
   * Mastermind(+) both lose Retain, but now both cost 1.
   * Grandeur(+): 1/1 -> 2/2 Strength/Dexterity (2/2 -> 3/3 Strength / Dexterity)
  - Cards
- * Hope In The Dark and its upgraded version no longer calculate off the
-   other version's multiplier in the description.
- * Duality now properly keeps track of Attacks and Skills played during the
-   turn in its power tooltip.
- * Wife's Lightning and Faithful Flames now keep track of how many Attacks
-   they'll take before they activate.
-.
-Localization
- * Strike, Defend, Attunement Tonic, the three Immortal cards,
-   Character select screen, Heart event, and Vampires event text all adjusted
-   to support future localization.
+  * Hope In The Dark and its upgraded version no longer calculate off the
+    other version's multiplier in the description.
+  * Duality now properly keeps track of Attacks and Skills played during the
+    turn in its power tooltip.
+  * Wife's Lightning and Faithful Flames now keep track of how many Attacks
+    they'll take before they activate.
+ - Text
+  * Strike, Defend, Attunement Tonic, the three Immortal cards,
+    Character select screen, Heart event, and Vampires event text all adjusted
+    to support future localization.
 
 == v0.8.2 ==
  * Changelog started.

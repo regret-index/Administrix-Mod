@@ -6,7 +6,7 @@
     <!-- Change These to match your mod -->
     <groupId>StsMod</groupId>
     <artifactId>TheAdministrix</artifactId>
-    <version>0.8.3</version>
+    <version>0.8.4</version>
     <packaging>jar</packaging>
     <name>NoMikoMod</name>
     <description>Slay the Spire Mod.</description>

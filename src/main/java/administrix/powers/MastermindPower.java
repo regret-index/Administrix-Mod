@@ -14,7 +14,7 @@ import static administrix.AdministrixMod.ADMIN_POWERS_ATLAS;
 
 // This effect doubles Plot effects.
 // While a patch like as exists for Moulting would be reasonable,
-// for the first release a function check for AbstractAdministrixCard
+// for the first releases a function check for AbstractAdministrixCard
 // will serve until later clean-up.
 
 public class MastermindPower extends AbstractPower {
@@ -39,8 +39,8 @@ public class MastermindPower extends AbstractPower {
         } else if (this.amount == 2) {
             this.description = (DESCRIPTIONS[0] + DESCRIPTIONS[2]);
         } else {
-            this.description = (DESCRIPTIONS[0] + this.amount +
-                                DESCRIPTIONS[3] + DESCRIPTIONS[4]);
+            this.description = (DESCRIPTIONS[0] + DESCRIPTIONS[3] +
+                                this.amount + DESCRIPTIONS[4]);
         }
     }
 

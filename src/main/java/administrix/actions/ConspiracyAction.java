@@ -39,8 +39,7 @@ public class ConspiracyAction
             }
             tmpGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (int i = 0; i < Math.min(this.amount, AbstractDungeon.player.drawPile.size()); i++) {
-                tmpGroup.addToTop(
-                        (AbstractCard)AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
+                tmpGroup.addToTop((AbstractCard)AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
             }
             AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, true, TEXT[0]);
         }
@@ -49,6 +48,11 @@ public class ConspiracyAction
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                 AbstractDungeon.player.drawPile.moveToDiscardPile(c);
                 c.triggerOnManualDiscard();
+                // For some reason, other uses of discards are fine with
+                // MoultingPatch's locator, but this needs a forced use...
+                if (AbstractDungeon.player.hasPower("AdministrixMod:Moulting")) {
+                    AbstractDungeon.player.getPower("AdministrixMod:Moulting").onSpecificTrigger();
+                }
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
