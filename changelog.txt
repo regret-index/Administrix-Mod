@@ -1,4 +1,4 @@
-== v0.8.4b ==
+== v0.8.4c ==
  - Bug fixes
   * Conductor's Ritual Baton now activates as it should on playing 3 of one, 3
     of another, then 1 of the original card type.
@@ -6,15 +6,22 @@
   * Mastermind's power tooltip is fixed for having more than 2 stacks of it.
   * Cast Off Regrets now triggers properly with Quiet Conspiracy's discard.
  - Balance
+  * Amassed Masks: 3 -> 2 cost. Amassed Masks+: gives upgraded cards.
+  * Amassed Masks(+): can't generate itself.
   * Seal Away+: Draws 3 -> 4 cards.
+  * Seventeen Article Laser+: Gain 17 of the lower of your Yin / Yang ->
+    Deal damage to all enemies.
+  * Cast Off Regrets(+): 2 -> 3 Frail.
+  * Overdrive: No longer gives 1 energy. Overdrive+: Now gives -1 Strength.
  - Effects
-  * Mastermind now has a blue border, not a red one, to avoid associations
+  * Mastermind now has a blue flash border, not a red one, to avoid associations
     with taking low-HP damage.
  - Text
+  * Wuji+ properly lists Retain when it'd do something / is used / is discarded.
   * Upgraded Immortal cards have their Plot effects rephrased.
   * Regent's Edict emphasizes that it steals _all_ of the enemy's strength.
   * Cracking Pangu, Newborn Divinity, and Hope In The Dark all emphasize that
-    it removes the user's debuffs, and not some target's.
+    it removes the user's debuffs, and not other targets'.
 
 == v0.8.3 ==
  - Bug fixes

@@ -29,15 +29,14 @@ public class Overdrive extends AbstractAdministrixCard
     private static final CardType type = CardType.POWER;
     private static final int UNITY_AMOUNT = 4;
     private static final int ENERGY_AMOUNT = 1;
-    private static final int STR_LOSS = 1;
-    private static final int DEX_LOSS = 1;
+    private static final int STAT_LOSS = 1;
 
     public Overdrive() {
         super(ID, CARD_STRINGS.NAME, AdministrixMod.OVERDRIVE, COST,
                 CARD_STRINGS.DESCRIPTION,
                 type, AbstractCardEnum.LichGold,
                 rarity, target);
-        this.baseMagicNumber = this.magicNumber = DEX_LOSS;
+        this.baseMagicNumber = this.magicNumber = STAT_LOSS;
         this.isEthereal = true;
     }
 
@@ -45,10 +44,10 @@ public class Overdrive extends AbstractAdministrixCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DualityPower(p, UNITY_AMOUNT), UNITY_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_AMOUNT));
         if (!this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, -STR_LOSS), -STR_LOSS));
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_AMOUNT));
         }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, -this.magicNumber), -this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, -this.magicNumber), -this.magicNumber));
     }
 

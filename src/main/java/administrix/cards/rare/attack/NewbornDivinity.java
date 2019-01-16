@@ -104,7 +104,7 @@ public class NewbornDivinity extends AbstractAdministrixCard
 
     public void onMoveToDiscard()
     {
-        this.rawDescription = (DESCRIPTION);
+        this.rawDescription = DESCRIPTION;
         initializeDescription();
     }
 

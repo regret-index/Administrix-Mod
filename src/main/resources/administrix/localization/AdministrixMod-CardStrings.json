@@ -79,7 +79,7 @@
   "AdministrixMod:SeventeenArticleLaser": {
     "NAME": "17-Article Laser",
     "DESCRIPTION": "Deal !D! damage. NL Transpose one.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Transpose one. NL Gain 17 of the lower of your Yin or your Yang."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Transpose one."
   },
   "AdministrixMod:UnstableVigor": {
     "NAME": "Unstable Vigor",
@@ -255,7 +255,7 @@
 
   "AdministrixMod:CastOffRegrets": {
     "NAME": "Cast Off Regrets",
-    "DESCRIPTION": "Gain 2 Frail. NL Whenever you manually discard a card, gain !M! of the higher of your Yin and your Yang."
+    "DESCRIPTION": "Gain 3 Frail. NL Whenever you manually discard a card, gain !M! of the higher of your Yin and your Yang."
   },
   "AdministrixMod:Convergence": {
     "NAME": "Convergence",
@@ -271,8 +271,8 @@
   },
   "AdministrixMod:Overdrive": {
     "NAME": "Overdrive",
-    "DESCRIPTION": "Ethereal. NL Gain 4 Duality. NL Gain [R]. NL Lose 1 Strength. NL Lose !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain 4 Duality. NL Gain [R]. NL Lose !M! Dexterity."
+    "DESCRIPTION": "Ethereal. NL Gain 4 Duality. NL Lose !M! Strength. NL Lose !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain 4 Duality. NL Gain [R]. NL Lose !M! Strength. NL Lose !M! Dexterity."
   },
   "AdministrixMod:XianArts": {
     "NAME": "Xian Arts",
@@ -281,7 +281,8 @@
 
   "AdministrixMod:AmassedMasks": {
     "NAME": "Amassed Masks",
-    "DESCRIPTION": "Add a random Attack card, Skill card, and Power card into your hand. NL They all cost 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Add a random Attack card, Skill card, and Power card into your hand. NL They all cost 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a random Attack card, Skill card, and Power card into your hand, then upgrade them all. NL They all cost 0 this turn. NL Exhaust."
   },
   "AdministrixMod:BattleforgedBonds": {
     "NAME": "Battleforged Bonds",

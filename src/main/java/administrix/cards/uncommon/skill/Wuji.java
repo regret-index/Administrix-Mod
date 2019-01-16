@@ -78,14 +78,22 @@ public class Wuji extends AbstractAdministrixCard
 
         if (this.magicNumber > 0)
         {
-            this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+            if (this.upgraded) {
+                this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+            } else {
+                this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+            }
             initializeDescription();
         }
     }
 
     public void onMoveToDiscard()
     {
-        this.rawDescription = DESCRIPTION;
+        if (this.upgraded) {
+            this.rawDescription = UPGRADE_DESCRIPTION;
+        } else {
+            this.rawDescription = DESCRIPTION;
+        }
         initializeDescription();
     }
 

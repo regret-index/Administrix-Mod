@@ -18,8 +18,8 @@ public class AmassedMasks extends AbstractAdministrixCard
     public static final String NAME = "Amassed Masks";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    private static final int COST = 3;
-    private static final int UPGRADE_COST = 2;
+    public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
+    private static final int COST = 2;
     private static final CardRarity rarity = CardRarity.RARE;
     private static final CardTarget target = CardTarget.SELF;
     private static final CardType type = CardType.SKILL;
@@ -41,12 +41,19 @@ public class AmassedMasks extends AbstractAdministrixCard
         AbstractCard b = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.SKILL).makeCopy();
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER).makeCopy();
 
-        while (c instanceof AmassedMasks)
-            c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER).makeCopy();
+        while (b instanceof AmassedMasks)
+            b = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.SKILL).makeCopy();
+
+        if (this.upgraded) {
+            a.upgrade();
+            b.upgrade();
+            c.upgrade();
+        }
 
         a.setCostForTurn(0);
         b.setCostForTurn(0);
         c.setCostForTurn(0);
+
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(a, true));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(b, true));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, true));
@@ -62,7 +69,8 @@ public class AmassedMasks extends AbstractAdministrixCard
         if (!upgraded)
         {
             this.upgradeName();
-            this.upgradeBaseCost(UPGRADE_COST);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

@@ -25,7 +25,7 @@ public class CastOffRegrets extends AbstractAdministrixCard
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
     private static final int MOULTING_AMOUNT = 2;
-    private static final int FRAIL_AMOUNT = 2;
+    private static final int FRAIL_AMOUNT = 3;
 
     public CastOffRegrets() {
         super(ID, CARD_STRINGS.NAME, AdministrixMod.CAST_OFF_REGRETS, COST,
