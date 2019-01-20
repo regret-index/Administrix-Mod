@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -47,10 +48,11 @@ public class FalseDeath extends AbstractAdministrixCard
         this.exhaust = true;
     }
 
+    // Discard the draw pile, tutor cards from discard to draw pile, wilt.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-
+        AbstractDungeon.actionManager.addToBottom(new SFXAction("HERMIT-HUM"));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.PURPLE), 0.4F));
 
         if (!AbstractDungeon.player.drawPile.group.isEmpty()) {

@@ -24,9 +24,9 @@ public class DuskAndDawn extends AbstractAdministrixCard
     private static final int COST = 1;
     private static final int CARD_AMOUNT = 1;
     private static final int DRAW_AMOUNT = 1;
+    private static final int UPGRADE_DRAW_AMOUNT = 1;
     private static final AbstractCard.CardRarity rarity = CardRarity.COMMON;
     private static final CardTarget target = CardTarget.SELF;
-
 
     public DuskAndDawn() {
         super(ID, CARD_STRINGS.NAME, AdministrixMod.DUSK_AND_DAWN, COST,
@@ -39,20 +39,14 @@ public class DuskAndDawn extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        if (this.upgraded)
-        {
-            AbstractCard d = new Daybreak().makeCopy();
-            AbstractCard n = new Nightfall().makeCopy();
-            d.upgrade();
-            n.upgrade();
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(d, CARD_AMOUNT));
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(n, CARD_AMOUNT));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Daybreak(), CARD_AMOUNT));
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Nightfall(), CARD_AMOUNT));
-        }
+        AbstractCard d = new Daybreak().makeCopy();
+        AbstractCard n = new Nightfall().makeCopy();
+        d.upgrade();
+        n.upgrade();
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(d, CARD_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(n, CARD_AMOUNT));
         if (p.hasPower(DualityPower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMOUNT));
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
         }
     }
 
@@ -71,6 +65,7 @@ public class DuskAndDawn extends AbstractAdministrixCard
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.upgradeMagicNumber(UPGRADE_DRAW_AMOUNT);
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

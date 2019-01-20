@@ -36,23 +36,23 @@ public class Katabasis extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        // Apply X(+1) Weak, add an upgraded Nightfall to your hand,
-        // add such again for the next X(+1) turns.
+        // Apply 1 Weak X(+1) times, add an upgraded Nightfall to your hand
+        // for the next X(+1) turns.
         int effect = EnergyPanel.totalCount;
         if (this.energyOnUse != -1) {
             effect = this.energyOnUse;
         }
-        if (p.hasRelic("Chemical X"))
-        {
+        if (p.hasRelic("Chemical X")) {
             effect += 2;
             p.getRelic("Chemical X").flash();
         }
         if (this.upgraded) {
             effect++;
         }
-        if (effect > 0)
-        {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, effect, false), effect));
+        if (effect > 0) {
+            for (int i = 0; i < effect; i++) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, 1, false), 1));
+            }
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DescentPlusPower(p, effect), effect));
         }
         p.energy.use(EnergyPanel.totalCount);

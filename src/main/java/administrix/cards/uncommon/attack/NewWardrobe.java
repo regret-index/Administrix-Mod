@@ -56,9 +56,9 @@ public class NewWardrobe extends AbstractAdministrixCard
         int difference = Math.abs(yinAmount - yangAmount);
 
         if (yinAmount > yangAmount) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
-        } else if (yangAmount > yinAmount) {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.WHITE, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
+        } else if (yangAmount > yinAmount) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
         }
 
         if ((yinAmount == 0) && (yangAmount != 0))
@@ -96,14 +96,14 @@ public class NewWardrobe extends AbstractAdministrixCard
             } else if (this.damage < 60) {
                 if (yinAmount < yangAmount) {
                     for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                        if (mo != null) {
-                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlashySlamEffect(p.hb.cX, p.hb.cY, mo.hb.cX, new Color(0.95F, 0.90F, 0.70F, 0.0F)), 0.4F));
+                        if (mo != null && !mo.isDeadOrEscaped()) {
+                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlashySlamEffect(p.hb.cX, p.hb.cY, mo.hb.cX, new Color(0.30F, 0.05F, 0.35F, 0.0F)), 0.4F));
                         }
                     }
                 } else {
                     for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                        if (mo != null) {
-                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlashySlamEffect(p.hb.cX, p.hb.cY, mo.hb.cX, new Color(0.30F, 0.05F, 0.35F, 0.0F)), 0.4F));
+                        if (mo != null && !mo.isDeadOrEscaped()) {
+                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlashySlamEffect(p.hb.cX, p.hb.cY, mo.hb.cX, new Color(0.85F, 0.75F, 0.55F, 0.0F)), 0.4F));
                         }
                     }
                 }
@@ -111,16 +111,16 @@ public class NewWardrobe extends AbstractAdministrixCard
             } else {
                 if (yinAmount < yangAmount) {
                     for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                        if (mo != null) {
-                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimelessImpactEffect(mo.hb.cX, mo.hb.cY, new Color(0.95F, 0.9F, 0.8F, 0.8F))));
+                        if (mo != null && !mo.isDeadOrEscaped()) {
+                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimelessImpactEffect(mo.hb.cX, mo.hb.cY, new Color(0.2F, 0.1F, 0.4F, 0.8F))));
                         }
                     }
                     AbstractDungeon.actionManager.addToBottom(new WaitAction(1.0F));
                     AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
                 } else {
                     for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                        if (mo != null) {
-                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimelessImpactEffect(mo.hb.cX, mo.hb.cY, new Color(0.2F, 0.1F, 0.4F, 0.8F))));
+                        if (mo != null && !mo.isDeadOrEscaped()) {
+                            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimelessImpactEffect(mo.hb.cX, mo.hb.cY, new Color(0.85F, 0.75F, 0.55F, 0.8F))));
                         }
                     }
                     AbstractDungeon.actionManager.addToBottom(new WaitAction(1.0F));
@@ -144,9 +144,14 @@ public class NewWardrobe extends AbstractAdministrixCard
 
         if (this.baseDamage > 0)
         {
-            this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+            if (this.upgraded) {
+                this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+            } else {
+                this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
+            }
             initializeDescription();
         }
+
     }
 
     @Override

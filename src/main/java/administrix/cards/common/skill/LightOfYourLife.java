@@ -3,6 +3,8 @@ package administrix.cards.common.skill;
 import administrix.actions.TransposeAction;
 import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,6 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.YangPower;
+import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 
 public class LightOfYourLife extends AbstractAdministrixCard
 {
@@ -40,7 +43,10 @@ public class LightOfYourLife extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        AbstractDungeon.actionManager.addToBottom(new TransposeAction(TRANSPOSE_AMOUNT));
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.4F));
+            AbstractDungeon.actionManager.addToBottom(new TransposeAction(TRANSPOSE_AMOUNT));
+        }
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YangPower(p, YANG_AMOUNT), YANG_AMOUNT));
     }

@@ -87,7 +87,7 @@
   },
   "AdministrixMod:WickedPunishment": {
     "NAME": "Wicked Punishment",
-    "DESCRIPTION": "Deal !D! damage twice. NL Draw 2 cards. NL Gain !M! Yin twice."
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw 2 cards. NL Gain 3 Yin !M! times."
   },
 
   "AdministrixMod:GirlsDoItBetter": {
@@ -101,7 +101,7 @@
   },
   "AdministrixMod:LifeforceNet": {
     "NAME": "Lifeforce Net",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deal !D! damage to a random enemy twice. NL Obtain 1 Fairy in a Bottle. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Deal !D! damage to ALL enemies. NL Obtain 1 Fairy in a Bottle. NL Exhaust."
   },
   "AdministrixMod:NewbornDivinity": {
     "NAME": "Newborn Divinity",
@@ -137,8 +137,8 @@
   },
   "AdministrixMod:DuskAndDawn": {
     "NAME": "Dusk and Dawn",
-    "DESCRIPTION": "Add a Daybreak and a Nightfall to your hand. NL If you have any Duality, draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Add an upgraded Daybreak and Nightfall to your hand. NL If you have any Duality, draw 1 card."
+    "DESCRIPTION": "Add an upgraded Daybreak and Nightfall to your hand. NL If you have any Duality, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Add an upgraded Daybreak and Nightfall to your hand. NL If you have any Duality, draw !M! cards."
   },
   "AdministrixMod:ImmortalPurity": {
     "NAME": "Immortal Purity",
@@ -212,7 +212,7 @@
   },
   "AdministrixMod:Grandeur": {
     "NAME": "Grandeur",
-    "DESCRIPTION": "Innate. NL Gain !M! Strength and !M! Dexterity, and lose such at the end of this turn. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Gain !M! Strength and !ax:M2! Dexterity, and lose such at the end of this turn. NL Draw 1 card."
   },
   "AdministrixMod:GuanyinBlessing": {
     "NAME": "Guanyin's Blessing",
@@ -224,8 +224,8 @@
   },
   "AdministrixMod:Katabasis": {
     "NAME": "Katabasis",
-    "DESCRIPTION": "Apply X Weak. NL Add an upgraded Nightfall to your hand each turn for the next X turns.",
-    "UPGRADE_DESCRIPTION": "Apply X+1 Weak. NL Add an upgraded Nightfall to your hand each turn for the next X+1 turns."
+    "DESCRIPTION": "Apply 1 Weak X times. NL Add an upgraded Nightfall to your hand each turn for the next X turns.",
+    "UPGRADE_DESCRIPTION": "Apply 1 Weak X+1 times. NL Add an upgraded Nightfall to your hand each turn for the next X+1 turns."
   },
   "AdministrixMod:Metempsychosis": {
     "NAME": "Metempsychosis",
@@ -246,8 +246,8 @@
   },
   "AdministrixMod:Wuji": {
     "NAME": "Wuji",
-    "DESCRIPTION": "Lose all Yang & Yin. NL Gain 1 Duality for each 4 of the lower of your Yin or your Yang.",
-    "UPGRADE_DESCRIPTION": "Lose all Yang & Yin. NL Gain 1 Duality for each 4 of the lower of your Yin or your Yang. NL Retain.",
+    "DESCRIPTION": "Gain 1 Duality for each 4 of the lower of your Yin or your Yang. NL Lose all of your Yin and Yang. NL Retain.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Duality for each 4 of the lower of your Yin or your Yang. NL Lose half of your Yin and Yang, rounded down. NL Retain.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gain !M! Duality.)"
     ]

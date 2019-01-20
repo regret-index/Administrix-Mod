@@ -22,9 +22,10 @@ public class Grandeur extends AbstractAdministrixCard
     public static final String NAME = "Grandeur";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 0;
-    private static final int STAT_AMOUNT = 2;
-    private static final int DRAW_AMOUNT = 1;
+    private static final int STRENGTH_AMOUNT = 2;
+    private static final int DEXTERITY_AMOUNT = 1;
     private static final int UPGRADE_STAT_AMOUNT = 1;
+    private static final int DRAW_AMOUNT = 1;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.SELF;
 
@@ -34,17 +35,17 @@ public class Grandeur extends AbstractAdministrixCard
                 CardType.SKILL, AbstractCardEnum.LichGold,
                 rarity, target);
         this.isInnate = true;
-        this.baseMagicNumber = this.magicNumber = STAT_AMOUNT;
-        this.exhaust = true;
+        this.baseMagicNumber = this.magicNumber = STRENGTH_AMOUNT;
+        this.baseSecondMagicNumber = this.secondMagicNumber = DEXTERITY_AMOUNT;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.secondMagicNumber), this.secondMagicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseDexterityPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseDexterityPower(p, this.secondMagicNumber), this.secondMagicNumber));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMOUNT));
     }
 
@@ -58,6 +59,7 @@ public class Grandeur extends AbstractAdministrixCard
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(UPGRADE_STAT_AMOUNT);
+            this.upgradeSecondMagicNumber(UPGRADE_STAT_AMOUNT);
         }
     }
 

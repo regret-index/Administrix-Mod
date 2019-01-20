@@ -1,11 +1,16 @@
 package administrix.actions;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
+
 import java.util.ArrayList;
 
 // This was coded by Robin-MK0.5. Many thanks to her.
@@ -57,7 +62,8 @@ public class TransposeAction extends AbstractGameAction {
             }
             else
             {
-                tmpGroup = new CardGroup(com.megacrit.cardcrawl.cards.CardGroup.CardGroupType.UNSPECIFIED);
+                 CardCrawlGame.sound.play("TH-MENU-OK");
+                 tmpGroup = new CardGroup(com.megacrit.cardcrawl.cards.CardGroup.CardGroupType.UNSPECIFIED);
                  for (int i = 0; i < AbstractDungeon.player.drawPile.size(); i++) {
                         tmpGroup.addToTop((AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
                         AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, TRANPOSE_DOWN, false, false, false, false);
@@ -92,6 +98,7 @@ public class TransposeAction extends AbstractGameAction {
                 }
                 else if (AbstractDungeon.player.discardPile.group.size() > this.amount)
                 {
+                        CardCrawlGame.sound.play("TH-MENU-CONFIRM");
                         AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.discardPile, amount, TRANSPOSE_UP, false, false, false, false);
                 }
                 setUpReturn = true;

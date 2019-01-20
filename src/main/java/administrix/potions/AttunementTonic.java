@@ -42,18 +42,15 @@ public class AttunementTonic extends AbstractPotion {
         target = AbstractDungeon.player;
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
         {
-            int dualityAmount = AbstractDungeon.player.hasPower(DualityPower.POWER_ID) ?
-                                AbstractDungeon.player.getPower(DualityPower.POWER_ID).amount + 1 : 1;
-            int affinityAmount = AbstractDungeon.player.hasPower(AffinityPower.POWER_ID) ?
-                                 AbstractDungeon.player.getPower(AffinityPower.POWER_ID).amount + 1 : 1;
+            if (AbstractDungeon.player.hasPower(DualityPower.POWER_ID)) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new DualityPower(target, this.potency), this.potency));
+            }
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new DualityPower(target, this.potency), this.potency));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new AffinityPower(target, this.potency), this.potency));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new DualityPower(target, dualityAmount), dualityAmount));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new AffinityPower(target, affinityAmount), affinityAmount));
+
+            if (AbstractDungeon.player.hasPower(AffinityPower.POWER_ID)) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new AffinityPower(target, this.potency), this.potency));
+            }
         }
     }
 
@@ -65,6 +62,6 @@ public class AttunementTonic extends AbstractPotion {
     @Override
     public int getPotency(int ascensionLevel) {
         // return ascensionLevel < 11 ? 1 : 0;
-        return 1;
+        return 3;
     }
 }

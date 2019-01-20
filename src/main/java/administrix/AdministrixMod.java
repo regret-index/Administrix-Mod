@@ -239,6 +239,9 @@ public class AdministrixMod implements PostInitializeSubscriber,
     private void loadAudio() {
         HashMap<String, Sfx> map = (HashMap<String, Sfx>) ReflectionHacks.getPrivate(CardCrawlGame.sound, SoundMaster.class, "map");
         map.put("STARRY-BEAT", new Sfx("administrix/admin_audio/STARRY-BEAT.wav", false));
+        map.put("TH-MENU-OK", new Sfx("administrix/admin_audio/TH-MENU-OK.wav", false));
+        map.put("TH-MENU-CONFIRM", new Sfx("administrix/admin_audio/TH-MENU-CONFIRM.wav", false));
+        map.put("HERMIT-HUM", new Sfx("administrix/admin_audio/HERMIT-HUM.wav", false));
     }
 
     @Override

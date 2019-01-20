@@ -1,8 +1,8 @@
 package administrix.actions;
 
 // This is essentially a mildly adjusted version
-// of the standard DiscardPileToTopOfDeck action- half of
-// Transpose, for the one card that uses that. Thanks, megacrit.
+// of the standard DiscardPileToTopOfDeck action, allowing
+// pulling out more than one card. Thanks, megacrit.
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,6 +18,7 @@ public class DiscardToDraw
 {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DiscardToDrawAction");
     public static final String[] TEXT = uiStrings.TEXT;
+    private static String COUNT_TEXT;
     private AbstractPlayer p;
 
     public DiscardToDraw(int num, AbstractCreature source)
@@ -27,6 +28,14 @@ public class DiscardToDraw
         setValues(null, source, this.amount);
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FASTER;
+
+        if (this.amount == 2) {
+            COUNT_TEXT = TEXT[0];
+        } else if (this.amount == 3) {
+            COUNT_TEXT = TEXT[1];
+        } else {
+            COUNT_TEXT = TEXT[2];
+        }
     }
 
     public void update()
@@ -51,7 +60,7 @@ public class DiscardToDraw
             }
             if (this.p.discardPile.group.size() > this.amount)
             {
-                AbstractDungeon.gridSelectScreen.open(this.p.discardPile, this.amount, TEXT[0], false, false, false, false);
+                AbstractDungeon.gridSelectScreen.open(this.p.discardPile, this.amount, COUNT_TEXT, false, false, false, false);
                 tickDuration();
                 return;
             }

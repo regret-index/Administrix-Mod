@@ -244,8 +244,6 @@ public class Administrix extends CustomPlayer{
         return "STARRY-BEAT";
     }
 
-
-
     @Override
     public String getSpireHeartText() {
         return charStrings.TEXT[1];

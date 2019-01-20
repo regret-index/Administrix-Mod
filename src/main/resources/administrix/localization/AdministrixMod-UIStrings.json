@@ -6,7 +6,9 @@
   },
   "DiscardToDrawAction": {
     "TEXT": [
-      "Choose two discarded cards to move to the bottom of the Draw Pile."
+      "Choose two discarded cards to move to the bottom of the Draw Pile.",
+      "Choose three discarded cards to move to the bottom of the Draw Pile.",
+      "Choose discarded cards to move to the bottom of the Draw Pile."
     ]
   },
   "TransposeAction": {

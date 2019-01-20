@@ -2,6 +2,7 @@ package administrix.cards.uncommon.attack;
 
 import administrix.actions.TransposeAction;
 import administrix.cards.AbstractAdministrixCard;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
@@ -45,7 +47,7 @@ public class SeventeenArticleLaser extends AbstractAdministrixCard
         // Damage upgrading to damage all, transpose.
         if (this.upgraded) {
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (mo != null) {
+                if (mo != null && !mo.isDeadOrEscaped()) {
                     AbstractDungeon.actionManager.addToBottom(new VFXAction(new LightningEffect(mo.drawX, mo.drawY), 0.05F));
                 }
             }
@@ -56,6 +58,7 @@ public class SeventeenArticleLaser extends AbstractAdministrixCard
         }
 
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.4F));
             AbstractDungeon.actionManager.addToBottom(new TransposeAction(TRANSPOSE_AMOUNT));
         }
     }
