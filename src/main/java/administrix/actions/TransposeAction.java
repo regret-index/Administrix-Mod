@@ -62,12 +62,25 @@ public class TransposeAction extends AbstractGameAction {
             }
             else
             {
-                 CardCrawlGame.sound.play("TH-MENU-OK");
-                 tmpGroup = new CardGroup(com.megacrit.cardcrawl.cards.CardGroup.CardGroupType.UNSPECIFIED);
-                 for (int i = 0; i < AbstractDungeon.player.drawPile.size(); i++) {
-                        tmpGroup.addToTop((AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
-                        AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, TRANPOSE_DOWN, false, false, false, false);
-                 }
+                CardCrawlGame.sound.play("TH-MENU-OK");
+
+                tmpGroup = new CardGroup(com.megacrit.cardcrawl.cards.CardGroup.CardGroupType.UNSPECIFIED);
+
+                // Show draw pile in true order if the player has Frozen Eye, but in randomized order otherwise
+                if (AbstractDungeon.player.hasRelic("Frozen Eye"))
+                {
+                    for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+                        tmpGroup.addToBottom(c);
+                    }
+                }
+                else
+                {
+                    for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+                        tmpGroup.addToRandomSpot(c);
+                    }
+                }
+
+                AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, TRANPOSE_DOWN, false, false, false, false);
             }
         }
         else if (!doneDiscard && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())
