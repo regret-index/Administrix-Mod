@@ -32,9 +32,9 @@ public class AttunementTonic extends AbstractPotion {
         this.isThrown = false;
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip((TipHelper.capitalize(dualityStrings.NAME)),
-                     (String)GameDictionary.keywords.get(dualityStrings.NAME)));
+                     (String)GameDictionary.keywords.get("duality")));
         this.tips.add(new PowerTip((TipHelper.capitalize(affinityStrings.NAME)),
-                     (String)GameDictionary.keywords.get(affinityStrings.NAME)));
+                     (String)GameDictionary.keywords.get("affinity")));
     }
 
     @Override
