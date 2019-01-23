@@ -34,7 +34,6 @@ public class Grandeur extends AbstractAdministrixCard
                 CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.LichGold,
                 rarity, target);
-        this.isInnate = true;
         this.baseMagicNumber = this.magicNumber = STRENGTH_AMOUNT;
         this.baseSecondMagicNumber = this.secondMagicNumber = DEXTERITY_AMOUNT;
     }

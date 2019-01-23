@@ -23,7 +23,7 @@ public class ImmortalPurity extends AbstractAdministrixCard
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
-    private static final int BLOCK_AMOUNT = 6;
+    private static final int BLOCK_AMOUNT = 7;
     private static final int UPGRADE_BLOCK_AMOUNT = 1;
     private static final int DISCARD_AMOUNT = 1;
     private static final CardRarity rarity = CardRarity.COMMON;

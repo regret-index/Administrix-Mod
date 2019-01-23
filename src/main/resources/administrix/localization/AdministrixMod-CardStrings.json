@@ -212,7 +212,7 @@
   },
   "AdministrixMod:Grandeur": {
     "NAME": "Grandeur",
-    "DESCRIPTION": "Innate. NL Gain !M! Strength and !ax:M2! Dexterity, and lose such at the end of this turn. NL Draw 1 card."
+    "DESCRIPTION": "Gain !M! Strength and !ax:M2! Dexterity. NL Lose !M! Strength and !ax:M2! Dexterity at the end of this turn. NL Draw 1 card."
   },
   "AdministrixMod:GuanyinBlessing": {
     "NAME": "Guanyin's Blessing",

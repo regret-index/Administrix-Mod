@@ -25,7 +25,7 @@ public class ImmortalGrace extends AbstractAdministrixCard
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
-    private static final int ATTACK_DMG = 6;
+    private static final int ATTACK_DMG = 7;
     private static final int UPGRADE_ATTACK_DMG = 1;
     private static final int DRAW_AMOUNT = 1;
     private static final CardRarity rarity = CardRarity.COMMON;

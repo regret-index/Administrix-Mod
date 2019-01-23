@@ -10,8 +10,11 @@ additional proofreaders welcome.
   * Attunement Tonic: Completely revamped.
     If one has any Affinity, gain 3 more; if one has any Duality, gain 3 more.
   * Dusk and Dawn: Upgraded Daybreak / Nightfall. Dusk and Dawn+: Draw 2.
-  * Wicked Punishment+: Gain 4 Yin twice -> Gain 3 Yin thrice.`
-  * Grandeur(+): 2 Dexterity -> 1 (3 Dexterity -> 2), no longer exhausts.
+  * Immortal Grace: Base 6 -> 7 damage.
+  * Immortal Purity: Base 6 -> 7 block.
+  * Wicked Punishment+: Gain 4 Yin twice -> Gain 3 Yin thrice.
+  * Grandeur(+): 2 Dexterity -> 1 (3 Dexterity -> 2), no longer exhausts
+    and is no longer Innate.
   * Katabasis(+): Applies 1 Weak X(+1) times, instead of applying X(+1) Weak.
   * Wuji retains. Wuji+ cuts one's Yin & Yang in half. Wuji/+ both cost 1.
   * Harmonic Reverence(+): 4 -> 3 Affinity (5 -> 4 Affinity).
