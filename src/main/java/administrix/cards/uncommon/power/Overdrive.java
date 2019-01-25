@@ -44,7 +44,7 @@ public class Overdrive extends AbstractAdministrixCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DualityPower(p, UNITY_AMOUNT), UNITY_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
-        if (!this.upgraded) {
+        if (this.upgraded) {
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_AMOUNT));
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, -this.magicNumber), -this.magicNumber));

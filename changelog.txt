@@ -6,6 +6,7 @@ additional proofreaders welcome.
   * Lifeforce Net reverses the order of the random attack and attack-all,
     so that the random attack doesn't randomly fail if an enemy dies to the
     attack-all.
+  * Overdrive's reversed energy-gain logic is set back to normal.
  - Balance
   * Attunement Tonic: Completely revamped.
     If one has any Affinity, gain 3 more; if one has any Duality, gain 3 more.
