@@ -124,10 +124,10 @@ to each release, for those who wish to spoil themselves completely.)
 == __Daybreaks, Nightfalls__ ==
 
  * These are 0-cost weak and Ethereal cards that Exhaust when played.
-   __Daybreaks__ deal 3 (5) damage and also provide Yang, while __Nightfalls__ gain
-   3 (5) block and also provide Yin. These scale strongly to Strength and 
+   __Daybreaks__ deal 3 (5) damage and also provide Yang, while __Nightfalls__
+   gain 3 (5) block and also provide Yin. These scale strongly to Strength and
    Dexterity gain, can be played or ignored to balance for Duality and Affinity,
-   plus readily help trigger the starting relic's conditions- these are well 
+   plus readily help trigger the starting relic's conditions- these are well
    beyond Shivs. Be careful with playing these against Time Eater and the Heart!
 
 ...
@@ -138,27 +138,21 @@ to each release, for those who wish to spoil themselves completely.)
  * Playing cards too quickly can sometimes have tooltips or targetting arrows
    mess up the Transpose interface.
  * Both Blessings lack part of the Plot card indicator.
- * Schism+ and Newborn Divinity+ squish their descriptions against a fraction
-   of the card text box.
  * The in-game character statistics page prints a blank listing for the 
    character name.
 
 --== Full Release Plans ==--
 ======
-
+ * Overhauls to Duality, Affinity, Yin, and Yang.
+ * Simplified Chinese Localization, finally, jeez.
  * Quick mechanics reference + tutorial guide.
  * Balance adjustments as according to feedback.
- * The remaining 10/80 cards (more pure-value commons and supports for 
-   muddled Y / Y decks, alongside lingering concepts) 7/11 relics for a full 
-   character set (boss ones...), and another potion (a Plot focus?)
- * A custom UI panel, constantly depicting card types played for Duality
-   (instead of the current placeholder relic-based UI) plus tracking Yin & Yang
-   in a fashion seperated from Miko's endless power stacks.
- * Further effects improvements. Character animation, the character select 
-   screen, Wuji, some self-debuff cards, and the plainer Rare cards are all 
-   intended targets. Some secret effects against bosses, too, perhaps.
- * A Simplified Chinese Translation has been offered up, and is being readied
-   for.
+ * The remaining 5/80 cards (mostly lingering concepts),
+   7/11 relics for a full character set (boss ones...),
+   and another potion (a Plot focus?).
+ * Further effects improvements. Character animation, the character select
+   screen, scaling cards, self-debuff cards, and the plainer Rare cards
+   are all intended targets. Some secret effects against bosses, too, perhaps.
 
 ...
 

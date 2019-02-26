@@ -44,7 +44,7 @@ public class LightOfYourLife extends AbstractAdministrixCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.4F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.8F));
             AbstractDungeon.actionManager.addToBottom(new TransposeAction(TRANSPOSE_AMOUNT));
         }
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));

@@ -62,6 +62,5 @@ public class SipOfSparks extends AbstractAdministrixCard
             this.upgradeBlock((UPGRADE_BLOCK_DMG));
             this.upgradeMagicNumber(UPGRADE_STR_AMOUNT);
         }
-
     }
 }

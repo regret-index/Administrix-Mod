@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,10 +27,10 @@ public class RisingSunPrince extends AbstractAdministrixCard
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 1;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
-    private static final CardTarget target = CardTarget.ALL_ENEMY;
+    private static final CardTarget target = CardTarget.ENEMY;
     private static final CardType type = CardType.ATTACK;
-    private static final int ATTACK_DMG = 3;
-    private static final int UPGRADE_ATTACK_DMG = 1;
+    private static final int ATTACK_DMG = 4;
+    private static final int UPGRADE_ATTACK_DMG = 2;
     private static final int STR_AMOUNT = 2;
     private static final int UPGRADE_STR_AMOUNT = 1;
 
@@ -42,18 +43,13 @@ public class RisingSunPrince extends AbstractAdministrixCard
         setBackgroundTexture(ATTACK_LICH_GOLD_PLOT, ATTACK_LICH_GOLD_PLOT_PORTRAIT);
         this.baseDamage = this.damage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = STR_AMOUNT;
-        this.isMultiDamage = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_DEFECT_BEAM"));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.0F));
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_DEFECT_BEAM"));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.0F));
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 
     public void triggerWhenDrawn()

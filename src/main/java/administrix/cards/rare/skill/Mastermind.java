@@ -49,17 +49,13 @@ public class Mastermind extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MastermindPower(p, SCHEMER_AMOUNT), SCHEMER_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.4F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.8F));
             AbstractDungeon.actionManager.addToBottom(new TransposeAction(this.magicNumber));
         }
-
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MastermindPower(p, SCHEMER_AMOUNT), SCHEMER_AMOUNT));
-
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnDrawReductionPower(p, DRAWLESS_AMOUNT), DRAWLESS_AMOUNT));
     }
 

@@ -58,7 +58,7 @@ public class SeventeenArticleLaser extends AbstractAdministrixCard
         }
 
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.4F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.8F));
             AbstractDungeon.actionManager.addToBottom(new TransposeAction(TRANSPOSE_AMOUNT));
         }
     }

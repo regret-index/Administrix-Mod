@@ -19,7 +19,7 @@ public class QuietConspiracy extends AbstractAdministrixCard
     public static final String NAME = "Quiet Conspiracy";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 1;
-    private static final int PROGRAM_AMOUNT = 3;
+    private static final int PROGRAM_AMOUNT = 4;
     private static final int UPGRADE_PROGRAM_AMOUNT = 1;
     private static final int DRAW_AMOUNT = 2;
     private static final CardRarity rarity = CardRarity.UNCOMMON;

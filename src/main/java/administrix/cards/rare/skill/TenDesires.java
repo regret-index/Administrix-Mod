@@ -41,6 +41,7 @@ public class TenDesires extends AbstractAdministrixCard
                 CARD_STRINGS.DESCRIPTION, type,
                 AbstractCardEnum.LichGold,
                 rarity, target);
+        this.magicNumber = this.baseMagicNumber = TRANSPOSE_AMOUNT;
         this.isEthereal = true;
         this.exhaust = true;
     }
@@ -48,10 +49,9 @@ public class TenDesires extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.4F));
-            AbstractDungeon.actionManager.addToBottom(new TransposeAction(TRANSPOSE_AMOUNT));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.8F));
+            AbstractDungeon.actionManager.addToBottom(new TransposeAction(this.magicNumber));
         }
 
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
@@ -76,7 +76,7 @@ public class TenDesires extends AbstractAdministrixCard
         if (!upgraded)
         {
             this.upgradeName();
-            this.isEthereal = false;
+            this.exhaust = false;
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

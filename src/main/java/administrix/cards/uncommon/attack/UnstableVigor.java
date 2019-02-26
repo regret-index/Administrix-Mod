@@ -40,7 +40,6 @@ public class UnstableVigor extends AbstractAdministrixCard
                 rarity, target);
         this.baseDamage = this.damage = ATTACK_DMG;
         this.baseMagicNumber = this.magicNumber = STRENGTH_AMOUNT;
-        this.exhaust = true;
     }
 
     @Override

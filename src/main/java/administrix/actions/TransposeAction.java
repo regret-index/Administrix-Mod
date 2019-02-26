@@ -66,7 +66,8 @@ public class TransposeAction extends AbstractGameAction {
 
                 tmpGroup = new CardGroup(com.megacrit.cardcrawl.cards.CardGroup.CardGroupType.UNSPECIFIED);
 
-                // Show draw pile in true order if the player has Frozen Eye, but in randomized order otherwise
+                // Show draw pile in true order if the player has Frozen Eye,
+                // but in a randomized order otherwise.
                 if (AbstractDungeon.player.hasRelic("Frozen Eye"))
                 {
                     for (AbstractCard c : AbstractDungeon.player.drawPile.group) {

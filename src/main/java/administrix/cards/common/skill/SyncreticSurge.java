@@ -37,7 +37,6 @@ public class SyncreticSurge extends AbstractAdministrixCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         int cardAmount = 0;
-        AbstractDungeon.actionManager.addToBottom(new PutOnDeckAction(p, p, 1, false));
 
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
             if (c.type == AbstractCard.CardType.SKILL) {
@@ -106,7 +105,6 @@ public class SyncreticSurge extends AbstractAdministrixCard
             this.upgradeName();
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
-
         }
     }
 }

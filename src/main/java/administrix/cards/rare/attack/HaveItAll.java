@@ -30,7 +30,6 @@ public class HaveItAll extends AbstractAdministrixCard
     private static final int ATTACK_DMG = 1;
     private static final int BLOCK_AMOUNT = 1;
     private static final int STAT_AMOUNT = 1;
-    private static final int DRAW_AMOUNT = 1;
     private static final int DISCARD_AMOUNT = 1;
 
     public HaveItAll() {
@@ -65,9 +64,7 @@ public class HaveItAll extends AbstractAdministrixCard
         }
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AffinityPower(p, STAT_AMOUNT), STAT_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMOUNT));
         AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, DISCARD_AMOUNT, false));
-
     }
 
     @Override

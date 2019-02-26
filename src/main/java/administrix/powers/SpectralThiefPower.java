@@ -40,16 +40,6 @@ public class SpectralThiefPower extends AbstractPower {
         }
     }
 
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action)
-    {
-        if (card instanceof RegentEdict && this.amount == 2)
-        {
-            flash();
-            action.exhaustCard = true;
-        }
-    }
-
     public void updateDescription()
     {
         if (this.amount == 2) {

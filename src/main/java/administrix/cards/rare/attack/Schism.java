@@ -27,9 +27,9 @@ public class Schism extends AbstractAdministrixCard
     public static final String NAME = "Schism";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
     private static final int COST = 1;
+    private static final int UPGRADE_COST = 0;
     private static final CardRarity rarity = CardRarity.RARE;
     private static final CardTarget target = CardTarget.ALL;
 
@@ -39,7 +39,6 @@ public class Schism extends AbstractAdministrixCard
                 CardType.ATTACK, AbstractCardEnum.LichGold,
                 rarity, target);
         this.isMultiDamage = true;
-        this.exhaust = true;
     }
 
     @Override
@@ -54,6 +53,7 @@ public class Schism extends AbstractAdministrixCard
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new GoldenSlashEffect(AbstractDungeon.player.hb.cX - 60.0F * Settings.scale, AbstractDungeon.player.hb.cY, true), 0.1F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new GoldenSlashEffect(AbstractDungeon.player.hb.cX + 60.0F * Settings.scale, AbstractDungeon.player.hb.cY, true), 0.1F));
         }
+
         if (this.damage > 0) {
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 if (m != null) {
@@ -62,6 +62,7 @@ public class Schism extends AbstractAdministrixCard
             }
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
         }
+
         if (this.block > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
         }
@@ -78,11 +79,7 @@ public class Schism extends AbstractAdministrixCard
 
         if (this.damage > 0 || this.block > 0)
         {
-            if (this.upgraded) {
-                this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-            } else {
-                this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-            }
+            this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
             initializeDescription();
         }
     }
@@ -90,11 +87,7 @@ public class Schism extends AbstractAdministrixCard
     @Override
     public void onMoveToDiscard()
     {
-        if (this.upgraded) {
-            this.rawDescription = (UPGRADE_DESCRIPTION);
-        } else {
-            this.rawDescription = (DESCRIPTION);
-        }
+        this.rawDescription = (DESCRIPTION);
         initializeDescription();
     }
 
@@ -107,9 +100,7 @@ public class Schism extends AbstractAdministrixCard
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.exhaust = false;
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            this.upgradeBaseCost(UPGRADE_COST);
         }
     }
 }

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -65,10 +66,11 @@ public class LuminaryPath extends AbstractAdministrixCard
 
         if (difference > 0) {
             if (yinAmount > yangAmount) {
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.WHITE, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
-            } else if (yangAmount > yinAmount) {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
+            } else if (yangAmount > yinAmount) {
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.WHITE, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
             }
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("TH-BONUS"));
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(difference));
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, difference));
         }

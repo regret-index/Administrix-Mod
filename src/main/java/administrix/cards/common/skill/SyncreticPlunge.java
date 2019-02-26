@@ -38,7 +38,6 @@ public class SyncreticPlunge extends AbstractAdministrixCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         int cardAmount = 0;
-        AbstractDungeon.actionManager.addToBottom(new DiscardPileToTopOfDeckAction(p));
 
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
             if (c.type == CardType.ATTACK) {

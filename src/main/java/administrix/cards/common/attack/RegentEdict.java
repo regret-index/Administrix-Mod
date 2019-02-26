@@ -26,7 +26,7 @@ public class RegentEdict extends AbstractAdministrixCard
     private static final CardRarity rarity = CardRarity.COMMON;
     private static final CardTarget target = CardTarget.SELF_AND_ENEMY;
     private static final CardType type = CardType.ATTACK;
-    private static final int ATTACK_DMG = 5;
+    private static final int ATTACK_DMG = 4;
     private static final int UPGRADE_ATTACK_DMG = 3;
     private static final int EDICT_AMOUNT = 1;
 
@@ -42,9 +42,8 @@ public class RegentEdict extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        // On the third time of playing this card,
-        // steal the enemy's Strength. The card exhausting
-        // and the count removing itself are off in SpectralThiefPower.
+        // On the third time of playing this card, steal the enemy's strength.
+        // steal the enemy's Strength. The the count removing itself are off in SpectralThiefPower.
         int stolen = (m.hasPower("Strength") &&
                      !m.hasPower("Artifact") &&
                      m.getPower("Strength").amount > 0) ?

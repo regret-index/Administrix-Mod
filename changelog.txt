@@ -1,5 +1,52 @@
+==== v0.9.0a ====
+ - Content: new cards!
+  * Noble Path: A 1-cost common Attack.
+    Deal 8 damage. Gain 1 Energy next turn. Gain 3 Yin and Yang (twice).
+  * Passage of Ages: A 1-cost common attack.
+    Deal 4(6) damage. Gain 4(6) Yin.
+    { Plot: Add a Nightfall to your hand. }
+  * Centuries Ascent: A 0-cost common skill.
+    Gain 3(5) block. Gain 3(5) Yang.
+    { Plot: Add a Daybreak to your hand. }
+  * Beget Eternity: A 3-cost uncommon Attack.
+    Deal 7(9) damage thrice. Draw 1 additional card next turn.
+    Gain 2(3) Affinity. Exhaust.
+  * Cosmos Control: A 2-cost uncommon Skill.
+    Put a card from your discard pile into your hand, then a card from your
+    hand on top of your draw pile. Both cost 0 until played. Exhaust (not).
+  * Transcension: A 2-cost uncommon Skill.
+    Replay the last Attack you played this turn for every 9(7) of the lower of
+    your Yin and Yang.
+ - Bug Fixes
+  * Unstable Vigor no longer exhausts, as the card text didn't mention. Whoops.
+ - Balance
+  * Dusk and Dawn has been removed.
+  * Syncretic Plunge and Syncretic Surge now solely add cards to one's hand.
+  * Rising Sun's Prince: 3(4) * 2 damage to all -> 4(6) * 2 damage to one.
+  * Have It All no longer draws 1 card.
+  * Regent's Edict(+) no longer exhausts, deals 5(8) -> 4(7) damage.
+  .
+  * Quiet Conspiracy(+) preview 3 (4) -> preview 4 (5).
+  * Base Schism doesn't exhaust. Schism+ costs 0.
+  * Mastermind's doubled-Plot is now before, not after the Transpose.
+  * Ten Desires+: Not Ethereal -> Doesn't exhaust.
+ - Visuals & Effects
+  * The Transpose border effect now lasts a bit longer.
+  * Fiendish Crimson now gnaws with a proper red.
+  * Regent's Edict, Seal Away, Syncretic Surge & Plunge, Rising Sun's Prince,
+    Unstable Vigor, Wicked Punishment, and Guanyin's Blessing all have altered
+    card art.
+  * Luminary's Path now has a sound effect.
+ - Text
+  * Would much rather have italics or just lean on the fact that multiple
+    enemies consistently means "all", but to match base game English card copy
+    all uses of "all enemies" is now consistently "ALL enemies".
+  * Likewise, Seal Away is now consistent with Armaments, and
+    Unstable Vigor + Untouchable are now consistent with Flex.
+  * "your Yin and your Yang" is now consistently "your Yin and Yang".
+  * Plot's tooltip is pluralized for Mastermind.
+
 == v0.8.5b ==
-Some new cards might be coming soon.
 The Simplified Chinese translation is also being whittled away at-
 additional proofreaders welcome.
  - Bug fixes
@@ -19,7 +66,7 @@ additional proofreaders welcome.
   * Katabasis(+): Applies 1 Weak X(+1) times, instead of applying X(+1) Weak.
   * Wuji retains. Wuji+ cuts one's Yin & Yang in half. Wuji/+ both cost 1.
   * Harmonic Reverence(+): 4 -> 3 Affinity (5 -> 4 Affinity).
- - Effects
+ - Visuals & Effects
   * Transpose now makes the screen flash gold and plays sound effects for
     either half's menu, hopefully helping one identify the screen suddenly
     popping up from the Shaku or Mayhem.
@@ -48,7 +95,7 @@ additional proofreaders welcome.
     Deal damage to all enemies.
   * Cast Off Regrets(+): 2 -> 3 Frail.
   * Overdrive: No longer gives 1 energy. Overdrive+: Now gives -1 Strength.
- - Effects
+ - Visuals
   * Mastermind now has a blue flash border, not a red one, to avoid associations
     with taking low-HP damage.
  - Text
@@ -69,14 +116,13 @@ additional proofreaders welcome.
   * Unstable Vigor(+): 11 -> 12 (12 -> 14) damage.
   * Mastermind(+) both lose Retain, but now both cost 1.
   * Grandeur(+): 1/1 -> 2/2 Strength/Dexterity (2/2 -> 3/3 Strength / Dexterity)
- - Cards
+ - Text
   * Hope In The Dark and its upgraded version no longer calculate off the
     other version's multiplier in the description.
   * Duality now properly keeps track of Attacks and Skills played during the
     turn in its power tooltip.
   * Wife's Lightning and Faithful Flames now keep track of how many Attacks
     they'll take before they activate.
- - Text
   * Strike, Defend, Attunement Tonic, the three Immortal cards,
     Character select screen, Heart event, and Vampires event text all adjusted
     to support future localization.

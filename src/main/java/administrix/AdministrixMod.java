@@ -2,7 +2,6 @@ package administrix;
 
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +12,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 
+import basemod.abstracts.CustomUnlockBundle;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.interfaces.*;
@@ -21,12 +21,13 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.audio.Sfx;
 import com.megacrit.cardcrawl.audio.SoundMaster;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -105,13 +106,15 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String DIVERSION_TACTIC = CARD_IMG_PATH + "Diversion Tactic.png";
     public static final String EXTOL_VIRTUE = CARD_IMG_PATH + "Extol Virtue.png";
     public static final String IMMORTAL_GRACE = CARD_IMG_PATH + "Immortal Grace.png";
+    public static final String NOBLE_PATH = CARD_IMG_PATH + "Noble Path.png";
+    public static final String PASSAGE_OF_AGES = CARD_IMG_PATH + "Passage of Ages.png";
     public static final String PLATE_OF_ANTIQUITY = CARD_IMG_PATH + "Plate of Antiquity.png";
     public static final String REBUKE_DESIRES = CARD_IMG_PATH + "Rebuke Desires.png";
     public static final String REGENT_EDICT = CARD_IMG_PATH + "Regent's Edict.png";
     public static final String SHADOW_PLAY = CARD_IMG_PATH + "Shadow Play.png";
     public static final String TRAINEE_JIANGSHI = CARD_IMG_PATH + "Trainee Jiangshi.png";
 
-    public static final String DUSK_AND_DAWN = CARD_IMG_PATH + "Dusk and Dawn.png";
+    public static final String CENTURIES_ASCENT = CARD_IMG_PATH + "Centuries Ascent.png";
     public static final String IMMORTAL_PURITY = CARD_IMG_PATH + "Immortal Purity.png";
     public static final String LIGHT_OF_YOUR_LIFE = CARD_IMG_PATH + "Light Of Your Life.png";
     public static final String SEAL_AWAY = CARD_IMG_PATH + "Seal Away.png";
@@ -121,6 +124,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String TOUCH_OF_CINNABAR = CARD_IMG_PATH + "Touch of Cinnabar.png";
     public static final String TRANSITION = CARD_IMG_PATH + "Transition.png";
 
+    public static final String BEGET_ETERNITY = CARD_IMG_PATH + "Beget Eternity.png";
     public static final String CHOOSE_YOUR_END = CARD_IMG_PATH + "Choose Your End.png";
     public static final String FIENDISH_CRIMSON = CARD_IMG_PATH + "Fiendish Crimson.png";
     public static final String JUST_REWARDS = CARD_IMG_PATH + "Just Rewards.png";
@@ -134,6 +138,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String ARMILLARY_SPHERE = CARD_IMG_PATH + "Armillary Sphere.png";
     public static final String BISHAMON_BLESSING = CARD_IMG_PATH + "Bishamon's Blessing.png";
     public static final String BLOODLESS_SAPPHIRE = CARD_IMG_PATH + "Bloodless Sapphire.png";
+    public static final String COSMOS_CONTROL = CARD_IMG_PATH + "Cosmos Control.png";
     public static final String DREAMS_MAUSOLEUM = CARD_IMG_PATH + "Dreams Mausoleum.png";
     public static final String FEAST_OF_DEW = CARD_IMG_PATH + "Feast of Dew.png";
     public static final String GRANDEUR = CARD_IMG_PATH + "Grandeur.png";
@@ -142,6 +147,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String METEMPSYCHOSIS = CARD_IMG_PATH + "Metempsychosis.png";
     public static final String MIX_OF_MERCURY = CARD_IMG_PATH + "Mix of Mercury.png";
     public static final String QUIET_CONSPIRACY = CARD_IMG_PATH + "Quiet Conspiracy.png";
+    public static final String TRANSCENSION = CARD_IMG_PATH + "Transcension.png";
     public static final String UNTOUCHABLE = CARD_IMG_PATH + "Untouchable.png";
     public static final String WUJI = CARD_IMG_PATH + "Wuji.png";
 
@@ -241,6 +247,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
         map.put("STARRY-BEAT", new Sfx("administrix/admin_audio/STARRY-BEAT.wav", false));
         map.put("TH-MENU-OK", new Sfx("administrix/admin_audio/TH-MENU-OK.wav", false));
         map.put("TH-MENU-CONFIRM", new Sfx("administrix/admin_audio/TH-MENU-CONFIRM.wav", false));
+        map.put("TH-BONUS", new Sfx("administrix/admin_audio/TH-BONUS.wav", false));
         map.put("HERMIT-HUM", new Sfx("administrix/admin_audio/HERMIT-HUM.wav", false));
     }
 
@@ -279,6 +286,8 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new DiversionaryTactic());
         BaseMod.addCard(new ExtolVirtue());
         BaseMod.addCard(new ImmortalGrace());
+        BaseMod.addCard(new NoblePath());
+        BaseMod.addCard(new PassageOfAges());
         BaseMod.addCard(new PlateOfAntiquity());
         BaseMod.addCard(new RebukeDesires());
         BaseMod.addCard(new RegentEdict());
@@ -286,7 +295,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
         // BaseMod.addCard(new TraineeJiangshi());
 
         // Common Skills.
-        BaseMod.addCard(new DuskAndDawn());
+        BaseMod.addCard(new CenturiesAscent());
         BaseMod.addCard(new ImmortalPurity());
         BaseMod.addCard(new LightOfYourLife());
         BaseMod.addCard(new SealAway());
@@ -297,10 +306,12 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new Transition());
 
         // Uncommon Attacks.
+        BaseMod.addCard(new BegetEternity());
         BaseMod.addCard(new ChooseYourEnd());
         BaseMod.addCard(new FiendishCrimson());
         BaseMod.addCard(new JustRewards());
         BaseMod.addCard(new NewWardrobe());
+        BaseMod.addCard(new ReachToHeaven());
         BaseMod.addCard(new RisingSunPrince());
         BaseMod.addCard(new SeventeenArticleLaser());
         BaseMod.addCard(new UnstableVigor());
@@ -310,6 +321,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new ArmillarySphere());
         BaseMod.addCard(new BishamonBlessing());
         BaseMod.addCard(new BloodlessSapphire());
+        BaseMod.addCard(new CosmosControl());
         BaseMod.addCard(new DreamsMausoleum());
         BaseMod.addCard(new FeastOfDew());
         BaseMod.addCard(new Grandeur());
@@ -319,6 +331,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new MixOfMercury());
         BaseMod.addCard(new QuietConspiracy());
         BaseMod.addCard(new ReachToHeaven());
+        BaseMod.addCard(new Transcension());
         BaseMod.addCard(new Untouchable());
         BaseMod.addCard(new Wuji());
 
@@ -385,17 +398,45 @@ public class AdministrixMod implements PostInitializeSubscriber,
         logger.info("Finished adding potions.");
     }
 
-    // @Override
-    // public void receiveSetUnlocks() {
-    //	UnlockTracker.addCard("MastermindSchemer");
-    //	UnlockTracker.addCard("FalseDeath");
-    //	UnlockTracker.addCard("TenDesires");
-    //	// Administrix unlock #?
-    //	BaseMod.addUnlockBundle(new CustomUnlockBundle(
-    //			"MastermindSchemer", "FalseDeath", "TenDesires"
-    //			), CharacterEnum.TheAdministrix, 1);
-    // ...not sure what else I'd put here...
-    // }
+
+    public void receiveSetUnlocks() {
+
+        /*
+        // probably would add a relics tier, next
+        // Administrix unlock 1: Deck manipulation.
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(
+                AbstractUnlock.UnlockType.CARD,
+                "AdministrixMod:SealAway",
+                "AdministrixMod:QuietConspiracy",
+                "AdministrixMod:Mastermind"
+        ), CharacterEnum.TheAdministrix, 0);
+        UnlockTracker.addCard("AdministrixMod:SealAway");
+        UnlockTracker.addCard("AdministrixMod:QuietConspiracy");
+        UnlockTracker.addCard("AdministrixMod:Mastermind");
+
+        // Administrix unlock 2: Artifact builds.
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(
+                AbstractUnlock.UnlockType.CARD,
+                "AdministrixMod:Overdrive",
+                "AdministrixMod:?",
+                "AdministrixMod:FearOfDeath"
+        ), CharacterEnum.TheAdministrix, 1);
+        UnlockTracker.addCard("AdministrixMod:Overdrive");
+        UnlockTracker.addCard("AdministrixMod:?");
+        UnlockTracker.addCard("AdministrixMod:FearOfDeath");
+
+        // Administrix unlock 3: Mixed Yin / Yang manipulators.
+        BaseMod.addUnlockBundle(new CustomUnlockBundle(
+                AbstractUnlock.UnlockType.CARD,
+                "AdministrixMod:NewWardrobe",
+                "AdministrixMod:Transcension",
+                "AdministrixMod:Wuji"
+        ), CharacterEnum.TheAdministrix, 1);
+        UnlockTracker.addCard("AdministrixMod:SealAway");
+        UnlockTracker.addCard("AdministrixMod:ArmillarySphere");
+        UnlockTracker.addCard("AdministrixMod:FearOfDeath");
+        */
+    }
 
     @Override
     public void receiveEditCharacters() {

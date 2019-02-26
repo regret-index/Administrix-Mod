@@ -1,12 +1,12 @@
 {
 	"transpose": {
-		"NAMES": [ "transpose", "Transpose." ],
-		"DESCRIPTION": "Discard cards from your #yDraw #yPile, then move different cards from the #yDiscard #yPile to the bottom of your #yDraw #yPile."
+		"NAMES": [ "transpose" ],
+		"DESCRIPTION": "Discard cards from your Draw Pile, then move different cards from the Discard Pile to the bottom of your #yDraw #yPile."
 	},
 
 	"plot": {
-		"NAMES": [ "plot", "「Plot:」", "{Plot:}" ],
-		"DESCRIPTION": "This effect triggers on both drawing and manually discarding this card."
+		"NAMES": [ "plot", "「Plot:」" ],
+		"DESCRIPTION": "These effects occur on drawing and manually discarding these cards (even from one's Draw Pile)."
 	},
 
 	"immortal": {
@@ -36,7 +36,7 @@
 
 	"affinity": {
 		"NAMES": [ "affinity" ],
-		"DESCRIPTION": "If you have more #yYin than #yYang, then when you gain #yYin, damage all enemies twice. If reversed, then when you gain #yYang, gain #yBlock. "
+		"DESCRIPTION": "If you have more #yYin than #yYang, then when you gain #yYin, damage all enemies twice. If reversed, then when you gain #yYang, gain #yBlock."
 	},
 
 	"daybreak": {

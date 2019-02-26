@@ -13,17 +13,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import administrix.powers.ImmortalClarityPower;
 
-public class ImmortalClarityAction
-        extends AbstractGameAction
-{
+public class ImmortalClarityAction extends AbstractGameAction {
+
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CopyAction");
     public static final String[] TEXT = uiStrings.TEXT;
     private AbstractPlayer p;
     private static final float DURATION = Settings.ACTION_DUR_XFAST;
 
-    public ImmortalClarityAction(AbstractCreature target, AbstractCreature source,
-                    int amount)
-    {
+    public ImmortalClarityAction(AbstractCreature target, AbstractCreature source, int amount) {
         setValues(target, source, amount);
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.duration = DURATION;
@@ -41,8 +38,7 @@ public class ImmortalClarityAction
             }
             if (this.p.hand.size() == 1)
             {
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.p, this.p, new ImmortalClarityPower(this.p, this.amount, this.p.hand
-                        .getBottomCard())));
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.p, this.p, new ImmortalClarityPower(this.p, this.amount, this.p.hand.getBottomCard())));
                 this.isDone = true;
                 return;
             }
