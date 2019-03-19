@@ -18,6 +18,14 @@
     ]
   },
 
+  "AdministrixMod:AbandonedRose": {
+    "NAME": "Abandoned Rose",
+    "FLAVOR": "The End of The World has come and gone. Shine through the despair.",
+    "DESCRIPTIONS": [
+      "Whenever you manually discard a card, #yUpgrade it for the rest of the combat."
+    ]
+  },
+
   "AdministrixMod:GoldenChickadee": {
     "NAME": "Golden Chickadee",
     "FLAVOR": "You hatched ages ago, of course.",
@@ -25,6 +33,35 @@
       "Upon pickup, #yUpgrade #b",
       " random #yRare cards. ",
       "Whenever you add a #yRare card into your deck, #yUpgrade it."
+    ]
+  },
+
+  "AdministrixMod:KeyOfKings": {
+    "NAME": "Key of Kings",
+    "FLAVOR": "'Royalty's a continuous cutting motion', they say. Well, despite yourself, you treasure also cutting away from it all.",
+    "DESCRIPTIONS": [
+      "Every time you discard #b",
+      " cards, add a #yDaybreak and a #yNightfall to your hand."
+    ]
+  },
+
+  "AdministrixMod:DragonsEyeCharm": {
+    "NAME": "Dragon's Eye Charm",
+    "FLAVOR": "Even when it came to your secrets, it was never about balance or enlightenment. It was always about seizing empowerment.",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yYin or #yYang, you'll gain #b",
+      " more."
+    ]
+  },
+
+  "AdministrixMod:BloodSoakedVeil": {
+    "NAME": "Blood-soaked Veil",
+    "FLAVOR": "...a life and an unlife of death have been all too inescapable. Perhaps you should embrace it.",
+    "DESCRIPTIONS": [
+      "Remove all Strikes and Defends. Receive #b",
+      " #yFiendish #yCrimsons and #b",
+      " #yBloodless #ySapphires. Whenever you #yExhaust a card that costs #b",
+      " or more, gain [E] the next turn."
     ]
   },
 

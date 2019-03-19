@@ -188,8 +188,12 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String RELIC_IMG_PATH = IMG_PATH + "relics/";
     public static final String SHAKU = RELIC_IMG_PATH + "Shaku.png";
     public static final String PRESCRIPTION_BOTTLE = RELIC_IMG_PATH + "PrescriptionBottle.png";
-    public static final String ELIXIR_OF_IMMORALITY = RELIC_IMG_PATH + "ElixirOfImmorality.png";
+    public static final String ABANDONED_ROSE = RELIC_IMG_PATH + "AbandonedRose.png";
     public static final String GOLDEN_CHICKADEE = RELIC_IMG_PATH + "GoldenChickadee.png";
+    public static final String DRAGONSEYE_CHARM = RELIC_IMG_PATH + "DragonsEyeCharm.png";
+    public static final String KEY_OF_KINGS = RELIC_IMG_PATH + "KeyOfKings.png";
+    public static final String BLOODSOAKED_VEIL = RELIC_IMG_PATH + "BloodSoakedVeil.png";
+    public static final String ELIXIR_OF_IMMORALITY = RELIC_IMG_PATH + "ElixirOfImmorality.png";
 
     // Placeholder trackers for Duality and Baton.
     public static final String ATTACK_COUNTER = RELIC_IMG_PATH + "AttackCounter.png";
@@ -247,7 +251,9 @@ public class AdministrixMod implements PostInitializeSubscriber,
         map.put("STARRY-BEAT", new Sfx("administrix/admin_audio/STARRY-BEAT.wav", false));
         map.put("TH-MENU-OK", new Sfx("administrix/admin_audio/TH-MENU-OK.wav", false));
         map.put("TH-MENU-CONFIRM", new Sfx("administrix/admin_audio/TH-MENU-CONFIRM.wav", false));
+        map.put("TH-SUBMENU", new Sfx("administrix/admin_audio/TH-SUBMENU.wav", false));
         map.put("TH-BONUS", new Sfx("administrix/admin_audio/TH-BONUS.wav", false));
+        map.put("TH-WOOSH", new Sfx("administrix/admin_audio/TH-WOOSH.wav", false));
         map.put("HERMIT-HUM", new Sfx("administrix/admin_audio/HERMIT-HUM.wav", false));
     }
 
@@ -260,7 +266,11 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addRelicToCustomPool(new AlphaSkillCounter(), AbstractCardEnum.LichGold);
         BaseMod.addRelicToCustomPool(new PrescriptionBottle(), AbstractCardEnum.LichGold);
         BaseMod.addRelicToCustomPool(new GoldenChickadee(), AbstractCardEnum.LichGold);
+        BaseMod.addRelicToCustomPool(new AbandonedRose(), AbstractCardEnum.LichGold);
+        BaseMod.addRelicToCustomPool(new KeyOfKings(), AbstractCardEnum.LichGold);
+        BaseMod.addRelicToCustomPool(new BloodsoakedVeil(), AbstractCardEnum.LichGold);
         BaseMod.addRelicToCustomPool(new ElixirOfImmorality(), AbstractCardEnum.LichGold);
+        BaseMod.addRelicToCustomPool(new DragonsEyeCharm(), AbstractCardEnum.LichGold);
 
         // RelicLibrary.add(new GoldenChickadee());
 

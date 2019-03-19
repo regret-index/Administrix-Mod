@@ -29,7 +29,7 @@ public class Defend_Administrix extends AbstractAdministrixCard
                 CardType.SKILL, AbstractCardEnum.LichGold,
                 rarity, target);
         this.tags.add(BaseModCardTags.BASIC_DEFEND);
-        this.block=this.baseBlock = BLOCK_AMOUNT;
+        this.block = this.baseBlock = BLOCK_AMOUNT;
     }
 
     @Override

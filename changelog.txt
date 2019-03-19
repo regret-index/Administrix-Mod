@@ -1,5 +1,5 @@
 ==== v0.9.0a ====
- - Content: new cards!
+ - Content: new cards! new relics!
   * Noble Path: A 1-cost common Attack.
     Deal 8 damage. Gain 1 Energy next turn. Gain 3 Yin and Yang (twice).
   * Passage of Ages: A 1-cost common attack.
@@ -17,6 +17,17 @@
   * Transcension: A 2-cost uncommon Skill.
     Replay the last Attack you played this turn for every 9(7) of the lower of
     your Yin and Yang.
+  .
+  * Abandoned Rose: An Uncommon relic.
+    Whenever you manually discard a card, Upgrade it for the rest of the combat.
+  * Key of Kings: A Rare relic.
+    Whenever you discard 3 cards, add a Daybreak and a Nightfall to your hand.
+  * Dragon's-eye Charm: A Shop relic.
+    Whenever you gain Yin or Yang, you'll gain 3 more.
+  * Blood-soaked Veil: A Boss relic.
+    Remove all Strikes and Defends. Recieve 3 Fiendish Crimsons and
+    Bloodless Sapphires. Whenever you exhaust a card that costs 1 or more,
+    gain 1 Energy next turn.
  - Bug Fixes
   * Unstable Vigor no longer exhausts, as the card text didn't mention. Whoops.
  - Balance
@@ -25,11 +36,11 @@
   * Rising Sun's Prince: 3(4) * 2 damage to all -> 4(6) * 2 damage to one.
   * Have It All no longer draws 1 card.
   * Regent's Edict(+) no longer exhausts, deals 5(8) -> 4(7) damage.
-  .
+ ...
   * Quiet Conspiracy(+) preview 3 (4) -> preview 4 (5).
   * Base Schism doesn't exhaust. Schism+ costs 0.
   * Mastermind's doubled-Plot is now before, not after the Transpose.
-  * Ten Desires+: Not Ethereal -> Doesn't exhaust.
+  * Ten Desires+: Not ethereal -> Doesn't exhaust.
  - Visuals & Effects
   * The Transpose border effect now lasts a bit longer.
   * Fiendish Crimson now gnaws with a proper red.

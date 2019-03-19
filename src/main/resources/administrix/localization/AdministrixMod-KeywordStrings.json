@@ -47,5 +47,10 @@
 	"nightfall": {
 		"NAMES": [ "nightfall", "nightfalls" ],
 		"DESCRIPTION": "Nightfalls are 0-cost #yEthereal skills that give #yYin and #yExhaust."
+	},
+
+	"bloodsoaked": {
+		"NAMES": [ "bloodsoaked" ],
+		"DESCRIPTION": "These are 2-cost Uncommon cards that heal, self-Debuff, and #yExhaust. The first deals damage + inflicts #yFrail, and the second gains #yBlock + inflicts #yWilting."
 	}
 }
