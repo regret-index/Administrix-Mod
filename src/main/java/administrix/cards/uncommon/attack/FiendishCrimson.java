@@ -30,8 +30,8 @@ public class FiendishCrimson extends AbstractAdministrixCard
     private static final CardType type = CardType.ATTACK;
     private static final int ATTACK_DMG = 14;
     private static final int UPGRADE_ATTACK_DMG = 4;
-    private static final int HEAL_AMOUNT = 5;
-    private static final int UPGRADE_HEAL_AMOUNT = 2;
+    private static final int HEAL_AMOUNT = 4;
+    private static final int UPGRADE_HEAL_AMOUNT = 3;
     private static final int FRAIL_AMOUNT = 2;
 
     public FiendishCrimson() {

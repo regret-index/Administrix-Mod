@@ -26,10 +26,11 @@ public class PassageOfAges extends AbstractAdministrixCard
     public static final String ID = "AdministrixMod:PassageOfAges";
     public static final String NAME = "Passage Of Ages";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
     private static final int COST = 1;
     private static final int ATTACK_DMG = 4;
     private static final int UPGRADE_ATTACK_DMG = 2;
-    private static final int YIN_AMOUNT = 4;
+    private static final int YIN_AMOUNT = 0;
     private static final int UPGRADE_YIN_AMOUNT = 2;
     private static final CardRarity rarity = CardRarity.COMMON;
     private static final CardTarget target = CardTarget.ENEMY;
@@ -49,7 +50,9 @@ public class PassageOfAges extends AbstractAdministrixCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YinPower(p, this.magicNumber), this.magicNumber));
+        if (this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YinPower(p, this.magicNumber), this.magicNumber));
+        }
     }
 
     public void triggerWhenDrawn()
@@ -80,6 +83,8 @@ public class PassageOfAges extends AbstractAdministrixCard
             this.upgradeName();
             this.upgradeDamage(UPGRADE_ATTACK_DMG);
             this.upgradeMagicNumber(UPGRADE_YIN_AMOUNT);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

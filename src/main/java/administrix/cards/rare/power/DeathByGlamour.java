@@ -1,9 +1,7 @@
 package administrix.cards.rare.power;
 
 import administrix.cards.AbstractAdministrixCard;
-import administrix.powers.PermanentDrawReduction;
 import administrix.vfx.SpiritFlameEffect;
-import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -49,8 +47,6 @@ public class DeathByGlamour extends AbstractAdministrixCard
         } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GlamourPower(p, this.magicNumber), this.magicNumber));
         }
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PermanentDrawReduction(p, this.magicNumber), this.magicNumber));
     }
 
     @Override

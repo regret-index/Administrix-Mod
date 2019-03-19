@@ -25,8 +25,8 @@ public class BloodlessSapphire extends AbstractAdministrixCard
     private static final CardType type = CardType.SKILL;
     private static final int BLOCK_AMOUNT = 14;
     private static final int UPGRADE_BLOCK_AMOUNT = 4;
-    private static final int HEAL_AMOUNT = 5;
-    private static final int UPGRADE_HEAL_AMOUNT = 2;
+    private static final int HEAL_AMOUNT = 4;
+    private static final int UPGRADE_HEAL_AMOUNT = 3;
     private static final int WILTING_AMOUNT = 2;
 
     public BloodlessSapphire() {

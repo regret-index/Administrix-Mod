@@ -28,7 +28,7 @@ public class CenturiesAscent extends AbstractAdministrixCard
     private static final int COST = 0;
     private static final int BLOCK_AMOUNT = 3;
     private static final int UPGRADE_BLOCK_AMOUNT = 2;
-    private static final int YANG_AMOUNT = 3;
+    private static final int YANG_AMOUNT = 0;
     private static final int UPGRADE_YANG_AMOUNT = 2;
     private static final CardRarity rarity = CardRarity.COMMON;
     private static final CardTarget target = CardTarget.SELF;
@@ -48,7 +48,9 @@ public class CenturiesAscent extends AbstractAdministrixCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YangPower(p, this.magicNumber), this.magicNumber));
+        if (this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YangPower(p, this.magicNumber), this.magicNumber));
+        }
     }
 
     public void triggerWhenDrawn()
@@ -79,6 +81,8 @@ public class CenturiesAscent extends AbstractAdministrixCard
             this.upgradeName();
             this.upgradeBlock(UPGRADE_BLOCK_AMOUNT);
             this.upgradeMagicNumber(UPGRADE_YANG_AMOUNT);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

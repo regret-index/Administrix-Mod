@@ -36,7 +36,8 @@
   },
   "AdministrixMod:PassageOfAges": {
     "NAME": "Passage Of Ages",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Yin. NL [#cc99ff]{[] Plot: Add a Nightfall to your hand. [#cc99ff]}[]"
+    "DESCRIPTION": "Deal !D! damage. NL [#cc99ff]{[] Plot: Add a Nightfall to your hand. [#cc99ff]}[]",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !M! Yin. NL [#cc99ff]{[] Plot: Add a Nightfall to your hand. [#cc99ff]}[]"
   },
   "AdministrixMod:PlateOfAntiquity": {
     "NAME": "Plate Of Antiquity",
@@ -149,7 +150,8 @@
   },
   "AdministrixMod:CenturiesAscent": {
     "NAME": "Centuries Ascent",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Yang. NL [#cc99ff]{[] Plot: Add a Daybreak to your hand. [#cc99ff]}[]"
+    "DESCRIPTION": "Gain !B! Block. NL [#cc99ff]{[] Plot: Add a Daybreak to your hand. [#cc99ff]}[]",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! Yang. NL [#cc99ff]{[] Plot: Add a Daybreak to your hand. [#cc99ff]}[]"
   },
   "AdministrixMod:ImmortalPurity": {
     "NAME": "Immortal Purity",
@@ -353,8 +355,8 @@
 
   "AdministrixMod:DeathByGlamour": {
     "NAME": "Death by Glamour",
-    "DESCRIPTION": "At the start of your turn, add a random Rare card to your hand (which costs 0 that turn), and discard 1 card. NL Draw 1 less card each turn.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Rare card to your hand (which costs 0 this combat), and discard 1 card. NL Draw 1 less card each turn."
+    "DESCRIPTION": "At the start of your turn, add a random Rare card to your hand (which costs 0 that turn), and discard 1 card.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Rare card to your hand (which costs 0 this combat), and discard 1 card."
   },
   "AdministrixMod:FearOfDeath": {
     "NAME": "Fear of Death",

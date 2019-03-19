@@ -31,22 +31,25 @@
  - Bug Fixes
   * Unstable Vigor no longer exhausts, as the card text didn't mention. Whoops.
  - Balance
+  * Regent's Edict(+) no longer exhausts, deals 5(8) -> 4(7) damage.
   * Dusk and Dawn has been removed.
   * Syncretic Plunge and Syncretic Surge now solely add cards to one's hand.
   * Rising Sun's Prince: 3(4) * 2 damage to all -> 4(6) * 2 damage to one.
+  * Fiendish Crimson, Bloodless Sapphire: Heal 5(7) -> 4(7).
   * Have It All no longer draws 1 card.
-  * Regent's Edict(+) no longer exhausts, deals 5(8) -> 4(7) damage.
  ...
   * Quiet Conspiracy(+) preview 3 (4) -> preview 4 (5).
   * Base Schism doesn't exhaust. Schism+ costs 0.
   * Mastermind's doubled-Plot is now before, not after the Transpose.
   * Ten Desires+: Not ethereal -> Doesn't exhaust.
+  * Death By Glamour: No longer reduces card draw.
  - Visuals & Effects
   * The Transpose border effect now lasts a bit longer.
   * Fiendish Crimson now gnaws with a proper red.
-  * Regent's Edict, Seal Away, Syncretic Surge & Plunge, Rising Sun's Prince,
-    Unstable Vigor, Wicked Punishment, and Guanyin's Blessing all have altered
-    card art.
+  * Regent's Edict, Shadow Play, Immortal Purity, Seal Away, Syncretic Surge &
+    Plunge, Fiendish Crimson, Rising Sun's Prince, Unstable Vigor,
+    Wicked Punishment, Feast of Dew, and Guanyin's Blessing:
+    all have altered card art.
   * Luminary's Path now has a sound effect.
  - Text
   * Would much rather have italics or just lean on the fact that multiple
