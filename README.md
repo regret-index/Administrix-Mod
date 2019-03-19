@@ -140,6 +140,10 @@ to each release, for those who wish to spoil themselves completely.)
  * Both Blessings lack part of the Plot card indicator.
  * The in-game character statistics page prints a blank listing for the 
    character name.
+ * Transcension's card flickers rapidly if the screen dims during the effect
+   (e.g. Baton kicking in, any discard / exhaust prompts).
+ * Card preview tooltips would be nice for Choose Your End and Bloodsoaked Veil,
+   though the two cards each pose a number of issues.
 
 --== Full Release Plans ==--
 ======

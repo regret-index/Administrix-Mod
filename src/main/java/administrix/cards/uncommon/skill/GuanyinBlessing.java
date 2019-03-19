@@ -53,7 +53,7 @@ public class GuanyinBlessing extends AbstractAdministrixCard
 
     public void triggerWhenDrawn()
     {
-        this.superFlash();
+        this.superFlash(PLOT_PURPLE);
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new YinPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
@@ -67,7 +67,7 @@ public class GuanyinBlessing extends AbstractAdministrixCard
 
     public void triggerOnManualDiscard()
     {
-        this.superFlash();
+        this.superFlash(PLOT_PURPLE);
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new YinPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {

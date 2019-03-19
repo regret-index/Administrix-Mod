@@ -55,7 +55,7 @@ public class CenturiesAscent extends AbstractAdministrixCard
 
     public void triggerWhenDrawn()
     {
-        this.superFlash();
+        this.superFlash(PLOT_PURPLE);
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Daybreak(), 1));
         }
@@ -63,7 +63,7 @@ public class CenturiesAscent extends AbstractAdministrixCard
 
     public void triggerOnManualDiscard()
     {
-        this.superFlash();
+        this.superFlash(PLOT_PURPLE);
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Daybreak(), 1));
         }

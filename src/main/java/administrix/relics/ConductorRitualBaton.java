@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -78,6 +79,7 @@ public class ConductorRitualBaton
                     shakuSkillCounter >= ACTIVATE_COUNT) {
                     flash();
                     AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                    AbstractDungeon.actionManager.addToBottom(new SFXAction("TH-SUBMENU"));
                     AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new BorderLongFlashEffect(Color.GOLD), 0.8F));
                     AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                     AbstractDungeon.actionManager.addToBottom(new TransposeAction(1));

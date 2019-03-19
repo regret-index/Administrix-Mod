@@ -46,7 +46,7 @@ public class Transition extends AbstractAdministrixCard
 
     public void triggerWhenDrawn()
     {
-        this.superFlash();
+        this.superFlash(PLOT_PURPLE);
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, DRAW_AMOUNT), DRAW_AMOUNT));
         }
@@ -54,7 +54,7 @@ public class Transition extends AbstractAdministrixCard
 
     public void triggerOnManualDiscard()
     {
-        this.superFlash();
+        this.superFlash(PLOT_PURPLE);
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, DRAW_AMOUNT), DRAW_AMOUNT));
         }

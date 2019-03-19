@@ -18,7 +18,8 @@
       "Discard cards from your Draw Pile.",
       "Choose a discarded card to move to the bottom of the Draw Pile.",
       "Choose two discarded cards to move to the bottom of the Draw Pile.",
-      "Choose discarded cards to move to the bottom of the Draw Pile."
+      "Choose discarded cards to move to the bottom of the Draw Pile.",
+      " (This activates Plot effects.)"
     ]
   },
   "Periods": {

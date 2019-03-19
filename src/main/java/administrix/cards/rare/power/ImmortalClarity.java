@@ -49,7 +49,7 @@ public class ImmortalClarity extends AbstractAdministrixCard
 
     public void triggerWhenDrawn()
     {
-        this.superFlash();
+        this.superFlash(PLOT_PURPLE);
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
         }
@@ -57,7 +57,7 @@ public class ImmortalClarity extends AbstractAdministrixCard
 
     public void triggerOnManualDiscard()
     {
-        this.superFlash();
+        this.superFlash(PLOT_PURPLE);
         for (int i = 0; i < mastermindCheck(); i++) {
             AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
         }

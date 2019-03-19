@@ -1,15 +1,12 @@
 package administrix.actions;
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 
 import java.util.ArrayList;
 
@@ -35,13 +32,13 @@ public class TransposeAction extends AbstractGameAction {
         this.startingDuration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_FAST;
         this.duration = this.startingDuration;
         if (this.amount == 1) {
-            TRANPOSE_DOWN = TEXT[0];
+            TRANPOSE_DOWN = TEXT[0] + TEXT[6];
             TRANSPOSE_UP = TEXT[3];
         } else if (this.amount == 2) {
-            TRANPOSE_DOWN = TEXT[1];
+            TRANPOSE_DOWN = TEXT[1] + TEXT[6];
             TRANSPOSE_UP = TEXT[4];
         } else {
-            TRANPOSE_DOWN = TEXT[2];
+            TRANPOSE_DOWN = TEXT[2] + TEXT[6];
             TRANSPOSE_UP = TEXT[5];
         }
     }

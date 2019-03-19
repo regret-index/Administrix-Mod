@@ -3,8 +3,10 @@ package administrix.cards;
 import administrix.powers.MastermindPower;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardHelper;
 
 // TODO: Functionize plot backgrounds / scroll.
 // For the full release, probably.
@@ -14,6 +16,8 @@ public abstract class AbstractAdministrixCard extends CustomCard {
     public int secondMagicNumber;
     public boolean isSecondMagicNumberModified;
     public boolean upgradedSecondMagicNumber;
+
+    public static final Color PLOT_PURPLE = CardHelper.getColor(205.0f, 25.0f, 250.0f);
 
     public AbstractAdministrixCard(final String id, final String name, final String img, final int cost, final String rawDescription,
                                    final AbstractCard.CardType type, final AbstractCard.CardColor color,

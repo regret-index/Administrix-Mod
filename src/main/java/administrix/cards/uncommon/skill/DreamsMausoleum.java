@@ -55,7 +55,7 @@ public class DreamsMausoleum extends AbstractAdministrixCard
     public void triggerWhenDrawn()
     {
         if (this.cost > 0) {
-            this.superFlash();
+            this.superFlash(PLOT_PURPLE);
             for (int i = 0; i < mastermindCheck(); i++) {
                 AbstractDungeon.actionManager.addToBottom(new ReduceCostAction(this.uuid, COST_REDUCTION));
             }
@@ -65,7 +65,7 @@ public class DreamsMausoleum extends AbstractAdministrixCard
 
     public void triggerOnManualDiscard() {
         if (this.cost > 0) {
-            this.superFlash();
+            this.superFlash(PLOT_PURPLE);
             for (int i = 0; i < mastermindCheck(); i++) {
                 AbstractDungeon.actionManager.addToBottom(new ReduceCostAction(this.uuid, COST_REDUCTION));
             }

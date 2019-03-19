@@ -53,7 +53,7 @@ public class ArmillarySphere extends AbstractAdministrixCard
     // we have to manually apply Dexterity and Frail here.
     public void triggerWhenDrawn()
     {
-        this.superFlash();
+        this.superFlash(PLOT_PURPLE);
         int dexCheck = (AbstractDungeon.player.hasPower("Dexterity")) ?
                        AbstractDungeon.player.getPower("Dexterity").amount : 0;
         double frailCheck = (AbstractDungeon.player.hasPower("Frail")) ? 0.75 : 1;
@@ -66,7 +66,7 @@ public class ArmillarySphere extends AbstractAdministrixCard
 
     public void triggerOnManualDiscard()
     {
-        this.superFlash();
+        this.superFlash(PLOT_PURPLE);
         int dexCheck = (AbstractDungeon.player.hasPower("Dexterity")) ?
                 AbstractDungeon.player.getPower("Dexterity").amount : 0;
         double frailCheck = (AbstractDungeon.player.hasPower("Frail")) ? 0.75 : 1;
