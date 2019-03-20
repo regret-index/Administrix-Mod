@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+  background: #333333;
+  color: #E8D8F0;
+}
+a { color: white; }
+
+table {
+    border-collapse: collapse;
+    font-size: 90%;
+    border: none;
+}
+
+tr:nth-child(odd) {
+    background-color: #444440;
+}
+tr:nth-child(even) {
+    background-color: #444044;
+}
+
+#relics td:nth-child(3) {
+    border-left: 1px dotted #AAA;
+}
+
+#relics td:nth-child(5) {
+    border-left: 1px dotted #AAA;
+}
+
+#relics td:nth-child(6) {
+    border-left: 1px dotted #AAA;
+}
+
+#cards td:nth-child(3) {
+    border-left: 1px dotted #AAA;
+}
+
+#cards td:nth-child(6) {
+    border-left: 1px dotted #AAA;
+}
+
+td, th {
+  padding: 4px 7px;
+}
+th {
+  border: 2px solid #222222;
+  text-align: left;
+  background-color: #555;
+  cursor: default;
+}
+td {
+  border-top: 2px solid #555;
+  border-bottom: 2px solid #555;
+  border-left: 0px solid;
+  border-right: 0px solid;
+}
+td {
+  position: relative;
+}
+a img {
+  border: 0;
+}
+
+.color-r {
+  color: #ff6563;
+}
+.color-g {
+  color: #7fff00;
+}
+.color-b {
+  color: #87ceeb;
+}
+.color-l {
+  color: #302838;
+}
+.color-W {
+  color: #FFFFF0;
+}
+.color-y {
+  color: #efc851;
+}
+.color-p {
+  color: #aa66bb;
+}

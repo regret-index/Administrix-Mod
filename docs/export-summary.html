@@ -1,0 +1,872 @@
+<!DOCTYPE html!>
+<html>
+  <head>
+    <title>The Administrix - v0.9.0 content</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+  </head>
+  <body>
+    <h1>The Administrix</h1>
+    <h3>v0.9.0</h3>
+    <img src="img/Administrix.png">
+
+    <h2>Keywords</h2>
+    <table class="sortable">
+      <tr>
+        <th>Keyword</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><b>Plot</b></td>
+        <td>Plot effects trigger on both drawing and manually discarding given cards.</td>
+      </tr>
+      <tr>
+        <td><b>Transpose</b></td>
+        <td>To Transpose is to discard cards from your <span class="color-y">Draw</span> <span class="color-y">Pile,</span> then move different cards from the <span class="color-y">Discard</span> <span class="color-y">Pile</span> to the bottom of your <span class="color-y">Draw</span> <span class="color-y">Pile.</span></td>
+      </tr>
+      <tr>
+        <td><b>Immortal</b></td>
+        <td>Immortal cards <span class="color-y">upgrade</span> other Immortal cards via <span class="color-y">Plot</span> and can be <span class="color-y"><span class="color-y">upgraded</span></span> any number of times.</td>
+      </tr>
+
+      <tr><td colspan="2"></td></tr>
+
+      <tr>
+        <td><b>[Artifact]</b></td>
+        <td>Negate debuffs as usual, including the loss of stats from temporary stat increases.</td>
+      </tr>
+      <tr>
+        <td><b>Wilting</b></td>
+        <td>Whenever you play a card, Wilting does <span class="color-b">1</span> damage to yourself.</td>
+      </tr>
+      <tr>
+        <td><b>Duality</b></td>
+        <td>Whenever you play an equal, non-zero number of Attacks and Skills in one turn, Duality grants temporary <span class="color-y">Strength</span> and <span class="color-y">Dexterity</span> next turn.</td>
+      </tr>
+
+      <tr><td colspan="2"></td></tr>
+
+      <tr>
+        <td><b>Yin, Yang</b></td>
+        <td><span class="color-l">Yin</span> and <span class="color-w">Yang</span> fuel many cards. The higher value between <span class="color-l">Yin</span> and <span class="color-w">Yang</span> decreases by <span class="color-b">1</span> each turn.</td>
+      </tr>
+      <tr>
+        <td><b>Daybreak</b></td>
+        <td>Daybreaks are 0-cost <span class="color-y">Ethereal</span> attacks that give <span class="color-w">Yang</span> and <span class="color-y">Exhaust.</span></td>
+      </tr>
+      <tr>
+        <td><b>Nightfall</b></td>
+        <td>Nightfalls are 0-cost <span class="color-y">Ethereal</span> skills that give <span class="color-l">Yin</span> and <span class="color-y">Exhaust.</span></td>
+      </tr>
+
+      <tr>
+        <td><b>Affinity</b></td>
+        <td>If you have more <span class="color-l">Yin</span> than <span class="color-w">Yang,</span> then when you gain <span class="color-l">Yin,</span> damage all enemies twice. If you have more <span class="color-w">Yang</span> than <span class="color-l">Yin</span>, then when you gain <span class="color-w">Yang,</span> gain <span class="color-y">Block.</span></td>
+      </tr>
+    </table>
+
+    <h2>Relics</h2>
+      <table class="sortable" id="relics">
+        <tr>
+          <th>Relic</th>
+          <th>Image</th>
+          <th>Tier</th>
+          <th>Pool</th>
+          <th>Description</th>
+          <th>Flavor</th>
+        </tr>
+
+        <tr>
+          <td><u>Conductor's Ritual Baton</u></td>
+          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/Shaku.png" width="128" height="128"></td>
+          <td><i>Starter</i></td>
+          <td>Lich Gold</td>
+          <td>The first time each turn you play <span class="color-b">4</span> Attacks or <span class="color-b">4</span> Skills, <span class="color-y">Transpose</span> one.</td>
+          <td><i>A golden shaku, really, and your favourite dramatic gesturing aide. Control the fight's tempo.</i></td>
+        </tr>
+
+        <tr>
+          <td><u>Attack Counter</u></td>
+          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/AttackCounter.png" width="128" height="128"></td>
+          <td><i>Special Starter</i></td>
+          <td>Lich Gold</td>
+          <td>(This does nothing besides count how many Attacks you've played each turn.)</td>
+          <td>(<i>A proper custom UI element for Duality and the Shaku will come up eventually.</i>)</td>
+        </tr>
+      
+        <tr>
+          <td><u>Skill Counter</u></td>
+          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/SkillCounter.png" width="128" height="128"></td>
+          <td><i>Special Starter</i></td>
+          <td>Lich Gold</td>
+          <td>(This does nothing besides count how many Skills you've played each turn.)</td>
+          <td>(<i>Probably will also steal away Yin and Yang into such to reduce the endless power count.</i>)</td>
+        </tr>
+
+        <tr>
+          <td><u>Prescription Bottle</u></td>
+          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/PrescriptionBottle.png" width="128" height="128"></td>
+          <td><i>Common</i></td>
+          <td>Lich Gold</td>
+          <td>Every <span class="color-b">4</span> turns, gain <span class="color-b">1</span> <span class="color-y">Artifact.</span></td>
+          <td><i>Self-medication may have been necessary for survival, but that sister-in-arms god/doctor was a far better replacement.</i></td>
+        </tr>
+
+        <tr>
+          <td><u>Abandoned Rose</u></td>
+          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/AbandonedRose.png" width="128" height="128"></td>
+          <td><i>Uncommon</i></td>
+          <td>Lich Gold</td>
+          <td>Whenever you manually discard a card, <span class="color-y">Upgrade</span> it for the rest of the combat.</td>
+          <td><i>The End of The World has come and gone. Shine through the despair.</i></td>
+        </tr>
+
+        <tr>
+          <td><u>Golden Chickadee</u></td>
+          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/GoldenChickadee.png" width="128" height="128"></td>
+          <td><i>Uncommon</i></td>
+          <td>Lich Gold</td>
+          <td>Upon pickup, <span class="color-y">Upgrade</span> <span class="color-b">2</span> random <span class="color-y">Rare</span> cards. Whenever you add a <span class="color-y">Rare</span> card into your deck, <span class="color-y">Upgrade</span> it.</td>
+          <td><i>You hatched ages ago, of course.</i></td>
+        </tr>
+
+        <tr>
+          <td><u>Key of Kings</u></td>
+          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/KeyOfKings.png" width="128" height="128"></td>
+          <td><i>Rare</i></td>
+          <td>Lich Gold</td>
+          <td>Every time you discard <span class="color-b">3</span> cards, add a <span class="color-y">Daybreak</span> and a <span class="color-y">Nightfall</span> to your hand.</td>
+          <td><i>'Royalty's a continuous cutting motion', they say. Well, despite yourself, you treasure also cutting away from it all.</i></td>
+        </tr>
+
+        <tr>
+          <td><u>Elixir of Immorality</u></td>
+          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/ElixirOfImmorality.png" width="128" height="128"></td>
+          <td><i>Boss</i></td>
+          <td>Lich Gold</td>
+          <td>Gain [E] at the start of your turn. At the start of turn <span class="color-b">2,</span> gain <span class="color-b">1</span> <span class="color-y">Wilting.</span> At the start of turn <span class="color-b">4,</span> gain <span class="color-b">1</span> <span class="color-y">Frail.</span></td>
+          <td><i>You've long surpassed that other wicked hermit's medicines. Still, her work has some (dubious) potency left...</i></td>
+        </tr>
+
+        <tr>
+          <td><u>Blood-soaked Veil</u></td>
+          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/BloodSoakedVeil.png" width="128" height="128"></td>
+          <td><i>Boss</i></td>
+          <td>Lich Gold</td>
+          <td>Remove all Strikes and Defends. Receive <span class="color-b">3</span> <span class="color-y">Fiendish</span> <span class="color-y">Crimsons</span> and <span class="color-b">3</span> <span class="color-y">Bloodless</span> <span class="color-y">Sapphires.</span> Whenever you <span class="color-y">Exhaust</span> a card that costs <span class="color-b">2</span> or more, gain [E] the next turn.</td>
+          <td><i>...a life and an unlife of death have been all too inescapable. Perhaps you should embrace it.</i></td>
+        </tr>
+
+        <tr>
+          <td><u>Dragon's Eye Charm</u></td>
+          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/DragonsEyeCharm.png" width="128" height="128"></td>
+          <td><i>Shop</i></td>
+          <td>Lich Gold</td>
+          <td>Whenever you gain <span class="color-y">Yin</span> or <span class="color-y">Yang,</span> you'll gain <span class="color-b">3</span> more.</td>
+          <td><i>Even when it came to your secrets, it was never about balance or enlightenment. It was always about seizing empowerment.</i></td>
+        </tr>
+      </table>
+   
+      <h2>Potions</h2>
+      <table class="sortable">
+        <tr>
+          <th>Potion</th>
+          <th>Image</th>
+          <th>Rarity</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><u>Attunement Tonic</u></td>
+          <td><img src="img/AttunementTonic.png"></td>
+          <td><i>Uncommon</i></td>
+          <td>Gain <span class="color-b">1</span> <span class="color-y">Duality</span> and <span class="color-b">1</span> <span class="color-y">Affinity,</span> then double both.</td>
+        </tr>
+      </table>
+  
+      <h2>Cards</h2>
+        <table class="sortable" id="cards">
+          <tr>
+        <th>Card</th>
+        <th>Image</th>
+        <th>Rarity</th>
+        <th>Type</th>
+        <th>Cost</th>
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td><span class="color-y">Daybreak</span></td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Daybreak_p.png" height="190" width="250" /></td>
+        <td><i>Basic</i></td>
+        <td><i>Attack</i></td>
+        <td>0</td>
+        <td><span class="color-y">Ethereal</span>. Deal 3(5) damage. Gain 3(4) <span class="color-w">Yang</span>. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+
+      <tr>
+        <td><span class="color-y">Nightfall</span></td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Nightfall_p.png" height="190" width="250" /></td>
+        <td><i>Basic</i></td>
+        <td><i>Skill</i></td>
+        <td>0</td>
+        <td><span class="color-y">Ethereal</span>. Gain 3(5) <span class="color-y">Block</span>. Gain 3(4) <span class="color-l">Yin</span>. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+
+      <tr>
+        <td>Blue Cloak</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Blue%20Cloak_p.png" height="190" width="250" /></td>
+        <td><i>Starter</i></td>
+        <td><i>Attack</i></td>
+        <td>0</td>
+        <td>Deal 3(5) damage. Draw 1 card. Discard 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Apply 1 <span class="color-y">Weak</span> to all enemies. <span class="color-p">}</span></td>
+      </tr>
+      
+      <tr>
+        <td>Defend</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Defend_p.png" height="190" width="250" /></td>
+        <td><i>Starter</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Gain 5(8) <span class="color-y">Block</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Hidden Power</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Hidden%20Power_p.png" height="190" width="250" /></td>
+        <td><i>Starter</i></td>
+        <td><i>Power</i></td>
+        <td>1(0)</td>
+        <td>Gain 2 <span class="color-y">Affinity</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Red Cloak</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Red%20Cloak_p.png" height="190" width="250" /></td>
+        <td><i>Starter</i></td>
+        <td><i>Skill</i></td>
+        <td>0</td>
+        <td>Gain 3(5) <span class="color-y">Block</span>. Draw 1 card. Discard 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Apply 1 <span class="color-y">Vulnerable</span> to all enemies. <span class="color-p">}</span></td>
+      </tr>
+      
+      <tr>
+        <td>Strike</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Strike_p.png" height="190" width="250" /></td>
+        <td><i>Starter</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 6(9) damage.</td>
+      </tr>
+      
+      <tr>
+        <td>Cracking Pangu</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Cracking%20Pangu_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 9(12) damage. Every three times you play any Cracking Pangu[+] this combat, remove all of your Debuffs.</td>
+      </tr>
+      
+      <tr>
+        <td>Diversion Tactic</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Diversion%20Tactic_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 7(10) damage. Discard 1 card. <span class="color-y">Retain</span> your hand this turn.</td>
+      </tr>
+      
+      <tr>
+        <td>Centuries Ascent</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Centuries%20Ascent_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Skill</i></td>
+        <td>0</td>
+        <td>Gain 3(5) <span class="color-y">Block</span>. (Gain 2 <span class="color-w">Yang</span>). <span class="color-p">{</span> <span class="color-y">Plot</span>: Add a <span class="color-y">Daybreak</span> to your hand. <span class="color-p">}</span></td></td>
+      </tr>
+      
+      <tr>
+        <td>Extol Virtue</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Extol%20Virtue_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 7(10) damage to ALL enemies. If you have any <span class="color-y">Artifact</span>, gain 1 more.</td>
+      </tr>
+      
+      <tr>
+        <td>Immortal Grace</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Immortal%20Grace_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 7(8) damage. Draw 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Upgrade all Immortal cards in your hand (deck) for the rest of this combat. <span class="color-p">}</span></td>
+      </tr>
+      
+      <tr>
+        <td>Immortal Purity</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Immortal%20Purity_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Gain 7(8) <span class="color-y">Block</span>. Discard 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Upgrade all Immortal cards in your hand (deck) for the rest of this combat. <span class="color-p">}</span></td>
+      </tr>
+      
+      <tr>
+        <td>Light of Your Life</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Light%20Of%20Your%20Life_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td><span class="color-y">Transpose</span> one. Draw 1 card. Gain 4 <span class="color-w">Yang</span>. <span class="color-y">Exhaust</span> (not).</td>
+      </tr>
+
+      <tr>
+        <td>Passage of Ages</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Passage%20of%20Ages_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 4(6) damage. (Gain 2 <span class="color-l">Yin</span>). <span class="color-p">{</span> <span class="color-y">Plot</span>: Add a <span class="color-y">Nightfall</span> to your hand. <span class="color-p">}</span></td></td>
+      </tr>
+      
+      <tr>
+        <td>Noble Path</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Noble%20Path_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 8 damage. Gain [E] next turn. Gain 3 <span class="color-l">Yin</span> (twice). Gain 3 <span class="color-w">Yang</span> (twice).</td></td>
+      </tr>
+      
+      <tr>
+        <td>Plate Of Antiquity</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Plate%20of%20Antiquity_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 7(8) damage. Gain 2(3) <span class="color-y">Dexterity</span>. Lose 2(3) <span class="color-y">Dexterity</span> at the end of this turn.</td>
+      </tr>
+      
+      <tr>
+        <td>Rebuke Desires</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Rebuke%20Desires_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Attack</i></td>
+        <td>0</td>
+        <td>(<span class="color-y">Innate</span>.) Deal 4 damage. If the enemy doesn't intend to attack, gain 1 <span class="color-y">Artifact</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Regent's Edict</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Regent's%20Edict_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 4(7) damage. Whenever you play any Regent's Edict[+] three times this combat, steal the enemy's <span class="color-y">Strength</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Seal Away</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Seal%20Away_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Draw 2(4) cards. <span class="color-y">Upgrade</span> all cards in your hand for the rest of this combat. Discard your hand.</td>
+      </tr>
+      
+      <tr>
+        <td>Shadow Play</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Shadow%20Play_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 6 damage. Draw 2 cards. Discard 1 card. Gain 4 <span class="color-l">Yin</span>. <span class="color-y">Exhaust</span> (not).</td>
+      </tr>
+      
+      <tr>
+        <td>Sip of Sparks</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Sip%20of%20Sparks_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Gain 7(8) <span class="color-y">Block</span>. Gain 2(3) <span class="color-y">Strength</span>. Lose 2(3) <span class="color-y">Strength</span> at the end of this turn.</td>
+      </tr>
+      
+      <tr>
+        <td>Syncretic Plunge</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Syncretic%20Plunge_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Add a(n <span class="color-y">upgraded</span>) <span class="color-y">Nightfall</span> to your hand for every Attack you've played this turn.</td>
+      </tr>
+      
+      <tr>
+        <td>Syncretic Surge</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Syncretic%20Surge_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Add a(n <span class="color-y">upgraded</span>) <span class="color-y">Daybreak</span> to your hand for every Skill you've played this turn (including this one).</td>
+      </tr>
+      
+      <tr>
+        <td>Touch of Cinnabar</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Touch%20of%20Cinnabar_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Skill</i></td>
+        <td>1(0)</td>
+        <td>Gain 3 <span class="color-y">Plated Armor</span>. Gain 2 <span class="color-y">Frail</span>. Gain 1 <span class="color-y">Artifact</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Transition</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Transition_p.png" height="190" width="250" /></td>
+        <td><i>Common</i></td>
+        <td><i>Skill</i></td>
+        <td>1(0)</td>
+        <td>Discard 2 cards. Gain [E] next turn. <span class="color-p">{</span> <span class="color-y">Plot</span>: Draw 1 card next turn. <span class="color-p">}</span></td>
+      </tr>
+      
+      <tr>
+        <td>17-Article Laser</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Seventeen%20Article%20Laser_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Attack</i></td>
+        <td>2</td>
+        <td>Deal 17 damage (to ALL enemies). <span class="color-y">Transpose</span> one.</td>
+      </tr>
+      
+      <tr>
+        <td>Armillary Sphere</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Armillary%20Sphere_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>2</td>
+        <td>Gain 4(5) <span class="color-y">Block</span> next turn. Gain 1(2) <span class="color-y">Artifact</span>. <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain 4(5) <span class="color-y">Block</span>. <span class="color-p">}</span></td>
+      </tr>
+      
+      <tr>
+        <td>Bishamon's Blessing</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Bishamon's%20Blessing_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td></td>
+        <td><span class="color-y">Unplayable</span>. <span class="color-y">Ethereal</span>. <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain 3 <span class="color-w">Yang</span>. Apply 1 <span class="color-y">Weak</span> to all enemies. (Draw 1 card.) <span class="color-p">}</span></td>
+      </tr>
+
+      <tr>
+        <td>Beget Eternity</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Beget%20Eternity_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Attack</i></td>
+        <td>3</td>
+        <td>Deal 7(9) damage thrice. Draw 1 additional card next turn. Gain 2(3) <span class="color-y">Affinity</span>. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+
+      <tr>
+        <td>Bloodless Sapphire</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Bloodless%20Sapphire_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>2</td>
+        <td>Gain 14(18) <span class="color-y">Block</span>. Heal 4(7) HP. Gain 2 <span class="color-y">Wilting</span>. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+
+      <tr>
+        <td>Cosmos Control</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Cosmos%20Control_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>2</td>
+        <td>Put a card from your discard pile into your hand. Put a card from your hand on top of your draw pile. Both cost 0 until played. <span class="color-y">Exhaust</span> (not).</td>
+      </tr>
+      
+      <tr>
+        <td>Cast Off Regrets</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Cast%20Off%20Regrets_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Power</i></td>
+        <td>1(0)</td>
+        <td>Gain 3 <span class="color-y">Frail</span>. Whenever you manually discard a card, gain 2 of the higher of your <span class="color-l">Yin</span> and your <span class="color-w">Yang</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Choose Your End</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Choose%20Your%20End_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 11(15) damage. Add a Red Cloak and Blue Cloak to your hand. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Convergence</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Convergence_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Power</i></td>
+        <td>2</td>
+        <td>Add a(n <span class="color-y">upgraded</span>) <span class="color-y">Daybreak</span> and a(n <span class="color-y">upgraded</span>) <span class="color-y">Nightfall</span> to your hand at the start of each turn.</td>
+      </tr>
+      
+      <tr>
+        <td>Dreams Mausoleum</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Dreams%20Mausoleum_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>4</td>
+        <td><span class="color-y">Ethereal</span>. Gain 10(14) <span class="color-y">Block</span>. Gain 1 <span class="color-y">Artifact</span>. <span class="color-p">{</span> <span class="color-y">Plot</span>: This card costs 1 [E] less this combat. <span class="color-p">}</span></td>
+      </tr>
+      
+      <tr>
+        <td>Feast of Dew</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Feast%20of%20Dew_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Draw 2 cards. (Add a copy of this card to your hand. <span class="color-y">Exhaust</span>.) Whenever you play any Feast of Dew[+] three times this combat, gain 4 <span class="color-y">Affinity</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Fiendish Crimson</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Fiendish%20Crimson_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Attack</i></td>
+        <td>2</td>
+        <td>Deal 14(18) damage. Heal 4(7) HP. Gain 2 <span class="color-y">Frail</span>. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Grandeur</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Grandeur_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>0</td>
+        <td>Gain 2(3) <span class="color-y">Strength</span> and 1(2) <span class="color-y">Dexterity</span>, and lose such at the end of this turn. Draw 1 card.</td>
+      </tr>
+      
+      <tr>
+        <td>Guanyin's Blessing</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Guanyin's%20Blessing_p.png" height="190" width="250" /></td> 
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td></td>
+        <td><span class="color-y">Unplayable</span>. <span class="color-y">Ethereal</span>. <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain 3 <span class="color-l">Yin</span>. Apply 1 <span class="color-y">Vulnerable</span> to all enemies.  (Draw 1 card.) <span class="color-p">}</span></td>
+      </tr>
+      
+      <tr>
+        <td>Harmonic Reverence</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Harmonic%20Reverence_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Power</i></td>
+        <td>2</td>
+        <td>Gain 3(4) <span class="color-y">Affinity</span>. Double both your <span class="color-l">Yin</span> and your <span class="color-w">Yang</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Just Rewards</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Just%20Rewards_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Attack</i></td>
+        <td>2</td>
+        <td>Deal 10 damage to ALL enemies. Apply 1 <span class="color-y">Vulnerable</span> to ALL enemies. Add 2(3) <span class="color-y">Daybreak</span>s to your hand.</td>
+      </tr>
+      
+      <tr>
+        <td>Katabasis</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Katabasis_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>X</td>
+        <td>Apply 1 <span class="color-y">Weak</span> X(+1) times. Add an <span class="color-y">upgraded</span> <span class="color-y">Nightfall</span> to your hand each turn for the next X(+1) turns.</td>
+      </tr>
+
+      <tr>
+        <td>Metempsychosis</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Metempsychosis_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>0</td>
+        <td>Gain [E] next turn. Draw 1 less card next turn. Gain 2 <span class="color-y">Duality</span>. <span class="color-y">Exhaust</span> (not).</td>
+      </tr>
+      
+      <tr>
+        <td>Mix of Mercury</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Mix%20of%20Mercury_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Gain 2 <span class="color-y">Thorns</span>. Gain 2 <span class="color-y">Wilting</span>. Gain 1(2) <span class="color-y">Artifact</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>New Wardrobe</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/New%20Wardrobe_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Swap your <span class="color-l">Yin</span> & <span class="color-w">Yang</span>. Deal damage to ALL enemies equal to (4 +) the difference between them. </td>
+      </tr>
+      
+      <tr>
+        <td>Overdrive</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Overdrive_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Power</i></td>
+        <td>0</td>
+        <td><span class="color-y">Ethereal</span>. Gain 4 <span class="color-y">Duality</span>. (Gain [E].) Lose 1 <span class="color-y">Strength</span>. Lose 1 <span class="color-y">Dexterity</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Quiet Conspiracy</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Quiet%20Conspiracy_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>If the enemy doesn't intend to attack, look at the top 4(5) cards of your draw pile, and discard any of them. Regardless, draw 2 cards.</td>
+      </tr>
+      
+      <tr>
+        <td>Reach to Heaven</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Reach%20to%20Heaven_p.png" height="190" width="250" /></td>    <td><i>Uncommon</i></td>
+        <td><i>Attack</i></td>
+        <td>X</td>
+        <td>Discard X cards. Deal 3(4) damage X times. Deal 3(4) to all enemies X times. Gain 3(4) <span class="color-w">Yang</span> X times.</td>
+      </tr>
+      
+      <tr>
+        <td>Rising Sun's Prince</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Rising%20Sun's%20Prince_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 4(6) damage twice. <span class="color-p">{</span> <span class="color-y">Plot</span>: ALL enemies lose 2(3) <span class="color-y">Strength</span> this turn. <span class="color-p">}</span></td>
+      </tr>
+      
+      <tr>
+        <td>Transcension</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Transcension_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>2</td>
+        <td>Replay the last Attack you played this turn for each 9(7) of the lower of your <span class="color-l">Yin</span> and <span class="color-w">Yang</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Unstable Vigor</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Unstable%20Vigor_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 12(14) damage. Gain 3(4) <span class="color-y">Strength</span>. Lose 3(4) <span class="color-y">Strength</span> at the end of this turn. Gain 1 <span class="color-y">Wilting</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Untouchable</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Untouchable_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>0</td>
+        <td>Apply 1 <span class="color-y">Weak</span>. If the enemy intends to attack, gain 3(4) <span class="color-y">Dexterity</span>, and lose 3(4) <span class="color-y">Dexterity</span> at the end of the turn. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Wicked Punishment</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Wicked%20Punishment_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Attack</i></td>
+        <td>2</td>
+        <td>Deal 6(8) damage twice. Draw 2 cards. Gain 3 <span class="color-l">Yin</span> twice (thrice).</td>
+      </tr>
+      
+      <tr>
+        <td>Wuji</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Wuji_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Gain 1 <span class="color-y">Duality</span> for each 4 of the lower of your <span class="color-l">Yin</span> or your <span class="color-w">Yang</span>. Lose all (half) of your <span class="color-l">Yin</span> and <span class="color-w">Yang</span>. <span class="color-y">Retain</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Xian Arts</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Xian%20Arts_p.png" height="190" width="250" /></td>
+        <td><i>Uncommon</i></td>
+        <td><i>Power</i></td>
+        <td>1</td>
+        <td>Gain 2(3) <span class="color-y">Duality</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Amassed Masks</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Amassed%20Masks_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Skill</i></td>
+        <td>2</td>
+        <td>Add a random Attack card, Skill card, and Power card into your hand(, then <span class="color-y">upgrade</span> all of them). They all cost 0 this turn. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Battleforged Bonds</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Battleforged%20Bonds_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Skill</i></td>
+        <td>4</td>
+        <td>Gain 4 <span class="color-y">Strength</span> and 4 <span class="color-y">Dexterity</span>. Lose such at the end of this turn. Reduce the cost of all cards in your hand to 0 this turn. <span class="color-y">Exhaust</span>. (<span class="color-y">Retain</span>.)</td>
+      </tr>
+      
+      <tr>
+        <td>Brewing Cloister</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Brewing%20Cloister_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Skill</i></td>
+        <td>2</td>
+        <td>Gain 16(24) <span class="color-y">Block</span>. Obtain a random non-healing potion. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Death by Glamour</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Death%20By%20Glamour_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Power</i></td>
+        <td>3</td>
+        <td>At the start of your turn, add a random Rare card to your hand [which costs 0 that turn (this combat)], and discard 1 card.</td>
+      </tr>
+      
+      <tr>
+        <td>Faithful Flames</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Faithful%20Flames_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Power</i></td>
+        <td>2</td>
+        <td>(<span class="color-y">Innate</span>.) Whenever you play 3 Attacks, gain 2 <span class="color-y">Thorns</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>False Death</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/False%20Death_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Skill</i></td>
+        <td>2</td>
+        <td>Discard your draw pile. Put 2(3) cards from your discard pile ontop of your draw pile. Gain 3 <span class="color-y">Wilting</span>. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Fear of Death</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Fear%20Of%20Death_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Power</i></td>
+        <td>0</td>
+        <td>Gain 3 <span class="color-y">Frail</span>. Gain 3 <span class="color-y">Wilting</span>. Gain 4(7) <span class="color-y">Artifact</span>. Discard your hand.</td>
+      </tr>
+      
+      <tr>
+        <td>Girls Do It Better</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Girls%20Do%20It%20Better_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Attack</i></td>
+        <td>2</td>
+        <td>Deal 2 damage 4(7) times. Enemy loses <span class="color-y">Strength</span> equal to two-thirds of your <span class="color-y">Strength</span>, rounded down. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Have It All</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Have%20It%20All_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Attack</i></td>
+        <td>0</td>
+        <td>Gain 1 <span class="color-y">Block</span> (twice). Deal 1 damage to ALL enemies (twice). Gain 1 <span class="color-y">Affinity</span>. Discard 1 card.</td>
+      </tr>
+      
+      <tr>
+        <td>Hope in the Dark</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Hope%20in%20the%20Dark_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Skill</i></td>
+        <td>2</td>
+        <td><span class="color-y">Ethereal</span>. Gain <span class="color-y">Block</span> equal to (one and a half times) the amount of <span class="color-l">Yin</span> you have more of than <span class="color-w">Yang</span>(, rounded down). Remove all of your Debuffs.</td>
+      </tr>
+      
+      <tr>
+        <td>Immortal Clarity</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Immortal%20Clarity_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Power</i></td>
+        <td>1</td>
+        <td>Choose a card. Add a copy of that card into your hand (each turn for the) next (2) turn(s). <span class="color-p">{</span> <span class="color-y">Plot</span>: Upgrade all </span> <span class="color-y">Immortal</span> cards in your hand (deck) for the rest of this combat. <span class="color-p">}</span></td>
+      </tr>
+      
+      <tr>
+        <td>Lifeforce Net</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Lifeforce%20Net_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Attack</i></td>
+        <td>1</td>
+        <td>Deal 4(5) damage to a random enemy twice. Deal 4(5) damage to ALL enemies. Obtain 1 Fairy in a Bottle. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Luminary's Path</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Luminary's%20Path_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Discard your hand. Draw cards and gain [E] equal to the difference between your <span class="color-l">Yin</span> and your <span class="color-w">Yang</span>, divided by 10 (8). <span class="color-y">Exhaust</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Mastermind</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Mastermind_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Skill</i></td>
+        <td>1</td>
+        <td>Double all <span class="color-y">Plot</span> effects this turn and next turn. <span class="color-y">Transpose</span> one (two). Draw 1 less card next turn. <span class="color-y">Exhaust</span>.</td>
+      </tr>
+      
+      <tr>
+        <td>Newborn Divinity</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Newborn%20Divinity_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Attack</i></td>
+        <td>2</td>
+        <td><span class="color-y">Ethereal</span>. Deal damage equal to 2(3) times the amount of <span class="color-w">Yang</span> you have more of than <span class="color-l">Yin</span>. Remove all of your Debuffs.</td>
+      </tr>
+
+      <tr>
+        <td>Schism</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Schism_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Attack</i></td>
+        <td>1(0)</td>
+        <td>Deal damage equal to half your <span class="color-y">Block</span> to ALL enemies. Gain half your current <span class="color-y">Block</span> next turn. Lose all <span class="color-y">Block</span>.</td>
+      </tr>
+
+      <tr>
+        <td>Star Sword Soul</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Star%20Sword%20Soul_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Power</i></td>
+        <td>3</td>
+        <td>At the start of your turn, gain 1 <span class="color-y">Duality</span>, 1 <span class="color-y">Affinity</span>, and draw 1 additional card.  (<span class="color-y">Retain</span>.)</td>
+      </tr>
+
+      <tr>
+        <td>Ten Desires</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Ten%20Desires_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Skill</i></td>
+        <td>2</td>
+        <td><span class="color-y">Ethereal</span>. <span class="color-y">Transpose</span> two. Draw cards until you have 10 in your hand. Discard 2 cards. <span class="color-y">Exhaust</span> (not).</td>
+      </tr>
+
+      <tr>
+        <td>Wife's Lightning</td>
+        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Wife's%20Lightning_p.png" height="190" width="250" /></td>
+        <td><i>Rare</i></td>
+        <td><i>Power</i></td>
+        <td>2</td>
+        <td>(<span class="color-y">Innate</span>.) Whenever you play 3 Attacks, gain 2 <span class="color-y">Plated Armor</span>.</td>
+      </tr>
+    </table>
+  </body>
+</html>
