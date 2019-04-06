@@ -239,12 +239,15 @@
   },
   "AdministrixMod:Metempsychosis": {
     "NAME": "Metempsychosis",
-    "DESCRIPTION": "Gain [R] next turn. NL Draw 1 less card next turn. NL Gain 2 Duality. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [R] next turn. NL Draw 1 less card next turn. NL Gain 2 Duality."
+    "DESCRIPTION": "Put a card from your draw pile on top of your draw pile. NL Gain [R] next turn. NL Draw 1 less card next turn."
   },
   "AdministrixMod:MixOfMercury": {
     "NAME": "Mix of Mercury",
     "DESCRIPTION": "Gain 2 Thorns. NL Gain 2 Wilting. NL Gain !M! Artifact."
+  },
+  "AdministrixMod:Overdrive": {
+    "NAME": "Overdrive",
+    "DESCRIPTION": "Ethereal. NL Gain [R]. NL Gain !M! Strength. NL Lose !ax:M2! Strength at the end of this turn. NL Exhaust."
   },
   "AdministrixMod:QuietConspiracy": {
     "NAME": "Quiet Conspiracy",
@@ -284,10 +287,10 @@
   },
   "AdministrixMod:Wuji": {
     "NAME": "Wuji",
-    "DESCRIPTION": "Gain 1 Duality for each 4 of the lower of your Yin or Yang. NL Lose all of your Yin and Yang. NL Retain.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Duality for each 4 of the lower of your Yin or Yang. NL Lose half of your Yin and Yang, rounded down. NL Retain.",
+    "DESCRIPTION": "Gain 1 Dexterity for each 4 of the lower of your Yin or Yang. NL Lose all of your Yin and Yang. NL Retain.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Dexterity for each 4 of the lower of your Yin or Yang. NL Lose half of your Yin and Yang, rounded down. NL Retain.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Gain !M! Duality.)"
+      " NL (Gain !M! Dexterity.)"
     ]
   },
 
@@ -307,14 +310,9 @@
       "Gain !M! Affinity. NL Double both your Yang and Yin."
     ]
   },
-  "AdministrixMod:Overdrive": {
-    "NAME": "Overdrive",
-    "DESCRIPTION": "Ethereal. NL Gain 4 Duality. NL Lose !M! Strength. NL Lose !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain 4 Duality. NL Gain [R]. NL Lose !M! Strength. NL Lose !M! Dexterity."
-  },
   "AdministrixMod:XianArts": {
     "NAME": "Xian Arts",
-    "DESCRIPTION": "Gain !M! Duality."
+    "DESCRIPTION": "Whenever you gain any Artifact, gain !M! Strength and !M! Dexterity."
   },
 
   "AdministrixMod:AmassedMasks": {
@@ -384,8 +382,8 @@
   },
   "AdministrixMod:StarSwordSoul": {
     "NAME": "Star Sword Soul",
-    "DESCRIPTION": "At the start of your turn, gain 1 Duality, 1 Affinity, and draw 1 additional card.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, gain 1 Duality, 1 Affinity, and draw 1 additional card. NL Retain."
+    "DESCRIPTION": "At the start of your turn, gain 1 Affinity and draw 1 additional card. NL Retain.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 Duality, 1 Affinity, and draw 1 additional card. NL Retain."
   },
   "AdministrixMod:WifeLightning": {
     "NAME": "Wife's Lightning",

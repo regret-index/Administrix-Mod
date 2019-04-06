@@ -19,7 +19,6 @@ import administrix.powers.DualityPower;
 public class AttunementTonic extends AbstractPotion {
     public static final String POTION_ID = "AdministrixMod:AttunementTonic";
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
-    private static final PowerStrings dualityStrings = CardCrawlGame.languagePack.getPowerStrings(DualityPower.POWER_ID);
     private static final PowerStrings affinityStrings = CardCrawlGame.languagePack.getPowerStrings(AffinityPower.POWER_ID);
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
@@ -27,12 +26,9 @@ public class AttunementTonic extends AbstractPotion {
     public AttunementTonic() {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.M, PotionColor.SMOKE);
         this.potency = this.getPotency();
-        this.description = DESCRIPTIONS[0] + this.potency +
-                           DESCRIPTIONS[1] + this.potency + DESCRIPTIONS[2];
+        this.description = DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1];
         this.isThrown = false;
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip((TipHelper.capitalize(dualityStrings.NAME)),
-                     (String)GameDictionary.keywords.get("duality")));
         this.tips.add(new PowerTip((TipHelper.capitalize(affinityStrings.NAME)),
                      (String)GameDictionary.keywords.get("affinity")));
     }
@@ -42,12 +38,6 @@ public class AttunementTonic extends AbstractPotion {
         target = AbstractDungeon.player;
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
         {
-            if (AbstractDungeon.player.hasPower(DualityPower.POWER_ID)) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new DualityPower(target, this.potency), this.potency));
-            }
-
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-
             if (AbstractDungeon.player.hasPower(AffinityPower.POWER_ID)) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new AffinityPower(target, this.potency), this.potency));
             }
@@ -61,7 +51,7 @@ public class AttunementTonic extends AbstractPotion {
 
     @Override
     public int getPotency(int ascensionLevel) {
-        // return ascensionLevel < 11 ? 1 : 0;
+        // return ascensionLevel < 11 ? 3 : 2;
         return 3;
     }
 }

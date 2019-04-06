@@ -24,8 +24,8 @@ public class LightOfYourLife extends AbstractAdministrixCard
     public static final String NAME = "Light of Your Life";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 1;
-    private static final int UPGRADE_COST = 1;
-    private static final int TRANSPOSE_AMOUNT = 0;
+    private static final int UPGRADE_COST = 0;
+    private static final int TRANSPOSE_AMOUNT = 1;
     private static final int DRAW_AMOUNT = 1;
     private static final int YANG_AMOUNT = 4;
     private static final CardRarity rarity = CardRarity.COMMON;

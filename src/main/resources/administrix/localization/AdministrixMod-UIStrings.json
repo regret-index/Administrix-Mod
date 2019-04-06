@@ -11,6 +11,11 @@
       "Choose discarded cards to move to the bottom of the Draw Pile."
     ]
   },
+  "MetempsychosisAction": {
+    "TEXT": [
+      "Choose a card from your Draw Pile to put on top of the Draw Pile."
+    ]
+  },
   "TransposeAction": {
     "TEXT": [
       "Discard a card from your Draw Pile.",

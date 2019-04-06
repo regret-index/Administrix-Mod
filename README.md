@@ -2,7 +2,7 @@ The _Administrix_, the lich princess of the rising sun,
 is inspired by Toyosatomimi no Miko (豊聡耳 神子),
 a character from the _Touhou Project_ series.
 
-Latest releases can be found [here](https://github.com/regret-index/Administrix-Mod/releases). The versions changelog can be found [here](https://github.com/regret-index/Administrix-Mod/blob/master/changelog.txt).
+Latest releases can be found [here](https://github.com/regret-index/Administrix-Mod/releases). The versions changelog can be found [here](https://github.com/regret-index/Administrix-Mod/blob/master/changelog.txt). A full content summary can be found [here](https://regret-index.github.io/Administrix-Summary/).
 
 --== Credits ==--
 ======

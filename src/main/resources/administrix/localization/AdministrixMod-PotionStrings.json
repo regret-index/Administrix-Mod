@@ -2,8 +2,7 @@
   "AdministrixMod:AttunementTonic": {
     "NAME": "Attunement Tonic",
     "DESCRIPTIONS": [
-      "If you have any #yDuality, gain #b",
-      " #yDuality. If you have any #yAffinity, gain #b",
+      "If you have any #yAffinity, gain #b",
       " #yAffinity."
     ]
   }

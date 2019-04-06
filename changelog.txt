@@ -1,9 +1,38 @@
 ==== v0.9.1a ====
+=======
+ - Two new cards.
+  * Funerary Rites: A 1(0)-cost common skill.
+    Discard 1 card. Put a card from your Discard Pile on top of your Draw Pile.
+    Gain 4 Yang.
+  * Trick of the Light: A 1 cost common attack.
+    Deal 8 damage. Discard the top Plot card in your draw pile.
+    Gain 4 Yin. Exhaust (not).
+
+ - Simplification revisions: Duality has been cut.
+   The following previous sources of it have been revamped:
+  * Metempsychosis: Now a 1(0) cost uncommon skill.
+    Put a card from your draw pile on top of your draw pile.
+    Gain 1 energy and draw 1 less card next turn.
+  * Wuji: Still a 1-cost uncommon skill.
+    Gain 1 Dexterity for each 4 of the lower of your Yin and Yang.
+    Lose all (half) of your Yin and Yang. Retain.
+  * Overdrive: Now a 0-cost uncommon skill.
+    Ethereal. Gain [E]. Gain 3(4) Strength.
+    Lose 5(6) Strength at the end of the turn. Exhaust.
+  * Xian Arts: now a 2(1)-cost uncommon power.
+    Whenever you gain any Artifact, gain 1 Strength and 1 Dexterity.
+  * Star Sword Soul: Still a 3-cost rare power.
+    (Innate.) At the start of each turn, gain 1 Affinity
+    and draw 1 additional card. Retain.
+  * Attunement Tonic: Still an uncommon potion.
+    If you have any Affinity, gain 3 more.
+
  - Simplification revisions - Yin and Yang no longer slowly equalize,
    and have Affinity effects built-in for both (at an effective base 1).
    Affinity now simply strengthens Yin and Yang.
    Hidden Power is out of the starting deck and is now Uncommon:
    [1(0)-cost power - Gain 2 Affinity. Draw 1 less card next turn.]
+
  - Balance changes due to said Yin and Yang shifts.
   * Red Cloak: 3(5) Block -> 2(4) Block.
   * Blue Cloak: 3(5) damage -> 2(4) damage.
@@ -13,10 +42,15 @@
   * Bishamon's Blessing, Guanyin's Blessing:
     Base card Plot effects draw 1 card, base cards exhaust when drawn.
  ...
+  * Light of Your Life: Base no longer exhausts, upgrade costs 0.
   * Feast of Dew: Base now exhausts and adds a copy to the Draw Pile.
   * Harmonic Reverence: 3(4) Affinity -> 3(5) Affinity.
 
+ - Visuals
+  * New card art edits for Reach to Heaven, Unstable Vigor, and Mix of Mercury.
+
 ==== v0.9.0 ====
+=======
  - Content: new cards! new relics!
   * Noble Path: A 1-cost common Attack.
     Deal 8 damage. Gain 1 Energy next turn. Gain 3 Yin and Yang (twice).
@@ -68,7 +102,7 @@
     Plunge, Fiendish Crimson, Rising Sun's Prince, Unstable Vigor,
     Wicked Punishment, Feast of Dew, and Guanyin's Blessing:
     all have altered card art.
-  * Luminary's Path now has a sound effect.
+  * Luminary's Path and Conductor's Ritual Baton now have sound effects.
  - Text
   * Would much rather have italics or just lean on the fact that multiple
     enemies consistently means "all", but to match base game English card copy

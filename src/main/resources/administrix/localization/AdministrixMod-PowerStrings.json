@@ -156,8 +156,7 @@
     "NAME": "Star Sword Soul",
     "DESCRIPTIONS": [
       "At the start of each turn, gain #b",
-      " Duality, #b",
-      " Affinity, and draw #b",
+      " Affinity and draw #b",
       " cards.",
       " card."
     ]
@@ -170,6 +169,14 @@
       "This turn, ",
       "whenever you play a card, take #b",
       " damage."
+    ]
+  },
+  "AdministrixMod:XianArts": {
+    "NAME": "Xian Arts",
+    "DESCRIPTIONS": [
+      "Whenever you gain any Artifact, gain #b",
+      " #yStrength and #b",
+      " #yDexterity."
     ]
   },
   "AdministrixMod:Yang": {

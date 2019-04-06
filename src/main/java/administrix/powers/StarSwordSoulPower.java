@@ -36,8 +36,6 @@ public class StarSwordSoulPower extends AbstractPower {
         {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.9F, 0.1F, 0.8F, 0.0F)), 0.05F));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new DualityPower(this.owner, this.amount), this.amount, true, AbstractGameAction.AttackEffect.NONE));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new AffinityPower(this.owner, this.amount), this.amount, true, AbstractGameAction.AttackEffect.NONE));
         }
     }
@@ -47,11 +45,11 @@ public class StarSwordSoulPower extends AbstractPower {
         if (this.amount > 1) {
             this.description = (DESCRIPTIONS[0] + this.amount +
                                 DESCRIPTIONS[1] + this.amount +
-                                DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3]);
+                                DESCRIPTIONS[2]);
         } else {
             this.description = (DESCRIPTIONS[0] + this.amount +
                                 DESCRIPTIONS[1] + this.amount +
-                                DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[4]);
+                                DESCRIPTIONS[3]);
         }
     }
 
