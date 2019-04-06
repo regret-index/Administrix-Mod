@@ -16,6 +16,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
 import static administrix.AdministrixMod.*;
+import static administrix.patches.CardTagsEnum.PLOT;
 
 // Ugh, this one's a mess of commented-out prior drafts.
 // Plot to reduce this card's cost this turn.
@@ -38,6 +39,7 @@ public class DreamsMausoleum extends AbstractAdministrixCard
                 CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.LichGold,
                 rarity, target);
+        this.tags.add(PLOT);
         setOrbTexture(ENERGY_ORB_LICH_GOLD_PLOT, ENERGY_ORB_LICH_GOLD_PORTRAIT);
         setBackgroundTexture(SKILL_LICH_GOLD_PLOT, SKILL_LICH_GOLD_PLOT_PORTRAIT);
         this.baseBlock = this.block = BLOCK_AMOUNT;

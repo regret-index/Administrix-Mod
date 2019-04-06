@@ -17,6 +17,7 @@ import administrix.powers.YangPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static administrix.AdministrixMod.*;
+import static administrix.patches.CardTagsEnum.PLOT;
 
 public class BishamonBlessing extends AbstractAdministrixCard
 {
@@ -37,6 +38,7 @@ public class BishamonBlessing extends AbstractAdministrixCard
                 CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.LichGold,
                 rarity, target);
+        this.tags.add(PLOT);
         setBannerTexture(UNCOMMON_BANNER_LICH_GOLD_PLOT, UNCOMMON_BANNER_PORTRAIT);
         setBackgroundTexture(SKILL_LICH_GOLD_PLOT, SKILL_LICH_GOLD_PLOT_PORTRAIT);
         this.baseMagicNumber = this.magicNumber = YANG_AMOUNT;

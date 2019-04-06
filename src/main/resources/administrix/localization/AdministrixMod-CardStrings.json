@@ -57,6 +57,11 @@
     "DESCRIPTION": "Deal !D! damage. NL Draw 2 cards. NL Discard 1 card. NL Gain 4 Yin. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw 2 cards. NL Discard 1 card. NL Gain 4 Yin."
   },
+  "AdministrixMod:TrickOfTheLight": {
+    "NAME": "Trick of the Light",
+    "DESCRIPTION": "Deal !D! damage. NL Discard the top Plot card in your draw pile. NL Gain 4 Yang. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Discard the top Plot card in your draw pile. NL Gain 4 Yang."
+  },
 
   "AdministrixMod:BegetEternity": {
     "NAME": "Beget Eternity",
@@ -149,6 +154,11 @@
     "NAME": "Nightfall",
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !M! Yin. NL Exhaust."
   },
+
+  "AdministrixMod:FuneraryRites": {
+    "NAME": "Funerary Rites",
+    "DESCRIPTION": "Discard a card. NL Put a card from your discard pile on top of your draw pile. NL Gain 4 Yin."
+  },
   "AdministrixMod:CenturiesAscent": {
     "NAME": "Centuries Ascent",
     "DESCRIPTION": "Gain !B! Block. NL [#cc99ff]{[] Plot: Add a Daybreak to your hand. [#cc99ff]}[]",
@@ -161,8 +171,7 @@
   },
   "AdministrixMod:LightOfYourLife": {
     "NAME": "Light of Your Life",
-    "DESCRIPTION": "Transpose one. NL Draw !M! card. NL Gain 4 Yang. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Transpose one. NL Draw !M! card. NL Gain 4 Yang."
+    "DESCRIPTION": "Transpose one. NL Draw !M! card. NL Gain 4 Yang."
   },
   "AdministrixMod:SealAway": {
     "NAME": "Seal Away",

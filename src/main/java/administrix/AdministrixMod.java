@@ -108,9 +108,11 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String REBUKE_DESIRES = CARD_IMG_PATH + "Rebuke Desires.png";
     public static final String REGENT_EDICT = CARD_IMG_PATH + "Regent's Edict.png";
     public static final String SHADOW_PLAY = CARD_IMG_PATH + "Shadow Play.png";
+    public static final String TRICK_OF_THE_LIGHT = CARD_IMG_PATH + "Trick of the Light.png";
     public static final String TRAINEE_JIANGSHI = CARD_IMG_PATH + "Trainee Jiangshi.png";
 
     public static final String CENTURIES_ASCENT = CARD_IMG_PATH + "Centuries Ascent.png";
+    public static final String FUENRARY_RITES = CARD_IMG_PATH + "Funerary Rites.png";
     public static final String IMMORTAL_PURITY = CARD_IMG_PATH + "Immortal Purity.png";
     public static final String LIGHT_OF_YOUR_LIFE = CARD_IMG_PATH + "Light Of Your Life.png";
     public static final String SEAL_AWAY = CARD_IMG_PATH + "Seal Away.png";
@@ -178,7 +180,6 @@ public class AdministrixMod implements PostInitializeSubscriber,
 
     // Powers
     public static final String POWER_IMG_PATH = IMG_PATH + "powers/";
-    public static final String AFFINITY_POWER = POWER_IMG_PATH + "Affinity.png";
     public static TextureAtlas ADMIN_POWERS_ATLAS;
 
     // Relics
@@ -298,10 +299,12 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new RebukeDesires());
         BaseMod.addCard(new RegentEdict());
         BaseMod.addCard(new ShadowPlay());
+        BaseMod.addCard(new TrickOfTheLight());
         // BaseMod.addCard(new TraineeJiangshi());
 
         // Common Skills.
         BaseMod.addCard(new CenturiesAscent());
+        BaseMod.addCard(new FuneraryRites());
         BaseMod.addCard(new ImmortalPurity());
         BaseMod.addCard(new LightOfYourLife());
         BaseMod.addCard(new SealAway());

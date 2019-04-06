@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static administrix.AdministrixMod.*;
+import static administrix.patches.CardTagsEnum.PLOT;
 
 public class CenturiesAscent extends AbstractAdministrixCard
 {
@@ -38,6 +39,7 @@ public class CenturiesAscent extends AbstractAdministrixCard
                 COST, CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.LichGold,
                 rarity, target);
+        this.tags.add(PLOT);
         setOrbTexture(ENERGY_ORB_LICH_GOLD_PLOT, ENERGY_ORB_LICH_GOLD_PORTRAIT);
         setBackgroundTexture(SKILL_LICH_GOLD_PLOT, SKILL_LICH_GOLD_PLOT_PORTRAIT);
         this.baseBlock = this.block = BLOCK_AMOUNT;

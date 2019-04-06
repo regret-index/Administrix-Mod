@@ -16,6 +16,7 @@ import administrix.actions.ImmortalUpgradeAction;
 import administrix.patches.AbstractCardEnum;
 
 import static administrix.AdministrixMod.*;
+import static administrix.patches.CardTagsEnum.PLOT;
 
 public class ImmortalClarity extends AbstractAdministrixCard
 {
@@ -33,6 +34,7 @@ public class ImmortalClarity extends AbstractAdministrixCard
                 CARD_STRINGS.DESCRIPTION,
                 type, AbstractCardEnum.LichGold,
                 rarity, CardTarget.SELF);
+        this.tags.add(PLOT);
         setOrbTexture(ENERGY_ORB_LICH_GOLD_PLOT, ENERGY_ORB_LICH_GOLD_PORTRAIT);
         setBackgroundTexture(POWER_LICH_GOLD_PLOT, POWER_LICH_GOLD_PLOT_PORTRAIT);
         this.baseMagicNumber = this.magicNumber = CLARITY_AMOUNT;

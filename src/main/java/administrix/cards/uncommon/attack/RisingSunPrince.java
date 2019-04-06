@@ -19,6 +19,7 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
 import static administrix.AdministrixMod.*;
+import static administrix.patches.CardTagsEnum.PLOT;
 
 public class RisingSunPrince extends AbstractAdministrixCard
 {
@@ -39,6 +40,7 @@ public class RisingSunPrince extends AbstractAdministrixCard
                 CARD_STRINGS.DESCRIPTION,
                 type, AbstractCardEnum.LichGold,
                 rarity, target);
+        this.tags.add(PLOT);
         setOrbTexture(ENERGY_ORB_LICH_GOLD_PLOT, ENERGY_ORB_LICH_GOLD_PORTRAIT);
         setBackgroundTexture(ATTACK_LICH_GOLD_PLOT, ATTACK_LICH_GOLD_PLOT_PORTRAIT);
         this.baseDamage = this.damage = ATTACK_DMG;

@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static administrix.AdministrixMod.*;
+import static administrix.patches.CardTagsEnum.PLOT;
 
 public class PassageOfAges extends AbstractAdministrixCard
 {
@@ -40,6 +41,7 @@ public class PassageOfAges extends AbstractAdministrixCard
                 COST, CARD_STRINGS.DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.LichGold,
                 rarity, target);
+        this.tags.add(PLOT);
         setOrbTexture(ENERGY_ORB_LICH_GOLD_PLOT, ENERGY_ORB_LICH_GOLD_PORTRAIT);
         setBackgroundTexture(ATTACK_LICH_GOLD_PLOT, ATTACK_LICH_GOLD_PLOT_PORTRAIT);
         this.baseDamage = this.damage = ATTACK_DMG;

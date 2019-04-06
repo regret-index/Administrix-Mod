@@ -18,6 +18,7 @@ import administrix.patches.AbstractCardEnum;
 import administrix.powers.YinPower;
 
 import static administrix.AdministrixMod.*;
+import static administrix.patches.CardTagsEnum.PLOT;
 
 public class GuanyinBlessing extends AbstractAdministrixCard
 {
@@ -38,6 +39,7 @@ public class GuanyinBlessing extends AbstractAdministrixCard
                 CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.LichGold,
                 rarity, target);
+        this.tags.add(PLOT);
         setBannerTexture(UNCOMMON_BANNER_LICH_GOLD_PLOT, UNCOMMON_BANNER_PORTRAIT);
         setBackgroundTexture(SKILL_LICH_GOLD_PLOT, SKILL_LICH_GOLD_PLOT_PORTRAIT);
         this.baseMagicNumber = this.magicNumber = YIN_AMOUNT;
