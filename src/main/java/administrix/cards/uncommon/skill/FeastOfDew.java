@@ -4,6 +4,7 @@ import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,7 +35,7 @@ public class FeastOfDew extends AbstractAdministrixCard
                 AbstractCardEnum.LichGold,
                 rarity, target);
         this.baseMagicNumber = this.magicNumber = DRAW_AMOUNT;
-        this.exhaust = false;
+        this.exhaust = true;
     }
 
     @Override
@@ -43,9 +44,10 @@ public class FeastOfDew extends AbstractAdministrixCard
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
         if (this.upgraded) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeStatEquivalentCopy()));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(this.makeStatEquivalentCopy(), 1, true, true));
         }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new MistEaterPower(p, FEAST_AMOUNT), FEAST_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MistEaterPower(p, FEAST_AMOUNT), FEAST_AMOUNT));
     }
 
     @Override
@@ -58,7 +60,6 @@ public class FeastOfDew extends AbstractAdministrixCard
         if (!upgraded)
         {
             this.upgradeName();
-            this.exhaust = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

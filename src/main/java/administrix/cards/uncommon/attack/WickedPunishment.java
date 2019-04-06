@@ -43,7 +43,7 @@ public class WickedPunishment extends AbstractAdministrixCard
                 AbstractCardEnum.LichGold,
                 rarity, target);
         this.baseDamage = this.damage = ATTACK_DMG;
-        this.baseMagicNumber = this.magicNumber = YIN_STACKS_AMOUNT;
+        this.baseMagicNumber = this.magicNumber = YIN_AMOUNT;
     }
 
     @Override
@@ -58,8 +58,8 @@ public class WickedPunishment extends AbstractAdministrixCard
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMOUNT));
-        for (int i = 0; i < this.magicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YinPower(p, YIN_AMOUNT), YIN_AMOUNT));
+        for (int i = 0; i < YIN_STACKS_AMOUNT; i++) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YinPower(p, this.magicNumber), this.magicNumber));
         }
     }
 

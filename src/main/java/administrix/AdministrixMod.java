@@ -12,7 +12,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 
-import basemod.abstracts.CustomUnlockBundle;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.interfaces.*;
@@ -26,8 +25,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -98,7 +95,6 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String DEFEND_AX = CARD_IMG_PATH + "Defend.png";
     public static final String RED_CLOAK = CARD_IMG_PATH + "Red Cloak.png";
     public static final String BLUE_CLOAK = CARD_IMG_PATH + "Blue Cloak.png";
-    public static final String HIDDEN_POWER = CARD_IMG_PATH + "Hidden Power.png";
     public static final String DAYBREAK = CARD_IMG_PATH + "Daybreak.png";
     public static final String NIGHTFALL = CARD_IMG_PATH + "Nightfall.png";
 
@@ -119,8 +115,6 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String LIGHT_OF_YOUR_LIFE = CARD_IMG_PATH + "Light Of Your Life.png";
     public static final String SEAL_AWAY = CARD_IMG_PATH + "Seal Away.png";
     public static final String SIP_OF_SPARKS = CARD_IMG_PATH + "Sip of Sparks.png";
-    public static final String SYNCRETIC_PLUNGE = CARD_IMG_PATH + "Syncretic Plunge.png";
-    public static final String SYNCRETIC_SURGE = CARD_IMG_PATH + "Syncretic Surge.png";
     public static final String TOUCH_OF_CINNABAR = CARD_IMG_PATH + "Touch of Cinnabar.png";
     public static final String TRANSITION = CARD_IMG_PATH + "Transition.png";
 
@@ -147,6 +141,8 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String METEMPSYCHOSIS = CARD_IMG_PATH + "Metempsychosis.png";
     public static final String MIX_OF_MERCURY = CARD_IMG_PATH + "Mix of Mercury.png";
     public static final String QUIET_CONSPIRACY = CARD_IMG_PATH + "Quiet Conspiracy.png";
+    public static final String SYNCRETIC_PLUNGE = CARD_IMG_PATH + "Syncretic Plunge.png";
+    public static final String SYNCRETIC_SURGE = CARD_IMG_PATH + "Syncretic Surge.png";
     public static final String TRANSCENSION = CARD_IMG_PATH + "Transcension.png";
     public static final String UNTOUCHABLE = CARD_IMG_PATH + "Untouchable.png";
     public static final String WUJI = CARD_IMG_PATH + "Wuji.png";
@@ -154,6 +150,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String CAST_OFF_REGRETS = CARD_IMG_PATH + "Cast Off Regrets.png";
     public static final String CONVERGENCE = CARD_IMG_PATH + "Convergence.png";
     public static final String HARMONIC_REVERENCE = CARD_IMG_PATH + "Harmonic Reverence.png";
+    public static final String HIDDEN_POWER = CARD_IMG_PATH + "Hidden Power.png";
     public static final String OVERDRIVE = CARD_IMG_PATH + "Overdrive.png";
     public static final String XIAN_ARTS = CARD_IMG_PATH + "Xian Arts.png";
 
@@ -289,7 +286,6 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new RedCloak());
         BaseMod.addCard(new Daybreak());
         BaseMod.addCard(new Nightfall());
-        BaseMod.addCard(new HiddenPower());
 
         // Common Attacks.
         BaseMod.addCard(new CrackingPangu());
@@ -310,8 +306,6 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new LightOfYourLife());
         BaseMod.addCard(new SealAway());
         BaseMod.addCard(new SipOfSparks());
-        BaseMod.addCard(new SyncreticPlunge());
-        BaseMod.addCard(new SyncreticSurge());
         BaseMod.addCard(new TouchOfCinnabar());
         BaseMod.addCard(new Transition());
 
@@ -340,7 +334,8 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new Metempsychosis());
         BaseMod.addCard(new MixOfMercury());
         BaseMod.addCard(new QuietConspiracy());
-        BaseMod.addCard(new ReachToHeaven());
+        BaseMod.addCard(new SyncreticPlunge());
+        BaseMod.addCard(new SyncreticSurge());
         BaseMod.addCard(new Transcension());
         BaseMod.addCard(new Untouchable());
         BaseMod.addCard(new Wuji());
@@ -349,6 +344,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new CastOffRegrets());
         BaseMod.addCard(new Convergence());
         BaseMod.addCard(new HarmonicReverence());
+        BaseMod.addCard(new HiddenPower());
         BaseMod.addCard(new Overdrive());
         BaseMod.addCard(new XianArts());
 

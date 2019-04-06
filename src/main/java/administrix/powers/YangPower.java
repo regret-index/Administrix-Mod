@@ -12,10 +12,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static administrix.AdministrixMod.ADMIN_POWERS_ATLAS;
 
-// Yang does nothing by itself, except slowly even out with Yin.
-// A fair number of cards just use this as fuel in comparison to Yin.
-// However, if you have any Affinity and less Yin than Yang,
-// one'll gain block whenever they gain Yang.
+// Yang provides a source of Block if it's higher than Yin,
+// scaled with Affinity.
 
 public class YangPower extends AbstractPower {
     public static final String POWER_ID = "AdministrixMod:Yang";
@@ -35,36 +33,34 @@ public class YangPower extends AbstractPower {
     @Override
     public void stackPower(int amount)
     {
-        if (this.owner.hasPower(AffinityPower.POWER_ID) &&
-            (!this.owner.hasPower(YinPower.POWER_ID) ||
-             this.owner.getPower(YinPower.POWER_ID).amount < this.amount)) {
+        if (!this.owner.hasPower(YinPower.POWER_ID) ||
+             this.owner.getPower(YinPower.POWER_ID).amount < this.amount) {
 
-            this.owner.getPower(AffinityPower.POWER_ID).flash();
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.owner.getPower(AffinityPower.POWER_ID).amount));
+            int toBlock = 1;
+
+            if (this.owner.hasPower(AffinityPower.POWER_ID)) {
+                this.owner.getPower(AffinityPower.POWER_ID).flash();
+                toBlock += this.owner.getPower(AffinityPower.POWER_ID).amount;
+            }
+
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, toBlock));
         }
 
         super.stackPower(amount);
     }
 
-    @Override
-    public void atEndOfRound() {
-        if (!this.owner.hasPower(YinPower.POWER_ID) ||
-             this.owner.hasPower(YinPower.POWER_ID) &&
-             this.amount > this.owner.getPower(YinPower.POWER_ID).amount) {
-            flash();
-            if (this.amount == 0) {
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
-                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
-                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            }
-        }
-    }
-
     public void updateDescription()
     {
-        this.description = DESCRIPTIONS[0];
-    }
+        int power = (this.owner.hasPower(AffinityPower.POWER_ID)) ?
+                     this.owner.getPower(AffinityPower.POWER_ID).amount + 1 : 1;
 
+        if (!this.owner.hasPower(YinPower.POWER_ID) ||
+            this.owner.getPower(YinPower.POWER_ID).amount < this.amount) {
+            this.description = DESCRIPTIONS[0] + power +
+                               DESCRIPTIONS[1] + DESCRIPTIONS[2];
+        } else {
+            this.description = DESCRIPTIONS[0] + power +
+                               DESCRIPTIONS[1] + DESCRIPTIONS[3];
+        }
+    }
 }

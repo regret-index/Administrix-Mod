@@ -72,7 +72,8 @@
   },
   "AdministrixMod:JustRewards": {
     "NAME": "Just Rewards",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply 1 Vulnerable to ALL enemies. NL Add !M! Daybreaks to your hand."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply 1 Vulnerable to ALL enemies. NL Add 2 Daybreaks to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply 1 Vulnerable to ALL enemies. NL Add 2 upgraded Daybreaks to your hand."
   },
   "AdministrixMod:NewWardrobe": {
     "NAME": "New Wardrobe",
@@ -101,7 +102,7 @@
   },
   "AdministrixMod:WickedPunishment": {
     "NAME": "Wicked Punishment",
-    "DESCRIPTION": "Deal !D! damage twice. NL Draw 2 cards. NL Gain 3 Yin !M! times."
+    "DESCRIPTION": "Deal !D! damage twice. NL Draw 2 cards. NL Gain !M! Yin twice."
   },
 
   "AdministrixMod:GirlsDoItBetter": {
@@ -138,7 +139,7 @@
   },
   "AdministrixMod:HiddenPower": {
     "NAME": "Hidden Power",
-    "DESCRIPTION": "Gain !M! Affinity."
+    "DESCRIPTION": "Gain !M! Affinity. NL Draw 1 less card next turn."
   },
   "AdministrixMod:RedCloak": {
     "NAME": "Red Cloak",
@@ -171,24 +172,6 @@
     "NAME": "Sip of Sparks",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Strength. NL Lose !M! Strength at the end of this turn."
   },
-  "AdministrixMod:SyncreticSurge": {
-    "NAME": "Syncretic Surge",
-    "DESCRIPTION": "Add a Daybreak to your hand for every Skill you've played this turn (including this one).",
-    "UPGRADE_DESCRIPTION": "Add an upgraded Daybreak to your hand for every Skill you've played this turn (including this one).",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Add !M! Daybreaks.)",
-      " NL (Add !M! Daybreak.)"
-    ]
-  },
-  "AdministrixMod:SyncreticPlunge": {
-    "NAME": "Syncretic Plunge",
-    "DESCRIPTION": "Add a Nightfall to your hand for every Attack you've played this turn.",
-    "UPGRADE_DESCRIPTION": "Add an upgraded Nightfall to your hand for every Attack you've played this turn.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Add !M! Nightfalls.)",
-      " NL (Add !M! Nightfall.)"
-    ]
-  },
   "AdministrixMod:TouchOfCinnabar": {
     "NAME": "Touch of Cinnabar",
     "DESCRIPTION": "Gain 3 Plated Armor. NL Gain 2 Frail. NL Gain !M! Artifact."
@@ -204,7 +187,7 @@
   },
   "AdministrixMod:BishamonBlessing": {
     "NAME": "Bishamon's Blessing",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yang. NL Apply 1 Weak to ALL enemies. [#cc99ff]}[]",
+    "DESCRIPTION": "Unplayable. NL Exhausts when drawn. NL [#cc99ff]{[] Plot: Gain !M! Yang. NL Apply 1 Weak to ALL enemies. NL Draw 1 card. [#cc99ff]}[]",
     "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yang. NL Apply 1 Weak to ALL enemies. NL Draw 1 card. [#cc99ff]}[]",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card."
@@ -225,8 +208,8 @@
   },
   "AdministrixMod:FeastOfDew": {
     "NAME": "Feast of Dew",
-    "DESCRIPTION": "Draw !M! cards. NL Whenever you play any Feast of Dew(+) three times this combat, gain 4 Affinity.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Add a copy of this card to your hand. NL Exhaust. NL Whenever you play any Feast of Dew(+) three times this combat, gain 4 Affinity."
+    "DESCRIPTION": "Draw !M! cards, then add a copy of this card to your draw pile. NL Exhaust. NL Whenever you play any Feast of Dew(+) three times this combat, gain 4 Affinity.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards, then add a copy of this card to your hand. NL Exhaust. NL Whenever you play any Feast of Dew(+) three times this combat, gain 4 Affinity."
   },
   "AdministrixMod:Grandeur": {
     "NAME": "Grandeur",
@@ -234,7 +217,7 @@
   },
   "AdministrixMod:GuanyinBlessing": {
     "NAME": "Guanyin's Blessing",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yin. NL Apply 1 Vulnerable to ALL enemies. [#cc99ff]}[]",
+    "DESCRIPTION": "Unplayable. NL Exhausts when drawn. NL [#cc99ff]{[] Plot: Gain !M! Yin. NL Apply 1 Vulnerable to ALL enemies. NL Draw 1 card. [#cc99ff]}[]",
     "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL [#cc99ff]{[] Plot: Gain !M! Yin. NL Apply 1 Vulnerable to ALL enemies. NL Draw 1 card. [#cc99ff]}[]",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card."
@@ -257,6 +240,24 @@
   "AdministrixMod:QuietConspiracy": {
     "NAME": "Quiet Conspiracy",
     "DESCRIPTION": "If the enemy doesn't intend to attack, look at the top !M! cards of your draw pile, and discard any of them. NL Regardless, draw 2 cards."
+  },
+  "AdministrixMod:SyncreticSurge": {
+    "NAME": "Syncretic Surge",
+    "DESCRIPTION": "Add a Daybreak to your hand for every Skill you've played this turn (including this one).",
+    "UPGRADE_DESCRIPTION": "Add an upgraded Daybreak to your hand for every Skill you've played this turn (including this one).",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Add !M! Daybreaks.)",
+      " NL (Add !M! Daybreak.)"
+    ]
+  },
+  "AdministrixMod:SyncreticPlunge": {
+    "NAME": "Syncretic Plunge",
+    "DESCRIPTION": "Add a Nightfall to your hand for every Attack you've played this turn.",
+    "UPGRADE_DESCRIPTION": "Add an upgraded Nightfall to your hand for every Attack you've played this turn.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Add !M! Nightfalls.)",
+      " NL (Add !M! Nightfall.)"
+    ]
   },
   "AdministrixMod:Transcension": {
     "NAME": "Transcension",

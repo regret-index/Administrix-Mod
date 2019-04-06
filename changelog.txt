@@ -1,4 +1,22 @@
-==== v0.9.0a ====
+==== v0.9.1a ====
+ - Simplification revisions - Yin and Yang no longer slowly equalize,
+   and have Affinity effects built-in for both (at an effective base 1).
+   Affinity now simply strengthens Yin and Yang.
+   Hidden Power is out of the starting deck and is now Uncommon:
+   [1(0)-cost power - Gain 2 Affinity. Draw 1 less card next turn.]
+ - Balance changes due to said Yin and Yang shifts.
+  * Red Cloak: 3(5) Block -> 2(4) Block.
+  * Blue Cloak: 3(5) damage -> 2(4) damage.
+  * Syncretic Surge, Syncretic Plunge: Common -> Uncommon.
+  * Just Rewards: 2(3) Daybreaks -> 2 Daybreak(+)s.
+  * Wicked Punishment: 3 Yin twice (thrice) -> 3 (4) Yin twice.
+  * Bishamon's Blessing, Guanyin's Blessing:
+    Base card Plot effects draw 1 card, base cards exhaust when drawn.
+ ...
+  * Feast of Dew: Base now exhausts and adds a copy to the Draw Pile.
+  * Harmonic Reverence: 3(4) Affinity -> 3(5) Affinity.
+
+==== v0.9.0 ====
  - Content: new cards! new relics!
   * Noble Path: A 1-cost common Attack.
     Deal 8 damage. Gain 1 Energy next turn. Gain 3 Yin and Yang (twice).

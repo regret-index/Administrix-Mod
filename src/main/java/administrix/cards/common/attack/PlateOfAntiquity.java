@@ -46,6 +46,10 @@ public class PlateOfAntiquity extends AbstractAdministrixCard
                 new DexterityPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new LoseDexterityPower(p, this.magicNumber), this.magicNumber));
+        for (AbstractCard c : p.drawPile.group) {
+
+        }
+
     }
 
     @Override

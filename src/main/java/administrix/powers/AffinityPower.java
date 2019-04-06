@@ -26,10 +26,20 @@ public class AffinityPower extends AbstractPower {
         this.region128 = ADMIN_POWERS_ATLAS.findRegion("affinity");
     }
 
+    @Override
+    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        super.onApplyPower(power, target, source);
+        if (target.hasPower(YinPower.POWER_ID)) {
+            target.getPower(YinPower.POWER_ID).updateDescription();
+        }
+        if (target.hasPower(YangPower.POWER_ID)) {
+            target.getPower(YangPower.POWER_ID).updateDescription();
+        }
+    }
+
     public void updateDescription()
     {
-        this.description = DESCRIPTIONS[0] + this.amount +
-                           DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
 }

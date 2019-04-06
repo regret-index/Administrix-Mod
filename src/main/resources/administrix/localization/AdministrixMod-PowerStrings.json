@@ -2,9 +2,8 @@
   "AdministrixMod:Affinity": {
     "NAME": "Affinity",
     "DESCRIPTIONS": [
-      "If you have more Yin than Yang: whenever you gain Yin, deal #b",
-      " damage to all enemies twice. NL If you have more Yang than Yin: whenever you gain Yang, gain #b",
-      " Block."
+      "Increases the effectiveness of #yYin and #yYang by #b",
+      "."
     ]
   },
   "AdministrixMod:Convergence": {
@@ -176,13 +175,19 @@
   "AdministrixMod:Yang": {
     "NAME": "Yang",
     "DESCRIPTIONS": [
-      "Each turn, the higher value between #yYin and #yYang decreases by 1."
+      "If you have more Yang than Yin, then whenever you gain Yang, gain #b",
+      " Block.",
+      " [#588CE8]{Active.}[]",
+      " [#D83434]{Inactive.}[]"
     ]
   },
   "AdministrixMod:Yin": {
     "NAME": "Yin",
     "DESCRIPTIONS": [
-      "Each turn, the higher value between #yYin and #yYang decreases by 1."
+      "If you have more Yin than Yang, then whenever you gain Yin, deal #b",
+      " damage to all enemies twice.",
+      " [#588CE8]{Active.}[]",
+      " [#D83434]{Inactive.}[]"
     ]
   },
   "AdministrixMod:LastEntry": {

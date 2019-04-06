@@ -1,12 +1,10 @@
-package administrix.cards.common.skill;
+package administrix.cards.uncommon.skill;
 
 import administrix.AdministrixMod;
-
 import administrix.cards.AbstractAdministrixCard;
+import administrix.cards.common.attack.Daybreak;
 import administrix.patches.AbstractCardEnum;
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.unique.DiscardPileToTopOfDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,21 +12,20 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-
-public class SyncreticPlunge extends AbstractAdministrixCard
+public class SyncreticSurge extends AbstractAdministrixCard
 {
-    public static final String ID = "AdministrixMod:SyncreticPlunge";
-    public static final String NAME = "Syncretic Plunge";
+    public static final String ID = "AdministrixMod:SyncreticSurge";
+    public static final String NAME = "Syncretic Surge";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
     private static final int COST = 1;
-    private static final CardRarity rarity = CardRarity.COMMON;
+    private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.SELF;
 
-    public SyncreticPlunge() {
-        super(ID, CARD_STRINGS.NAME, AdministrixMod.SYNCRETIC_PLUNGE, COST,
+    public SyncreticSurge() {
+        super(ID, CARD_STRINGS.NAME, AdministrixMod.SYNCRETIC_SURGE, COST,
                 CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.LichGold,
                 rarity, target);
@@ -40,22 +37,22 @@ public class SyncreticPlunge extends AbstractAdministrixCard
         int cardAmount = 0;
 
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
-            if (c.type == CardType.ATTACK) {
+            if (c.type == AbstractCard.CardType.SKILL) {
                 cardAmount++;
             }
         }
         if (this.upgraded) {
-            AbstractCard n = new Nightfall().makeCopy();
-            n.upgrade();
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(n, cardAmount));
+            AbstractCard d = new Daybreak().makeCopy();
+            d.upgrade();
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(d, cardAmount));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Nightfall(), cardAmount));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Daybreak(), cardAmount));
         }
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new SyncreticPlunge();
+        return new SyncreticSurge();
     }
 
     @Override
@@ -63,12 +60,12 @@ public class SyncreticPlunge extends AbstractAdministrixCard
     {
         int cardAmount = 0;
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisTurn) {
-            if (c.type == CardType.ATTACK) {
+            if (c.type == AbstractCard.CardType.SKILL) {
                 cardAmount++;
             }
         }
 
-        this.magicNumber = this.baseMagicNumber = cardAmount;
+        this.magicNumber = this.baseMagicNumber = cardAmount + 1;
 
         if (this.upgraded) {
             if (this.magicNumber == 1) {

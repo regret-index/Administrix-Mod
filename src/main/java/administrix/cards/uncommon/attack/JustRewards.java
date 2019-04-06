@@ -25,6 +25,7 @@ public class JustRewards extends AbstractAdministrixCard
     public static final String ID = "AdministrixMod:JustRewards";
     public static final String NAME = "Just Rewards";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
     private static final int COST = 2;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.ALL_ENEMY;
@@ -53,7 +54,13 @@ public class JustRewards extends AbstractAdministrixCard
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new VulnerablePower(mo, VULN_AMOUNT, false), VULN_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
         }
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Daybreak(), this.magicNumber));
+        if (this.upgraded) {
+            AbstractCard d = new Daybreak().makeCopy();
+            d.upgrade();
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(d, DAYBREAK_AMOUNT));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Daybreak(), DAYBREAK_AMOUNT));
+        }
     }
 
     @Override
@@ -67,6 +74,8 @@ public class JustRewards extends AbstractAdministrixCard
         {
             this.upgradeName();
             this.upgradeMagicNumber(UPGRADE_DAYBREAK_AMOUNT);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

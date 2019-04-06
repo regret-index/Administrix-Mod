@@ -23,7 +23,7 @@ public class BlueCloak extends AbstractAdministrixCard
     public static final String NAME = "Blue Cloak";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 0;
-    private static final int ATTACK_DMG = 3;
+    private static final int ATTACK_DMG = 2;
     private static final int UPGRADE_ATTACK_DMG = 2;
     private static final int DRAW_AMOUNT = 1;
     private static final int DISCARD_AMOUNT = 1;

@@ -26,17 +26,17 @@
 
 	"yin": {
 		"NAMES": [ "yin" ],
-		"DESCRIPTION": "Yin fuels many cards. The higher value between #yYin and #yYang decreases by 1 each turn."
+		"DESCRIPTION": "Yin fuels many cards. If you have more Yin than #yYang, then when you gain Yin, damage all enemies twice."
 	},
 
 	"yang": {
 		"NAMES": [ "yang" ],
-		"DESCRIPTION": "Yang fuels many cards. The high value between #yYin and #yYang decreases by 1 each turn."
+		"DESCRIPTION": "Yang fuels many cards. If you have more Yang than #yYin, then when you gain Yang, gain #yBlock."
 	},
 
 	"affinity": {
 		"NAMES": [ "affinity" ],
-		"DESCRIPTION": "If you have more #yYin than #yYang, then when you gain #yYin, damage all enemies twice. If reversed, then when you gain #yYang, gain #yBlock."
+		"DESCRIPTION": "Affinity increases the effectiveness of #yYin and #yYang."
 	},
 
 	"daybreak": {

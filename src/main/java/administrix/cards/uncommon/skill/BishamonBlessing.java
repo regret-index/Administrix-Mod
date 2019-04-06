@@ -4,6 +4,7 @@ import administrix.cards.AbstractAdministrixCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -39,11 +40,13 @@ public class BishamonBlessing extends AbstractAdministrixCard
         setBannerTexture(UNCOMMON_BANNER_LICH_GOLD_PLOT, UNCOMMON_BANNER_PORTRAIT);
         setBackgroundTexture(SKILL_LICH_GOLD_PLOT, SKILL_LICH_GOLD_PLOT_PORTRAIT);
         this.baseMagicNumber = this.magicNumber = YANG_AMOUNT;
-        this.isEthereal = true;
+        this.isEthereal = false;
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {}
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        this.cantUseMessage = EXTENDED_DESCRIPTION[0];
+    }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m)
     {
@@ -51,6 +54,8 @@ public class BishamonBlessing extends AbstractAdministrixCard
         return false;
     }
 
+    // The unupgraded version of this exhausting when drawn
+    // is implemented in BlessingExhaustPatch.java.
     public void triggerWhenDrawn()
     {
         this.superFlash(PLOT_PURPLE);
@@ -59,9 +64,8 @@ public class BishamonBlessing extends AbstractAdministrixCard
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, WEAK_AMOUNT, false), WEAK_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
             }
-            if (this.upgraded) {
-                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, DRAW_AMOUNT));
-            }
+
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, DRAW_AMOUNT));
         }
     }
 
@@ -73,9 +77,8 @@ public class BishamonBlessing extends AbstractAdministrixCard
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, WEAK_AMOUNT, false), WEAK_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
             }
-            if (this.upgraded) {
-                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, DRAW_AMOUNT));
-            }
+
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, DRAW_AMOUNT));
         }
     }
 
@@ -88,6 +91,7 @@ public class BishamonBlessing extends AbstractAdministrixCard
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.isEthereal = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

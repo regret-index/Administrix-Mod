@@ -6,13 +6,6 @@ import java.util.Map.Entry;
 
 import administrix.cards.common.attack.Daybreak;
 import administrix.cards.common.skill.Nightfall;
-import administrix.cards.rare.skill.*;
-import administrix.cards.rare.attack.*;
-import administrix.cards.rare.power.*;
-import administrix.cards.common.attack.*;
-import administrix.cards.common.skill.*;
-import administrix.cards.uncommon.attack.*;
-import administrix.cards.uncommon.skill.*;
 import administrix.cards.uncommon.power.*;
 import administrix.cards.starter.*;
 import com.badlogic.gdx.graphics.Color;
@@ -137,13 +130,11 @@ public class Administrix extends CustomPlayer{
         retVal.add(Defend_Administrix.ID);
         retVal.add(RedCloak.ID);
         retVal.add(BlueCloak.ID);
-        retVal.add(HiddenPower.ID);
 
         UnlockTracker.markCardAsSeen(Strike_Administrix.ID);
         UnlockTracker.markCardAsSeen(Defend_Administrix.ID);
         UnlockTracker.markCardAsSeen(RedCloak.ID);
         UnlockTracker.markCardAsSeen(BlueCloak.ID);
-        UnlockTracker.markCardAsSeen(HiddenPower.ID);
         UnlockTracker.markCardAsSeen(Daybreak.ID);
         UnlockTracker.markCardAsSeen(Nightfall.ID);
 
@@ -215,7 +206,6 @@ public class Administrix extends CustomPlayer{
     @Override
     public AbstractCard getStartCardForEvent() {
         ArrayList<AbstractCard> list = new ArrayList();
-        list.add(new HiddenPower());
         list.add(new RedCloak());
         list.add(new BlueCloak());
         return (AbstractCard)list.get(cardRandomRng.random(list.size() - 1));

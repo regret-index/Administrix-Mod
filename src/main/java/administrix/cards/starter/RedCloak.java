@@ -22,7 +22,7 @@ public class RedCloak extends AbstractAdministrixCard
     public static final String NAME = "Red Cloak";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 0;
-    private static final int BLOCK_AMOUNT = 3;
+    private static final int BLOCK_AMOUNT = 2;
     private static final int UPGRADE_BLOCK_DMG = 2;
     private static final int DRAW_AMOUNT = 1;
     private static final int DISCARD_AMOUNT = 1;
