@@ -65,7 +65,7 @@
 
   "AdministrixMod:BegetEternity": {
     "NAME": "Beget Eternity",
-    "DESCRIPTION": "Deal !D! damage thrice. NL Draw 1 additional card next turn. NL Gain !M! Affinity. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage thrice. NL Draw 1 additional card next turn. NL Gain !M! Strength. NL Exhaust."
   },
   "AdministrixMod:ChooseYourEnd": {
     "NAME": "Choose Your End",
@@ -183,7 +183,7 @@
   },
   "AdministrixMod:TouchOfCinnabar": {
     "NAME": "Touch of Cinnabar",
-    "DESCRIPTION": "Gain 3 Plated Armor. NL Gain 2 Frail. NL Gain !M! Artifact."
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Gain 2 Frail. NL Gain 1 Artifact."
   },
   "AdministrixMod:Transition": {
     "NAME": "Transition",
@@ -247,7 +247,7 @@
   },
   "AdministrixMod:Overdrive": {
     "NAME": "Overdrive",
-    "DESCRIPTION": "Ethereal. NL Gain [R]. NL Gain !M! Strength. NL Lose !ax:M2! Strength at the end of this turn. NL Exhaust."
+    "DESCRIPTION": "Unplayable. NL [#cc99ff]{[] Plot: Gain [R]. NL Gain !M! Strength. NL Lose !ax:M2! Strength at the end of this turn. NL Exhaust. [#cc99ff]}[]"
   },
   "AdministrixMod:QuietConspiracy": {
     "NAME": "Quiet Conspiracy",
@@ -265,7 +265,7 @@
   "AdministrixMod:SyncreticPlunge": {
     "NAME": "Syncretic Plunge",
     "DESCRIPTION": "Add a Nightfall to your hand for every Attack you've played this turn.",
-    "UPGRADE_DESCRIPTION": "Add an upgraded Nightfall to your hand for every Attack you've played this turn.",
+    "UPGRADE_DESCRIPTION": "A/dd an upgraded Nightfall to your hand for every Attack you've played this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Add !M! Nightfalls.)",
       " NL (Add !M! Nightfall.)"
@@ -285,18 +285,10 @@
     "NAME": "Untouchable",
     "DESCRIPTION": "Apply 1 Weak. NL If the enemy intends to attack, gain !M! Dexterity, and lose !M! Dexterity at the end of this turn. NL Exhaust."
   },
-  "AdministrixMod:Wuji": {
-    "NAME": "Wuji",
-    "DESCRIPTION": "Gain 1 Dexterity for each 4 of the lower of your Yin or Yang. NL Lose all of your Yin and Yang. NL Retain.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Dexterity for each 4 of the lower of your Yin or Yang. NL Lose half of your Yin and Yang, rounded down. NL Retain.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Gain !M! Dexterity.)"
-    ]
-  },
 
   "AdministrixMod:CastOffRegrets": {
     "NAME": "Cast Off Regrets",
-    "DESCRIPTION": "Gain 3 Frail. NL Whenever you manually discard a card, gain !M! of the higher of your Yin and Yang."
+    "DESCRIPTION": "Gain 2 Frail twice. NL Whenever you manually discard a card, gain !M! of the higher of your Yin and Yang."
   },
   "AdministrixMod:Convergence": {
     "NAME": "Convergence",
@@ -310,9 +302,17 @@
       "Gain !M! Affinity. NL Double both your Yang and Yin."
     ]
   },
+  "AdministrixMod:Wuji": {
+    "NAME": "Wuji",
+    "DESCRIPTION": "Gain !ax:M2! Dexterity for each 5 of the lower of your Yin or Yang. NL Lose half of your Yin and Yang. NL Retain.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gain !M! Dexterity.)"
+    ]
+  },
   "AdministrixMod:XianArts": {
     "NAME": "Xian Arts",
-    "DESCRIPTION": "Whenever you gain any Artifact, gain !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "Ethereal. NL The first time each turn you gain any Artifact, gain !M! Strength and !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "The first time each turn you gain any Artifact, gain !M! Strength and !M! Dexterity."
   },
 
   "AdministrixMod:AmassedMasks": {

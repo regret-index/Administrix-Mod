@@ -20,12 +20,12 @@ public class HiddenPower extends AbstractAdministrixCard
     public static final String ID = "AdministrixMod:HiddenPower";
     public static final String NAME = "Hidden Power";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    private static final int COST = 0;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.SELF;
     private static final CardType type = CardType.POWER;
-    private static final int STACK_BASE = 2;
+    private static final int STACK_BASE = 1;
+    private static final int UPGRADE_STACK_BASE = 1;
     private static final int DRAWLESS_AMOUNT = 1;
 
     public HiddenPower() {
@@ -53,7 +53,7 @@ public class HiddenPower extends AbstractAdministrixCard
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(UPGRADE_COST);
+            this.upgradeMagicNumber(UPGRADE_STACK_BASE);
         }
     }
 

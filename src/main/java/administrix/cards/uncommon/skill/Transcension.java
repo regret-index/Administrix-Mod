@@ -128,7 +128,7 @@ public class Transcension extends AbstractAdministrixCard
                     this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0] +
                                            lastAttack.name + EXTENDED_DESCRIPTION[2]);
                 } else {
-                    this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0] +
+                    this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0] +
                                            lastAttack.name + " " + this.magicNumber +
                                            EXTENDED_DESCRIPTION[1]);
                 }

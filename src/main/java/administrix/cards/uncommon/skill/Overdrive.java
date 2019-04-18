@@ -18,13 +18,17 @@ import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.DualityPower;
 
+import static administrix.AdministrixMod.*;
+import static administrix.AdministrixMod.SKILL_LICH_GOLD_PLOT_PORTRAIT;
+import static administrix.patches.CardTagsEnum.PLOT;
+
 public class Overdrive extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:Overdrive";
     public static final String NAME = "Overdrive";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
-    private static final int COST = 0;
+    public static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
+    private static final int COST = -2;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.SELF;
     private static final CardType type = CardType.SKILL;
@@ -38,20 +42,44 @@ public class Overdrive extends AbstractAdministrixCard
                 CARD_STRINGS.DESCRIPTION,
                 type, AbstractCardEnum.LichGold,
                 rarity, target);
+        this.tags.add(PLOT);
+        setBannerTexture(UNCOMMON_BANNER_LICH_GOLD_PLOT, UNCOMMON_BANNER_PORTRAIT);
+        setBackgroundTexture(SKILL_LICH_GOLD_PLOT, SKILL_LICH_GOLD_PLOT_PORTRAIT);
         this.baseMagicNumber = this.magicNumber = STRENGTH_GAIN;
         this.baseSecondMagicNumber = this.secondMagicNumber = STRENGTH_LOSS;
-        this.isEthereal = true;
-        this.exhaust = true;
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m)
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        this.cantUseMessage = EXTENDED_DESCRIPTION[0];
+    }
+
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) { return false; }
+
+    // This exhausts itself in DrawToExhaustPatch.
+    public void triggerWhenDrawn()
     {
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_AMOUNT));
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.secondMagicNumber), this.secondMagicNumber));
+        this.superFlash(PLOT_PURPLE);
+        for (int i = 0; i < mastermindCheck(); i++) {
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_AMOUNT));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, this.secondMagicNumber), this.secondMagicNumber));
+        }
+    }
+
+    public void triggerOnManualDiscard()
+    {
+        this.superFlash(PLOT_PURPLE);
+        for (int i = 0; i < mastermindCheck(); i++) {
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_AMOUNT));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, this.secondMagicNumber), this.secondMagicNumber));
+        }
+        AbstractDungeon.player.discardPile.moveToExhaustPile(this);
     }
 
     @Override

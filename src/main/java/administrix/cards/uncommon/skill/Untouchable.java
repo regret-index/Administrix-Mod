@@ -22,7 +22,7 @@ public class Untouchable extends AbstractAdministrixCard
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 0;
     private static final int WEAK_AMOUNT = 1;
-    private static final int DEX_AMOUNT = 3;
+    private static final int DEX_AMOUNT = 2;
     private static final int UPGRADE_DEX_AMOUNT = 1;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.SELF_AND_ENEMY;

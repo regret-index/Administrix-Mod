@@ -1,4 +1,4 @@
-package administrix.cards.uncommon.skill;
+package administrix.cards.uncommon.power;
 
 import administrix.cards.AbstractAdministrixCard;
 import administrix.powers.YangPower;
@@ -19,7 +19,6 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
-import administrix.powers.DualityPower;
 
 public class Wuji extends AbstractAdministrixCard
 {
@@ -27,13 +26,13 @@ public class Wuji extends AbstractAdministrixCard
     public static final String NAME = "Wuji";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
-    public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
     private static final int COST = 1;
-    private static final int DEXTERITY_SCALE = 4;
+    private static final int UPGRADE_COST = 0;
+    private static final int DEXTERITY_SCALE = 5;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.SELF;
-    private static final CardType type = CardType.SKILL;
+    private static final CardType type = CardType.POWER;
 
     public Wuji() {
         super(ID, CARD_STRINGS.NAME, AdministrixMod.WUJI, COST,
@@ -41,13 +40,14 @@ public class Wuji extends AbstractAdministrixCard
                 AbstractCardEnum.LichGold,
                 rarity, target);
         this.baseMagicNumber = this.magicNumber = 0;
+        this.baseSecondMagicNumber = this.secondMagicNumber = 1;
         this.retain = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        // Gain Duality equal to 1/4th of the lower of your Yin or your Yang.
+        // Gain Duality equal to 1/6th of the lower of your Yin or your Yang.
         int yinAmount = p.hasPower(YinPower.POWER_ID) ?
                         p.getPower(YinPower.POWER_ID).amount : 0;
         int yangAmount = p.hasPower(YangPower.POWER_ID) ?
@@ -56,23 +56,19 @@ public class Wuji extends AbstractAdministrixCard
         int halfYang = yangAmount / 2;
         int equalPoint = (yinAmount > yangAmount) ? yangAmount : yinAmount;
 
-        this.magicNumber = equalPoint / DEXTERITY_SCALE;
+        this.magicNumber = (equalPoint / DEXTERITY_SCALE) * secondMagicNumber;
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.WHITE, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.2F));
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_FIRE"));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.2F));
 
-        if (this.upgraded) {
-            if (halfYin != 0) {
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, YinPower.POWER_ID, halfYin));
-            }
-            if (halfYang != 0) {
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, YangPower.POWER_ID, halfYang));
-            }
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, YinPower.POWER_ID));
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, YangPower.POWER_ID));
+        if (halfYin != 0) {
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, YinPower.POWER_ID, halfYin));
         }
+        if (halfYang != 0) {
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, YangPower.POWER_ID, halfYang));
+        }
+
 
         if (this.magicNumber > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
@@ -89,26 +85,18 @@ public class Wuji extends AbstractAdministrixCard
                          AbstractDungeon.player.getPower(YangPower.POWER_ID).amount : 0;
         int equalPoint = (yinAmount > yangAmount) ? yangAmount : yinAmount;
 
-        this.baseMagicNumber = this.magicNumber = equalPoint / DEXTERITY_SCALE;
+        this.baseMagicNumber = this.magicNumber = (equalPoint / DEXTERITY_SCALE) * secondMagicNumber;
 
         if (this.magicNumber > 0)
         {
-            if (this.upgraded) {
-                this.rawDescription = (UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-            } else {
-                this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
-            }
+            this.rawDescription = (DESCRIPTION + EXTENDED_DESCRIPTION[0]);
             initializeDescription();
         }
     }
 
     public void onMoveToDiscard()
     {
-        if (this.upgraded) {
-            this.rawDescription = UPGRADE_DESCRIPTION;
-        } else {
-            this.rawDescription = DESCRIPTION;
-        }
+        this.rawDescription = DESCRIPTION;
         initializeDescription();
     }
 
@@ -126,8 +114,7 @@ public class Wuji extends AbstractAdministrixCard
     public void upgrade() {
         if (!upgraded)
         {
-            this.upgradeName();
-            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }

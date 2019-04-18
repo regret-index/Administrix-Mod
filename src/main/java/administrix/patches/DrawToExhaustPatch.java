@@ -4,6 +4,7 @@ package administrix.patches;
 
 import administrix.cards.uncommon.skill.BishamonBlessing;
 import administrix.cards.uncommon.skill.GuanyinBlessing;
+import administrix.cards.uncommon.skill.Overdrive;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,14 +23,15 @@ import java.util.ArrayList;
         }
 )
 
-public class BlessingExhaustPatch {
+public class DrawToExhaustPatch {
 
     @SpireInsertPatch(
             locator = Locator.class,
             localvars={"c"}
     )
     public static void Insert(AbstractPlayer _instance, int numCards, AbstractCard c) {
-        if ((c instanceof GuanyinBlessing || c instanceof BishamonBlessing) && !c.upgraded)
+        if ((c instanceof GuanyinBlessing || c instanceof BishamonBlessing) && !c.upgraded ||
+             c instanceof Overdrive)
         {
             _instance.hand.moveToExhaustPile(c);
             _instance.hand.removeCard(c);

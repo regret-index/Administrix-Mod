@@ -3,15 +3,12 @@ package administrix.cards.uncommon.attack;
 import administrix.AdministrixMod;
 import administrix.cards.AbstractAdministrixCard;
 import administrix.patches.AbstractCardEnum;
-import administrix.powers.AffinityPower;
-import administrix.powers.YinPower;
 import administrix.vfx.FlashySlamEffect;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -21,6 +18,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class BegetEternity extends AbstractAdministrixCard
 {
@@ -35,8 +33,8 @@ public class BegetEternity extends AbstractAdministrixCard
     private static final int ATTACK_DMG = 7;
     private static final int UPGRADE_ATTACK_DMG = 2;
     private static final int DRAW_AMOUNT = 1;
-    private static final int AFFINITY_AMOUNT = 2;
-    private static final int UPGRADE_AFFINITY_AMOUNT = 1;
+    private static final int STRENGTH_AMOUNT = 2;
+    private static final int UPGRADE_STRENGTH_AMOUNT = 1;
 
     public BegetEternity() {
         super(ID, CARD_STRINGS.NAME, AdministrixMod.BEGET_ETERNITY, COST,
@@ -44,7 +42,7 @@ public class BegetEternity extends AbstractAdministrixCard
                 AbstractCardEnum.LichGold,
                 rarity, target);
         this.baseDamage = this.damage = ATTACK_DMG;
-        this.baseMagicNumber = this.magicNumber = AFFINITY_AMOUNT;
+        this.baseMagicNumber = this.magicNumber = STRENGTH_AMOUNT;
         this.exhaust = true;
     }
 
@@ -65,7 +63,7 @@ public class BegetEternity extends AbstractAdministrixCard
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, DRAW_AMOUNT), DRAW_AMOUNT));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AffinityPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
     }
 
     @Override
@@ -79,7 +77,7 @@ public class BegetEternity extends AbstractAdministrixCard
         {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_ATTACK_DMG);
-            this.upgradeMagicNumber(UPGRADE_AFFINITY_AMOUNT);
+            this.upgradeMagicNumber(UPGRADE_STRENGTH_AMOUNT);
         }
     }
 

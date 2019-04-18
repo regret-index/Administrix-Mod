@@ -19,7 +19,7 @@ public class ElixirOfImmorality
     public static final String ID = "AdministrixMod:ElixirOfImmorality";
     public static final RelicStrings STRINGS = CardCrawlGame.languagePack.getRelicStrings(ID);
     public static final String[] DESCRIPTIONS = STRINGS.DESCRIPTIONS;
-    private static int FRAIL_AMOUNT = 1;
+    private static int FRAIL_AMOUNT = 2;
     private static int WILTING_AMOUNT = 1;
 
     public static final Logger logger = LogManager.getLogger(ElixirOfImmorality.class.getName());

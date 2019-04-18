@@ -26,9 +26,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import administrix.AdministrixMod;
 import administrix.actions.TransposeAction;
 
-public class ConductorRitualBaton
-        extends CustomRelic
-{
+public class ConductorRitualBaton extends CustomRelic {
     public static final String ID = "AdministrixMod:ConductorRitualBaton";
     public static final RelicStrings STRINGS = CardCrawlGame.languagePack.getRelicStrings(ID);
     public static final String[] DESCRIPTIONS = STRINGS.DESCRIPTIONS;
@@ -36,6 +34,8 @@ public class ConductorRitualBaton
     private static int shakuAttackCounter;
     private static int shakuSkillCounter;
     private static boolean shakuActivated;
+    private static boolean shakuBattleStart;
+    public int offsetX = 0;
 
     public static final Logger logger = LogManager.getLogger(ConductorRitualBaton.class.getName());
 
@@ -59,6 +59,13 @@ public class ConductorRitualBaton
         shakuSkillCounter = 0;
         shakuActivated = false;
         stopPulse();
+    }
+
+
+    @Override
+    public void atBattleStart() {
+        super.atBattleStart();
+        shakuBattleStart = true;
     }
 
     @Override
@@ -90,26 +97,58 @@ public class ConductorRitualBaton
         }
     }
 
-    // Non-functional for now.
-    /*
+    // Borrowed from Blue Hexagon's Elementalist's Magus Staff.
+    @Override
+    public void renderInTopPanel(SpriteBatch sb) {
+        this.scale = Settings.scale;
+        if (Settings.hideRelics) {
+            return;
+        }
+
+        renderOutline(sb, true);
+        sb.setColor(Color.WHITE);
+        float offsetX = 0f;
+        float rotation = 0f;
+        sb.draw(this.img, this.currentX - 64.0F + offsetX, this.currentY - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, this.scale, this.scale, rotation, 0, 0, 128, 128, false, false);
+
+        renderCounter(sb, true);
+        renderFlash(sb, true);
+        this.hb.render(sb);
+    }
+
+    @Override
     public void renderCounter(SpriteBatch sb, boolean inTopPanel) {
-        if (this.counter > -1) {
-            if (inTopPanel) {
-                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(shakuAttackCounter), this.currentX + 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, Color.WHITE);
-                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, "/", this.currentX + 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, Color.WHITE);
-                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(shakuSkillCounter), this.currentX + 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, Color.WHITE);
+        if (shakuBattleStart) {
+            Color attackColor, skillColor;
+
+            if (!shakuActivated && shakuAttackCounter == ACTIVATE_COUNT - 1) {
+                attackColor = new Color(0.9F, 0.5F, 0.5F, 1.0F);
             } else {
-                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(this.counter), this.currentX + 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, Color.WHITE);
+                attackColor = new Color(0.7F, 0.3F, 0.3F, 1.0F);
             }
+
+            if (!shakuActivated && shakuSkillCounter == ACTIVATE_COUNT - 1) {
+                skillColor = new Color(0.5F, 0.9F, 0.8F, 1.0F);
+            } else {
+                skillColor = new Color(0.3F, 0.7F, 0.6F, 1.0F);
+            }
+
+            float offX = (inTopPanel) ? this.currentX + offsetX : this.currentX;
+            float offXA = 8.0F * Settings.scale;
+            float offXS = (shakuSkillCounter < 10) ? 26.0F * Settings.scale :
+                                                     34.0F * Settings.scale;
+
+            FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(shakuAttackCounter), offX - offXA, this.currentY + 28.0F * Settings.scale, attackColor);
+            FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(shakuSkillCounter), offX + offXS, this.currentY - 7.0F * Settings.scale, skillColor);
         }
     }
-    */
 
     @Override
     public void onVictory()
     {
         shakuAttackCounter = -1;
         shakuSkillCounter = -1;
+        shakuBattleStart = false;
         stopPulse();
     }
 

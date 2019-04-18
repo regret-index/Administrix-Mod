@@ -48,6 +48,7 @@ public class CosmosDiscardToHandAction
             if (this.p.discardPile.size() <= this.amount)
             {
                 tmp = this.p.discardPile.getTopCard();
+                tmp.freeToPlayOnce = true;
                 this.p.discardPile.removeCard(tmp);
                 this.p.hand.addToHand(tmp);
             }

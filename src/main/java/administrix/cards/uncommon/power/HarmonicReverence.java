@@ -28,7 +28,7 @@ public class HarmonicReverence extends AbstractAdministrixCard
     private static final CardTarget target = CardTarget.SELF;
     private static final CardType type = CardType.POWER;
     private static final int STACK_BASE = 3;
-    private static final int UPGRADE_STACK_BASE = 2;
+    private static final int UPGRADE_STACK_BASE = 1;
 
     public HarmonicReverence() {
         super(ID, CARD_STRINGS.NAME, AdministrixMod.HARMONIC_REVERENCE, COST,

@@ -13,14 +13,15 @@
   * Metempsychosis: Now a 1(0) cost uncommon skill.
     Put a card from your draw pile on top of your draw pile.
     Gain 1 energy and draw 1 less card next turn.
-  * Wuji: Still a 1-cost uncommon skill.
-    Gain 1 Dexterity for each 4 of the lower of your Yin and Yang.
-    Lose all (half) of your Yin and Yang. Retain.
+  * Wuji: Now a 1(0)-cost uncommon power.
+    Gain 1 Dexterity for each 5 of the lower of your Yin and Yang.
+    Lose half of your Yin and Yang. Retain.
   * Overdrive: Now a 0-cost uncommon skill.
-    Ethereal. Gain [E]. Gain 3(4) Strength.
-    Lose 5(6) Strength at the end of the turn. Exhaust.
+    Unplayable. { Plot: Gain [E]. Gain 3(4) Strength.
+    Lose 5(6) Strength at the end of the turn. Exhaust. }
   * Xian Arts: now a 2(1)-cost uncommon power.
-    Whenever you gain any Artifact, gain 1 Strength and 1 Dexterity.
+    Ethereal (not). Whenever you gain any Artifact,
+    gain 1 Strength and 1 Dexterity.
   * Star Sword Soul: Still a 3-cost rare power.
     (Innate.) At the start of each turn, gain 1 Affinity
     and draw 1 additional card. Retain.
@@ -30,22 +31,34 @@
  - Simplification revisions - Yin and Yang no longer slowly equalize,
    and have Affinity effects built-in for both (at an effective base 1).
    Affinity now simply strengthens Yin and Yang.
-   Hidden Power is out of the starting deck and is now Uncommon:
-   [1(0)-cost power - Gain 2 Affinity. Draw 1 less card next turn.]
+   Hidden Power is out of the starting deck and is now Uncommon:/
+   [0-cost power - Gain 1(2) Affinity. Draw 1 less card next turn.]
 
- - Balance changes due to said Yin and Yang shifts.
+ - Balance changes, due to the above shifts.
   * Red Cloak: 3(5) Block -> 2(4) Block.
   * Blue Cloak: 3(5) damage -> 2(4) damage.
   * Syncretic Surge, Syncretic Plunge: Common -> Uncommon.
+  * Touch of Cinnabar: Base provides 2 Armor, upgrade provides 4 and costs 1.
+  * Beget Eternity: 2(3) Affinity -> 2(3) Strength.
+  * Choose Your End: 11(15) damage -> 10(14) damage.
   * Just Rewards: 2(3) Daybreaks -> 2 Daybreak(+)s.
   * Wicked Punishment: 3 Yin twice (thrice) -> 3 (4) Yin twice.
   * Bishamon's Blessing, Guanyin's Blessing:
     Base card Plot effects draw 1 card, base cards exhaust when drawn.
+  * Cosmos Control: Uncommon -> Rare.
+  * Untouchable: 3(4) Dexterity -> 2(3) Dexterity.
+  * Cast Off Regrets: 3 Frail -> 2 Frail twice.
+ ...
+  * Elixir of Immorality: 1 Frail Turn 4 -> 2 Frail Turn 4.
  ...
   * Light of Your Life: Base no longer exhausts, upgrade costs 0.
   * Feast of Dew: Base now exhausts and adds a copy to the Draw Pile.
-  * Harmonic Reverence: 3(4) Affinity -> 3(5) Affinity.
 
+ - Bugfixes:
+  * Cosmos Control properly applies the discount to the retrieved card
+    when there's only 1 card in the discard pile.
+  * Base Transcension displays the proper division point in-hand
+    for being able to play an attack twice or more.
  - Visuals
   * New card art edits for Reach to Heaven, Unstable Vigor, and Mix of Mercury.
 

@@ -1,11 +1,9 @@
-package administrix.cards.uncommon.skill;
+package administrix.cards.rare.skill;
 
 import administrix.AdministrixMod;
-import administrix.actions.ConspiracyAction;
 import administrix.actions.CosmosDiscardToHandAction;
 import administrix.cards.AbstractAdministrixCard;
 import administrix.patches.AbstractCardEnum;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.unique.SetupAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,7 +20,7 @@ public class CosmosControl extends AbstractAdministrixCard
     public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
     private static final int COST = 2;
     private static final int TUTOR_AMOUNT = 1;
-    private static final CardRarity rarity = CardRarity.UNCOMMON;
+    private static final CardRarity rarity = CardRarity.RARE;
     private static final CardTarget target = CardTarget.SELF;
 
     public CosmosControl() {

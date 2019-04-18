@@ -3,6 +3,7 @@ package administrix.cards.common.skill;
 import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -22,8 +23,8 @@ public class TouchOfCinnabar extends AbstractAdministrixCard
     public static final String NAME = "Touch of Cinnabar";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
-    private static final int PLATED_AMOUNT = 3;
+    private static final int PLATED_AMOUNT = 2;
+    private static final int UPGRADE_PLATED_AMOUNT = 2;
     private static final int FRAIL_AMOUNT = 2;
     private static final int ARTIFACT_AMOUNT = 1;
     private static final CardRarity rarity = CardRarity.COMMON;
@@ -34,15 +35,17 @@ public class TouchOfCinnabar extends AbstractAdministrixCard
                 CARD_STRINGS.DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.LichGold,
                 rarity, target);
-        this.baseMagicNumber = this.magicNumber = ARTIFACT_AMOUNT;
+        this.baseMagicNumber = this.magicNumber = PLATED_AMOUNT;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, PLATED_AMOUNT), PLATED_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, FRAIL_AMOUNT, false), FRAIL_AMOUNT));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, ARTIFACT_AMOUNT), ARTIFACT_AMOUNT));
     }
 
     @Override
@@ -60,7 +63,7 @@ public class TouchOfCinnabar extends AbstractAdministrixCard
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(UPGRADE_COST);
+            this.upgradeMagicNumber(UPGRADE_PLATED_AMOUNT);
         }
     }
 

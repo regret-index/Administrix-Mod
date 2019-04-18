@@ -18,6 +18,7 @@ public class XianArtsPower extends AbstractPower {
     public static final String POWER_ID = "AdministrixMod:XianArts";
     private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    private static boolean turnReset = true;
 
     public XianArtsPower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
@@ -30,10 +31,19 @@ public class XianArtsPower extends AbstractPower {
     }
 
     public void onSpecificTrigger() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+        if (turnReset) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.amount), this.amount));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, this.amount), this.amount));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+            turnReset = false;
+        }
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        super.atStartOfTurn();
+        turnReset = true;
     }
 
     public void updateDescription()

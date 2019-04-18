@@ -46,6 +46,10 @@ public class TransposeAction extends AbstractGameAction {
     public void update() {
         CardGroup tmpGroup;
 
+        if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            isDone = true;
+        }
+
         if (this.duration == this.startingDuration)
         {
             if (AbstractDungeon.player.drawPile.isEmpty())

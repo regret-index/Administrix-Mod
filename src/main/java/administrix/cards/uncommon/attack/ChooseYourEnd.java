@@ -26,7 +26,7 @@ public class ChooseYourEnd extends AbstractAdministrixCard
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.ENEMY;
     private static final CardType type = CardType.ATTACK;
-    private static final int ATTACK_DMG = 11;
+    private static final int ATTACK_DMG = 10;
     private static final int UPGRADE_ATTACK_DMG = 4;
     private static final int CARD_AMOUNT = 1;
 

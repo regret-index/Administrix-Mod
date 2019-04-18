@@ -57,7 +57,7 @@ public class BishamonBlessing extends AbstractAdministrixCard
     }
 
     // The unupgraded version of this exhausting when drawn
-    // is implemented in BlessingExhaustPatch.java.
+    // is implemented in DrawToExhaustPatch.
     public void triggerWhenDrawn()
     {
         this.superFlash(PLOT_PURPLE);

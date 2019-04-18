@@ -134,7 +134,6 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String ARMILLARY_SPHERE = CARD_IMG_PATH + "Armillary Sphere.png";
     public static final String BISHAMON_BLESSING = CARD_IMG_PATH + "Bishamon's Blessing.png";
     public static final String BLOODLESS_SAPPHIRE = CARD_IMG_PATH + "Bloodless Sapphire.png";
-    public static final String COSMOS_CONTROL = CARD_IMG_PATH + "Cosmos Control.png";
     public static final String DREAMS_MAUSOLEUM = CARD_IMG_PATH + "Dreams Mausoleum.png";
     public static final String FEAST_OF_DEW = CARD_IMG_PATH + "Feast of Dew.png";
     public static final String GRANDEUR = CARD_IMG_PATH + "Grandeur.png";
@@ -147,13 +146,13 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String SYNCRETIC_SURGE = CARD_IMG_PATH + "Syncretic Surge.png";
     public static final String TRANSCENSION = CARD_IMG_PATH + "Transcension.png";
     public static final String UNTOUCHABLE = CARD_IMG_PATH + "Untouchable.png";
-    public static final String WUJI = CARD_IMG_PATH + "Wuji.png";
 
     public static final String CAST_OFF_REGRETS = CARD_IMG_PATH + "Cast Off Regrets.png";
     public static final String CONVERGENCE = CARD_IMG_PATH + "Convergence.png";
     public static final String HARMONIC_REVERENCE = CARD_IMG_PATH + "Harmonic Reverence.png";
     public static final String HIDDEN_POWER = CARD_IMG_PATH + "Hidden Power.png";
     public static final String OVERDRIVE = CARD_IMG_PATH + "Overdrive.png";
+    public static final String WUJI = CARD_IMG_PATH + "Wuji.png";
     public static final String XIAN_ARTS = CARD_IMG_PATH + "Xian Arts.png";
 
     public static final String GIRLS_DO_IT_BETTER = CARD_IMG_PATH + "Girls Do It Better.png";
@@ -165,6 +164,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String AMASSED_MASKS = CARD_IMG_PATH + "Amassed Masks.png";
     public static final String BATTLEFORGED_BONDS = CARD_IMG_PATH + "Battleforged Bonds.png";
     public static final String BREWING_CLOISTER = CARD_IMG_PATH + "Brewing Cloister.png";
+    public static final String COSMOS_CONTROL = CARD_IMG_PATH + "Cosmos Control.png";
     public static final String FALSE_DEATH = CARD_IMG_PATH + "False Death.png";
     public static final String HOPE_IN_THE_DARK = CARD_IMG_PATH + "Hope in the Dark.png";
     public static final String LUMINARY_PATH = CARD_IMG_PATH + "Luminary's Path.png";
@@ -260,8 +260,8 @@ public class AdministrixMod implements PostInitializeSubscriber,
         logger.info("Adding relics.");
 
         BaseMod.addRelicToCustomPool(new ConductorRitualBaton(), AbstractCardEnum.LichGold);
-        BaseMod.addRelicToCustomPool(new AlphaAttackCounter(), AbstractCardEnum.LichGold);
-        BaseMod.addRelicToCustomPool(new AlphaSkillCounter(), AbstractCardEnum.LichGold);
+        // BaseMod.addRelicToCustomPool(new AlphaAttackCounter(), AbstractCardEnum.LichGold);
+        // BaseMod.addRelicToCustomPool(new AlphaSkillCounter(), AbstractCardEnum.LichGold);
         BaseMod.addRelicToCustomPool(new PrescriptionBottle(), AbstractCardEnum.LichGold);
         BaseMod.addRelicToCustomPool(new GoldenChickadee(), AbstractCardEnum.LichGold);
         BaseMod.addRelicToCustomPool(new AbandonedRose(), AbstractCardEnum.LichGold);
@@ -328,7 +328,6 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new ArmillarySphere());
         BaseMod.addCard(new BishamonBlessing());
         BaseMod.addCard(new BloodlessSapphire());
-        BaseMod.addCard(new CosmosControl());
         BaseMod.addCard(new DreamsMausoleum());
         BaseMod.addCard(new FeastOfDew());
         BaseMod.addCard(new Grandeur());
@@ -341,7 +340,6 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new SyncreticSurge());
         BaseMod.addCard(new Transcension());
         BaseMod.addCard(new Untouchable());
-        BaseMod.addCard(new Wuji());
 
         // Uncommon Powers.
         BaseMod.addCard(new CastOffRegrets());
@@ -349,6 +347,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new HarmonicReverence());
         BaseMod.addCard(new HiddenPower());
         BaseMod.addCard(new Overdrive());
+        BaseMod.addCard(new Wuji());
         BaseMod.addCard(new XianArts());
 
         // Rare Attacks.
@@ -362,6 +361,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new AmassedMasks());
         BaseMod.addCard(new BrewingCloister());
         BaseMod.addCard(new BattleforgedBonds());
+        BaseMod.addCard(new CosmosControl());
         BaseMod.addCard(new FalseDeath());
         BaseMod.addCard(new HopeInTheDark());
         BaseMod.addCard(new LuminaryPath());

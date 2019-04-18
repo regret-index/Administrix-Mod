@@ -15,6 +15,8 @@ import javassist.CtBehavior;
 import java.util.ArrayList;
 
 // Provide two UI relics at the start of each game, not as starter relics.
+// This has been dummied out with the removal of Duality, as the Shaku
+// itself counts as the singular case of caring over such.
 
 @SpirePatch(
         clz = CardCrawlGame.class,
@@ -30,6 +32,7 @@ public class UIRelicsPatch {
 
         if (AbstractDungeon.player instanceof Administrix)
         {
+            /*
             // Only add the attack/skill counter 'relics' if they haven't somehow been added already
             // (This can apparently cause issues with other mods that rearrange the order of relics)
             if (!AbstractDungeon.player.hasRelic(AlphaAttackCounter.ID))
@@ -43,6 +46,7 @@ public class UIRelicsPatch {
                 UnlockTracker.markRelicAsSeen(AlphaAttackCounter.ID);
                 UnlockTracker.markRelicAsSeen(AlphaSkillCounter.ID);
             }
+            */
         }
     }
 
