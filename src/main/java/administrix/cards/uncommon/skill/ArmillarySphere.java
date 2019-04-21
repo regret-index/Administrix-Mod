@@ -53,30 +53,28 @@ public class ArmillarySphere extends AbstractAdministrixCard
 
     // Due to the Plot triggers using AbstractDungeon.player,
     // we have to manually apply Dexterity and Frail here.
-    public void triggerWhenDrawn()
-    {
-        this.superFlash(PLOT_PURPLE);
-        int dexCheck = (AbstractDungeon.player.hasPower("Dexterity")) ?
-                       AbstractDungeon.player.getPower("Dexterity").amount : 0;
-        double frailCheck = (AbstractDungeon.player.hasPower("Frail")) ? 0.75 : 1;
-        this.block += dexCheck;
-        this.block *= frailCheck;
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
-        }
-    }
-
-    public void triggerOnManualDiscard()
-    {
-        this.superFlash(PLOT_PURPLE);
+    @Override
+    public void plotEffect() {
         int dexCheck = (AbstractDungeon.player.hasPower("Dexterity")) ?
                 AbstractDungeon.player.getPower("Dexterity").amount : 0;
         double frailCheck = (AbstractDungeon.player.hasPower("Frail")) ? 0.75 : 1;
         this.block += dexCheck;
         this.block /= frailCheck;
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
-        }
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+    }
+
+    @Override
+    public void triggerWhenDrawn()
+    {
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME  + "+" : this.CARD_STRINGS.NAME;
+        doPlotEffect(cardName);
+    }
+
+    @Override
+    public void triggerOnManualDiscard()
+    {
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME  + "+" : this.CARD_STRINGS.NAME;
+        doPlotEffect(cardName);
     }
 
     @Override

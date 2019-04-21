@@ -265,7 +265,7 @@
   "AdministrixMod:SyncreticPlunge": {
     "NAME": "Syncretic Plunge",
     "DESCRIPTION": "Add a Nightfall to your hand for every Attack you've played this turn.",
-    "UPGRADE_DESCRIPTION": "A/dd an upgraded Nightfall to your hand for every Attack you've played this turn.",
+    "UPGRADE_DESCRIPTION": "Add an upgraded Nightfall to your hand for every Attack you've played this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (Add !M! Nightfalls.)",
       " NL (Add !M! Nightfall.)"

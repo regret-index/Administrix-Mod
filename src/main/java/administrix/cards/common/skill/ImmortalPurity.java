@@ -2,6 +2,7 @@ package administrix.cards.common.skill;
 
 import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import administrix.AdministrixMod;
 import administrix.actions.ImmortalUpgradeAction;
 import administrix.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 
 import static administrix.AdministrixMod.*;
 import static administrix.patches.CardTagsEnum.PLOT;
@@ -48,20 +50,23 @@ public class ImmortalPurity extends AbstractAdministrixCard
         AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, DISCARD_AMOUNT, false));
     }
 
-    public void triggerWhenDrawn()
-    {
-        this.superFlash(PLOT_PURPLE);
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
-        }
+    @Override
+    public void plotEffect() {
+        AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
     }
 
+    @Override
+    public void triggerWhenDrawn()
+    {
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME  + "+" : this.CARD_STRINGS.NAME;
+        doPlotEffect(cardName);
+    }
+
+    @Override
     public void triggerOnManualDiscard()
     {
-        this.superFlash(PLOT_PURPLE);
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
-        }
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME  + "+" : this.CARD_STRINGS.NAME;
+        doPlotEffect(cardName);
     }
 
     @Override

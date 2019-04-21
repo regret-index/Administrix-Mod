@@ -1,9 +1,11 @@
 package administrix.cards;
 
 import administrix.powers.MastermindPower;
+import administrix.vfx.PlotDisplayEffect;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -23,10 +25,6 @@ public abstract class AbstractAdministrixCard extends CustomCard {
                                    final AbstractCard.CardType type, final AbstractCard.CardColor color,
                                    final AbstractCard.CardRarity rarity, final AbstractCard.CardTarget target) {
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
-    }
-
-    public int mastermindCheck() {
-        return (AbstractDungeon.player.hasPower(MastermindPower.POWER_ID)? 2 : 1);
     }
 
     public void upgradeSecondMagicNumber(int amount) {
@@ -62,4 +60,18 @@ public abstract class AbstractAdministrixCard extends CustomCard {
             return ((AbstractAdministrixCard)card).secondMagicNumber;
         }
     }
+
+    public void plotEffect() { }
+
+    public void doPlotEffect(String name) {
+        int mastermindCheck = (AbstractDungeon.player.hasPower(MastermindPower.POWER_ID)? 2 : 1);
+
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new PlotDisplayEffect("Plot: " + name)));
+        this.superFlash(PLOT_PURPLE);
+        for (int i = 0; i < mastermindCheck; i++) {
+            plotEffect();
+        }
+    }
+
+
 }

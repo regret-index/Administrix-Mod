@@ -54,25 +54,24 @@ public class DreamsMausoleum extends AbstractAdministrixCard
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, ARTIFACT_AMOUNT), ARTIFACT_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
     }
 
-    public void triggerWhenDrawn()
-    {
-        if (this.cost > 0) {
-            this.superFlash(PLOT_PURPLE);
-            for (int i = 0; i < mastermindCheck(); i++) {
-                AbstractDungeon.actionManager.addToBottom(new ReduceCostAction(this.uuid, COST_REDUCTION));
-            }
-        }
+    @Override
+    public void plotEffect() {
+        AbstractDungeon.actionManager.addToBottom(new ReduceCostAction(this.uuid, COST_REDUCTION));
         this.isCostModified = true;
     }
 
-    public void triggerOnManualDiscard() {
-        if (this.cost > 0) {
-            this.superFlash(PLOT_PURPLE);
-            for (int i = 0; i < mastermindCheck(); i++) {
-                AbstractDungeon.actionManager.addToBottom(new ReduceCostAction(this.uuid, COST_REDUCTION));
-            }
-        }
-        this.isCostModified = true;
+    @Override
+    public void triggerWhenDrawn()
+    {
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME : this.CARD_STRINGS.NAME + "+";
+        doPlotEffect(cardName);
+    }
+
+    @Override
+    public void triggerOnManualDiscard()
+    {
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME : this.CARD_STRINGS.NAME + "+";
+        doPlotEffect(cardName);
     }
 
     @Override

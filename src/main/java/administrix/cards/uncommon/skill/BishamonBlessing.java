@@ -56,32 +56,31 @@ public class BishamonBlessing extends AbstractAdministrixCard
         return false;
     }
 
-    // The unupgraded version of this exhausting when drawn
-    // is implemented in DrawToExhaustPatch.
-    public void triggerWhenDrawn()
-    {
-        this.superFlash(PLOT_PURPLE);
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new YangPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
-            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, WEAK_AMOUNT, false), WEAK_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
-            }
 
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, DRAW_AMOUNT));
+    @Override
+    public void plotEffect() {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new YangPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, WEAK_AMOUNT, false), WEAK_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
         }
+
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, DRAW_AMOUNT));
     }
 
+    // The unupgraded version of this exhausting when drawn
+    // is implemented in DrawToExhaustPatch.
+    @Override
+    public void triggerWhenDrawn()
+    {
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME : this.CARD_STRINGS.NAME + "+";
+        doPlotEffect(cardName);
+    }
+
+    @Override
     public void triggerOnManualDiscard()
     {
-        this.superFlash(PLOT_PURPLE);
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new YangPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
-            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, WEAK_AMOUNT, false), WEAK_AMOUNT, true, AbstractGameAction.AttackEffect.NONE));
-            }
-
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, DRAW_AMOUNT));
-        }
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME : this.CARD_STRINGS.NAME + "+";
+        doPlotEffect(cardName);
     }
 
     @Override

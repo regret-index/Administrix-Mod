@@ -49,20 +49,23 @@ public class ImmortalClarity extends AbstractAdministrixCard
                 (p, p, this.magicNumber));
     }
 
-    public void triggerWhenDrawn()
-    {
-        this.superFlash(PLOT_PURPLE);
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
-        }
+    @Override
+    public void plotEffect() {
+        AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
     }
 
+    @Override
+    public void triggerWhenDrawn()
+    {
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME  + "+" : this.CARD_STRINGS.NAME;
+        doPlotEffect(cardName);
+    }
+
+    @Override
     public void triggerOnManualDiscard()
     {
-        this.superFlash(PLOT_PURPLE);
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
-        }
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME  + "+" : this.CARD_STRINGS.NAME;
+        doPlotEffect(cardName);
     }
 
     @Override

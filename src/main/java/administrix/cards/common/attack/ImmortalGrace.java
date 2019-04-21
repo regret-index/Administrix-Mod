@@ -1,8 +1,10 @@
 package administrix.cards.common.attack;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.vfx.PlotDisplayEffect;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -50,20 +52,23 @@ public class ImmortalGrace extends AbstractAdministrixCard
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMOUNT));
     }
 
-    public void triggerWhenDrawn()
-    {
-        this.superFlash(PLOT_PURPLE);
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
-        }
+    @Override
+    public void plotEffect() {
+        AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
     }
 
+    @Override
+    public void triggerWhenDrawn()
+    {
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME  + "+" : this.CARD_STRINGS.NAME;
+        doPlotEffect(cardName);
+    }
+
+    @Override
     public void triggerOnManualDiscard()
     {
-        this.superFlash(PLOT_PURPLE);
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new ImmortalUpgradeAction(this.upgraded));
-        }
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME  + "+" : this.CARD_STRINGS.NAME;
+        doPlotEffect(cardName);
     }
 
     @Override

@@ -1,4 +1,9 @@
-==== v0.9.1a ====
+==== v0.9.2a ====
+=======
+ - Plot effects now come with a visual effect showing the card name.
+
+
+==== v0.9.1 ====
 =======
  - Two new cards.
   * Funerary Rites: A 1(0)-cost common skill.

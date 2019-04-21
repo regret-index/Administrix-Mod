@@ -56,29 +56,28 @@ public class Overdrive extends AbstractAdministrixCard
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) { return false; }
 
-    // This exhausts itself in DrawToExhaustPatch.
-    public void triggerWhenDrawn()
-    {
-        this.superFlash(PLOT_PURPLE);
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_AMOUNT));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, this.secondMagicNumber), this.secondMagicNumber));
-        }
+    @Override
+    public void plotEffect() {
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, this.secondMagicNumber), this.secondMagicNumber));
     }
 
+    // This exhausting when drawn is implemented in DrawToExhaustPatch.
+    @Override
+    public void triggerWhenDrawn()
+    {
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME : this.CARD_STRINGS.NAME + "+";
+        doPlotEffect(cardName);
+    }
+
+    @Override
     public void triggerOnManualDiscard()
     {
-        this.superFlash(PLOT_PURPLE);
-        for (int i = 0; i < mastermindCheck(); i++) {
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_AMOUNT));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, this.secondMagicNumber), this.secondMagicNumber));
-        }
+        String cardName = (this.upgraded) ? this.CARD_STRINGS.NAME : this.CARD_STRINGS.NAME + "+";
+        doPlotEffect(cardName);
         AbstractDungeon.player.discardPile.moveToExhaustPile(this);
     }
 
