@@ -1,7 +1,10 @@
 package administrix.cards.common.skill;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.vfx.FlaskBounceEffect;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,6 +19,7 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.vfx.combat.PotionBounceEffect;
 
 public class TouchOfCinnabar extends AbstractAdministrixCard
 {
@@ -41,6 +45,8 @@ public class TouchOfCinnabar extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlaskBounceEffect(p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, new Color(0.25F, 0.05F, 0.05F, 1.0F)), 0.4F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, FRAIL_AMOUNT, false), FRAIL_AMOUNT));

@@ -1,7 +1,10 @@
 package administrix.powers;
 
+import administrix.vfx.SpiritFlameEffect;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -42,9 +45,14 @@ public class FlamesOfFaithPower extends AbstractPower {
         }
         if (attackCounter == THRESHOLD) {
             flash();
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect(AbstractDungeon.player.hb.cX - 30.0F * Settings.scale, AbstractDungeon.player.hb.cY - 15.0F * Settings.scale, new Color(0.20F, 0.35F, 0.4F, 1.0F)), 0.05F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY - 50.0F * Settings.scale, new Color(0.05F, 0.05F, 0.5F, 1.0F)), 0.05F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect(AbstractDungeon.player.hb.cX - 60.0F * Settings.scale, AbstractDungeon.player.hb.cY - 50.0F * Settings.scale, new Color(0.30F, 0.30F, 0.45F, 1.0F)), 0.05F));
             if (Settings.FAST_MODE) {
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.4F));
             } else {
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.6F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.8F));
             }
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, this.amount), this.amount));

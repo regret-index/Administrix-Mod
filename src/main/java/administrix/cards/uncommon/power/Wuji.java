@@ -3,7 +3,9 @@ package administrix.cards.uncommon.power;
 import administrix.cards.AbstractAdministrixCard;
 import administrix.powers.YangPower;
 import administrix.powers.YinPower;
+import administrix.vfx.KinesisEffect;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -12,10 +14,12 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.vfx.CollectorStakeEffect;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
@@ -62,13 +66,20 @@ public class Wuji extends AbstractAdministrixCard
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_FIRE"));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.2F));
 
+        if (this.magicNumber > 0) {
+            float length = Math.min(0.1F + this.magicNumber * 0.05F, 1.2F);
+            CardCrawlGame.sound.playA("ORB_DARK_EVOKE", -0.4F);
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new KinesisEffect(p.hb.cX, p.hb.cX, p.hb.cX, p.hb.cY - 800F * Settings.scale, length, Color.WHITE.cpy(), Color.BLACK.cpy()), length));
+            CardCrawlGame.sound.playA("ORB_DARK_EVOKE", -0.4F);
+        }
+
         if (halfYin != 0) {
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, YinPower.POWER_ID, halfYin));
         }
+
         if (halfYang != 0) {
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, YangPower.POWER_ID, halfYang));
         }
-
 
         if (this.magicNumber > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
@@ -114,6 +125,7 @@ public class Wuji extends AbstractAdministrixCard
     public void upgrade() {
         if (!upgraded)
         {
+            this.upgradeName();
             this.upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }

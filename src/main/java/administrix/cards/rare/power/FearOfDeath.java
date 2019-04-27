@@ -1,10 +1,13 @@
 package administrix.cards.rare.power;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.vfx.InTheDarkEffect;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -16,6 +19,7 @@ import com.megacrit.cardcrawl.vfx.combat.AdrenalineEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.WiltingPower;
+import com.megacrit.cardcrawl.vfx.combat.RoomTintEffect;
 
 public class FearOfDeath extends AbstractAdministrixCard
 {
@@ -40,10 +44,14 @@ public class FearOfDeath extends AbstractAdministrixCard
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new RoomTintEffect(Color.BLACK.cpy(), 0.5F, 2.0F, true)));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new AdrenalineEffect(), 0.15F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, FRAIL_AMOUNT, false), FRAIL_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WiltingPower(p, WILTING_AMOUNT, false), WILTING_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
         int count = BaseMod.MAX_HAND_SIZE;
         if (count != 0)
         {

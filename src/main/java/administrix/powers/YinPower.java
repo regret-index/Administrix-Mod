@@ -1,5 +1,6 @@
 package administrix.powers;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -13,7 +14,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.vfx.combat.AnimatedSlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import static administrix.AdministrixMod.ADMIN_POWERS_ATLAS;
@@ -49,18 +52,36 @@ public class YinPower extends AbstractPower {
                 toDamage += this.owner.getPower(AffinityPower.POWER_ID).amount;
             }
 
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_DEFECT_BEAM"));
-            if (Settings.FAST_MODE) {
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(this.owner, new CleaveEffect(), 0.1F));
-                AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(toDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(this.owner, new CleaveEffect(), 0.1F));
-                AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(toDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(this.owner, new CleaveEffect(), 0.2F));
-                AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(toDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(this.owner, new CleaveEffect(), 0.2F));
-                AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(toDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
+            AbstractMonster leftmost = null;
+            AbstractMonster rightmost = null;
+            boolean stop = false;
+
+            for (AbstractMonster mon : AbstractDungeon.getCurrRoom().monsters.monsters)
+            {
+                if (!mon.isDeadOrEscaped()) {
+                    if (leftmost == null) { leftmost = mon; }
+                    if (rightmost == null) { rightmost = mon; }
+
+                    if (mon.hb.cX < leftmost.hb.cX) {
+                        leftmost = mon;
+                    } else if (mon.hb.cX > rightmost.hb.cX) {
+                        rightmost = mon;
+                    }
+                }
             }
+
+            float lX = leftmost.hb.cX * Settings.scale;
+            float lY = leftmost.hb.cY * Settings.scale;
+            float rX = rightmost.hb.cX * Settings.scale;
+            float rY = rightmost.hb.cY * Settings.scale;
+
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_DEFECT_BEAM"));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new AnimatedSlashEffect(lX + 500.0f * Settings.scale, lY, (rX - lX) * 4.0F, -15.0F * Settings.scale, 105.0F, 4.0F, Color.PURPLE.cpy(), Color.PURPLE.cpy())));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new AnimatedSlashEffect(lX + 320.0F * Settings.scale, lY, (rX - lX) * 4.0F, -60.0F * Settings.scale, 105.0F, 4.0F, Color.PURPLE.cpy(), Color.PURPLE.cpy())));
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(toDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new AnimatedSlashEffect(rX, rY, (lX - rX) * 4.0F, 15.F * Settings.scale, 75.0F, 4.0F, Color.PURPLE.cpy(), Color.PURPLE.cpy())));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new AnimatedSlashEffect(rX + 180.0F * Settings.scale, rY, (lX - rX) * 4.0F, 60.0F * Settings.scale, 75.0F, 4.0F, Color.PURPLE.cpy(), Color.PURPLE.cpy())));
+            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(toDamage, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE));
         }
 
         super.stackPower(amount);

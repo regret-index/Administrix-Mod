@@ -3,12 +3,14 @@ package administrix.cards.rare.skill;
 import administrix.cards.AbstractAdministrixCard;
 import administrix.powers.YangPower;
 import administrix.powers.YinPower;
+import administrix.vfx.InTheDarkEffect;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -16,6 +18,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
+import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
+import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
@@ -60,9 +64,14 @@ public class HopeInTheDark extends AbstractAdministrixCard
         super.applyPowers();
 
         if (difference > 0) {
+            float duration = 1.6F + (this.block / 20) * 0.4F;
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new InTheDarkEffect(duration)));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.2F));
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_FIRE"));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.PURPLE, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+            for (int i = 0; i <= this.block / 20; i++) {
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.2F));
+            }
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         }
 

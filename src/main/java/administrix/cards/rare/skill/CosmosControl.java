@@ -4,13 +4,16 @@ import administrix.AdministrixMod;
 import administrix.actions.CosmosDiscardToHandAction;
 import administrix.cards.AbstractAdministrixCard;
 import administrix.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.unique.SetupAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.HeartBuffEffect;
 
 public class CosmosControl extends AbstractAdministrixCard
 {
@@ -35,6 +38,8 @@ public class CosmosControl extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new HeartBuffEffect(p.hb.cX, p.hb.cY)));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
         AbstractDungeon.actionManager.addToBottom(new CosmosDiscardToHandAction(TUTOR_AMOUNT, p));
         AbstractDungeon.actionManager.addToBottom(new SetupAction());
     }

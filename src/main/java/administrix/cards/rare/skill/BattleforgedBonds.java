@@ -1,12 +1,15 @@
 package administrix.cards.rare.skill;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.vfx.ColouredSmokeEffect;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.unique.ApplyBulletTimeAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -42,6 +45,14 @@ public class BattleforgedBonds extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX - 210.0F * Settings.scale, p.hb.cY - 100.0F * Settings.scale, new Color(0.8F, 0.2F, 0.2F, 1.0F), false));
+        AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX - 140.0F * Settings.scale, p.hb.cY - 40.0F * Settings.scale, new Color(0.8F, 0.6F, 0.1F, 1.0F), false));
+        AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX - 70.0F * Settings.scale, p.hb.cY + 20.0F * Settings.scale, new Color(0.8F, 0.8F, 0.1F, 1.0F), false));
+        AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX, p.hb.cY + 40.0F * Settings.scale, new Color(0.4F, 0.8F, 0.2F, 1.0F), false));
+        AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX + 70.0F * Settings.scale, p.hb.cY + 20.0F * Settings.scale, new Color(0.2F, 0.6F, 0.8F, 1.0F), false));
+        AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX + 140.0F * Settings.scale, p.hb.cY - 40.0F * Settings.scale, new Color(0.4F, 0.4F, 0.8F, 1.0F), false));
+        AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX + 210.0F * Settings.scale, p.hb.cY - 100.0F * Settings.scale, new Color(0.6F, 0.2F, 0.6F, 1.0F), false));
+
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));

@@ -1,18 +1,22 @@
 package administrix.cards.uncommon.skill;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.vfx.BloodlessEffect;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.WiltingPower;
+import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 
 public class BloodlessSapphire extends AbstractAdministrixCard
 {
@@ -43,6 +47,8 @@ public class BloodlessSapphire extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new BloodlessEffect(AbstractDungeon.player.hb.cX + 40.0F * Settings.scale, AbstractDungeon.player.hb.cY - 60.0F * Settings.scale, Settings.BLUE_TEXT_COLOR.cpy()), 0.3F));
+
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         if (p.currentHealth > 0) {
             p.heal(this.magicNumber);

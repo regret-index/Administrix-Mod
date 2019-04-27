@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -18,8 +20,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
+import com.megacrit.cardcrawl.vfx.combat.AnimatedSlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.ClashEffect;
-import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
+
+import java.awt.*;
 
 public class Schism extends AbstractAdministrixCard
 {
@@ -50,14 +54,19 @@ public class Schism extends AbstractAdministrixCard
         this.block = this.baseBlock = p.currentBlock / 2;
 
         if (p.currentBlock > 0) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new GoldenSlashEffect(AbstractDungeon.player.hb.cX - 60.0F * Settings.scale, AbstractDungeon.player.hb.cY, true), 0.1F));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new GoldenSlashEffect(AbstractDungeon.player.hb.cX + 60.0F * Settings.scale, AbstractDungeon.player.hb.cY, true), 0.1F));
+            CardCrawlGame.sound.playA("ATTACK_IRON_2", -0.4F);
+            CardCrawlGame.sound.playA("ATTACK_HEAVY", -0.4F);
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new AnimatedSlashEffect(AbstractDungeon.player.hb.cX - 60.0F * Settings.scale, AbstractDungeon.player.hb.cY - 30.0F * Settings.scale, 0.0F, -500.0F, 180.0F, 5.0F, Color.RED, Color.RED)));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
+            CardCrawlGame.sound.playA("ATTACK_IRON_2", -0.4F);
+            CardCrawlGame.sound.playA("ATTACK_HEAVY", -0.4F);
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new AnimatedSlashEffect(AbstractDungeon.player.hb.cX + 60.0F * Settings.scale, AbstractDungeon.player.hb.cY - 30.0F * Settings.scale, 0.0F, -500.0F, 180.0F, 5.0F, Color.BLUE, Color.BLUE)));
         }
 
         if (this.damage > 0) {
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (m != null) {
-                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new ClashEffect(m.hb.cX, m.hb.cY), 0.1F));
+                if (mo != null) {
+                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new ClashEffect(mo.hb.cX, mo.hb.cY), 0.2F));
                 }
             }
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
@@ -66,6 +75,7 @@ public class Schism extends AbstractAdministrixCard
         if (this.block > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
         }
+
         AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(p, p));
     }
 

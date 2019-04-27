@@ -6,6 +6,7 @@ import administrix.actions.TransposeAction;
 import administrix.cards.AbstractAdministrixCard;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.WiltingPower;
+import administrix.vfx.SpiritFlameEffect;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -16,6 +17,7 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -54,7 +56,12 @@ public class TenDesires extends AbstractAdministrixCard
             AbstractDungeon.actionManager.addToBottom(new TransposeAction(this.magicNumber));
         }
 
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2F));
+
+        for (float i = 1.0F; i < 10.0F; i += 2.0F) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect( (float)Settings.WIDTH / 10.0F * i, (float)Settings.HEIGHT / 10.0F * 3.0F, new Color(0.25F, 0.30F, 0.35F, 1.0F)), 0.1F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect( (float)Settings.WIDTH / 10.0F * i, (float)Settings.HEIGHT / 10.0F * 8.0F, new Color(0.25F, 0.30F, 0.35F, 1.0F)), 0.1F));
+        }
 
         int toDraw = 10 - AbstractDungeon.player.hand.size();
         if (toDraw > 0) {
@@ -62,7 +69,6 @@ public class TenDesires extends AbstractAdministrixCard
         }
 
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
-
         AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, DISCARD_AMOUNT, false));
     }
 

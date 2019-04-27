@@ -1,8 +1,12 @@
 package administrix.cards.uncommon.skill;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.vfx.FlaskBounceEffect;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -40,8 +44,12 @@ public class MixOfMercury extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlaskBounceEffect(p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, new Color(0.15F, 0.35F, 0.40F, 1.0F)), 0.4F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, THORNS_AMOUNT), THORNS_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WiltingPower(p, WILTING_AMOUNT, false), WILTING_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
     }
 

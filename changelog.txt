@@ -1,7 +1,15 @@
 ==== v0.9.2a ====
 =======
- - Plot effects now come with a visual effect showing the card name.
-
+ - Visuals:
+  * Plot effects now come with a visual effect showing the card name.
+  * New effects for activating Yin and Yang.
+  * Additional effects for:
+    Wuji, Schism, Brewing Cloister, Luminary's Path,
+    Hope in the Dark, Faithful Flames, Wife's Lightning.
+  * New effects for:
+    Regent's Edict, Touch of Cinnabar, Bloodless Sapphire, Mix of Mercury,
+    Amassed Masks, Battleforged Bonds, Cosmos Control, Ten Desires.
+  * Card art adjustments for Guanyin's Blessing and Bishamon's Blessing.
 
 ==== v0.9.1 ====
 =======

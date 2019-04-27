@@ -1,11 +1,14 @@
 package administrix.cards.rare.skill;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.vfx.ColouredSmokeEffect;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -35,6 +38,10 @@ public class AmassedMasks extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
+        AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX - 180.0F * Settings.scale, p.hb.cY + 100.0F * Settings.scale, new Color(0.8F, 0.6F, 0.75F, 1.0F), false));
+        AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX - 180.0F * Settings.scale, p.hb.cY - 20.0F * Settings.scale, new Color(0.1F, 0.5F, 0.55F, 1.0F), false));
+        AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX - 180.0F * Settings.scale, p.hb.cY - 140.0F * Settings.scale, new Color(0.8F, 0.5F, 0.4F, 1.0F), false));
+
         // Generate a random Attack, Skill, and Power, all set to 0.
         // No generating itself, though, and no generating healing.
         AbstractCard a = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy();

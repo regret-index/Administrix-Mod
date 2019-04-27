@@ -3,6 +3,7 @@ package administrix.cards.rare.skill;
 import administrix.cards.AbstractAdministrixCard;
 import administrix.powers.YangPower;
 import administrix.powers.YinPower;
+import administrix.vfx.KinesisEffect;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -65,10 +67,15 @@ public class LuminaryPath extends AbstractAdministrixCard
         }
 
         if (difference > 0) {
+            float length = Math.min(0.1F + difference * 0.075F, 1.2F);
             if (yinAmount > yangAmount) {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
+                CardCrawlGame.sound.playA("ORB_DARK_EVOKE", -0.4F);
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new KinesisEffect(p.hb.cX, p.hb.cY + 800F * Settings.scale, p.hb.cX, p.hb.cY - 50F * Settings.scale, length, Color.BLACK.cpy(), Color.GOLD.cpy()), length));
             } else if (yangAmount > yinAmount) {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.WHITE, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
+                CardCrawlGame.sound.playA("ORB_DARK_EVOKE", -0.4F);
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new KinesisEffect(p.hb.cX, p.hb.cY + 800F * Settings.scale, p.hb.cX, p.hb.cY  - 50F * Settings.scale, length, Color.WHITE.cpy(), Color.PURPLE.cpy()), length));
             }
             AbstractDungeon.actionManager.addToBottom(new SFXAction("TH-BONUS"));
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(difference));

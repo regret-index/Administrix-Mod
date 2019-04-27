@@ -1,8 +1,9 @@
 package administrix.cards.rare.skill;
 
 import administrix.cards.AbstractAdministrixCard;
-import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import administrix.vfx.ColouredSmokeEffect;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,7 +14,6 @@ import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 
@@ -51,7 +51,17 @@ public class BrewingCloister extends AbstractAdministrixCard
                 temp.ID.equals("Regen Potion"))
             temp = PotionHelper.getRandomPotion();
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmokeBombEffect(p.hb.cX, p.hb.cY)));
+
+        CardCrawlGame.sound.play("ATTACK_WHIFF_2");
+        Color poof = new Color(0.5F + MathUtils.random(-0.05F, 0.05F), 0.2F, 0.6F + MathUtils.random(-0.05F, 0.05F), 1.0F);
+
+        float cr = 0.5F + MathUtils.random(-0.2F, 0.2F);
+        float cb = 0.6F + MathUtils.random(-0.1F, 0.2F);
+
+        for(int i = 0; i < 80; ++i) {
+            AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX, p.hb.cY, new Color(cr, 0.2F, cb, 1.0F), true));
+        }
+
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ObtainPotionAction(temp));
     }
