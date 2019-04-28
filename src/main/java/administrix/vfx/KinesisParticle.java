@@ -107,13 +107,13 @@ public class KinesisParticle extends AbstractGameEffect {
         }
 
         if (this.target.dst(this.pos) < DST_THRESHOLD) {
-            for(int i = 0; i < 8; ++i) {
+            for(int i = 0; i < 4; ++i) {
                 if (this.facingLeft) {
-                    AbstractDungeon.effectsQueue.add(new DarkOrbPassiveEffect(this.target.x + DST_THRESHOLD + MathUtils.random(-80F, 80F), this.target.y));
-                    AbstractDungeon.effectsQueue.add(new PlasmaOrbPassiveEffect(this.target.x + DST_THRESHOLD + MathUtils.random(-80F, 80F), this.target.y));
+                    AbstractDungeon.effectsQueue.add(new DarkOrbPassiveEffect(this.target.x + DST_THRESHOLD + MathUtils.random(-80F, 80F), this.target.y + MathUtils.random(-80F, 80F)));
+                    AbstractDungeon.effectsQueue.add(new PlasmaOrbPassiveEffect(this.target.x + DST_THRESHOLD + MathUtils.random(-80F, 80F), this.target.y + MathUtils.random(-80F, 80F)));
                 } else {
-                    AbstractDungeon.effectsQueue.add(new DarkOrbPassiveEffect(this.target.x - DST_THRESHOLD + MathUtils.random(-80F, 80F), this.target.y));
-                    AbstractDungeon.effectsQueue.add(new PlasmaOrbPassiveEffect(this.target.x - DST_THRESHOLD + MathUtils.random(-80F, 80F), this.target.y));
+                    AbstractDungeon.effectsQueue.add(new DarkOrbPassiveEffect(this.target.x - DST_THRESHOLD + MathUtils.random(-80F, 80F), this.target.y + MathUtils.random(-80F, 80F)));
+                    AbstractDungeon.effectsQueue.add(new PlasmaOrbPassiveEffect(this.target.x - DST_THRESHOLD + MathUtils.random(-80F, 80F), this.target.y + MathUtils.random(-80F, 80F)));
                 }
             }
 

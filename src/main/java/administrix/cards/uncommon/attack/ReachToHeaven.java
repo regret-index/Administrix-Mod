@@ -2,6 +2,7 @@ package administrix.cards.uncommon.attack;
 
 import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -20,6 +21,7 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.YangPower;
+import com.megacrit.cardcrawl.vfx.combat.RoomTintEffect;
 
 public class ReachToHeaven extends AbstractAdministrixCard
 {
@@ -59,6 +61,10 @@ public class ReachToHeaven extends AbstractAdministrixCard
         if (effect > 0)
         {
             AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, effect, false));
+
+            if (effect > 4 && p.hasRelic("Chemical X") || effect > 2) {
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new RoomTintEffect(Color.GOLD.cpy(), 0.2F, 1.8F + effect * 0.6F, true)));
+            }
             for (int i = 0; i < effect; i++) {
                 AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_DEFECT_BEAM"));

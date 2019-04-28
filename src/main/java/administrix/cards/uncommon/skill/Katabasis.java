@@ -2,7 +2,10 @@ package administrix.cards.uncommon.skill;
 
 import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,6 +17,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.DescentPlusPower;
+import com.megacrit.cardcrawl.vfx.combat.RoomTintEffect;
 
 public class Katabasis extends AbstractAdministrixCard
 {
@@ -50,9 +54,15 @@ public class Katabasis extends AbstractAdministrixCard
             effect++;
         }
         if (effect > 0) {
+            if (effect > 4 && p.hasRelic("Chemical X") ||
+                effect > 3 && this.upgraded || effect > 2) {
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new RoomTintEffect(Color.PURPLE.cpy(), 0.2F, 0.8F + effect * 0.1F, true)));
+            }
             for (int i = 0; i < effect; i++) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, 1, false), 1));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
             }
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DescentPlusPower(p, effect), effect));
         }
         p.energy.use(EnergyPanel.totalCount);

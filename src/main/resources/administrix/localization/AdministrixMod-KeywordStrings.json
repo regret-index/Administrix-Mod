@@ -1,7 +1,7 @@
 {
 	"transpose": {
 		"NAMES": [ "transpose" ],
-		"DESCRIPTION": "Discard cards from your Draw Pile, then move different cards from the Discard Pile to the bottom of your #yDraw #yPile."
+		"DESCRIPTION": "Discard cards from your Draw Pile, then move different cards from the Discard Pile to the bottom of your Draw Pile."
 	},
 
 	"plot": {
@@ -11,7 +11,7 @@
 
 	"immortal": {
 		"NAMES": [ "immortal", "immortalize" ],
-		"DESCRIPTION": "Immortal cards #yupgrade other Immortal cards and can be #yupgraded any number of times."
+		"DESCRIPTION": "Immortal cards upgrade other Immortal cards and can be upgraded any number of times."
 	},
 
 	"wilting": {
@@ -21,7 +21,7 @@
 
 	"duality": {
 		"NAMES": [ "duality" ],
-		"DESCRIPTION": "Whenever you play an equal, non-zero number of Attacks and Skills in one turn, gain temporary #yStrength and #yDexterity next turn."
+		"DESCRIPTION": "Whenever you play an equal, non-zero number of Attacks and Skills in one turn, gain temporary Strength and Dexterity next turn."
 	},
 
 	"yin": {

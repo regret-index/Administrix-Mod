@@ -2,11 +2,14 @@ package administrix.cards.common.attack;
 
 import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,6 +20,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.YinPower;
+import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
+import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbPassiveEffect;
 
 public class ShadowPlay extends AbstractAdministrixCard
 {
@@ -46,7 +51,14 @@ public class ShadowPlay extends AbstractAdministrixCard
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+        for(int i = 0; i < 6; ++i) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new DarkOrbPassiveEffect(m.hb.cX + MathUtils.random(60F, 100F), m.hb.cY + MathUtils.random(-80F, 80F))));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new DarkOrbPassiveEffect(m.hb.cX + MathUtils.random(-100F, -60F), m.hb.cY + MathUtils.random(-80F, 80F))));
+        }
+
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
         AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, DISCARD_AMOUNT, false));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new YinPower(p, this.magicNumber), this.magicNumber));
     }

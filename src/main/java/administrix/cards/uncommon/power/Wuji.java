@@ -31,9 +31,9 @@ public class Wuji extends AbstractAdministrixCard
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
-    private static final int DEXTERITY_SCALE = 5;
+    private static final int COST = 2;
+    private static final int UPGRADE_COST = 1;
+    private static final int DEXTERITY_SCALE = 6;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.SELF;
     private static final CardType type = CardType.POWER;
@@ -69,7 +69,7 @@ public class Wuji extends AbstractAdministrixCard
         if (this.magicNumber > 0) {
             float length = Math.min(0.1F + this.magicNumber * 0.05F, 1.2F);
             CardCrawlGame.sound.playA("ORB_DARK_EVOKE", -0.4F);
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new KinesisEffect(p.hb.cX, p.hb.cX, p.hb.cX, p.hb.cY - 800F * Settings.scale, length, Color.WHITE.cpy(), Color.BLACK.cpy()), length));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new KinesisEffect(p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY - 800F * Settings.scale, length, Color.WHITE.cpy(), Color.BLACK.cpy()), length));
             CardCrawlGame.sound.playA("ORB_DARK_EVOKE", -0.4F);
         }
 

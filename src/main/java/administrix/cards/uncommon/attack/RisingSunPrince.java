@@ -2,14 +2,18 @@ package administrix.cards.uncommon.attack;
 
 import administrix.cards.AbstractAdministrixCard;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,6 +21,7 @@ import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.vfx.combat.FlyingSpikeEffect;
 
 import static administrix.AdministrixMod.*;
 import static administrix.patches.CardTagsEnum.PLOT;
@@ -52,6 +57,10 @@ public class RisingSunPrince extends AbstractAdministrixCard
     {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+        for(int i = 0; i < 12; i++) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlyingSpikeEffect(m.hb.cX - MathUtils.random(-40.0F, 40.0F) * Settings.scale, m.hb.cY + MathUtils.random(-80.0F, 80.0F) * Settings.scale, 45.0F + MathUtils.random(15.0F, 75.0F), 0.0F, MathUtils.random(200.0F, 50.0F) * Settings.scale, Color.GOLD.cpy())));
+        }
     }
 
     @Override
@@ -60,6 +69,10 @@ public class RisingSunPrince extends AbstractAdministrixCard
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new StrengthPower(mo, -this.magicNumber), -this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
             if (mo != null && !mo.hasPower("Artifact")) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new GainStrengthPower(mo, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                for(int i = 0; i < 4; i++) {
+                    AbstractDungeon.effectsQueue.add(new FlyingSpikeEffect(mo.hb.cX - MathUtils.random(-120.0F, 120.0F) * Settings.scale, mo.hb.cY - MathUtils.random(80.0F, 120.0F) * Settings.scale, 45.0F + MathUtils.random(15.0F, 75.0F), 0.0F, MathUtils.random(200.0F, 50.0F) * Settings.scale, Color.GOLD.cpy()));
+                    AbstractDungeon.effectsQueue.add(new FlyingSpikeEffect(mo.hb.cX - MathUtils.random(-120.0F, 120.0F) * Settings.scale, mo.hb.cY + MathUtils.random(40.0F, 80.0F) * Settings.scale, 45.0F + MathUtils.random(15.0F, 75.0F), 0.0F, MathUtils.random(200.0F, 50.0F) * Settings.scale, Color.GOLD.cpy()));
+                }
             }
         }
     }

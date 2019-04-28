@@ -4,6 +4,7 @@ import administrix.AdministrixMod;
 import administrix.cards.AbstractAdministrixCard;
 import administrix.patches.AbstractCardEnum;
 import administrix.powers.YangPower;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -18,6 +19,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbPassiveEffect;
 
 import static administrix.patches.CardTagsEnum.PLOT;
 
@@ -46,9 +48,12 @@ public class TrickOfTheLight extends AbstractAdministrixCard
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.4F));
+        for(int i = 0; i < 6; ++i) {
+            AbstractDungeon.effectsQueue.add(new PlasmaOrbPassiveEffect(m.hb.cX + MathUtils.random(60F, 100F), m.hb.cY + MathUtils.random(-60F, 140F)));
+            AbstractDungeon.effectsQueue.add(new PlasmaOrbPassiveEffect(m.hb.cX + MathUtils.random(-100F, -60F), m.hb.cY + MathUtils.random(-60F, 140F)));
+        }
 
         if (!AbstractDungeon.player.drawPile.group.isEmpty()) {
             for (int i = p.drawPile.group.size() - 1; i >= 0; --i) {

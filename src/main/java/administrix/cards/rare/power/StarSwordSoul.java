@@ -20,9 +20,10 @@ import administrix.powers.StarSwordSoulPower;
 public class StarSwordSoul extends AbstractAdministrixCard
 {
     public static final String ID = "AdministrixMod:StarSwordSoul";
-    public static final String NAME = "Star Sword Soul";
+    public static final String NAME = "Phylactery Form";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
+    public static final String UPGRADE_NAME = CARD_STRINGS.EXTENDED_DESCRIPTION[0];
     private static final int COST = 3;
     private static final int STAT_AMOUNT = 1;
     private static final CardRarity rarity = CardRarity.RARE;
@@ -34,7 +35,6 @@ public class StarSwordSoul extends AbstractAdministrixCard
                 type, AbstractCardEnum.LichGold,
                 rarity, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = STAT_AMOUNT;
-        this.retain = true;
     }
 
     @Override
@@ -52,14 +52,17 @@ public class StarSwordSoul extends AbstractAdministrixCard
 
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
-        this.retain = true;
+        if (this.upgraded) { this.retain = true; }
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();
+            this.name = UPGRADE_NAME;
+            this.upgraded = true;
+            initializeTitle();
             this.isInnate = true;
+            this.retain = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

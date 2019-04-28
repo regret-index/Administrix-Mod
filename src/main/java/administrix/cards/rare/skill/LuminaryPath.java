@@ -71,7 +71,7 @@ public class LuminaryPath extends AbstractAdministrixCard
             if (yinAmount > yangAmount) {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.BLACK, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
                 CardCrawlGame.sound.playA("ORB_DARK_EVOKE", -0.4F);
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new KinesisEffect(p.hb.cX, p.hb.cY + 800F * Settings.scale, p.hb.cX, p.hb.cY - 50F * Settings.scale, length, Color.BLACK.cpy(), Color.GOLD.cpy()), length));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new KinesisEffect(p.hb.cX, p.hb.cY + 800F * Settings.scale, p.hb.cX, p.hb.cY - 50F * Settings.scale, length, Color.GOLD.cpy(), Color.BLACK.cpy()), length));
             } else if (yangAmount > yinAmount) {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new VerticalAuraEffect(Color.WHITE, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.33F));
                 CardCrawlGame.sound.playA("ORB_DARK_EVOKE", -0.4F);

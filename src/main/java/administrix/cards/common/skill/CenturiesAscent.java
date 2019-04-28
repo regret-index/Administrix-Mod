@@ -26,8 +26,8 @@ public class CenturiesAscent extends AbstractAdministrixCard
     public static final String NAME = "Centuries Ascent";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
-    private static final int COST = 0;
-    private static final int BLOCK_AMOUNT = 3;
+    private static final int COST = 1;
+    private static final int BLOCK_AMOUNT = 4;
     private static final int UPGRADE_BLOCK_AMOUNT = 2;
     private static final int YANG_AMOUNT = 0;
     private static final int UPGRADE_YANG_AMOUNT = 2;

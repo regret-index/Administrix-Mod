@@ -55,8 +55,8 @@ public class BrewingCloister extends AbstractAdministrixCard
         CardCrawlGame.sound.play("ATTACK_WHIFF_2");
         Color poof = new Color(0.5F + MathUtils.random(-0.05F, 0.05F), 0.2F, 0.6F + MathUtils.random(-0.05F, 0.05F), 1.0F);
 
-        float cr = 0.5F + MathUtils.random(-0.2F, 0.2F);
-        float cb = 0.6F + MathUtils.random(-0.1F, 0.2F);
+        float cr = 0.5F + MathUtils.random(-0.25F, 0.2F);
+        float cb = 0.6F + MathUtils.random(-0.15F, 0.25F);
 
         for(int i = 0; i < 80; ++i) {
             AbstractDungeon.effectsQueue.add(new ColouredSmokeEffect(p.hb.cX, p.hb.cY, new Color(cr, 0.2F, cb, 1.0F), true));

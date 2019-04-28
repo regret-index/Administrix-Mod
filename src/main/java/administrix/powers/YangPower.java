@@ -59,6 +59,10 @@ public class YangPower extends AbstractPower {
         }
 
         super.stackPower(amount);
+        this.updateDescription();
+        if (this.owner.hasPower(YinPower.POWER_ID)) {
+            this.owner.getPower(YinPower.POWER_ID).updateDescription();
+        }
     }
 
     public void updateDescription()

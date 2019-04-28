@@ -1,15 +1,25 @@
 ==== v0.9.2a ====
 =======
+ - Balance:
+  * Centuries Ascent now costs 1, and goes from 3(5) Block to 4(6) Block.
+  * Noble Path no longer provides energy the next turn.
+  * Wuji's cost goes from 1(0) to 2(1), and divides by 6.
+  * Star Sword Soul only retains when upgraded.
  - Visuals:
   * Plot effects now come with a visual effect showing the card name.
   * New effects for activating Yin and Yang.
   * Additional effects for:
     Wuji, Schism, Brewing Cloister, Luminary's Path,
-    Hope in the Dark, Faithful Flames, Wife's Lightning.
+    Hope in the Dark, Faithful Flames, Fear of Death, Wife's Lightning.
   * New effects for:
-    Regent's Edict, Touch of Cinnabar, Bloodless Sapphire, Mix of Mercury,
-    Amassed Masks, Battleforged Bonds, Cosmos Control, Ten Desires.
+    Noble Path, Regent's Edict, Shadow Play, Trick of the Light,
+    Touch of Cinnabar, Choose Your End, Reach to Heaven, Rising Sun's Prince,
+    Unstable Vigor, Bloodless Sapphire, Mix of Mercury, Katabasis,
+    Lifeforce Net, Amassed Masks, Battleforged Bonds, Cosmos Control,
+    Ten Desires, Immortal Clarity.
   * Card art adjustments for Guanyin's Blessing and Bishamon's Blessing.
+ - Fixes:
+  * Yin and Yang properly update the others' description.
 
 ==== v0.9.1 ====
 =======

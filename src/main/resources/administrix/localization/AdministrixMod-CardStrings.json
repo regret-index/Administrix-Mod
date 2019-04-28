@@ -31,8 +31,8 @@
   },
   "AdministrixMod:NoblePath": {
     "NAME": "Noble Path",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, gain [E]. NL Gain !M! Yin. NL Gain !M! Yang.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Next turn, gain [E]. NL Gain !M! Yin twice. NL Gain !M! Yang twice."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Yin. NL Gain !M! Yang.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !M! Yin twice. NL Gain !M! Yang twice."
   },
   "AdministrixMod:PassageOfAges": {
     "NAME": "Passage Of Ages",
@@ -381,9 +381,12 @@
     "UPGRADE_DESCRIPTION": "Choose a card. NL Add a copy of that card into your hand each turn for the next !M! turns. NL [#cc99ff]{[] Plot: Upgrade all of your Immortal cards for the rest of this combat. [#cc99ff]}[]"
   },
   "AdministrixMod:StarSwordSoul": {
-    "NAME": "Star Sword Soul",
-    "DESCRIPTION": "At the start of your turn, gain 1 Affinity and draw 1 additional card. NL Retain.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 Duality, 1 Affinity, and draw 1 additional card. NL Retain."
+    "NAME": "Phylactery Form",
+    "DESCRIPTION": "At the start of your turn, gain 1 Affinity and draw 1 additional card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 Affinity and draw 1 additional card. NL Retain.",
+    "EXTENDED_DESCRIPTION": [
+      "Star Sword Soul"
+    ]
   },
   "AdministrixMod:WifeLightning": {
     "NAME": "Wife's Lightning",

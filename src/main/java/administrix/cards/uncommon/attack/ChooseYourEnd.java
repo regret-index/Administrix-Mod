@@ -5,10 +5,12 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,6 +18,7 @@ import administrix.AdministrixMod;
 import administrix.cards.starter.BlueCloak;
 import administrix.cards.starter.RedCloak;
 import administrix.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.vfx.combat.WaterDropEffect;
 
 public class ChooseYourEnd extends AbstractAdministrixCard
 {
@@ -45,6 +48,9 @@ public class ChooseYourEnd extends AbstractAdministrixCard
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new RedCloak(), CARD_AMOUNT));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new BlueCloak(), CARD_AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
+        AbstractDungeon.effectsQueue.add(new WaterDropEffect(m.hb.cX - 50.0F * Settings.scale, m.hb.cY - 50.0F * Settings.scale));
+        AbstractDungeon.effectsQueue.add(new WaterDropEffect(m.hb.cX + 50.0F * Settings.scale, m.hb.cY + 50.0F * Settings.scale));
     }
 
     @Override

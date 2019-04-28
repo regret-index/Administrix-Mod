@@ -1,12 +1,18 @@
 package administrix.cards.rare.power;
 
 import administrix.cards.AbstractAdministrixCard;
+import administrix.cards.common.attack.ImmortalGrace;
+import administrix.cards.common.skill.ImmortalPurity;
 import administrix.powers.ImmortalClarityPower;
+import administrix.vfx.KinesisEffect;
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -45,8 +51,37 @@ public class ImmortalClarity extends AbstractAdministrixCard
         if (p.hasPower("AdministrixMod:ImmortalClarity")) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, ImmortalClarityPower.POWER_ID));
         }
-        AbstractDungeon.actionManager.addToBottom(new ImmortalClarityAction
-                (p, p, this.magicNumber));
+
+        float drawCount = 0.12F;
+        float handCount = 0.1F;
+        float discardCount = 0.12F;
+
+        for (AbstractCard c : p.drawPile.group) {
+            if (c instanceof ImmortalGrace || c instanceof ImmortalPurity || c instanceof ImmortalClarity) {
+                drawCount += 0.06F;
+            }
+        }
+
+        for (AbstractCard c : p.hand.group) {
+            if (c instanceof ImmortalGrace || c instanceof ImmortalPurity || c instanceof ImmortalClarity) {
+                handCount += 0.06F;
+            }
+        }
+
+        for (AbstractCard c : p.discardPile.group) {
+            if (c instanceof ImmortalGrace || c instanceof ImmortalPurity || c instanceof ImmortalClarity) {
+                discardCount += 0.06F;
+            }
+        }
+
+
+        CardCrawlGame.sound.playA("ORB_DARK_EVOKE", -0.4F);
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new KinesisEffect((float)Settings.WIDTH / 18.0F, -20F * Settings.scale, p.hb.cX, p.hb.cY, drawCount, Color.PURPLE.cpy(), Color.GOLD.cpy()), drawCount));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new KinesisEffect((float)Settings.WIDTH / 2.0F, -20F * Settings.scale, p.hb.cX, p.hb.cY, handCount, Color.WHITE.cpy(), Color.BLACK.cpy()), handCount));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new KinesisEffect((float)Settings.WIDTH / 18.0F * 17.0F, -20F  * Settings.scale, p.hb.cX, p.hb.cY, discardCount, Color.GOLD.cpy(), Color.PURPLE.cpy()), discardCount));
+        CardCrawlGame.sound.playA("ORB_DARK_EVOKE", -0.4F);
+
+        AbstractDungeon.actionManager.addToBottom(new ImmortalClarityAction(p, p, this.magicNumber));
     }
 
     @Override
