@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 import java.util.Map.Entry;
 
+import administrix.PseudoFormCharacter;
 import administrix.cards.common.attack.Daybreak;
 import administrix.cards.common.skill.Nightfall;
 import administrix.cards.uncommon.power.*;
 import administrix.cards.starter.*;
+import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -35,7 +37,7 @@ import org.apache.logging.log4j.Logger;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
-public class Administrix extends CustomPlayer{
+public class Administrix extends PseudoFormCharacter {
 
     public static final int ENERGY_PER_TURN = 3;
 
@@ -50,7 +52,7 @@ public class Administrix extends CustomPlayer{
     }
 
     public static final String CHARACTER_IMG_PATH = AdministrixMod.IMG_PATH + "char/";
-    public static final String AX_SHOULDER_2 =  CHARACTER_IMG_PATH + "miko_shoulder2.png";
+    public static final String AX_SHOULDER_2 = CHARACTER_IMG_PATH + "miko_shoulder2.png";
     public static final String AX_SHOULDER = CHARACTER_IMG_PATH + "miko_shoulder.png";
     public static final String AX_CORPSE = CHARACTER_IMG_PATH + "corpse_administrix.png";
     public static final String ADMINISTRIX_MAIN = CHARACTER_IMG_PATH + "main_administrix.png";
@@ -90,17 +92,20 @@ public class Administrix extends CustomPlayer{
 
     public static final int STARTING_HP = 65;
     public static final int MAX_HP = 65;
-    public static final int STARTING_GOLD = 111;
+    public static final int STARTING_GOLD = 101;
     public static final int HAND_SIZE = 5;
 
     public Administrix(String playerName) {
         super(playerName, CharacterEnum.TheAdministrix, orbTextures,
-              ADMINISTRIX_VFX_PATH, LAYER_SPEED, null, null);
+              ADMINISTRIX_VFX_PATH, LAYER_SPEED,
+                new SpriterAnimation(CHARACTER_IMG_PATH + "main/main.scml"),
+                new SpriterAnimation(CHARACTER_IMG_PATH + "attack/attack.scml"),
+                new SpriterAnimation(CHARACTER_IMG_PATH + "skill/skill.scml"));
 
         this.dialogX = (this.drawX + 0.0F * Settings.scale);
         this.dialogY = (this.drawY + 220.0F * Settings.scale);
 
-        initializeClass(ADMINISTRIX_MAIN,
+        initializeClass(null,
                 AX_SHOULDER_2, // required call to load textures and setup energy/loadout
                 AX_SHOULDER,
                 AX_CORPSE,

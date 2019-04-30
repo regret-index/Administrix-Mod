@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0">
+        <file id="0" name="main_administrix.png" width="225" height="250" pivot_x="0" pivot_y="1"/>
+        <file id="1" name="shadow.png" width="187" height="65" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <entity id="0" name="entity_000">
+        <animation id="0" name="NewAnimation" length="8000" interval="100" looping="false">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                </key>
+                <key id="1" time="125" curve_type="cubic" c1="0" c2="1">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="1" z_index="1"/>
+                </key>
+                <key id="2" time="3875">
+                    <object_ref id="0" timeline="0" key="2" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="2" z_index="1"/>
+                </key>
+                <key id="3" time="4125" curve_type="cubic" c1="0" c2="1">
+                    <object_ref id="0" timeline="0" key="3" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="3" z_index="1"/>
+                </key>
+                <key id="4" time="7875" curve_type="cubic" c1="0" c2="1">
+                    <object_ref id="0" timeline="0" key="4" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="4" z_index="1"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="main_administrix">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="-128" y="300"/>
+                </key>
+                <key id="1" time="125" spin="0">
+                    <object folder="0" file="0" x="-128" y="300"/>
+                </key>
+                <key id="2" time="3875" curve_type="cubic" c1="0" c2="1" spin="0">
+                    <object folder="0" file="0" x="-128" y="320"/>
+                </key>
+                <key id="3" time="4125" curve_type="cubic" c1="0" c2="1" spin="0">
+                    <object folder="0" file="0" x="-128" y="320"/>
+                </key>
+                <key id="4" time="7875" spin="0">
+                    <object folder="0" file="0" x="-128" y="300"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="shadow">
+                <key id="0" spin="0">
+                    <object folder="0" file="1" x="-90" y="32"/>
+                </key>
+                <key id="1" time="125" spin="0">
+                    <object folder="0" file="1" x="-90" y="32"/>
+                </key>
+                <key id="2" time="3875" curve_type="cubic" c1="0" c2="1" spin="0">
+                    <object folder="0" file="1" x="-87" y="31" scale_x="0.95" scale_y="0.95"/>
+                </key>
+                <key id="3" time="4125" curve_type="cubic" c1="0" c2="1" spin="0">
+                    <object folder="0" file="1" x="-87" y="31.095238" scale_x="0.95" scale_y="0.95"/>
+                </key>
+                <key id="4" time="7875" spin="0">
+                    <object folder="0" file="1" x="-90" y="32" scale_y="1"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
