@@ -1,6 +1,7 @@
 package administrix;
 
 import administrix.AdministrixMod;
+import administrix.vfx.SlimelessImpactEffect;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.AbstractAnimation;
@@ -78,7 +79,7 @@ public abstract class PseudoFormCharacter extends CustomPlayer {
 
         if (MathUtils.randomBoolean()) {
             for (int i = 0; i < 4; i++) {
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlyingSpikeEffect(AbstractDungeon.player.hb.cX - MathUtils.random(-160.0F, 160.0F) * Settings.scale, AbstractDungeon.player.hb.cY - MathUtils.random(150.0F, 180.0F) * Settings.scale, 45.0F + MathUtils.random(15.0F, 75.0F), 0.0F, MathUtils.random(200.0F, 50.0F) * Settings.scale, switchColor)));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new FlyingSpikeEffect(AbstractDungeon.player.hb.cX - MathUtils.random(-160.0F, 160.0F) * Settings.scale, AbstractDungeon.player.hb.cY - MathUtils.random(140.0F, 160.0F) * Settings.scale, 45.0F + MathUtils.random(15.0F, 75.0F), 0.0F, MathUtils.random(200.0F, 50.0F) * Settings.scale, switchColor)));
             }
         } else {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new AnimatedSlashEffect(AbstractDungeon.player.hb.cX - 120.0F * Settings.scale, AbstractDungeon.player.hb.cY - 120.0F * Settings.scale, 0.0F, 40.0F * Settings.scale, 20.0F, 0.8F, switchColor, switchColor)));
@@ -89,18 +90,21 @@ public abstract class PseudoFormCharacter extends CustomPlayer {
     @Override
     public void update() {
         super.update();
+
         if (currentRoom == null || !(currentRoom.equals(AbstractDungeon.getCurrRoom())))
         {
             currentRoom = AbstractDungeon.getCurrRoom();
-            state = "Default";
             swap("Default");
-            if (MathUtils.randomBoolean()) {
-                for (int i = 0; i < 8; i++) {
-                    AbstractDungeon.effectsQueue.add(new DarkOrbPassiveEffect(AbstractDungeon.player.hb.cX - MathUtils.random(-160.0F, 160.0F) * Settings.scale, AbstractDungeon.player.hb.cY - MathUtils.random(120.0F, 160.0F) * Settings.scale));
-                }
-            } else {
-                for (int i = 0; i < 4; i++) {
-                    AbstractDungeon.effectsQueue.add(new PlasmaOrbPassiveEffect(AbstractDungeon.player.hb.cX - MathUtils.random(-160.0F, 160.0F) * Settings.scale, AbstractDungeon.player.hb.cY - MathUtils.random(120.0F, 160.0F) * Settings.scale));
+            state = "Default";
+            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+                if (MathUtils.randomBoolean()) {
+                    for (int i = 0; i < 8; i++) {
+                        AbstractDungeon.effectsQueue.add(new DarkOrbPassiveEffect(AbstractDungeon.player.hb.cX - MathUtils.random(-120.0F, 120.0F) * Settings.scale, AbstractDungeon.player.hb.cY - MathUtils.random(80.0F, 120.0F) * Settings.scale));
+                    }
+                } else {
+                    for (int i = 0; i < 4; i++) {
+                        AbstractDungeon.effectsQueue.add(new PlasmaOrbPassiveEffect(AbstractDungeon.player.hb.cX - MathUtils.random(-120.0F, 120.0F) * Settings.scale, AbstractDungeon.player.hb.cY - MathUtils.random(80.0F, 120.0F) * Settings.scale));
+                    }
                 }
             }
         }
@@ -110,12 +114,14 @@ public abstract class PseudoFormCharacter extends CustomPlayer {
     public void applyStartOfTurnPostDrawRelics() {
         super.applyStartOfTurnPostDrawRelics();
         swap("Default");
+        state = "Default";
     }
 
     @Override
     public void onVictory() {
         super.onVictory();
         swap("Default");
+        state = "Default";
         powers.clear();
     }
 

@@ -331,7 +331,7 @@
   },
   "AdministrixMod:FalseDeath": {
     "NAME": "False Death",
-    "DESCRIPTION": "Discard your draw pile. NL Put !M! cards from your discard pile ontop of your draw pile. NL Gain 3 Wilting. NL Exhaust."
+    "DESCRIPTION": "Discard your draw pile. NL Put !M! cards from your discard pile on top of your draw pile. NL Gain 3 Wilting. NL Exhaust."
   },
   "AdministrixMod:HopeInTheDark": {
     "NAME": "Hope In The Dark",
@@ -372,8 +372,8 @@
   },
   "AdministrixMod:FaithfulFlames": {
     "NAME": "Faithful Flames",
-    "DESCRIPTION": "Whenever you play 3 Attacks, gain !M! Thorns.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play 3 Attacks, gain !M! Thorns."
+    "DESCRIPTION": "For every 3 Attacks you play (across turns), gain !M! Thorns.",
+    "UPGRADE_DESCRIPTION": "Innate. NL For every 3 Attacks you play (in total), gain !M! Thorns."
   },
   "AdministrixMod:ImmortalClarity": {
     "NAME": "Immortal Clarity",
@@ -381,8 +381,8 @@
     "UPGRADE_DESCRIPTION": "Choose a card. NL Add a copy of that card into your hand each turn for the next !M! turns. NL [#cc99ff]{[] Plot: Upgrade all of your Immortal cards for the rest of this combat. [#cc99ff]}[]"
   },
   "AdministrixMod:StarSwordSoul": {
-    "NAME": "Phylactery Form",
-    "DESCRIPTION": "At the start of your turn, gain 1 Affinity and draw 1 additional card.",
+    "NAME": "Star Sword Soul",
+    "DESCRIPTION": "At the start of your turn, gain 1 Affinity and draw 1 additional card. NL Retain.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain 1 Affinity and draw 1 additional card. NL Retain.",
     "EXTENDED_DESCRIPTION": [
       "Star Sword Soul"
@@ -390,8 +390,8 @@
   },
   "AdministrixMod:WifeLightning": {
     "NAME": "Wife's Lightning",
-    "DESCRIPTION": "Whenever you play 3 Attacks, gain !M! Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play 3 Attacks, gain !M! Plated Armor."
+    "DESCRIPTION": "For every 3 Attacks you play (in total), gain !M! Plated Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL For every 3 Attacks you play (in total), gain !M! Plated Armor."
   },
 
   "AdministrixMod:LastEntry": {

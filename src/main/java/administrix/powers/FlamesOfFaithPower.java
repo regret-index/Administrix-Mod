@@ -21,7 +21,7 @@ public class FlamesOfFaithPower extends AbstractPower {
     public static final String POWER_ID = "AdministrixMod:FlamesOfFaith";
     private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static int attackCounter;
+    private static int thornsAmount;
     private static final int THRESHOLD = 3;
 
     public FlamesOfFaithPower(AbstractCreature owner, int amount) {
@@ -35,15 +35,22 @@ public class FlamesOfFaithPower extends AbstractPower {
     }
 
     public void onInitialApplication() {
-        attackCounter = 0;
+        this.thornsAmount = this.amount;
+        this.amount = THRESHOLD;
+        this.updateDescription();
     }
 
-    public void onAfterCardPlayed(AbstractCard c)
-    {
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.thornsAmount += stackAmount;
+        this.updateDescription();
+    }
+
+    public void onAfterCardPlayed(AbstractCard c) {
         if (c.type == AbstractCard.CardType.ATTACK) {
-            attackCounter++;
+            this.amount--;
         }
-        if (attackCounter == THRESHOLD) {
+        if (this.amount <= 0) {
             flash();
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect(AbstractDungeon.player.hb.cX - 30.0F * Settings.scale, AbstractDungeon.player.hb.cY - 15.0F * Settings.scale, new Color(0.20F, 0.35F, 0.4F, 1.0F)), 0.05F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY - 50.0F * Settings.scale, new Color(0.05F, 0.05F, 0.5F, 1.0F)), 0.05F));
@@ -55,22 +62,21 @@ public class FlamesOfFaithPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.6F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.8F));
             }
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, this.amount), this.amount));
-            attackCounter = 0;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, this.thornsAmount), this.thornsAmount));
+            this.amount = THRESHOLD;
         }
         updateDescription();
     }
 
-    public void updateDescription()
-    {
-        if (THRESHOLD - attackCounter == 1) {
+    public void updateDescription() {
+        if (this.amount == 1) {
             this.description = (DESCRIPTIONS[0] + THRESHOLD + DESCRIPTIONS[1] +
-                               this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] +
-                               (THRESHOLD - attackCounter)) + DESCRIPTIONS[5];
+                    this.thornsAmount + DESCRIPTIONS[2] + DESCRIPTIONS[3] +
+                    (this.amount)) + DESCRIPTIONS[5];
         } else {
             this.description = (DESCRIPTIONS[0] + THRESHOLD + DESCRIPTIONS[1] +
-                               this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] +
-                               (THRESHOLD - attackCounter)) + DESCRIPTIONS[4];
+                    this.thornsAmount + DESCRIPTIONS[2] + DESCRIPTIONS[3] +
+                    (this.amount)) + DESCRIPTIONS[4];
         }
     }
 

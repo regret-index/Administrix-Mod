@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
 import com.megacrit.cardcrawl.vfx.combat.VerticalImpactEffect;
 
 // Another effect override- this puts a duration to the
-// dimming for Hope in the Dark, borrowed from the heart.
+// dimming for Hope in the Dark, borrowed from The Heart.
 
 public class InTheDarkEffect extends HeartMegaDebuffEffect {
 

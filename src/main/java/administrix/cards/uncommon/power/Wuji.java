@@ -33,7 +33,7 @@ public class Wuji extends AbstractAdministrixCard
     public static final String[] EXTENDED_DESCRIPTION = CARD_STRINGS.EXTENDED_DESCRIPTION;
     private static final int COST = 2;
     private static final int UPGRADE_COST = 1;
-    private static final int DEXTERITY_SCALE = 6;
+    private static final int DEXTERITY_SCALE = 5;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.SELF;
     private static final CardType type = CardType.POWER;

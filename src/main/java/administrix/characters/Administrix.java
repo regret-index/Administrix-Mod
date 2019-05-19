@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.GameTips;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import administrix.AdministrixMod;
 import administrix.patches.AbstractCardEnum;
@@ -110,6 +111,8 @@ public class Administrix extends PseudoFormCharacter {
                 AX_SHOULDER,
                 AX_CORPSE,
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
+
+        CardCrawlGame.tips = new AdminGameTips();
     }
 
     @Override
@@ -129,11 +132,11 @@ public class Administrix extends PseudoFormCharacter {
         retVal.add(Strike_Administrix.ID);
         retVal.add(Strike_Administrix.ID);
         retVal.add(Strike_Administrix.ID);
-        retVal.add(Defend_Administrix.ID);
-        retVal.add(Defend_Administrix.ID);
-        retVal.add(Defend_Administrix.ID);
-        retVal.add(Defend_Administrix.ID);
         retVal.add(RedCloak.ID);
+        retVal.add(Defend_Administrix.ID);
+        retVal.add(Defend_Administrix.ID);
+        retVal.add(Defend_Administrix.ID);
+        retVal.add(Defend_Administrix.ID);
         retVal.add(BlueCloak.ID);
 
         UnlockTracker.markCardAsSeen(Strike_Administrix.ID);

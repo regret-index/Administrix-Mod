@@ -4,8 +4,8 @@
     "FLAVOR": "A golden shaku, really, and your favourite dramatic gesturing aide. Control the fight's tempo.",
     "DESCRIPTIONS": [
       "The first time each turn you play #b",
-      " Attacks or #b",
-      " Skills, #yTranspose one."
+      " [#B24D4D]Attacks[] or #b",
+      " [#4DB298]Skills[], #yTranspose one."
     ]
   },
 
@@ -31,7 +31,7 @@
     "FLAVOR": "You hatched ages ago, of course.",
     "DESCRIPTIONS": [
       "Upon pickup, #yUpgrade #b",
-      " random #yRare cards. ",
+      " random #yRare cards in your deck. ",
       "Whenever you add a #yRare card into your deck, #yUpgrade it."
     ]
   },

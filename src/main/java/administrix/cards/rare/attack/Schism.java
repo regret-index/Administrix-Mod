@@ -65,7 +65,7 @@ public class Schism extends AbstractAdministrixCard
 
         if (this.damage > 0) {
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (mo != null) {
+                if (mo != null && !mo.isDeadOrEscaped()) {
                     AbstractDungeon.actionManager.addToBottom(new VFXAction(new ClashEffect(mo.hb.cX, mo.hb.cY), 0.2F));
                 }
             }

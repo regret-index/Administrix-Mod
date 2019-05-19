@@ -57,13 +57,14 @@ public class AdministrixMod implements PostInitializeSubscriber,
 
     public static final String RESOURCE_PATH = "administrix/";
     public static final String IMG_PATH = RESOURCE_PATH + "admin_images/";
-    public static final String LOCALIZATION_PATH = RESOURCE_PATH + "localization/";
-    public static final String CARD_STRINGS = LOCALIZATION_PATH + "AdministrixMod-CardStrings.json";
-    public static final String POWER_STRINGS = LOCALIZATION_PATH + "AdministrixMod-PowerStrings.json";
-    public static final String RELIC_STRINGS = LOCALIZATION_PATH + "AdministrixMod-RelicStrings.json";
-    public static final String UI_STRINGS = LOCALIZATION_PATH + "AdministrixMod-UIStrings.json";
-    public static final String POTION_STRINGS = LOCALIZATION_PATH + "AdministrixMod-PotionStrings.json";
-    public static final String CHARACTER_STRINGS = LOCALIZATION_PATH + "AdministrixMod-CharacterStrings.json";
+    public static final String LOCALIZATION_PATH = RESOURCE_PATH + "admin_text/";
+    public static final String CARD_STRINGS = "AdministrixMod-CardStrings";
+    public static final String POWER_STRINGS = "AdministrixMod-PowerStrings";
+    public static final String RELIC_STRINGS = "AdministrixMod-RelicStrings";
+    public static final String KEYWORD_STRINGS = "AdministrixMod-KeywordStrings";
+    public static final String UI_STRINGS = "AdministrixMod-UIStrings";
+    public static final String POTION_STRINGS = "AdministrixMod-PotionStrings";
+    public static final String CHARACTER_STRINGS = "AdministrixMod-CharacterStrings";
 
     // Asset backgrounds
     private static final String ATTACK_LICH_GOLD = IMG_PATH + "512/bg_attack_admin_gold_512.png";
@@ -387,7 +388,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public void receiveEditKeywords() {
         Gson gson = new Gson();
 
-        String keywordStrings = Gdx.files.internal("administrix/localization/AdministrixMod-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String keywordStrings = Gdx.files.internal(getLang(KEYWORD_STRINGS)).readString(String.valueOf(StandardCharsets.UTF_8));
         Type typeToken = new TypeToken<Map<String, Keyword>>() {}.getType();
 
         keywords = (Map)gson.fromJson(keywordStrings, typeToken);
@@ -460,36 +461,46 @@ public class AdministrixMod implements PostInitializeSubscriber,
         receiveEditPotions();
     }
 
+    private String getLang(String path)
+    {
+        switch (Settings.language) {
+            case ZHS:
+                return LOCALIZATION_PATH + "/zhs/" + path + "-ZHS.json";
+            default:
+                return LOCALIZATION_PATH + "/eng/" + path + "-ENG.json";
+        }
+    }
+
     @Override
     public void receiveEditStrings() {
         logger.info("Editing and adding in strings.");
 
-        String relicStrings = Gdx.files.internal(RELIC_STRINGS).readString(
+        String relicStrings = Gdx.files.internal(getLang(RELIC_STRINGS)).readString(
                               String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
         logger.info("Relic strings read and loaded.");
 
-        String cardStrings = Gdx.files.internal(CARD_STRINGS).readString(
+        String cardStrings = Gdx.files.internal(getLang(CARD_STRINGS)).readString(
                              String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
         logger.info("Card strings read and loaded.");
 
-        String powerStrings = Gdx.files.internal(POWER_STRINGS).readString(
-                String.valueOf(StandardCharsets.UTF_8));
+        String powerStrings = Gdx.files.internal(getLang(POWER_STRINGS)).readString(
+                              String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
         logger.info("Power strings read and loaded.");
 
-        String uiStrings = Gdx.files.internal(UI_STRINGS).readString(
+        String uiStrings = Gdx.files.internal(getLang(UI_STRINGS)).readString(
                            String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(UIStrings.class, uiStrings);
         logger.info("UI strings read and loaded.");
 
-        String potionStrings = Gdx.files.internal(POTION_STRINGS).readString(
+        String potionStrings = Gdx.files.internal(getLang(POTION_STRINGS)).readString(
                                String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
         logger.info("Potion strings read and loaded.");
 
-        String characterStrings = Gdx.files.internal(CHARACTER_STRINGS).readString(
+        String characterStrings = Gdx.files.internal(getLang(CHARACTER_STRINGS)).readString(
                                   String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CharacterStrings.class, characterStrings);
         logger.info("Character strings read and loaded.");

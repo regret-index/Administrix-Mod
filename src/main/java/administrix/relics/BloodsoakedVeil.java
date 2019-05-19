@@ -38,10 +38,15 @@ public class BloodsoakedVeil extends CustomRelic {
 
     public BloodsoakedVeil() {
         super(ID, new Texture(AdministrixMod.BLOODSOAKED_VEIL),
-                RelicTier.BOSS, LandingSound.SOLID);
-        this.tips.add(new PowerTip((TipHelper.capitalize("F. Crimson, B. Sapphire")),
-                (String) GameDictionary.keywords.get("bloodsoaked")));
-        logger.info(ID + " initialized");
+              RelicTier.BOSS, LandingSound.SOLID);
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+            this.tips.add(new PowerTip((TipHelper.capitalize("残忍猩红, 无血色的蓝宝石")),
+                         (String) GameDictionary.keywords.get("染血")));
+        } else {
+            this.tips.add(new PowerTip((TipHelper.capitalize("F. Crimson, B. Sapphire")),
+                         (String) GameDictionary.keywords.get("bloodsoaked")));
+            logger.info(ID + " initialized");
+        }
     }
 
     @Override

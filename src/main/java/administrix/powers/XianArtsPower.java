@@ -1,5 +1,6 @@
 package administrix.powers;
 
+import administrix.relics.PrescriptionBottle;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -18,7 +19,7 @@ public class XianArtsPower extends AbstractPower {
     public static final String POWER_ID = "AdministrixMod:XianArts";
     private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static boolean turnReset = true;
+    public static boolean turnReset = true;
 
     public XianArtsPower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
@@ -41,8 +42,8 @@ public class XianArtsPower extends AbstractPower {
     }
 
     @Override
-    public void atStartOfTurn() {
-        super.atStartOfTurn();
+    public void atEndOfRound() {
+        super.atEndOfRound();
         turnReset = true;
     }
 

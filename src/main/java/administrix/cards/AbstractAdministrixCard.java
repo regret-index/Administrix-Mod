@@ -7,6 +7,7 @@ import basemod.abstracts.DynamicVariable;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 
@@ -64,9 +65,11 @@ public abstract class AbstractAdministrixCard extends CustomCard {
     public void plotEffect() { }
 
     public void doPlotEffect(String name) {
+        String plotter = (Settings.language == Settings.GameLanguage.ZHS) ? "密谋 ：" : "Plot: ";
+
         int mastermindCheck = (AbstractDungeon.player.hasPower(MastermindPower.POWER_ID)? 2 : 1);
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new PlotDisplayEffect("Plot: " + name)));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new PlotDisplayEffect(plotter + name)));
         this.superFlash(PLOT_PURPLE);
         for (int i = 0; i < mastermindCheck; i++) {
             plotEffect();

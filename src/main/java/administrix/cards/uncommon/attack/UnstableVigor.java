@@ -34,9 +34,9 @@ public class UnstableVigor extends AbstractAdministrixCard
     private static final CardTarget target = CardTarget.ENEMY;
     private static final CardType type = CardType.ATTACK;
     private static final int ATTACK_DMG = 12;
-    private static final int UPGRADE_ATTACK_DMG = 2;
+    private static final int UPGRADE_ATTACK_DMG = 1;
     private static final int STRENGTH_AMOUNT = 2;
-    private static final int UPGRADE_STRENGTH_AMOUNT = 2;
+    private static final int UPGRADE_STRENGTH_AMOUNT = 1;
     private static final int WILTING_AMOUNT = 1;
 
     public UnstableVigor() {

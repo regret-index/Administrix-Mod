@@ -3,9 +3,20 @@
  - Balance:
   * Centuries Ascent now costs 1, and goes from 3(5) Block to 4(6) Block.
   * Noble Path no longer provides energy the next turn.
-  * Wuji's cost goes from 1(0) to 2(1), and divides by 6.
-  * Star Sword Soul only retains when upgraded.
+  * Wuji's cost goes from 1(0) to 2(1).
+  * Unstable Vigor: 12(15) damage, 3(4) Strength -> 12(13), 2(3).
+ - Text
+  * The Simplified Chinese Translation is finally live.
+    { 简体中文现已推出 ! }
+    Use the in-game base Settings menu to order to access such.
+  * Wife's Lightning and Faithful Flames clarify they work between turns,
+    and the power icon now indicates the Attacks count rather than the
+    Plated Armour / Thorns incidentally provided.
+  * Several custom mechanics tips are available in the English version.
  - Visuals:
+  * The Administrix now has several character sprite animations.
+  * The Conductor's Ritual Baton now puts an A and an S beside the
+    the corresponding counters for Attacks and Skills.
   * Plot effects now come with a visual effect showing the card name.
   * New effects for activating Yin and Yang.
   * Additional effects for:
@@ -20,6 +31,7 @@
   * Card art adjustments for Guanyin's Blessing and Bishamon's Blessing.
  - Fixes:
   * Yin and Yang properly update the others' description.
+  * Prescription Bottle now properly triggers Xian Arts.
 
 ==== v0.9.1 ====
 =======

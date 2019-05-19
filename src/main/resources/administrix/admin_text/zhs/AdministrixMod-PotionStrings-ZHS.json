@@ -1,0 +1,9 @@
+{
+  "AdministrixMod:AttunementTonic": {
+    "NAME": "调和补剂",
+    "DESCRIPTIONS": [
+      "若你已拥有 #y亲和 ，获得 #b",
+      "点 #y亲和 。"
+    ]
+  }
+}

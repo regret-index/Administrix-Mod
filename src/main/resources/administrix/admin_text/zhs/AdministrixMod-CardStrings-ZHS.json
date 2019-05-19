@@ -1,0 +1,395 @@
+{
+  "AdministrixMod:Strike_Administrix": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "AdministrixMod:BlueCloak": {
+    "NAME": "蓝披风",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 丢弃1张牌。 NL 『 密谋 ：给予所有敌人1层 虚弱 。』"
+  },
+  "AdministrixMod:Daybreak": {
+    "NAME": "日出",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 获得 !M! 点 阳 。 NL 消耗 。"
+  },
+  "AdministrixMod:CrackingPangu": {
+    "NAME": "盘古开天",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 在本场战斗中每打出3次 盘古开天(+)，移除自身所有负面状态。"
+  },
+  "AdministrixMod:DiversionaryTactic": {
+    "NAME": "转移注意战术",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃1张牌。 NL 在本回合 保留 你的手牌。"
+  },
+  "AdministrixMod:ExtolVirtue": {
+    "NAME": "赞颂美德",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 如果你有任意层 人工制品 ，再获得 !M! 层 人工制品 。"
+  },
+  "AdministrixMod:ImmortalGrace": {
+    "NAME": "神灵之慈悲",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽1张牌。 NL 『 密谋 ：在本场战斗中 升级 你手牌中所有的 神灵 牌。』",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽1张牌。 NL 『 密谋 ：在本场战斗中 升级 你所有的 神灵 牌。』"
+  },
+  "AdministrixMod:NoblePath": {
+    "NAME": "圣道",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 阴。 NL 获得 !M! 点 阳 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 阴 2次。 NL 获得 !M! 点 阳 2次。"
+  },
+  "AdministrixMod:PassageOfAges": {
+    "NAME": "时代推移",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 『 密谋 ：将一张 夜临 加入你的手牌。』",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 阴 。 NL 『 密谋 ：将一张 夜临 加入你的手牌。』"
+  },
+  "AdministrixMod:PlateOfAntiquity": {
+    "NAME": "古代盘子",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 敏捷 。 NL 在回合结束时失去 !M! 点 敏捷 。"
+  },
+  "AdministrixMod:RebukeDesires": {
+    "NAME": "惩戒欲念",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这名敌人的意图不是攻击，获得 !M! 层 人工制品 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 造成 !D! 点伤害。 NL 如果这名敌人的意图不是攻击，获得 !M! 层 人工制品 。"
+  },
+  "AdministrixMod:RegentEdict": {
+    "NAME": "天子诏书",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 在本场战斗中每打出3次 天子诏书(+) 后，偷取目标敌人的所有 力量。"
+  },
+  "AdministrixMod:ShadowPlay": {
+    "NAME": "影子戏法",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽2张牌。 NL 丢弃1张牌。 NL 获得4点 阴 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽2张牌。 NL 丢弃1张牌。 NL 获得4点 阴 。"
+  },
+  "AdministrixMod:TrickOfTheLight": {
+    "NAME": "光线把戏",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃抽牌堆中最靠近顶部的 密谋 牌。 NL 获得 !M! 点 阳 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃抽牌堆中最靠近顶部的 密谋 牌。 NL 获得 !M! 点 阳 。"
+  },
+  "AdministrixMod:BegetEternity": {
+    "NAME": "终致永生",
+    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 下回合多抽1张牌。 NL 获得 !M! 点 力量 。 NL 消耗 。"
+  },
+  "AdministrixMod:ChooseYourEnd": {
+    "NAME": "选择你的末路",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 红披风 和 蓝披风 各1张加入你的手牌。 NL 消耗 。"
+  },
+  "AdministrixMod:FiendishCrimson": {
+    "NAME": "残忍猩红",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 回复 !M! 生命。 NL 获得2层 脆弱 。 NL 消耗 。"
+  },
+  "AdministrixMod:JustRewards": {
+    "NAME": "正直的奖赏",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予所有敌人1层 易伤 。 NL 将2张 日出 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予所有敌人1层 易伤 。 NL 将2张已 升级 的 日出 加入你的手牌。"
+  },
+  "AdministrixMod:NewWardrobe": {
+    "NAME": "换上新装",
+    "DESCRIPTION": "互换你的 阴 和 阳 。 NL 对所有敌人造成 阴 和 阳 之间差值的伤害。",
+    "UPGRADE_DESCRIPTION": "互换你的 阴 和 阳 。 NL 对所有敌人造成 阴 和 阳 之间差值+4 的伤害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成 !D! 点伤害。）"
+    ]
+  },
+  "AdministrixMod:ReachToHeaven": {
+    "NAME": "抵达仙界",
+    "DESCRIPTION": "丢弃 X 张牌。 NL 造成 !D! 点伤害X次。 NL 对所有敌人造成 !D! 点伤害X次。 NL 获得 !M! 点 阳 X次。"
+  },
+  "AdministrixMod:RisingSunPrince": {
+    "NAME": "日出之处的天子",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 『 密谋 ：所有敌人在本回合失去 !M! 点 力量 。』"
+  },
+  "AdministrixMod:SeventeenArticleLaser": {
+    "NAME": "十七条的光芒",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 易转 1张。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 易转 1张。"
+  },
+  "AdministrixMod:UnstableVigor": {
+    "NAME": "不稳定的活力",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 力量 。 NL 在回合结束时失去 !M! 点 力量 。 NL 获得1层 枯萎 。"
+  },
+  "AdministrixMod:WickedPunishment": {
+    "NAME": "邪恶的惩罚",
+    "DESCRIPTION": "造成 !D! 点伤害2次。 NL 抽2张牌。 NL 获得 !M! 点 阴 2次。"
+  },
+
+  "AdministrixMod:GirlsDoItBetter": {
+    "NAME": "女孩子更能干",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 使这名敌人失去等同于你自身 力量 2/3 的 力量 （向下取整）。 NL 消耗 。"
+  },
+  "AdministrixMod:HaveItAll": {
+    "NAME": "我全都要",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 对所有敌人造成 !D! 点伤害。 NL 获得 !M! 点 亲和 。 NL 丢弃1张牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 2次。 NL 对所有敌人造成 !D! 点伤害2次。 NL 获得 !M! 点 亲和 。 NL 丢弃1张牌。"
+  },
+  "AdministrixMod:LifeforceNet": {
+    "NAME": "生命力之网",
+    "DESCRIPTION": "对一个随机敌人造成 !D! 点伤害2次。 NL 再对所有敌人造成 !D! 点伤害。 NL 得到1瓶 瓶装精灵 药水。 NL 消耗 。"
+  },
+  "AdministrixMod:NewbornDivinity": {
+    "NAME": "新生的神灵",
+    "DESCRIPTION": "虚无 。 NL 造成 !M! 倍你拥有的 阳 比 阴 多出的差值的伤害。 NL 移除自身所有负面状态。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成 !D! 点伤害。）"
+    ]
+  },
+  "AdministrixMod:Schism": {
+    "NAME": "割裂",
+    "DESCRIPTION": "对所有敌人造成你当前 格挡 值一半的伤害。 NL 下个回合获得你当前 格挡 值的一半。 NL 失去所有 格挡 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成 !D! 点伤害，下回合获得 !B! 点 格挡 。）"
+    ]
+  },
+  "AdministrixMod:Defend_Administrix": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "AdministrixMod:RedCloak": {
+    "NAME": "红披风",
+    "DESCRIPTION": "获得 !B! 格挡 。 NL 抽 !M! 张牌。 NL 丢弃1张牌。 NL 『 密谋 ：给予所有敌人1层 易伤 。』"
+  },
+  "AdministrixMod:Nightfall": {
+    "NAME": "夜临",
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 点 阴 。 NL 消耗 。"
+  },
+  "AdministrixMod:CenturiesAscent": {
+    "NAME": "世纪崛起",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 『 密谋 ：将一张 日出 加入你的手牌。』",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 阳 。 NL 『 密谋 ：将一张 日出 加入你的手牌。』"
+  },
+  "AdministrixMod:FuneraryRites": {
+    "NAME": "葬礼",
+    "DESCRIPTION": "丢弃1张牌。 NL 将弃牌堆中的一张牌放到抽牌堆的顶部。 NL 获得 4 点 阴 。"
+  },
+  "AdministrixMod:ImmortalPurity": {
+    "NAME": "神灵之纯粹",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃1张牌。 NL 『 密谋 ：在本场战斗中 升级 你手牌中所有的 神灵 牌。』",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 丢弃1张牌。 NL 『 密谋 ：在本场战斗中 升级 你所有的 神灵 牌。』"
+  },
+  "AdministrixMod:LightOfYourLife": {
+    "NAME": "汝生之光芒",
+    "DESCRIPTION": "易转 1张。 NL 抽 !M! 张牌。 NL 获得4点 阳 。"
+  },
+  "AdministrixMod:SealAway": {
+    "NAME": "密封",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 在本场战斗中 升级 手牌中的所有牌。 NL 丢弃你的所有手牌。"
+  },
+  "AdministrixMod:SipOfSparks": {
+    "NAME": "小撮电光",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 力量 。 NL 在回合结束时失去 !M! 点 力量 。"
+  },
+  "AdministrixMod:TouchOfCinnabar": {
+    "NAME": "接触朱砂",
+    "DESCRIPTION": "获得 !M! 层 多层护甲 。 NL 获得2层 脆弱 。 NL 获得 1 层 人工制品 。"
+  },
+  "AdministrixMod:Transition": {
+    "NAME": "转变",
+    "DESCRIPTION": "丢弃2张牌。 NL 下回合获得 [R] 。 NL 『 密谋 ：下回合多抽1张牌。』"
+  },
+
+  "AdministrixMod:ArmillarySphere": {
+    "NAME": "浑天仪",
+    "DESCRIPTION": "下回合获得 !B! 点 格挡 。 NL 获得 !M! 层 人工制品 。 NL 『 密谋 ：获得 !B! 点 格挡 。』"
+  },
+  "AdministrixMod:BishamonBlessing": {
+    "NAME": "毘沙门的祝福",
+    "DESCRIPTION": "不能被打出 。 NL 抽到时 消耗 。 NL 『 密谋 ：获得 !M! 点 阳 。 NL 给予所有敌人1层 虚弱 。 NL 抽1张牌。』",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 。 NL 『 密谋 ：获得 !M! 点 阳 。 NL 给予所有敌人1层 虚弱 。 NL 抽1张牌。』",
+    "EXTENDED_DESCRIPTION": [
+      "我不能打出这张牌。"
+    ]
+  },
+  "AdministrixMod:BloodlessSapphire": {
+    "NAME": "无血色的蓝宝石",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 回复 !M! 生命。 NL 获得2层 枯萎 。 NL 消耗 。"
+  },
+  "AdministrixMod:CosmosControl": {
+    "NAME": "操控秩序",
+    "DESCRIPTION": "将弃牌堆中的一张牌放入你的手牌。 NL 将手牌中的一张牌放到你的抽牌堆顶部。 NL 这些牌在被打出之前，耗能变为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将弃牌堆中的一张牌放入你的手牌。 NL 将手牌中的一张牌放到你的抽牌堆顶部。 NL 这些牌在被打出之前，耗能变为0。"
+  },
+  "AdministrixMod:DreamsMausoleum": {
+    "NAME": "梦之陵寝",
+    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 层 人工制品 。 NL 『 密谋 ：这场战斗中这张牌的耗能减少1 [R] 。』"
+  },
+  "AdministrixMod:FeastOfDew": {
+    "NAME": "露水盛宴",
+    "DESCRIPTION": "抽 !M! 张牌。然后将一张此牌的复制品加入你的抽牌堆。 NL 消耗 。 NL 在本场战斗中每打出3次 露水盛宴(+) ，获得 4 点 亲和 。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。然后将一张此牌的复制品加入你的手牌。 NL 消耗 。 NL 在本场战斗中每打出3次 露水盛宴(+) ，获得 4 点 亲和 。"
+  },
+  "AdministrixMod:Grandeur": {
+    "NAME": "庄严",
+    "DESCRIPTION": "获得 !M! 点 力量 和 !ax:M2! 点 敏捷 。 NL 在回合结束时失去 !M! 点 力量 和 !ax:M2! 点 敏捷 。 NL 抽1张牌。"
+  },
+  "AdministrixMod:GuanyinBlessing": {
+    "NAME": "观音的祝福",
+    "DESCRIPTION": " 不能被打出 。 NL 抽到时 消耗 。 NL 『 密谋 ：获得 !M! 点 阴 。 NL 给予所有敌人1层 易伤 。 NL 抽1张牌。』",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 虚无 。 NL 『 密谋 ：获得 !M! 点 阴 。 NL 给予所有敌人1层 易伤 。 NL 抽1张牌。』",
+    "EXTENDED_DESCRIPTION": [
+      "我不能打出这张牌。"
+    ]
+  },
+  "AdministrixMod:Katabasis": {
+    "NAME": "大败退",
+    "DESCRIPTION": "给予1层 虚弱 X次。 NL 在接下来的X回合，每个回合都将1张已 升级 的 夜临 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "给予1层 虚弱 X+1次。 NL 在接下来的X+1回合，每个回合都将1张已 升级 的 夜临 加入你的手牌。"
+  },
+  "AdministrixMod:Metempsychosis": {
+    "NAME": "轮回",
+    "DESCRIPTION": "将抽牌堆中的一张牌放到抽牌堆的顶部。 下个回合获得 [R] 。 NL 下个回合少抽1张牌。"
+  },
+  "AdministrixMod:MixOfMercury": {
+    "NAME": "混合水银",
+    "DESCRIPTION": "获得2点 荆棘 。 NL 获得2层 枯萎 。 NL 获得 !M! 层 人工制品 。"
+  },
+  "AdministrixMod:Overdrive": {
+    "NAME": "过载",
+    "DESCRIPTION": " 不能被打出 。 NL 『 密谋 ： 获得 [R] 。 NL 获得 !M! 点 力量 。 NL 在回合结束时失去 !ax:M2! 点 力量 。 NL 消耗 。』"
+  },
+  "AdministrixMod:QuietConspiracy": {
+    "NAME": "寂静的阴谋",
+    "DESCRIPTION": "如果这名敌人的意图不是攻击，则查看抽牌堆顶部的 !M! 张牌、并丢弃其中任意张牌。 NL 之后不论敌人的意图如何，抽2张牌。"
+  },
+  "AdministrixMod:SyncreticPlunge": {
+    "NAME": "融合骤降",
+    "DESCRIPTION": "本回合每打出过1张攻击牌，就将1张 夜临 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "本回合每打出过1张攻击牌，就将1张已 升级 的 夜临 加入你的手牌。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （加入 !M! 张 夜临 。）",
+      " NL （加入 !M! 张 夜临 。）"
+    ]
+  },
+  "AdministrixMod:SyncreticSurge": {
+    "NAME": "融合剧增",
+    "DESCRIPTION": "本回合每打出过1张技能牌（包括这张），就将1张 日出 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "本回合每打出过1张技能牌（包括这张），就将1张已 升级 的 日出 加入你的手牌。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （加入 !M! 张 日出 。）",
+      " NL （加入 !M! 张 日出 。）"
+    ]
+  },
+  "AdministrixMod:Transcension": {
+    "NAME": "超越",
+    "DESCRIPTION": "重复打出本回合你打出的最后一张攻击牌（阴 和 阳 中更少的那项每有9点就打出一次）。",
+    "UPGRADE_DESCRIPTION": "重复打出本回合你打出的最后一张攻击牌（阴 和 阳 中更少的那项每有 !ax:M2! 点就打出一次）。",
+    "EXTENDED_DESCRIPTION": [
+      "（打出 ",
+      " 次。）",
+      " 。）"
+    ]
+  },
+  "AdministrixMod:Untouchable": {
+    "NAME": "不可触碰",
+    "DESCRIPTION": "给予1层 虚弱 。 NL 如果这名敌人的意图是攻击，获得 !M! 点 敏捷 ， 并在回合结束时失去 !M! 点 敏捷 。 NL 消耗 。"
+  },
+  "AdministrixMod:CastOffRegrets": {
+    "NAME": "抛却遗憾",
+    "DESCRIPTION": "获得2层 脆弱 2次。 NL 每当你手动丢弃1张牌， 阴 、 阳 当中更多的那项获得 !M! 点。"
+  },
+  "AdministrixMod:Convergence": {
+    "NAME": "会聚",
+    "DESCRIPTION": "在每个回合开始时将 日出 和 夜临 各1张加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "在每个回合开始时将已 升级 的 日出 和 夜临 各1张加入你的手牌。"
+  },
+  "AdministrixMod:HarmonicReverence": {
+    "NAME": "谐和崇敬",
+    "DESCRIPTION": "获得 !M! 点 亲和 。 NL 翻倍你的 阴 和 阳 。",
+    "EXTENDED_DESCRIPTION": [
+      "获得 !M! 点 亲和 。 NL 翻倍你的 阴 和 阳 。"
+    ]
+  },
+  "AdministrixMod:HiddenPower": {
+    "NAME": "隐藏之力",
+    "DESCRIPTION": "获得 !M! 点 亲和 。NL 下个回合少抽1张牌。"
+  },
+  "AdministrixMod:Wuji": {
+    "NAME": "无极",
+    "DESCRIPTION": "阴 、 阳 当中更少的那项，每有5点就使你获得 !ax:M2! 点 敏捷 。 NL 失去一半的 阳 和 阴 。 NL 保留 。",
+    "EXTENDED_DESCRIPTION": [
+      "NL （获得 !M! 点 敏捷 。）"
+    ]
+  },
+  "AdministrixMod:XianArts": {
+    "NAME": "仙术",
+    "DESCRIPTION": " 虚无 。 NL 每个回合中、当你首次获得任意层 人工制品 时，获得 !M! 点 力量 和 !M! 点 敏捷 。",
+    "UPGRADE_DESCRIPTION": "每个回合中、当你首次获得任意层 人工制品 时，获得 !M! 点 力量 和 !M! 点 敏捷 。"
+  },
+  "AdministrixMod:AmassedMasks": {
+    "NAME": "积聚的面具",
+    "DESCRIPTION": "将随机的攻击牌、技能牌、能力牌各1张加入你的手牌。 NL 它们在本回合内的耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将随机的攻击牌、技能牌、能力牌各1张加入你的手牌，并将它们 升级 。 NL 它们在本回合内的耗能为0。 NL 消耗 。"
+  },
+  "AdministrixMod:BattleforgedBonds": {
+    "NAME": "战争缔造的团结",
+    "DESCRIPTION": "获得 !M! 点 力量 和 !M! 点 敏捷 。 在回合结束时失去同等的数值。 NL 你手牌中的所有牌在本回合的耗能变为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 力量 和 !M! 点 敏捷 。 在回合结束时失去同等的数值。 NL 你手牌中的所有牌在本回合的耗能变为0。。 NL 消耗 。 NL 保留 。"
+  },
+  "AdministrixMod:BrewingCloister": {
+    "NAME": "酿造回廊",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 得到一瓶随机的非回复类药水。 NL 消耗 。"
+  },
+  "AdministrixMod:FalseDeath": {
+    "NAME": "假死",
+    "DESCRIPTION": "丢弃整个抽牌堆。 NL 从弃牌堆选择 !M! 张牌放到抽牌堆的顶部。 NL 获得3层 枯萎 。 NL 消耗 。"
+  },
+  "AdministrixMod:HopeInTheDark": {
+    "NAME": "黑暗中的希望",
+    "DESCRIPTION": "虚无 。 NL 获得等同于 阴 比 阳 多出的数值的 格挡 。 NL 移除自身所有负面状态。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 获得等同于 阴 比 阳 多出的数值乘以1.5倍的 格挡 （向下取整）。 NL 移除自身所有负面状态。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （获得 !B! 格挡 。）"
+    ]
+  },
+  "AdministrixMod:LuminaryPath": {
+    "NAME": "圣人的道路",
+    "DESCRIPTION": "丢弃你的手牌。 NL 抽等同于 阴 、 阳 之间的差值除以10（向下取整）的牌并获得等量的 [R] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "丢弃你的手牌。 NL 抽等同于 阴 、 阳 之间差值除以 !ax:M2! （向下取整）的牌并获得等量的 [R] 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （抽 !M! 张卡…）",
+      " NL （抽 !M! 张卡…）"
+    ]
+  },
+  "AdministrixMod:Mastermind": {
+    "NAME": "珠玑妙算",
+    "DESCRIPTION": "将你的所有 密谋 效果翻倍，持续两个回合。 NL 易转 1张。 NL 下个回合少抽1张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将你的所有 密谋 效果翻倍，持续两个回合。 NL 易转 2张。 NL 下个回合少抽1张牌。 NL 消耗 。"
+  },
+  "AdministrixMod:TenDesires": {
+    "NAME": "十欲",
+    "DESCRIPTION": "虚无 。 NL 易转 2张。 NL 抽牌直到你有10张手牌。 NL 丢弃2张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 易转 2张。 NL 抽牌直到你有10张手牌。 NL 丢弃2张牌。"
+  },
+
+  "AdministrixMod:DeathByGlamour": {
+    "NAME": "死亡的魅力",
+    "DESCRIPTION": "在你的回合开始时，将一张随机稀有卡（本回合内耗能为0）加入你的手牌，然后丢弃1张牌。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时，将一张随机稀有卡（本场战斗内耗能为0）加入你的手牌，然后丢弃1张牌。"
+  },
+  "AdministrixMod:FearOfDeath": {
+    "NAME": "死亡的恐惧",
+    "DESCRIPTION": "获得3层 脆弱 。 NL 获得3层 枯萎 。 NL 获得 !M! 层 人工制品 。 NL 丢弃你的所有手牌。"
+  },
+  "AdministrixMod:FaithfulFlames": {
+    "NAME": "忠实的火焰",
+    "DESCRIPTION": "每当你打出3张攻击牌，获得 !M! 点 荆棘 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你打出3张攻击牌，获得 !M! 点 荆棘 。"
+  },
+  "AdministrixMod:ImmortalClarity": {
+    "NAME": "神灵之透彻",
+    "DESCRIPTION": "选择1张牌。 NL 下个回合将1张它的复制品加入你的手牌。 NL 『 密谋 ：在本场战斗中 升级 你手牌中所有的 神灵 牌。』",
+    "UPGRADE_DESCRIPTION": "选择1张牌。 NL 接下来 !M! 个回合，每个回合都将1张它的复制品加入你的手牌。 NL 『 密谋 ：在本场战斗中 升级 你所有的 神灵 牌。』"
+  },
+  "AdministrixMod:StarSwordSoul": {
+    "NAME": "护符形态",
+    "DESCRIPTION": "在你的回合开始时，获得1点 亲和 并多抽1张牌。 NL 保留 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 在你的回合开始时，获得1点 亲和 并多抽1张牌。 NL 保留 。",
+    "EXTENDED_DESCRIPTION": [
+      "星剑之魂"
+    ]
+  },
+  "AdministrixMod:WifeLightning": {
+    "NAME": "妻子的闪电",
+    "DESCRIPTION": "每当你打出3张攻击牌，获得 !M! 层 多层护甲 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你打出3张攻击牌，获得 !M! 层 多层护甲 。"
+  },
+
+  "AdministrixMod:LastEntry": {
+    "NAME": "Last Entry",
+    "DESCRIPTION": "Kept until cards are stable to keep this file is stable."
+  }
+}

@@ -35,6 +35,7 @@ public class StarSwordSoul extends AbstractAdministrixCard
                 type, AbstractCardEnum.LichGold,
                 rarity, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = STAT_AMOUNT;
+        this.retain = true;
     }
 
     @Override
@@ -52,17 +53,16 @@ public class StarSwordSoul extends AbstractAdministrixCard
 
     @Override
     public void triggerOnEndOfTurnForPlayingCard() {
-        if (this.upgraded) { this.retain = true; }
+        this.retain = true;
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.name = UPGRADE_NAME;
+            this.name = UPGRADE_NAME + "+";
             this.upgraded = true;
             initializeTitle();
             this.isInnate = true;
-            this.retain = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

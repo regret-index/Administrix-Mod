@@ -1,6 +1,7 @@
 package administrix.relics;
 
 import administrix.AdministrixMod;
+import administrix.powers.XianArtsPower;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

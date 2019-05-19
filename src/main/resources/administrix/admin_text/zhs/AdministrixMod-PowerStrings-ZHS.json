@@ -1,0 +1,206 @@
+{
+  "AdministrixMod:Affinity": {
+    "NAME": "亲和",
+    "DESCRIPTIONS": [
+      "增强 #y阴 和 #y阳 的效果 #b",
+      " 点。"
+    ]
+  },
+  "AdministrixMod:Convergence": {
+    "NAME": "会聚",
+    "DESCRIPTIONS": [
+      "每个回合开始时，将 #y日出 和 #y夜临 各 #b",
+      " 张加入到手牌中。",
+      " 张加入到手牌中。"
+    ]
+  },
+  "AdministrixMod:ConvergencePlus": {
+    "NAME": "会聚+",
+    "DESCRIPTIONS": [
+      "每个回合开始时，将已 升级 的 #y日出 和 #y夜临 各 #b",
+      " 张加入到手牌中。",
+      " 张加入到手牌中。"
+    ]
+  },
+  "AdministrixMod:DescentPlus": {
+    "NAME": "沉沦+",
+    "DESCRIPTIONS": [
+      "每个回合开始时，将1张已 #y升级 的 #y夜临 加入到手牌中，持续 #b",
+      " 个回合。",
+      "下个回合开始时，将1张已 #y升级 的 #y夜临 加入到手牌中。"
+    ]
+  },
+  "AdministrixMod:Duality": {
+    "NAME": "两仪",
+    "DESCRIPTIONS": [
+      "若在本回合中打出相同数量（不为0）的攻击牌和技能牌，下回合会获得临时的 #b",
+      " 点 #y力量 和 #y敏捷 。",
+      "（已打出 #b",
+      " 张 #y攻击牌 和 #b",
+      " 张 #y攻击牌 和 #b",
+      " 张 #y技能牌 。）",
+      " 张 #y技能牌 。）"
+    ]
+  },
+  "AdministrixMod:EggCracker": {
+    "NAME": "天地开辟者",
+    "DESCRIPTIONS": [
+      "再打出 #b",
+      " 次 #y盘古开天 ，移除自身所有负面状态。",
+      " 次 #y盘古开天 ，移除自身所有负面状态。"
+    ]
+  },
+  "AdministrixMod:FlamesOfFaith": {
+    "NAME": "忠实的火焰",
+    "DESCRIPTIONS": [
+      "每打出 ",
+      " 张 #y攻击牌 ，获得 #b",
+      " 点 #y荆棘 。",
+      " NL （再打出 #b",
+      " 张攻击牌后触发）",
+      " 张攻击牌后触发）"
+    ]
+  },
+  "AdministrixMod:Glamour": {
+    "NAME": "魅力",
+    "DESCRIPTIONS": [
+      "在回合开始时，加入 #b",
+      " 张随机稀有牌（本回合内耗能为0）到手牌中，并丢弃 #b",
+      " 张随机稀有牌（本回合内耗能为0）到手牌中，并丢弃 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "AdministrixMod:GlamourPlus": {
+    "NAME": "魅力+",
+    "DESCRIPTIONS": [
+      "在回合开始时，加入 #b",
+      " 张随机稀有牌（本场战斗内耗能为0）到手牌中，并丢弃 #b",
+      " 张随机稀有牌（本场战斗内耗能为0）到手牌中，并丢弃 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "AdministrixMod:ImmortalClarity": {
+    "NAME": "神灵之透彻",
+    "DESCRIPTIONS": [
+      "下个回合开始时，加入 ",
+      " 到手牌中。",
+      "每个回合开始时，加入 ",
+      " 到手牌中，持续 #b",
+      " 个回合。",
+      " NL （打出另一张 神灵之透彻 将移除这个效果）"
+    ]
+  },
+  "AdministrixMod:LightningEmbrace": {
+    "NAME": "闪电的追随",
+    "DESCRIPTIONS": [
+      "每打出 ",
+      " 张 #y攻击牌 ，获得 #b",
+      " 层 #y多层护甲 。",
+      " NL （再打出 #b",
+      " 张攻击牌后触发）",
+      " 张攻击牌后触发）"
+    ]
+  },
+  "AdministrixMod:MastermindPower": {
+    "NAME": "珠玑妙算",
+    "DESCRIPTIONS": [
+      "所有 #y密谋 效果翻倍，",
+      "持续到本回合结束。",
+      "持续到下个回合结束。",
+      "持续到下 #b",
+      " 个回合结束。"
+    ]
+  },
+  "AdministrixMod:MistEater": {
+    "NAME": "辟谷者",
+    "DESCRIPTIONS": [
+      "再打出 #b",
+      " 次 #y露水盛宴 ，获得 #b4 层 #y人工制品。",
+      " 次 #y露水盛宴 ，获得 #b4 层 #y人工制品。"
+    ]
+  },
+  "AdministrixMod:Moulting": {
+    "NAME": "蜕变",
+    "DESCRIPTIONS": [
+      "每当你手动丢弃一张牌，获得 #y阴 、 #y阳 中更多的那项 #b",
+      " 点。"
+    ]
+  },
+  "AdministrixMod:NextTurnDrawReduction": {
+    "NAME": "下个回合抽牌减少",
+    "DESCRIPTIONS": [
+      "下个回合少抽 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "AdministrixMod:PermanentDrawReduction": {
+    "NAME": "永久抽牌减少",
+    "DESCRIPTIONS": [
+      "每个回合少抽 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "AdministrixMod:SpectralThief": {
+    "NAME": "无形窃贼",
+    "DESCRIPTIONS": [
+      "再打出 #b",
+      " 次 #y天子诏书 ，偷取一位敌人的 #y力量 。",
+      " 次 #y天子诏书 ，偷取一位敌人的 #y力量 。"
+    ]
+  },
+  "AdministrixMod:StarSwordSoulPower": {
+    "NAME": "星剑之魂",
+    "DESCRIPTIONS": [
+      "每个回合开始时，获得 #b",
+      " 点 亲和 并抽 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "AdministrixMod:Wilting": {
+    "NAME": "枯萎",
+    "DESCRIPTIONS": [
+      "持续 #b",
+      " 个回合。 ",
+      "本回合内，",
+      "每当你打出一张牌，受到 #b",
+      " 点伤害。"
+    ]
+  },
+  "AdministrixMod:XianArts": {
+    "NAME": "仙术",
+    "DESCRIPTIONS": [
+      "每个回合，当你首次获得任意层 人工制品，获得 #b",
+      " 点 #y力量 和 #b",
+      " 点 #y敏捷 。"
+    ]
+  },
+  "AdministrixMod:Yang": {
+    "NAME": "阳",
+    "DESCRIPTIONS": [
+      "若阳比阴多，则每当你获得阳时，获得 #b",
+      " 点 格挡 。",
+      " [#588CE8]「激活」[]",
+      " [#D83434]「未激活」[]"
+    ]
+  },
+  "AdministrixMod:Yin": {
+    "NAME": "阴",
+    "DESCRIPTIONS": [
+      "若阴比阳多，则每当你获得阴时，对所有敌人造成 #b",
+      " 点伤害两次。",
+      " [#588CE8]「激活」[]",
+      " [#D83434]「未激活」[]"
+    ]
+  },
+  "AdministrixMod:LastEntry": {
+    "NAME": "LastEntry",
+    "DESCRIPTIONS": [
+      "Another end-of-file entry."
+    ]
+  }
+}

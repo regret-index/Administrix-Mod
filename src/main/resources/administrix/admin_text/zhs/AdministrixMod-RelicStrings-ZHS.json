@@ -1,0 +1,93 @@
+{
+  "AdministrixMod:ConductorRitualBaton": {
+    "NAME": "领导者的仪棒",
+    "FLAVOR": "一个黄金制的笏，真的哦，也是你特别喜爱以其做手势来引人注目的好帮手。用来控制战斗的节奏。",
+    "DESCRIPTIONS": [
+      "每个回合中，当你初次打出 #b",
+      " 张[#B24D4D]攻击[]牌或者 #b",
+      " 张[#4DB298]技能[]牌时， #y易转 一张。"
+    ]
+  },
+
+  "AdministrixMod:PrescriptionBottle": {
+    "NAME": "药方瓶子",
+    "FLAVOR": "自我治疗对生存来说或许是有必要的，但带一位身为神灵/医生的姐妹战友会是一个更好的选择。",
+    "DESCRIPTIONS": [
+      "每 #b",
+      " 个回合，获得 #b1 层 #y人工制品 。"
+    ]
+  },
+
+  "AdministrixMod:AbandonedRose": {
+    "NAME": "被遗弃的玫瑰",
+    "FLAVOR": "世界的末日已曾到来，也已远去。在绝望中保持闪耀。",
+    "DESCRIPTIONS": [
+      "每当你手动丢弃一张卡，将其在本场战斗中 #y升级 。"
+    ]
+  },
+
+  "AdministrixMod:GoldenChickadee": {
+    "NAME": "金色山雀",
+    "FLAVOR": "你在很久很久以前孵化出来的，没错。",
+    "DESCRIPTIONS": [
+      "拾起时，随机 #y升级 #b",
+      " 张 #y稀有牌 。 ",
+      "每当你将 #y稀有牌 加入你的卡组时，将其 #y升级 。"
+    ]
+  },
+
+  "AdministrixMod:KeyOfKings": {
+    "NAME": "王之匙",
+    "FLAVOR": "人们说“皇室一直在剥削我们”。好吧，虽然有悖你的欲望，但你也热衷于剥削你自身。",
+    "DESCRIPTIONS": [
+      "每当你丢弃 #b",
+      " 张牌， 将 #y日出 和 #y夜临 各一张加入你的手牌。"
+    ]
+  },
+
+  "AdministrixMod:DragonsEyeCharm": {
+    "NAME": "龙眼挂坠",
+    "FLAVOR": "即便是当它成为你的秘密的时候，它也从来不是用来平衡或者教化的。它一直是用来抓住权柄的。",
+    "DESCRIPTIONS": [
+      "每当你获得 #y阴 或 #y阳 ，你将会多获得 #b",
+      " 点。"
+    ]
+  },
+
+ "AdministrixMod:BloodSoakedVeil": {
+    "NAME": "染血的面纱",
+    "FLAVOR": "…生前与成为不死者的事都已是不可避免的。也许你应该接受它。",
+    "DESCRIPTIONS": [
+      "去除所有打击和防御。获得 #b",
+      " 张 #y残忍猩红 和 #b",
+      " 张 #y无血色的蓝宝石 。每当你 #y消耗 一张耗能为 #b",
+      " 或更多的牌，在下回合获得 [E] 。"
+    ]
+  },
+
+  "AdministrixMod:ElixirOfImmorality": {
+    "NAME": "禁忌的不死药",
+    "FLAVOR": "你早已摆脱了另一位邪仙所炼的药。不过，她炼出的成果对你依然有一些（可疑的）效能……",
+    "DESCRIPTIONS": [
+      "在你的回合开始时获得 [E] 。 ",
+      "在第 #b2 回合开始时，获得 #b", " 层 #y枯萎 。 ",
+      "在第 #b4 回合开始时，获得 #b", " 层 #y脆弱 。"
+    ]
+  },
+
+  "AdministrixMod:AlphaAttackCounter": {
+    "NAME": "攻击牌计数器",
+    "FLAVOR": "（合适的两仪和笏的自制UI元素最终都会有的。）",
+    "DESCRIPTIONS": [
+      "这个遗物除了用来计数你在每回合内打出过几张攻击牌以外，没有其他效果。"
+    ]
+  },
+
+  "AdministrixMod:AlphaSkillCounter": {
+    "NAME": "技能牌计数器",
+    "FLAVOR": "（也许将来会同样将阴和阳丢到类似的计数器里面，以减少那无止境的能力计数）",
+    "DESCRIPTIONS": [
+      "这个遗物除了用来计数你在每回合内打出过几张技能牌以外，没有其他效果。"
+    ]
+  }
+}

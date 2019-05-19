@@ -22,7 +22,7 @@ public class LightningEmbracePower extends AbstractPower {
     public static final String POWER_ID = "AdministrixMod:LightningEmbrace";
     private static PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private static int attackCounter;
+    private static int armorAmount;
     private static final int THRESHOLD = 3;
 
     public LightningEmbracePower(AbstractCreature owner, int amount) {
@@ -35,16 +35,26 @@ public class LightningEmbracePower extends AbstractPower {
         this.region128 = ADMIN_POWERS_ATLAS.findRegion("lightning_embrace");
     }
 
+    @Override
     public void onInitialApplication() {
-        attackCounter = 0;
+        this.armorAmount = this.amount;
+        this.amount = THRESHOLD;
+        this.updateDescription();
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.armorAmount += stackAmount;
+        this.updateDescription();
     }
 
     public void onAfterCardPlayed(AbstractCard c)
     {
         if (c.type == AbstractCard.CardType.ATTACK) {
-            attackCounter++;
+            this.amount--;
         }
-        if (attackCounter >= THRESHOLD) {
+        if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect(AbstractDungeon.player.hb.cX - 30.0F * Settings.scale, AbstractDungeon.player.hb.cY - 15.0F * Settings.scale, new Color(0.20F, 0.35F, 0.3F, 1.0F)), 0.05F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY - 60.0F * Settings.scale, new Color(0.05F, 0.5F, 0.1F, 1.0F)), 0.05F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SpiritFlameEffect(AbstractDungeon.player.hb.cX - 60.0F * Settings.scale, AbstractDungeon.player.hb.cY - 50.0F * Settings.scale, new Color(0.30F, 0.50F, 0.45F, 1.0F)), 0.05F));
@@ -52,22 +62,22 @@ public class LightningEmbracePower extends AbstractPower {
             flash();
             AbstractDungeon.actionManager.addToBottom(new SFXAction("THUNDERCLAP", 0.05F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new LightningEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.05F));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, this.amount), this.amount));
-            attackCounter = 0;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, this.armorAmount), this.armorAmount));
+            this.amount = THRESHOLD;
         }
         updateDescription();
     }
 
     public void updateDescription()
     {
-        if (THRESHOLD - attackCounter == 1) {
-            this.description = (DESCRIPTIONS[0] + THRESHOLD + DESCRIPTIONS[1] +
-                    this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] +
-                    (THRESHOLD - attackCounter)) + DESCRIPTIONS[5];
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0] + THRESHOLD + DESCRIPTIONS[1] +
+                    this.armorAmount + DESCRIPTIONS[2] + DESCRIPTIONS[3] +
+                    (this.amount) + DESCRIPTIONS[5];
         } else {
-            this.description = (DESCRIPTIONS[0] + THRESHOLD + DESCRIPTIONS[1] +
-                    this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] +
-                    (THRESHOLD - attackCounter)) + DESCRIPTIONS[4];
+            this.description = DESCRIPTIONS[0] + THRESHOLD + DESCRIPTIONS[1] +
+                    this.armorAmount + DESCRIPTIONS[2] + DESCRIPTIONS[3] +
+                    (this.amount) + DESCRIPTIONS[4];
         }
     }
 

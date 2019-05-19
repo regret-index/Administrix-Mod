@@ -27,6 +27,15 @@
       " (This activates Plot effects.)"
     ]
   },
+  "AXRandomTips": {
+    "TEXT": [
+      "[#aa77dd]{[] [#f0c82c]AX:[] Artifact can be used to turn temporary stat boosts into permanent ones. [#aa77dd]}[]",
+      "[#aa77dd]{[] [#f0c82c]AX:[] Try to play self-debuff cards after the rest of your cards. [#aa77dd]}[]",
+      "[#aa77dd]{[] [#f0c82c]AX:[] Any and all effects that explicitly mention discarding cards will apply Plot effects. [#aa77dd]}[]",
+      "[#aa77dd]{[] [#f0c82c]AX:[] Wilting's damage is fixed at 1, and gaining more increases the duration. [#aa77dd]}[]",
+      "[#aa77dd]{[] [#f0c82c]AX:[] Neither Yin nor Yang will activate when your Yin and Yang are equal, nor when they're both zero. [#aa77dd]}[]"
+    ]
+  },
   "Periods": {
     "TEXT": [
       ".."
