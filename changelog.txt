@@ -1,10 +1,21 @@
 ==== v0.9.2a ====
 =======
+ - New content:
+  * Blood Bargain: A 1-cost uncommon skill.
+    Apply 2 Vulnerable (to ALL enemies). Gain 2 Frail.
+    If the enemy (for each enemy that) intends to attack,
+    gain 3 Thorns and 3 Plated Armour.
+  * Cracked Taijitu: A common relic.
+    Start each combat with 1 Affinity.
  - Balance:
   * Centuries Ascent now costs 1, and goes from 3(5) Block to 4(6) Block.
   * Noble Path no longer provides energy the next turn.
   * Wuji's cost goes from 1(0) to 2(1).
   * Unstable Vigor: 12(15) damage, 3(4) Strength -> 12(13), 2(3).
+  * Metempsychosis: Base costs 0, now exhausts (upgrading to not exhausting).
+  * Grandeur has been removed.
+  * Quiet Conspiracy is now Common, and the base only previews 3.
+  * Golden Chickadee now provides 40 gold.
  - Text
   * The Simplified Chinese Translation is finally live.
     { 简体中文现已推出 ! }

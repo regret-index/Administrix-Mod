@@ -110,12 +110,12 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String REGENT_EDICT = CARD_IMG_PATH + "Regent's Edict.png";
     public static final String SHADOW_PLAY = CARD_IMG_PATH + "Shadow Play.png";
     public static final String TRICK_OF_THE_LIGHT = CARD_IMG_PATH + "Trick of the Light.png";
-    public static final String TRAINEE_JIANGSHI = CARD_IMG_PATH + "Trainee Jiangshi.png";
 
     public static final String CENTURIES_ASCENT = CARD_IMG_PATH + "Centuries Ascent.png";
     public static final String FUENRARY_RITES = CARD_IMG_PATH + "Funerary Rites.png";
     public static final String IMMORTAL_PURITY = CARD_IMG_PATH + "Immortal Purity.png";
     public static final String LIGHT_OF_YOUR_LIFE = CARD_IMG_PATH + "Light Of Your Life.png";
+    public static final String QUIET_CONSPIRACY = CARD_IMG_PATH + "Quiet Conspiracy.png";
     public static final String SEAL_AWAY = CARD_IMG_PATH + "Seal Away.png";
     public static final String SIP_OF_SPARKS = CARD_IMG_PATH + "Sip of Sparks.png";
     public static final String TOUCH_OF_CINNABAR = CARD_IMG_PATH + "Touch of Cinnabar.png";
@@ -134,6 +134,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
 
     public static final String ARMILLARY_SPHERE = CARD_IMG_PATH + "Armillary Sphere.png";
     public static final String BISHAMON_BLESSING = CARD_IMG_PATH + "Bishamon's Blessing.png";
+    public static final String BLOOD_BARGAIN = CARD_IMG_PATH + "Blood Bargain.png";
     public static final String BLOODLESS_SAPPHIRE = CARD_IMG_PATH + "Bloodless Sapphire.png";
     public static final String DREAMS_MAUSOLEUM = CARD_IMG_PATH + "Dreams Mausoleum.png";
     public static final String FEAST_OF_DEW = CARD_IMG_PATH + "Feast of Dew.png";
@@ -142,7 +143,6 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String KATABASIS = CARD_IMG_PATH + "Katabasis.png";
     public static final String METEMPSYCHOSIS = CARD_IMG_PATH + "Metempsychosis.png";
     public static final String MIX_OF_MERCURY = CARD_IMG_PATH + "Mix of Mercury.png";
-    public static final String QUIET_CONSPIRACY = CARD_IMG_PATH + "Quiet Conspiracy.png";
     public static final String SYNCRETIC_PLUNGE = CARD_IMG_PATH + "Syncretic Plunge.png";
     public static final String SYNCRETIC_SURGE = CARD_IMG_PATH + "Syncretic Surge.png";
     public static final String TRANSCENSION = CARD_IMG_PATH + "Transcension.png";
@@ -187,6 +187,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
     public static final String RELIC_IMG_PATH = IMG_PATH + "relics/";
     public static final String SHAKU = RELIC_IMG_PATH + "Shaku.png";
     public static final String PRESCRIPTION_BOTTLE = RELIC_IMG_PATH + "PrescriptionBottle.png";
+    public static final String CRACKED_TAIJITU = RELIC_IMG_PATH + "CrackedTaijitu.png";
     public static final String ABANDONED_ROSE = RELIC_IMG_PATH + "AbandonedRose.png";
     public static final String GOLDEN_CHICKADEE = RELIC_IMG_PATH + "GoldenChickadee.png";
     public static final String DRAGONSEYE_CHARM = RELIC_IMG_PATH + "DragonsEyeCharm.png";
@@ -263,6 +264,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addRelicToCustomPool(new ConductorRitualBaton(), AbstractCardEnum.LichGold);
         // BaseMod.addRelicToCustomPool(new AlphaAttackCounter(), AbstractCardEnum.LichGold);
         // BaseMod.addRelicToCustomPool(new AlphaSkillCounter(), AbstractCardEnum.LichGold);
+        BaseMod.addRelicToCustomPool(new CrackedTaijitu(), AbstractCardEnum.LichGold);
         BaseMod.addRelicToCustomPool(new PrescriptionBottle(), AbstractCardEnum.LichGold);
         BaseMod.addRelicToCustomPool(new GoldenChickadee(), AbstractCardEnum.LichGold);
         BaseMod.addRelicToCustomPool(new AbandonedRose(), AbstractCardEnum.LichGold);
@@ -308,6 +310,7 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new FuneraryRites());
         BaseMod.addCard(new ImmortalPurity());
         BaseMod.addCard(new LightOfYourLife());
+        BaseMod.addCard(new QuietConspiracy());
         BaseMod.addCard(new SealAway());
         BaseMod.addCard(new SipOfSparks());
         BaseMod.addCard(new TouchOfCinnabar());
@@ -329,14 +332,14 @@ public class AdministrixMod implements PostInitializeSubscriber,
         BaseMod.addCard(new ArmillarySphere());
         BaseMod.addCard(new BishamonBlessing());
         BaseMod.addCard(new BloodlessSapphire());
+        BaseMod.addCard(new BloodBargain());
         BaseMod.addCard(new DreamsMausoleum());
         BaseMod.addCard(new FeastOfDew());
-        BaseMod.addCard(new Grandeur());
+        // BaseMod.addCard(new Grandeur());
         BaseMod.addCard(new GuanyinBlessing());
         BaseMod.addCard(new Katabasis());
         BaseMod.addCard(new Metempsychosis());
         BaseMod.addCard(new MixOfMercury());
-        BaseMod.addCard(new QuietConspiracy());
         BaseMod.addCard(new SyncreticPlunge());
         BaseMod.addCard(new SyncreticSurge());
         BaseMod.addCard(new Transcension());

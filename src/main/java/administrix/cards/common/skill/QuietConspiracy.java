@@ -1,7 +1,6 @@
-package administrix.cards.uncommon.skill;
+package administrix.cards.common.skill;
 
 import administrix.cards.AbstractAdministrixCard;
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,10 +18,10 @@ public class QuietConspiracy extends AbstractAdministrixCard
     public static final String NAME = "Quiet Conspiracy";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     private static final int COST = 1;
-    private static final int PROGRAM_AMOUNT = 4;
-    private static final int UPGRADE_PROGRAM_AMOUNT = 1;
+    private static final int PROGRAM_AMOUNT = 3;
+    private static final int UPGRADE_PROGRAM_AMOUNT = 2;
     private static final int DRAW_AMOUNT = 2;
-    private static final CardRarity rarity = CardRarity.UNCOMMON;
+    private static final CardRarity rarity = CardRarity.COMMON;
     private static final CardTarget target = CardTarget.SELF_AND_ENEMY;
 
     public QuietConspiracy() {

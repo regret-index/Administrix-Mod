@@ -20,8 +20,7 @@ public class Metempsychosis extends AbstractAdministrixCard
     public static final String NAME = "Metempsychosis";
     public static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    private static final int COST = 0;
     private static final CardRarity rarity = CardRarity.UNCOMMON;
     private static final CardTarget target = CardTarget.SELF;
     private static final CardType type = CardType.SKILL;
@@ -33,6 +32,7 @@ public class Metempsychosis extends AbstractAdministrixCard
               CARD_STRINGS.DESCRIPTION, type,
               AbstractCardEnum.LichGold,
               rarity, target);
+        this.exhaust = true;
     }
 
     @Override
@@ -53,7 +53,9 @@ public class Metempsychosis extends AbstractAdministrixCard
         if (!upgraded)
         {
             this.upgradeName();
-            this.upgradeBaseCost(UPGRADE_COST);
+            this.exhaust = false;
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

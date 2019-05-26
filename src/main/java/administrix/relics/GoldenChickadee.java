@@ -24,6 +24,7 @@ public class GoldenChickadee
     public static final RelicStrings STRINGS = CardCrawlGame.languagePack.getRelicStrings(ID);
     public static final String[] DESCRIPTIONS = STRINGS.DESCRIPTIONS;
     private static final int UPGRADE_COUNT = 2;
+    private static final int GOLD_COUNT = 40;
 
     public static final Logger logger = LogManager.getLogger(GoldenChickadee.class.getName());
 
@@ -38,7 +39,7 @@ public class GoldenChickadee
     public String getUpdatedDescription()
     {
         return this.DESCRIPTIONS[0] + UPGRADE_COUNT + this.DESCRIPTIONS[1] +
-               this.DESCRIPTIONS[2];
+               GOLD_COUNT + this.DESCRIPTIONS[2];
     }
 
     @Override
@@ -85,6 +86,9 @@ public class GoldenChickadee
                 AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
             }
         }
+
+        CardCrawlGame.sound.play("GOLD_GAIN");
+        AbstractDungeon.player.gainGold(GOLD_COUNT);
     }
 
     @Override

@@ -9,6 +9,15 @@
     ]
   },
 
+  "AdministrixMod:CrackedTaijitu": {
+    "NAME": "Cracked Taijitu",
+    "FLAVOR": "It always was amusingly strange, how terrible you all were at your respective supposed precepts.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b",
+      " Affinity."
+    ]
+  },
+
   "AdministrixMod:PrescriptionBottle": {
     "NAME": "Prescription Bottle",
     "FLAVOR": "Self-medication may have been necessary for survival, but that sister-in-arms god/doctor was a far better replacement.",
@@ -31,8 +40,8 @@
     "FLAVOR": "You hatched ages ago, of course.",
     "DESCRIPTIONS": [
       "Upon pickup, #yUpgrade #b",
-      " random #yRare cards in your deck. ",
-      "Whenever you add a #yRare card into your deck, #yUpgrade it."
+      " random #yRare cards in your deck and gain #b",
+      " Gold. Whenever you add a #yRare card into your deck, #yUpgrade it."
     ]
   },
 

@@ -206,10 +206,10 @@
     "NAME": "Bloodless Sapphire",
     "DESCRIPTION": "Gain !B! Block. NL Heal !M! HP. NL Gain 2 Wilting. NL Exhaust."
   },
-  "AdministrixMod:CosmosControl": {
-    "NAME": "Cosmos Control",
-    "DESCRIPTION": "Put a card from your discard pile into your hand. NL Put a card from your hand on top of your draw pile. NL Both cards cost 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put a card from your discard pile into your hand. NL Put a card from your hand on top of your draw pile. NL Both cards cost 0 until played."
+  "AdministrixMod:BloodBargain": {
+    "NAME": "Blood Bargain",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Gain !M! Frail. NL If the enemy intends to attack, gain !ax:M2! Plated Armor and !ax:M2! Thorns.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL Gain !M! Frail. NL For each enemy that intends to attack, gain !ax:M2! Plated Armor and !ax:M2! Thorns."
   },
   "AdministrixMod:DreamsMausoleum": {
     "NAME": "Dreams Mausoleum",
@@ -239,7 +239,8 @@
   },
   "AdministrixMod:Metempsychosis": {
     "NAME": "Metempsychosis",
-    "DESCRIPTION": "Put a card from your draw pile on top of your draw pile. NL Gain [R] next turn. NL Draw 1 less card next turn."
+    "DESCRIPTION": "Put a card from your draw pile on top of your draw pile. NL Gain [R] next turn. NL Draw 1 less card next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put a card from your draw pile on top of your draw pile. NL Gain [R] next turn. NL Draw 1 less card next turn."
   },
   "AdministrixMod:MixOfMercury": {
     "NAME": "Mix of Mercury",
@@ -329,6 +330,11 @@
     "NAME": "Brewing Cloister",
     "DESCRIPTION": "Gain !B! Block. NL Obtain a random non-healing potion. NL Exhaust."
   },
+  "AdministrixMod:CosmosControl": {
+    "NAME": "Cosmos Control",
+    "DESCRIPTION": "Put a card from your discard pile into your hand. NL Put a card from your hand on top of your draw pile. NL Both cards cost 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put a card from your discard pile into your hand. NL Put a card from your hand on top of your draw pile. NL Both cards cost 0 until played."
+  },
   "AdministrixMod:FalseDeath": {
     "NAME": "False Death",
     "DESCRIPTION": "Discard your draw pile. NL Put !M! cards from your discard pile on top of your draw pile. NL Gain 3 Wilting. NL Exhaust."
@@ -372,8 +378,8 @@
   },
   "AdministrixMod:FaithfulFlames": {
     "NAME": "Faithful Flames",
-    "DESCRIPTION": "For every 3 Attacks you play (across turns), gain !M! Thorns.",
-    "UPGRADE_DESCRIPTION": "Innate. NL For every 3 Attacks you play (in total), gain !M! Thorns."
+    "DESCRIPTION": "For every 3 Attacks you play this combat, gain !M! Thorns.",
+    "UPGRADE_DESCRIPTION": "Innate. NL For every 3 Attacks you play this combat, gain !M! Thorns."
   },
   "AdministrixMod:ImmortalClarity": {
     "NAME": "Immortal Clarity",
@@ -390,8 +396,8 @@
   },
   "AdministrixMod:WifeLightning": {
     "NAME": "Wife's Lightning",
-    "DESCRIPTION": "For every 3 Attacks you play (in total), gain !M! Plated Armor.",
-    "UPGRADE_DESCRIPTION": "Innate. NL For every 3 Attacks you play (in total), gain !M! Plated Armor."
+    "DESCRIPTION": "For every 3 Attacks you play this combat, gain !M! Plated Armor.",
+    "UPGRADE_DESCRIPTION": "Innate. NL For every 3 Attacks you play this combat, gain !M! Plated Armor."
   },
 
   "AdministrixMod:LastEntry": {
