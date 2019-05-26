@@ -2,7 +2,10 @@ The _Administrix_, the lich princess of the rising sun,
 is inspired by Toyosatomimi no Miko (豊聡耳 神子),
 a character from the _Touhou Project_ series.
 
-Latest releases can be found [here](https://github.com/regret-index/Administrix-Mod/releases). The versions changelog can be found [here](https://github.com/regret-index/Administrix-Mod/blob/master/changelog.txt). A full content summary can be found [here](https://regret-index.github.io/Administrix-Summary/).
+The Steam Workshop page can be found [here](https://steamcommunity.com/sharedfiles/filedetails/?id=1618963010).
+Latest releases can be found [here](https://github.com/regret-index/Administrix-Mod/releases).
+The versions changelog can be found [here](https://github.com/regret-index/Administrix-Mod/blob/master/changelog.txt).
+A full content summary can be found [here](https://regret-index.github.io/Administrix-Summary/).
 
 --== Credits ==--
 ======
@@ -10,6 +13,9 @@ Latest releases can be found [here](https://github.com/regret-index/Administrix-
  * index-j: Content code, endless playtesting and debugging
  * Robin-MK0.5: Card edit art, playtesting, advanced feature debugging,
    constant support
+ * Kagiyama_Hinatan: Simplified Chinese translation, text assessment, bug reports
+ 
+.
 
  * Twilight Frontier: Official art assets for character art.
  * ZUN: For creating the Touhou Project.
@@ -52,8 +58,8 @@ Side-themes include:
  * flexible card creation,
  * and swapping cards between one's hand, the Draw Pile, and the Discard Pile.
 
-This v0.8 release contains 70 character-unique cards of a total planned 80,
-plus four relics out of a total planned ten and one potion of two.
+This v0.9 release contains 77 character-unique cards of a total planned 80,
+plus nine relics out of a total planned eleven and one potion of two.
 
 Design goals have been to make an internally consistent character, with decently
 reliable representation and support for multiple interwoven deck archetypes
@@ -87,16 +93,8 @@ to each release, for those who wish to spoil themselves completely.)
    different card from the Discard Pile to the bottom of the Draw Pile. The
    starting relic provides a constant source of this, and so do a slim number
    of other cards. This triggers Plot effects too, though it's a trade of
-   actively choosing such versus being able to trigger such later or twice whenever
-   drawn.
-
-==== __Duality__ ====
-
- * __Duality__ provides temporary Strength and Dexterity after each turn
-   one plays an equal number of Attacks and Skills (eventually with a unique UI
-   to help keep track). Do remember, temporary stats are executed as a stacking
-   debuff that applies another debuff to return to normal at the end of the
-   turn: try to gather much of it before gaining Artifact to keep it all.
+   actively choosing such versus being able to trigger such later or twice
+   whenever drawn.
 
 == __Wilting__ ==
 
@@ -107,19 +105,18 @@ to each release, for those who wish to spoil themselves completely.)
 
 ==== __Yin, Yang__ ====
 
- * These two buffs do nothing by themselves. __Yin and Yang__ are incidentally
-   provided by many cards, provide strong scaling for yet more cards, and
-   slowly equalize each turn. (This'll also kept on the card-count UI readied
-   for Duality- the Administrix has absurd numbers of buffs to keep track of.)
+ * __Yin and Yang__ are incidental benefits to many cards, scaling fuel for
+   yet more cards, and constant benefits for a focused deck. If you have
+   more Yin than Yang, then whenever you gain Yin, you'll gain block.
+   If you have more Yang than Yin, then whenever you gain Yang, you'll
+   deal damage to all enemies. 
 
 == __Affinity__ ==
 
- * One reocurring use of Yin and Yang provides a benefit for focusing on one or
-   the other. With __Affinity__, if you have more Yang than Yin, then whenever
-   you gain Yang you also gain Block. Alternatively, if you have more Yin than
-   Yang, then whenever you gain Yin, you also deal damage to all enemies twice.
-   A card in the starting deck provides little beyond a source of this;
-   it balances out the Plot cards in the starting deck.
+ * Affinity boosts the incremental benefits for both Yin and Yang.
+   Some cards benefit heavily from raw numbers of Yin or Yang,
+   some cards require building up both, and some cards simply
+   combo well regardless of which alignment one thus takes.
 
 == __Daybreaks, Nightfalls__ ==
 
@@ -137,26 +134,21 @@ to each release, for those who wish to spoil themselves completely.)
 
  * Playing cards too quickly can sometimes have tooltips or targetting arrows
    mess up the Transpose interface.
- * Both Blessings lack part of the Plot card indicator.
+ * Both Blessings and Overdrive lack part of the Plot card indicator.
  * The in-game character statistics page prints a blank listing for the 
    character name.
- * Transcension's card flickers rapidly if the screen dims during the effect
+ * Transcension's cards made flicker rapidly if the screen dims during the effect
    (e.g. Baton kicking in, any discard / exhaust prompts).
  * Card preview tooltips would be nice for Choose Your End and Bloodsoaked Veil,
    though the two cards each pose a number of issues.
 
 --== Full Release Plans ==--
 ======
- * Overhauls to Duality, Affinity, Yin, and Yang.
- * Simplified Chinese Localization, finally, jeez.
- * Quick mechanics reference + tutorial guide.
- * Balance adjustments as according to feedback.
- * The remaining 5/80 cards (mostly lingering concepts),
-   7/11 relics for a full character set (boss ones...),
-   and another potion (a Plot focus?).
- * Further effects improvements. Character animation, the character select
-   screen, scaling cards, self-debuff cards, and the plainer Rare cards
-   are all intended targets. Some secret effects against bosses, too, perhaps.
+ * Cleaner Yin and Yang UI.
+ * The remaining cards (more utility and scalars), relics (Possibly another
+   boss relic, defintiely another rare), another potion
+ * An event or two.   
+ * Special effects for capturing spell cards.
 
 ...
 

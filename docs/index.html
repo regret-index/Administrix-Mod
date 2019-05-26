@@ -1,870 +1,1170 @@
 <!DOCTYPE html!>
 <html>
-  <head>
-    <title>The Administrix - v0.9.1 content</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kryogenix.org/code/browser/sorttable/sorttable.js"></script>
-  </head>
-  <body>
-    <h1>The Administrix</h1>
-    <h3>v0.9.1</h3>
-    <img src="img/Administrix.png">
+<head>
+  <title>The Administrix - v0.9.2 content</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+</head>
+<body>
+<h1>The Administrix</h1>
+<h3>v0.9.2</h3>
+<img src="img/Administrix.png">
+<p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1618963010">Steam Workshop page, screenshots</a></p>
+<p><a href="https://github.com/regret-index/Administrix-Mod/">Repository, bug reports, patches reception</a></p>
+<p><a href="https://github.com/regret-index/Administrix-Mod/blob/master/changelog.txt">Changelog</a></p>
+<h2>Keywords</h2>
+<table class="sortable">
+  <tr>
+    <th>Keyword</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><b>Plot</b></td>
+    <td>Plot effects trigger on both drawing and manually discarding given cards.</td>
+  </tr>
+  <tr>
+    <td><b>Transpose</b></td>
+    <td>To Transpose is to discard cards from your <span class="color-y">Draw</span> <span class="color-y">Pile,</span> then move different cards from the <span class="color-y">Discard</span> <span class="color-y">Pile</span> to the bottom of your <span class="color-y">Draw</span> <span class="color-y">Pile.</span></td>
+  </tr>
+  <tr>
+    <td><b>Immortal</b></td>
+    <td>Immortal cards <span class="color-y">upgrade</span> other Immortal cards via <span class="color-y">Plot</span> and can be <span class="color-y"><span class="color-y">upgraded</span></span> any number of times.</td>
+  </tr>
 
-    <h2>Keywords</h2>
-    <table class="sortable">
-      <tr>
-        <th>Keyword</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><b>Plot</b></td>
-        <td>Plot effects trigger on both drawing and manually discarding given cards.</td>
-      </tr>
-      <tr>
-        <td><b>Transpose</b></td>
-        <td>To Transpose is to discard cards from your <span class="color-y">Draw</span> <span class="color-y">Pile,</span> then move different cards from the <span class="color-y">Discard</span> <span class="color-y">Pile</span> to the bottom of your <span class="color-y">Draw</span> <span class="color-y">Pile.</span></td>
-      </tr>
-      <tr>
-        <td><b>Immortal</b></td>
-        <td>Immortal cards <span class="color-y">upgrade</span> other Immortal cards via <span class="color-y">Plot</span> and can be <span class="color-y"><span class="color-y">upgraded</span></span> any number of times.</td>
-      </tr>
+  <tr><td colspan="2"></td></tr>
 
-      <tr><td colspan="2"></td></tr>
+  <tr>
+    <td><b>[Artifact]</b></td>
+    <td>Negate debuffs as usual, including the loss of stats from temporary stat increases.</td>
+  </tr>
+  <tr>
+    <td><b>Wilting</b></td>
+    <td>Whenever you play a card, Wilting does <span class="color-b">1</span> damage to yourself.</td>
+  </tr>
 
-      <tr>
-        <td><b>[Artifact]</b></td>
-        <td>Negate debuffs as usual, including the loss of stats from temporary stat increases.</td>
-      </tr>
-      <tr>
-        <td><b>Wilting</b></td>
-        <td>Whenever you play a card, Wilting does <span class="color-b">1</span> damage to yourself.</td>
-      </tr>
+  <tr><td colspan="2"></td></tr>
 
-      <tr><td colspan="2"></td></tr>
+  <tr>
+    <td><b>Yin</b></td>
+    <td><span class="color-w">Yang</span> fuels many cards. If you have more <span class="color-l">Yin</span> than <span class="color-w">Yang,</span> then when you gain <span class="color-l">Yin,</span> damage all enemies twice.</td>
+  </tr>
+  <tr>
+    <td><b>Yang</b></td>
+    <td><span class="color-l">Yin</span> fuels many cards. If you have more <span class="color-w">Yang</span> than <span class="color-l">Yin</span>, then when you gain <span class="color-w">Yang,</span> gain <span class="color-y">Block.</span></td>
+  </tr>
+  <tr>
+    <td><b>Daybreak</b></td>
+    <td>Daybreaks are 0-cost <span class="color-y">Ethereal</span> attacks that give <span class="color-w">Yang</span> and <span class="color-y">Exhaust.</span></td>
+  </tr>
+  <tr>
+    <td><b>Nightfall</b></td>
+    <td>Nightfalls are 0-cost <span class="color-y">Ethereal</span> skills that give <span class="color-l">Yin</span> and <span class="color-y">Exhaust.</span></td>
+  </tr>
+  <tr>
+    <td><b>Affinity</b></td>
+    <td>Increases the effectiveness of <span class="color-l">Yin</span> and <span class="color-w">Yang</span>.</td>
+  </tr>
+</table>
 
-      <tr>
-        <td><b>Yin</b></td>
-        <td><span class="color-w">Yang</span> fuels many cards. If you have more <span class="color-l">Yin</span> than <span class="color-w">Yang,</span> then when you gain <span class="color-l">Yin,</span> damage all enemies twice.</td>
-      </tr>
-      <tr>
-        <td><b>Yang</b></td>
-        <td><span class="color-l">Yin</span> fuels many cards. If you have more <span class="color-w">Yang</span> than <span class="color-l">Yin</span>, then when you gain <span class="color-w">Yang,</span> gain <span class="color-y">Block.</span></td>
-      </tr>
-      <tr>
-        <td><b>Daybreak</b></td>
-        <td>Daybreaks are 0-cost <span class="color-y">Ethereal</span> attacks that give <span class="color-w">Yang</span> and <span class="color-y">Exhaust.</span></td>
-      </tr>
-      <tr>
-        <td><b>Nightfall</b></td>
-        <td>Nightfalls are 0-cost <span class="color-y">Ethereal</span> skills that give <span class="color-l">Yin</span> and <span class="color-y">Exhaust.</span></td>
-      </tr>
-      <tr>
-        <td><b>Affinity</b></td>
-        <td>Increases the effectiveness of <span class="color-l">Yin</span> and <span class="color-w">Yang</span>.</td>
-      </tr>
-    </table>
+<br/><br/>
 
-    <h2>Relics</h2>
-      <table class="sortable" id="relics">
-        <tr>
-          <th>Relic</th>
-          <th>Image</th>
-          <th>Tier</th>
-          <th>Pool</th>
-          <th>Description</th>
-          <th>Flavor</th>
-        </tr>
+<table class="sortable">
+  <tr>
+    <th>Keyword</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><b>密谋</b></td>
+    <td>这个效果将会在抽到或手动丢弃这张牌时触发 （从抽牌堆丢弃也能触发）。</td>
+  </tr>
+  <tr>
+    <td><b>易转</b></td>
+    <td>先从抽牌堆中丢弃牌， 然后再从弃牌堆中选择不同的牌移至抽牌堆的底部。</td>
+  </tr>
+  <tr>
+    <td><b>神灵</b></td>
+    <td>神灵牌会 升级 其他神灵牌， 且神灵牌能被多次 升级。</td>
+  </tr>
 
-        <tr>
-          <td><u>Conductor's Ritual Baton</u></td>
-          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/Shaku.png" width="128" height="128"></td>
-          <td><i>Starter</i></td>
-          <td>Lich Gold</td>
-          <td>The first time each turn you play <span class="color-b">4</span> Attacks or <span class="color-b">4</span> Skills, <span class="color-y">Transpose</span> one.</td>
-          <td><i>A golden shaku, really, and your favourite dramatic gesturing aide. Control the fight's tempo.</i></td>
-        </tr>
-        <tr>
-          <td><u>Prescription Bottle</u></td>
-          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/PrescriptionBottle.png" width="128" height="128"></td>
-          <td><i>Common</i></td>
-          <td>Lich Gold</td>
-          <td>Every <span class="color-b">4</span> turns, gain <span class="color-b">1</span> <span class="color-y">Artifact.</span></td>
-          <td><i>Self-medication may have been necessary for survival, but that sister-in-arms god/doctor was a far better replacement.</i></td>
-        </tr>
+  <tr><td colspan="2"></td></tr>
 
-        <tr>
-          <td><u>Abandoned Rose</u></td>
-          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/AbandonedRose.png" width="128" height="128"></td>
-          <td><i>Uncommon</i></td>
-          <td>Lich Gold</td>
-          <td>Whenever you manually discard a card, <span class="color-y">Upgrade</span> it for the rest of the combat.</td>
-          <td><i>The End of The World has come and gone. Shine through the despair.</i></td>
-        </tr>
+  <tr>
+    <td><b>[Artifact]</b></td>
+    <td>Negate debuffs as usual, including the loss of stats from temporary stat increases.</td>
+  </tr>
+  <tr>
+    <td><b>枯萎</b></td>
+    <td>每当你打出一张牌，受到 1 点伤害 （可被抵挡）。</td>
+  </tr>
 
-        <tr>
-          <td><u>Golden Chickadee</u></td>
-          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/GoldenChickadee.png" width="128" height="128"></td>
-          <td><i>Uncommon</i></td>
-          <td>Lich Gold</td>
-          <td>Upon pickup, <span class="color-y">Upgrade</span> <span class="color-b">2</span> random <span class="color-y">Rare</span> cards. Whenever you add a <span class="color-y">Rare</span> card into your deck, <span class="color-y">Upgrade</span> it.</td>
-          <td><i>You hatched ages ago, of course.</i></td>
-        </tr>
+  <tr><td colspan="2"></td></tr>
 
-        <tr>
-          <td><u>Key of Kings</u></td>
-          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/KeyOfKings.png" width="128" height="128"></td>
-          <td><i>Rare</i></td>
-          <td>Lich Gold</td>
-          <td>Every time you discard <span class="color-b">3</span> cards, add a <span class="color-y">Daybreak</span> and a <span class="color-y">Nightfall</span> to your hand.</td>
-          <td><i>'Royalty's a continuous cutting motion', they say. Well, despite yourself, you treasure also cutting away from it all.</i></td>
-        </tr>
+  <tr>
+    <td><b>阴</b></td>
+    <td>阴能强化许多牌。 若阴比 阳 多， 则当你获得阴时， 对所有敌人造成两次伤害。</td>
+  </tr>
+  <tr>
+    <td><b>阳</b></td>
+    <td>阳能强化许多牌。若阳比 阴 多， 则当你获得阳时， 会获得 格挡。</td>
+  </tr>
+  <tr>
+    <td><b>日出</b></td>
+    <td>日出是会 消耗 且具有 虚无 的能给予 阳 的0耗能攻击牌。</td>
+  </tr>
+  <tr>
+    <td><b>夜临</b></td>
+    <td>夜临是会 消耗 且具有 虚无 的能给予 阴 的0耗能技能牌。</td>
+  </tr>
+  <tr>
+    <td><b>亲和</b></td>
+    <td>亲和会增强  阴 和 阳 的效果。</td>
+  </tr>
+</table>
 
-        <tr>
-          <td><u>Elixir of Immorality</u></td>
-          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/ElixirOfImmorality.png" width="128" height="128"></td>
-          <td><i>Boss</i></td>
-          <td>Lich Gold</td>
-          <td>Gain [E] at the start of your turn. At the start of turn <span class="color-b">2,</span> gain <span class="color-b">1</span> <span class="color-y">Wilting.</span> At the start of turn <span class="color-b">4,</span> gain <span class="color-b">1</span> <span class="color-y">Frail.</span></td>
-          <td><i>You've long surpassed that other wicked hermit's medicines. Still, her work has some (dubious) potency left...</i></td>
-        </tr>
+<h2>Relics</h2>
+<table class="sortable" id="relics">
+  <tr>
+    <th>Relic</th>
+    <th>Image</th>
+    <th>Tier</th>
+    <th>Pool</th>
+    <th>Description</th>
+    <th>Flavor</th>
+  </tr>
 
-        <tr>
-          <td><u>Blood-soaked Veil</u></td>
-          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/BloodSoakedVeil.png" width="128" height="128"></td>
-          <td><i>Boss</i></td>
-          <td>Lich Gold</td>
-          <td>Remove all Strikes and Defends. Receive <span class="color-b">3</span> <span class="color-y">Fiendish</span> <span class="color-y">Crimsons</span> and <span class="color-b">3</span> <span class="color-y">Bloodless</span> <span class="color-y">Sapphires.</span> Whenever you <span class="color-y">Exhaust</span> a card that costs <span class="color-b">2</span> or more, gain [E] the next turn.</td>
-          <td><i>...a life and an unlife of death have been all too inescapable. Perhaps you should embrace it.</i></td>
-        </tr>
+  <tr>
+    <td><u>Conductor's Ritual Baton</u><br/>领导者的仪棒</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/Shaku.png" width="128" height="128"></td>
+    <td><i>Starter</i></td>
+    <td>Lich Gold</td>
+    <td>The first time each turn you play <span class="color-b">4</span> Attacks or <span class="color-b">4</span> Skills, <span class="color-y">Transpose</span> one.
+      <br/><br/>每个回合中，当你初次打出 <span class="color-b">4</span> 张攻击牌或者 <span class="color-b">4</span> 张技能牌时， 易转 一张。</td>
+    <td><i>A golden shaku, really, and your favourite dramatic gesturing aide. Control the fight's tempo.</i>
+      <br/><br/>一个黄金制的笏， 真的哦， 也是你特别喜爱以其做手势来引人注目的好帮手。 用来控制战斗的节奏。</td>
+  </tr>
 
-        <tr>
-          <td><u>Dragon's Eye Charm</u></td>
-          <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/DragonsEyeCharm.png" width="128" height="128"></td>
-          <td><i>Shop</i></td>
-          <td>Lich Gold</td>
-          <td>Whenever you gain <span class="color-y">Yin</span> or <span class="color-y">Yang,</span> you'll gain <span class="color-b">3</span> more.</td>
-          <td><i>Even when it came to your secrets, it was never about balance or enlightenment. It was always about seizing empowerment.</i></td>
-        </tr>
-      </table>
-   
-      <h2>Potions</h2>
-      <table class="sortable">
-        <tr>
-          <th>Potion</th>
-          <th>Image</th>
-          <th>Rarity</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><u>Attunement Tonic</u></td>
-          <td><img src="img/AttunementTonic.png"></td>
-          <td><i>Uncommon</i></td>
-          <td>If you have any <span class="color-y">Affinity</span>, gain <span class="color-b">3</span> more.</td>
-        </tr>
-      </table>
-  
-      <h2>Cards</h2>
-        <table class="sortable" id="cards">
-          <tr>
-        <th>Card</th>
-        <th>Image</th>
-        <th>Rarity</th>
-        <th>Type</th>
-        <th>Cost</th>
-        <th>Description</th>
-      </tr>
+  <tr>
+    <td><u>Cracked Taijitu</u><br/>破裂的太极图</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/CrackedTaijitu.png" width="128" height="128"></td>
+    <td><i>Common</i></td>
+    <td>Lich Gold</td>
+    <td>Start each combat with <span class="color-b">1</span> <span class="color-y">Affinity.</span>
+      <br/><br/>在每场战斗开始时， 获得 <span class="color-b">1</span> 点 亲和。</td>
+    <td><i>It always was amusingly strange, how terrible you all were at your respective supposed precepts.</i>
+      <br/><br/>奇怪到让人发笑的是， 你们在遵守你们各自假定的戒律时的表现是有多糟糕。</td>
+  </tr>
 
-      <tr>
-        <td><span class="color-y">Daybreak</span></td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Daybreak_p.png" height="190" width="250" /></td>
-        <td><i>Basic</i></td>
-        <td><i>Attack</i></td>
-        <td>0</td>
-        <td><span class="color-y">Ethereal</span>. Deal 3(5) damage. Gain 3(4) <span class="color-w">Yang</span>. <span class="color-y">Exhaust</span>.</td>
-      </tr>
+  <tr>
+    <td><u>Prescription Bottle</u><br/>药方瓶子</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/PrescriptionBottle.png" width="128" height="128"></td>
+    <td><i>Common</i></td>
+    <td>Lich Gold</td>
+    <td>Every <span class="color-b">4</span> turns, gain <span class="color-b">1</span> <span class="color-y">Artifact.</span>
+      <br/><br/>每 <span class="color-b">4</span> 个回合，获得 <span class="color-b">1</span> 层 人工制品 。</td>
+    <td><i>Self-medication may have been necessary for survival, but that sister-in-arms god/doctor was a far better replacement.</i>
+      <br/><br/>自我治疗对生存来说或许是有必要的， 但带一位身为神灵/医生的姐妹战友会是一个更好的选择。</td>
+  </tr>
 
-      <tr>
-        <td><span class="color-y">Nightfall</span></td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Nightfall_p.png" height="190" width="250" /></td>
-        <td><i>Basic</i></td>
-        <td><i>Skill</i></td>
-        <td>0</td>
-        <td><span class="color-y">Ethereal</span>. Gain 3(5) <span class="color-y">Block</span>. Gain 3(4) <span class="color-l">Yin</span>. <span class="color-y">Exhaust</span>.</td>
-      </tr>
+  <tr>
+    <td><u>Abandoned Rose</u><br/>被遗弃的玫瑰</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/AbandonedRose.png" width="128" height="128"></td>
+    <td><i>Uncommon</i></td>
+    <td>Lich Gold</td>
+    <td>Whenever you manually discard a card, <span class="color-y">Upgrade</span> it for the rest of the combat.
+      <br/><br/>每当你手动丢弃一张卡， 将其在本场战斗中 升级 。</td>
+    <td><i>The End of The World has come and gone. Shine through the despair.</i>
+      <br/><br/>世界的末日已曾到来，也已远去。在绝望中保持闪耀。</td>
+  </tr>
 
-      <tr>
-        <td>Blue Cloak</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Blue%20Cloak_p.png" height="190" width="250" /></td>
-        <td><i>Starter</i></td>
-        <td><i>Attack</i></td>
-        <td>0</td>
-        <td>Deal 2(5) damage. Draw 1 card. Discard 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Apply 1 <span class="color-y">Weak</span> to all enemies. <span class="color-p">}</span></td>
-      </tr>
-      
-      <tr>
-        <td>Defend</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Defend_p.png" height="190" width="250" /></td>
-        <td><i>Starter</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Gain 5(8) <span class="color-y">Block</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Red Cloak</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Red%20Cloak_p.png" height="190" width="250" /></td>
-        <td><i>Starter</i></td>
-        <td><i>Skill</i></td>
-        <td>0</td>
-        <td>Gain 2(5) <span class="color-y">Block</span>. Draw 1 card. Discard 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Apply 1 <span class="color-y">Vulnerable</span> to all enemies. <span class="color-p">}</span></td>
-      </tr>
-      
-      <tr>
-        <td>Strike</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Strike_p.png" height="190" width="250" /></td>
-        <td><i>Starter</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 6(9) damage.</td>
-      </tr>
-      
-      <tr>
-        <td>Cracking Pangu</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Cracking%20Pangu_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 9(12) damage. Every three times you play any Cracking Pangu[+] this combat, remove all of your Debuffs.</td>
-      </tr>
-      
-      <tr>
-        <td>Diversion Tactic</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Diversion%20Tactic_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 7(10) damage. Discard 1 card. <span class="color-y">Retain</span> your hand this turn.</td>
-      </tr>
-      
-      <tr>
-        <td>Centuries Ascent</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Centuries%20Ascent_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Skill</i></td>
-        <td>0</td>
-        <td>Gain 3(5) <span class="color-y">Block</span>. (Gain 2 <span class="color-w">Yang</span>). <span class="color-p">{</span> <span class="color-y">Plot</span>: Add a <span class="color-y">Daybreak</span> to your hand. <span class="color-p">}</span></td></td>
-      </tr>
-      
-      <tr>
-        <td>Extol Virtue</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Extol%20Virtue_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 7(10) damage to ALL enemies. If you have any <span class="color-y">Artifact</span>, gain 1 more.</td>
-      </tr>
+  <tr>
+    <td><u>Golden Chickadee</u><br/>金色山雀</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/GoldenChickadee.png" width="128" height="128"></td>
+    <td><i>Uncommon</i></td>
+    <td>Lich Gold</td>
+    <td>Upon pickup, <span class="color-y">Upgrade</span> <span class="color-b">2</span> random <span class="color-y">Rare</span> cards and gain <span class="color-b">40</span> gold. Whenever you add a <span class="color-y">Rare</span> card into your deck, <span class="color-y">Upgrade</span> it.
+      <br/><br/>拾起时，随机 #y升级 <span class="color-b">2</span> 张 稀有牌。 获得 <span class="color-b">40</span> 金币。  每当你将 稀有牌 加入你的卡组时， 将其 升级 。</td>
+    <td><i>You hatched ages ago, of course.
+      <br/><br/>你在很久很久以前孵化出来的，没错。</i></td>
+  </tr>
 
-      <tr>
-        <td>Funerary Rites</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Funerary%20Rites_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Skill</i></td>
-        <td>1(0)</td>
-        <td>Discard 1 card. Put a card from your Discard Pile on top of your draw pile. Gain 4 <span class="color-l">Yin</span>.</td>
-      </tr>
+  <tr>
+    <td><u>Key of Kings</u><br/>王之匙</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/KeyOfKings.png" width="128" height="128"></td>
+    <td><i>Rare</i></td>
+    <td>Lich Gold</td>
+    <td>Every time you discard <span class="color-b">3</span> cards, add a <span class="color-y">Daybreak</span> and a <span class="color-y">Nightfall</span> to your hand.
+      <br/><br/>每当你丢弃 <span class="color-b">3</span> 张牌， 将 日出 和 夜临 各一张加入你的手牌。</td>
+    <td><i>'Royalty's a continuous cutting motion', they say. Well, despite yourself, you treasure also cutting away from it all.</i>
+      <br/><br/>人们说“皇室一直在剥削我们”。好吧，虽然有悖你的欲望，但你也热衷于剥削你自身。</td>
+  </tr>
 
-      <tr>
-        <td>Immortal Grace</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Immortal%20Grace_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 7(8) damage. Draw 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Upgrade all Immortal cards in your hand (deck) for the rest of this combat. <span class="color-p">}</span></td>
-      </tr>
-      
-      <tr>
-        <td>Immortal Purity</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Immortal%20Purity_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Gain 7(8) <span class="color-y">Block</span>. Discard 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Upgrade all Immortal cards in your hand (deck) for the rest of this combat. <span class="color-p">}</span></td>
-      </tr>
-      
-      <tr>
-        <td>Light of Your Life</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Light%20Of%20Your%20Life_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Skill</i></td>
-        <td>1(0)</td>
-        <td><span class="color-y">Transpose</span> one. Draw 1 card. Gain 4 <span class="color-w">Yang</span>.</td>
-      </tr>
+  <tr>
+    <td><u>Elixir of Immorality</u><br/>禁忌的不死药</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/ElixirOfImmorality.png" width="128" height="128"></td>
+    <td><i>Boss</i></td>
+    <td>Lich Gold</td>
+    <td>Gain [E] at the start of your turn.
+      <br/>At the start of turn <span class="color-b">2,</span> gain <span class="color-b">1</span> <span class="color-y">Wilting.</span>
+      <br/>At the start of turn <span class="color-b">4,</span> gain <span class="color-b">2</span> <span class="color-y">Frail.</span>
+      <br/><br/>在你的回合开始时获得 [E] 。,
+      <br/>在第 <span class="color-b">2</span> 回合开始时， 获得 <span class="color-b">1</span> 层 枯萎 。
+      <br/>在第 <span class="color-b">4</span> 回合开始时， 获得 <span class="color-b">2</span> 层 脆弱。</td>
+    <td><i>You've long surpassed that other wicked hermit's medicines. Still, her work has some (dubious) potency left...</i>
+      <br/><br/>你早已摆脱了另一位邪仙所炼的药。不过，她炼出的成果对你依然有一些（可疑的）效能…</td>
+  </tr>
 
-      <tr>
-        <td>Passage of Ages</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Passage%20of%20Ages_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 4(6) damage. (Gain 2 <span class="color-l">Yin</span>). <span class="color-p">{</span> <span class="color-y">Plot</span>: Add a <span class="color-y">Nightfall</span> to your hand. <span class="color-p">}</span></td></td>
-      </tr>
-      
-      <tr>
-        <td>Noble Path</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Noble%20Path_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 8 damage. Gain [E] next turn. Gain 3 <span class="color-l">Yin</span> (twice). Gain 3 <span class="color-w">Yang</span> (twice).</td></td>
-      </tr>
-      
-      <tr>
-        <td>Plate Of Antiquity</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Plate%20of%20Antiquity_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 7(8) damage. Gain 2(3) <span class="color-y">Dexterity</span>. Lose 2(3) <span class="color-y">Dexterity</span> at the end of this turn.</td>
-      </tr>
-      
-      <tr>
-        <td>Rebuke Desires</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Rebuke%20Desires_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>0</td>
-        <td>(<span class="color-y">Innate</span>.) Deal 4 damage. If the enemy doesn't intend to attack, gain 1 <span class="color-y">Artifact</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Regent's Edict</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Regent's%20Edict_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 4(7) damage. Whenever you play any Regent's Edict[+] three times this combat, steal the enemy's <span class="color-y">Strength</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Seal Away</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Seal%20Away_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Draw 2(4) cards. <span class="color-y">Upgrade</span> all cards in your hand for the rest of this combat. Discard your hand.</td>
-      </tr>
-      
-      <tr>
-        <td>Shadow Play</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Shadow%20Play_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 6 damage. Draw 2 cards. Discard 1 card. Gain 4 <span class="color-l">Yin</span>. <span class="color-y">Exhaust</span> (not).</td>
-      </tr>
+  <tr>
+    <td><u>Blood-soaked Veil</u><br/>染血的面纱</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/BloodSoakedVeil.png" width="128" height="128"></td>
+    <td><i>Boss</i></td>
+    <td>Lich Gold</td>
+    <td>Remove all Strikes and Defends. Receive <span class="color-b">3</span> <span class="color-y">Fiendish</span> <span class="color-y">Crimsons</span> and <span class="color-b">3</span> <span class="color-y">Bloodless</span> <span class="color-y">Sapphires.</span> Whenever you <span class="color-y">Exhaust</span> a card that costs <span class="color-b">2</span> or more, gain [E] the next turn.
+      <br/><br/> 去除所有打击和防御。 获得 <span class="color-b">3</span> 张 残忍猩红 和 <span class="color-b">3</span> 张 无血色的蓝宝石 。 每当你 消耗 一张耗能为 <span class="color-b">2</span> 或更多的牌， 在下回合获得 [E] 。</td>
+    <td><i>...a life and an unlife of death have been all too inescapable. Perhaps you should embrace it.</i>
+      <br/><br/>…生前与成为不死者的事都已是不可避免的。也许你应该接受它。</td>
+  </tr>
 
-      <tr>
-        <td>Sip of Sparks</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Sip%20of%20Sparks_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Gain 7(8) <span class="color-y">Block</span>. Gain 2(3) <span class="color-y">Strength</span>. Lose 2(3) <span class="color-y">Strength</span> at the end of this turn.</td>
-      </tr>
-      
-      <tr>
-        <td>Touch of Cinnabar</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Touch%20of%20Cinnabar_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Gain 2(4) <span class="color-y">Plated Armor</span>. Gain 2 <span class="color-y">Frail</span>. Gain 1 <span class="color-y">Artifact</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Transition</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Transition_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Skill</i></td>
-        <td>1(0)</td>
-        <td>Discard 2 cards. Gain [E] next turn. <span class="color-p">{</span> <span class="color-y">Plot</span>: Draw 1 card next turn. <span class="color-p">}</span></td>
-      </tr>
+  <tr>
+    <td><u>Dragon's Eye Charm</u><br/>龙眼挂坠</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/relics/DragonsEyeCharm.png" width="128" height="128"></td>
+    <td><i>Shop</i></td>
+    <td>Lich Gold</td>
+    <td>Whenever you gain <span class="color-y">Yin</span> or <span class="color-y">Yang,</span> you'll gain <span class="color-b">3</span> more.
+      <br/><br/>每当你获得 阴 或 阳， 你将会多获得  <span class="color-b">3</span> 点。</td>
+    <td><i>Even when it came to your secrets, it was never about balance or enlightenment. It was always about seizing empowerment.</i>
+      <br/><br/>即便是当它成为你的秘密的时候， 它也从来不是用来平衡或者教化的。 它一直是用来抓住权柄的。</td>
+  </tr>
+</table>
 
-      <tr>
-        <td>Trick of the Light</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Trick%20of%20the%20Light_p.png" height="190" width="250" /></td>
-        <td><i>Common</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 8 damage. Discard the top <span class="color-y">Plot</span> card in your draw pile. Gain 4 <span class="color-w">Yang</span>. <span class="color-y">Exhaust</span> (not).</td>
-      </tr>
-      
-      <tr>
-        <td>17-Article Laser</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Seventeen%20Article%20Laser_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Attack</i></td>
-        <td>2</td>
-        <td>Deal 17 damage (to ALL enemies). <span class="color-y">Transpose</span> one.</td>
-      </tr>
-      
-      <tr>
-        <td>Armillary Sphere</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Armillary%20Sphere_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>2</td>
-        <td>Gain 4(5) <span class="color-y">Block</span> next turn. Gain 1(2) <span class="color-y">Artifact</span>. <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain 4(5) <span class="color-y">Block</span>. <span class="color-p">}</span></td>
-      </tr>
-      
-      <tr>
-        <td>Bishamon's Blessing</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Bishamon's%20Blessing_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td></td>
-        <td><span class="color-y">Unplayable</span>. <span class="color-y">Exhausts</span> when drawn (<span class="color-y">Ethereal</span>). <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain 3 <span class="color-w">Yang</span>. Apply 1 <span class="color-y">Weak</span> to all enemies. Draw 1 card. <span class="color-p">}</span></td>
-      </tr>
+<h2>Potions</h2>
+<table class="sortable">
+  <tr>
+    <th>Potion</th>
+    <th>Image</th>
+    <th>Rarity</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><u>Attunement Tonic</u><br/>调和补剂</td>
+    <td><img src="img/AttunementTonic.png"></td>
+    <td><i>Uncommon</i></td>
+    <td>If you have any <span class="color-y">Affinity</span>, gain <span class="color-b">3</span> more.
+      <br/><br/>若你已拥有 亲和， 获得 <span class="color-b">3</span> 点 亲和 。</td>
+  </tr>
+</table>
 
-      <tr>
-        <td>Beget Eternity</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Beget%20Eternity_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Attack</i></td>
-        <td>3</td>
-        <td>Deal 7(9) damage thrice. Draw 1 additional card next turn. Gain 2(3) <span class="color-y">Strength</span>. <span class="color-y">Exhaust</span>.</td>
-      </tr>
+<h2>Cards</h2>
+<table class="sortable" id="cards">
+  <tr>
+    <th>Card</th>
+    <th>Image</th>
+    <th>Rarity</th>
+    <th>Type</th>
+    <th>Cost</th>
+    <th>Description</th>
+  </tr>
 
-      <tr>
-        <td>Bloodless Sapphire</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Bloodless%20Sapphire_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>2</td>
-        <td>Gain 14(18) <span class="color-y">Block</span>. Heal 4(7) HP. Gain 2 <span class="color-y">Wilting</span>. <span class="color-y">Exhaust</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Cast Off Regrets</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Cast%20Off%20Regrets_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Power</i></td>
-        <td>1(0)</td>
-        <td>Gain 2 <span class="color-y">Frail</span> twice. Whenever you manually discard a card, gain 2 of the higher of your <span class="color-l">Yin</span> and your <span class="color-w">Yang</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Choose Your End</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Choose%20Your%20End_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 10(14) damage. Add a Red Cloak and Blue Cloak to your hand. <span class="color-y">Exhaust</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Convergence</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Convergence_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Power</i></td>
-        <td>2</td>
-        <td>Add a(n <span class="color-y">upgraded</span>) <span class="color-y">Daybreak</span> and a(n <span class="color-y">upgraded</span>) <span class="color-y">Nightfall</span> to your hand at the start of each turn.</td>
-      </tr>
-      
-      <tr>
-        <td>Dreams Mausoleum</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Dreams%20Mausoleum_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>4</td>
-        <td><span class="color-y">Ethereal</span>. Gain 10(14) <span class="color-y">Block</span>. Gain 1 <span class="color-y">Artifact</span>. <span class="color-p">{</span> <span class="color-y">Plot</span>: This card costs 1 [E] less this combat. <span class="color-p">}</span></td>
-      </tr>
-      
-      <tr>
-        <td>Feast of Dew</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Feast%20of%20Dew_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Draw 2 cards, then add a copy of this card to your draw pile (hand). <span class="color-y">Exhaust</span>.) Whenever you play any Feast of Dew[+] three times this combat, gain 4 <span class="color-y">Affinity</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Fiendish Crimson</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Fiendish%20Crimson_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Attack</i></td>
-        <td>2</td>
-        <td>Deal 14(18) damage. Heal 4(7) HP. Gain 2 <span class="color-y">Frail</span>. <span class="color-y">Exhaust</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Grandeur</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Grandeur_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>0</td>
-        <td>Gain 2(3) <span class="color-y">Strength</span> and 1(2) <span class="color-y">Dexterity</span>, and lose such at the end of this turn. Draw 1 card.</td>
-      </tr>
-      
-      <tr>
-        <td>Guanyin's Blessing</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Guanyin's%20Blessing_p.png" height="190" width="250" /></td> 
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td></td>
-        <td><span class="color-y">Unplayable</span>. <span class="color-y">Exhausts</span> when drawn (<span class="color-y">Ethereal</span>). <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain 3 <span class="color-l">Yin</span>. Apply 1 <span class="color-y">Vulnerable</span> to all enemies. Draw 1 card. <span class="color-p">}</span></td>
-      </tr>
-      
-      <tr>
-        <td>Harmonic Reverence</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Harmonic%20Reverence_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Power</i></td>
-        <td>2</td>
-        <td>Gain 3(4) <span class="color-y">Affinity</span>. Double both your <span class="color-l">Yin</span> and your <span class="color-w">Yang</span>.</td>
-      </tr>
+  <tr>
+    <td><span class="color-y">Daybreak</span><br/><span class="color-y">日出</span></td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Daybreak_p.png" height="190" width="250" /></td>
+    <td><i>Basic</i></td>
+    <td><i>Attack</i></td>
+    <td>0</td>
+    <td><span class="color-y">Ethereal</span>. Deal 3(5) damage. Gain 3(4) <span class="color-w">Yang</span>. <span class="color-y">Exhaust</span>.
+      <br/><br/>虚无。 造成 3{{5}} 点伤害。 获得 3{{4}} 点 阳 。 消耗 。
+      <br/><br/><hr/><br/><i>Half a million days passed by like water after Miko sealed herself away.</i></td>
+  </tr>
 
-      <tr>
-        <td>Hidden Power</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Hidden%20Power_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Power</i></td>
-        <td>0</td>
-        <td>Gain 1(2) <span class="color-y">Affinity</span>. Draw 1 less card next turn.</td>
-      </tr>
+  <tr>
+    <td><span class="color-y">Nightfall</span><br/><span class="color-y">夜临</span></td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Nightfall_p.png" height="190" width="250" /></td>
+    <td><i>Basic</i></td>
+    <td><i>Skill</i></td>
+    <td>0</td>
+    <td><span class="color-y">Ethereal</span>. Gain 3(5) <span class="color-y">Block</span>. Gain 3(4) <span class="color-l">Yin</span>. <span class="color-y">Exhaust</span>.
+      <br/><br/>虚无。 获得 3 {{5}} 点 格挡。 获得 3 {{4}} 点 阴。 消耗。
+      <br/><br/><hr/><br/><i>Half a million nights passed by like water while Miko waited to resurrect.</i></td>
+  </tr>
 
-      <tr>
-        <td>Just Rewards</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Just%20Rewards_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Attack</i></td>
-        <td>2</td>
-        <td>Deal 10 damage to ALL enemies. Apply 1 <span class="color-y">Vulnerable</span> to ALL enemies. Add 2 <span class="color-y">Daybreak</span>(+)s to your hand.</td>
-      </tr>
-      
-      <tr>
-        <td>Katabasis</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Katabasis_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>X</td>
-        <td>Apply 1 <span class="color-y">Weak</span> X(+1) times. Add an <span class="color-y">upgraded</span> <span class="color-y">Nightfall</span> to your hand each turn for the next X(+1) turns.</td>
-      </tr>
+  <tr>
+    <td>Blue Cloak<br/>蓝披风</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Blue%20Cloak_p.png" height="190" width="250" /></td>
+    <td><i>Starter</i></td>
+    <td><i>Attack</i></td>
+    <td>0</td>
+    <td>Deal 2(4) damage. Draw 1 card. Discard 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Apply 1 <span class="color-y">Weak</span> to all enemies. <span class="color-p">}</span>
+      <br/><br/>造成 2 {{4}} 点伤害。 抽1张牌。 丢弃1张牌。 『 密谋 ：给予所有敌人1层 虚弱 。』
+      <br/><br/><hr/><br/><i>A reference to Miko's invocation of</i> Aka Manto <i>in</i> <u>Urban Legend in Limbo</u><i>.
+        <br/><br/>An offset-mirror with Red Cloak in the tilted dualistic way most of Miko is.
+        The Plot mechanic refers to the swirling spirits of desires in her introductory incident simply spawned around her up-and-coming presence (the autoplay part) paired with her backstory's many machinations.
+        With multiple characters already playing with discard effects, the on-draw effect was used as both differentiation and cause for many other characterizing design constraints (like The Administrix's low degree of up-front damage).</i></td>
+  </tr>
 
-      <tr>
-        <td>Metempsychosis</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Metempsychosis_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>1(0)</td>
-        <td>Put a card from your draw pile on top of your draw pile. Gain [E] next turn. Draw 1 less card next turn.</td>
-      </tr>
-      
-      <tr>
-        <td>Mix of Mercury</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Mix%20of%20Mercury_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Gain 2 <span class="color-y">Thorns</span>. Gain 2 <span class="color-y">Wilting</span>. Gain 1(2) <span class="color-y">Artifact</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>New Wardrobe</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/New%20Wardrobe_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Swap your <span class="color-l">Yin</span> & <span class="color-w">Yang</span>. Deal damage to ALL enemies equal to (4 +) the difference between them. </td>
-      </tr>
-      
-      <tr>
-        <td>Overdrive</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Overdrive_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>N/A</td>
-        <td><span class="color-y">Unplayable</span>. Gain 4 <span class="color-y">Duality</span>. <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain [E]. Gain 3(4) <span class="color-y">Strength</span>. Lose 5(6) <span class="color-y">Strength</span> at the end of this turn. <span class="color-y">Exhaust</span>. <span class="color-p">}</span></td>
-      </tr>
-      
-      <tr>
-        <td>Quiet Conspiracy</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Quiet%20Conspiracy_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>If the enemy doesn't intend to attack, look at the top 4(5) cards of your draw pile, and discard any of them. Regardless, draw 2 cards.</td>
-      </tr>
-      
-      <tr>
-        <td>Reach to Heaven</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Reach%20to%20Heaven_p.png" height="190" width="250" /></td>    <td><i>Uncommon</i></td>
-        <td><i>Attack</i></td>
-        <td>X</td>
-        <td>Discard X cards. Deal 3(4) damage X times. Deal 3(4) to all enemies X times. Gain 3(4) <span class="color-w">Yang</span> X times.</td>
-      </tr>
-      
-      <tr>
-        <td>Rising Sun's Prince</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Rising%20Sun's%20Prince_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 4(6) damage twice. <span class="color-p">{</span> <span class="color-y">Plot</span>: ALL enemies lose 2(3) <span class="color-y">Strength</span> this turn. <span class="color-p">}</span></td>
-      </tr>
-      
-      <tr>
-        <td>Syncretic Plunge</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Syncretic%20Plunge_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Add a(n <span class="color-y">upgraded</span>) <span class="color-y">Nightfall</span> to your hand for every Attack you've played this turn.</td>
-      </tr>
-      
-      <tr>
-        <td>Syncretic Surge</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Syncretic%20Surge_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Add a(n <span class="color-y">upgraded</span>) <span class="color-y">Daybreak</span> to your hand for every Skill you've played this turn (including this one).</td>
-      </tr>
+  <tr>
+    <td>Defend<br/>防御</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Defend_p.png" height="190" width="250" /></td>
+    <td><i>Starter</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Gain 5(8) <span class="color-y">Block</span>.
+      <br/><br/>获得 5 {{8}} 点 格挡。
+      <br/><br/><hr/><br/><i>Game design requires a thousand different skills in a thousand different fields, so while it's a shame to see mods with base game card art or monochrome edits or nearly no art, it's hardly surprising. It doesn't take much in terms of tools and knowledge to adjust hues and colours from scratch, but it helps distinguish every mod decently well.</i></td>
+  </tr>
 
-      <tr>
-        <td>Transcension</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Transcension_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>2</td>
-        <td>Replay the last Attack you played this turn for each 9(7) of the lower of your <span class="color-l">Yin</span> and <span class="color-w">Yang</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Unstable Vigor</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Unstable%20Vigor_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 12(14) damage. Gain 3(4) <span class="color-y">Strength</span>. Lose 3(4) <span class="color-y">Strength</span> at the end of this turn. Gain 1 <span class="color-y">Wilting</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Untouchable</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Untouchable_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Skill</i></td>
-        <td>0</td>
-        <td>Apply 1 <span class="color-y">Weak</span>. If the enemy intends to attack, gain 2(3) <span class="color-y">Dexterity</span>, and lose 3(4) <span class="color-y">Dexterity</span> at the end of the turn. <span class="color-y">Exhaust</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Wicked Punishment</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Wicked%20Punishment_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Attack</i></td>
-        <td>2</td>
-        <td>Deal 6(8) damage twice. Draw 2 cards. Gain 3(4) <span class="color-l">Yin</span> twice.</td>
-      </tr>
-      
-      <tr>
-        <td>Wuji</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Wuji_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Power</i></td>
-        <td>1(0)</td>
-        <td>Gain 1 <span class="color-y">Dexterity</span> for each 5 of the lower of your <span class="color-l">Yin</span> or your <span class="color-w">Yang</span>. Lose half of your <span class="color-l">Yin</span> and <span class="color-w">Yang</span>. <span class="color-y">Retain</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Xian Arts</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Xian%20Arts_p.png" height="190" width="250" /></td>
-        <td><i>Uncommon</i></td>
-        <td><i>Power</i></td>
-        <td>2</td>
-        <td><span class="color-y">Ethereal</span>. Whenever you gain any <span class="color-y">Artifact</span>, gain 1 <span class="color-y">Strength</span> and 1 <span class="color-y">Dexterity</span>.</td>
-      </tr>
+  <tr>
+    <td>Red Cloak<br/>红披风</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Red%20Cloak_p.png" height="190" width="250" /></td>
+    <td><i>Starter</i></td>
+    <td><i>Skill</i></td>
+    <td>0</td>
+    <td>Gain 2(4) <span class="color-y">Block</span>. Draw 1 card. Discard 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Apply 1 <span class="color-y">Vulnerable</span> to all enemies. <span class="color-p">}</span>
+      <br/><br/>获得 2{{4}} 格挡。 抽1张牌。 丢弃1张牌。 『 密谋 ：给予所有敌人1层 易伤 。』
+      <br/><br/><hr/><br/><i>A reference to Miko's invocation of </i>Aka Manto<i> in </i><u>Urban Legend in Limbo</u><i>.
+        <br/><br/>Every character's access to applying Weak and Vulnerable is another key piece of character definition, and Miko's regular single-stack-for-all might be a bit much, but over the full course of the game it's still got awkward match-ups.</i></td>
+  </tr>
 
-      <tr>
-        <td>Amassed Masks</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Amassed%20Masks_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Skill</i></td>
-        <td>2</td>
-        <td>Add a random Attack card, Skill card, and Power card into your hand(, then <span class="color-y">upgrade</span> all of them). They all cost 0 this turn. <span class="color-y">Exhaust</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Battleforged Bonds</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Battleforged%20Bonds_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Skill</i></td>
-        <td>4</td>
-        <td>Gain 4 <span class="color-y">Strength</span> and 4 <span class="color-y">Dexterity</span>. Lose such at the end of this turn. Reduce the cost of all cards in your hand to 0 this turn. <span class="color-y">Exhaust</span>. (<span class="color-y">Retain</span>.)</td>
-      </tr>
-      
-      <tr>
-        <td>Brewing Cloister</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Brewing%20Cloister_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Skill</i></td>
-        <td>2</td>
-        <td>Gain 16(24) <span class="color-y">Block</span>. Obtain a random non-healing potion. <span class="color-y">Exhaust</span>.</td>
-      </tr>
+  <tr>
+    <td>Strike<br/>打击</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Strike_p.png" height="190" width="250" /></td>
+    <td><i>Starter</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 6(9) damage.
+      <br/><br/>造成 6 {{9}} 点伤害。
+      <br/><br/><hr/><br/><i>The Administrix is absolutely the kind of character who would think her every strike is perfect.</i></td>
+  </tr>
 
-      <tr>
-        <td>Cosmos Control</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Cosmos%20Control_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Skill</i></td>
-        <td>2</td>
-        <td>Put a card from your discard pile into your hand. Put a card from your hand on top of your draw pile. Both cost 0 until played. <span class="color-y">Exhaust</span> (not).</td>
-      </tr>
+  <tr>
+    <td>Centuries Ascent<br/>世纪崛起</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Centuries%20Ascent_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Gain 4(6) <span class="color-y">Block</span>. (Gain 2 <span class="color-w">Yang</span>). <span class="color-p">{</span> <span class="color-y">Plot</span>: Add a <span class="color-y">Daybreak</span> to your hand. <span class="color-p">}</span>
+      <br/><br/>获得 4{{6}} 点 格挡 。 {{ 获得 2 点 阳 }}。 『 密谋 ：将一张 日出 加入你的手牌。』
+      <br/><br/><hr/><br/><i>Gender processes can take an eternity to realize.<br/>Mirrors Passage of Ages.</i></td></td>
+  </tr>
 
-      <tr>
-        <td>Death by Glamour</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Death%20By%20Glamour_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Power</i></td>
-        <td>3</td>
-        <td>At the start of your turn, add a random Rare card to your hand [which costs 0 that turn (this combat)], and discard 1 card.</td>
-      </tr>
-      
-      <tr>
-        <td>Faithful Flames</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Faithful%20Flames_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Power</i></td>
-        <td>2</td>
-        <td>(<span class="color-y">Innate</span>.) Whenever you play 3 Attacks, gain 2 <span class="color-y">Thorns</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>False Death</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/False%20Death_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Skill</i></td>
-        <td>2</td>
-        <td>Discard your draw pile. Put 2(3) cards from your discard pile ontop of your draw pile. Gain 3 <span class="color-y">Wilting</span>. <span class="color-y">Exhaust</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Fear of Death</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Fear%20Of%20Death_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Power</i></td>
-        <td>0</td>
-        <td>Gain 3 <span class="color-y">Frail</span>. Gain 3 <span class="color-y">Wilting</span>. Gain 4(7) <span class="color-y">Artifact</span>. Discard your hand.</td>
-      </tr>
-      
-      <tr>
-        <td>Girls Do It Better</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Girls%20Do%20It%20Better_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Attack</i></td>
-        <td>2</td>
-        <td>Deal 2 damage 4(7) times. Enemy loses <span class="color-y">Strength</span> equal to two-thirds of your <span class="color-y">Strength</span>, rounded down. <span class="color-y">Exhaust</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Have It All</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Have%20It%20All_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Attack</i></td>
-        <td>0</td>
-        <td>Gain 1 <span class="color-y">Block</span> (twice). Deal 1 damage to ALL enemies (twice). Gain 1 <span class="color-y">Affinity</span>. Discard 1 card.</td>
-      </tr>
-      
-      <tr>
-        <td>Hope in the Dark</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Hope%20in%20the%20Dark_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Skill</i></td>
-        <td>2</td>
-        <td><span class="color-y">Ethereal</span>. Gain <span class="color-y">Block</span> equal to (one and a half times) the amount of <span class="color-l">Yin</span> you have more of than <span class="color-w">Yang</span>(, rounded down). Remove all of your Debuffs.</td>
-      </tr>
-      
-      <tr>
-        <td>Immortal Clarity</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Immortal%20Clarity_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Power</i></td>
-        <td>1</td>
-        <td>Choose a card. Add a copy of that card into your hand (each turn for the) next (2) turn(s). <span class="color-p">{</span> <span class="color-y">Plot</span>: Upgrade all </span> <span class="color-y">Immortal</span> cards in your hand (deck) for the rest of this combat. <span class="color-p">}</span></td>
-      </tr>
-      
-      <tr>
-        <td>Lifeforce Net</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Lifeforce%20Net_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Attack</i></td>
-        <td>1</td>
-        <td>Deal 4(5) damage to a random enemy twice. Deal 4(5) damage to ALL enemies. Obtain 1 Fairy in a Bottle. <span class="color-y">Exhaust</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Luminary's Path</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Luminary's%20Path_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Discard your hand. Draw cards and gain [E] equal to the difference between your <span class="color-l">Yin</span> and your <span class="color-w">Yang</span>, divided by 10 (8). <span class="color-y">Exhaust</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Mastermind</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Mastermind_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Skill</i></td>
-        <td>1</td>
-        <td>Double all <span class="color-y">Plot</span> effects this turn and next turn. <span class="color-y">Transpose</span> one (two). Draw 1 less card next turn. <span class="color-y">Exhaust</span>.</td>
-      </tr>
-      
-      <tr>
-        <td>Newborn Divinity</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Newborn%20Divinity_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Attack</i></td>
-        <td>2</td>
-        <td><span class="color-y">Ethereal</span>. Deal damage equal to 2(3) times the amount of <span class="color-w">Yang</span> you have more of than <span class="color-l">Yin</span>. Remove all of your Debuffs.</td>
-      </tr>
+  <tr>
+    <td>Cracking Pangu<br/>盘古开天</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Cracking%20Pangu_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 9(12) damage. Every three times you play any Cracking Pangu[+] this combat, remove all of your Debuffs.
+      <br/><br/>造成 9 {{12}} 点伤害。 在本场战斗中每打出3次 盘古开天(+)，移除自身所有负面状态
+      <br/><br/><hr/><br/><i>The ancient Chinese myth of Pangu concerns a primordial creator-giant hatching from a cosmic egg, a rather loaded metaphor here.
+        <br/><br/>The play-thrice mechanic was intended to provide non-Plot uses for Transpose- while it works here, a non-status UI and far more iterations of it could easily support a character concept by itself.</i></td>
+  </tr>
 
-      <tr>
-        <td>Schism</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Schism_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Attack</i></td>
-        <td>1(0)</td>
-        <td>Deal damage equal to half your <span class="color-y">Block</span> to ALL enemies. Gain half your current <span class="color-y">Block</span> next turn. Lose all <span class="color-y">Block</span>.</td>
-      </tr>
+  <tr>
+    <td>Diversion Tactic<br/>转移注意战术</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Diversion%20Tactic_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 7(10) damage. Discard 1 card. <span class="color-y">Retain</span> your hand this turn.
+      <br/><br/>造成 7 {{10}}  点伤害。 丢弃1张牌。 在本回合 保留 你的手牌。</td>
+  </tr>
 
-      <tr>
-        <td>Star Sword Soul</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Star%20Sword%20Soul_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Power</i></td>
-        <td>3</td>
-        <td>(<span class="color-y">Innate.</span>) At the start of your turn, gain 1 <span class="color-y">Affinity</span> and draw 1 additional card. <span class="color-y">Retain</span>.</td>
-      </tr>
+  <tr>
+    <td>Extol Virtue<br>赞颂美德</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Extol%20Virtue_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 7(10) damage to ALL enemies. If you have any <span class="color-y">Artifact</span>, gain 1 more.
+      <br/><br/>对所有敌人造成 7{{10}} 点伤害。 如果你有任意层 人工制品 ，再获得 1 层 人工制品 。
+      <br/><br/><hr/><br/><i>Based off of Miko's empassioned speech condemning junk food in </i><u>Alternative Facts in Eastern Utopia</u><i>.
+        <br/><br/>The Administrix pushed the limits of per-card complexity a bit far, and it's most visible when even the simplest cards concern conditional effects, which can provide quite the constant conscious overhead.
+        It's not as chaotic as cards with four or more seperate actions, but it's still another concern amongst many.</i></td>
+  </tr>
 
-      <tr>
-        <td>Ten Desires</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Ten%20Desires_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Skill</i></td>
-        <td>2</td>
-        <td><span class="color-y">Ethereal</span>. <span class="color-y">Transpose</span> two. Draw cards until you have 10 in your hand. Discard 2 cards. <span class="color-y">Exhaust</span> (not).</td>
-      </tr>
+  <tr>
+    <td>Funerary Rites<br/>葬礼</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Funerary%20Rites_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Skill</i></td>
+    <td>1(0)</td>
+    <td>Discard 1 card. Put a card from your Discard Pile on top of your draw pile. Gain 4 <span class="color-l">Yin</span>.
+      <br/><br/>丢弃1张牌。 将弃牌堆中的一张牌放到抽牌堆的顶部。 获得 4 点 阴 。
+      <br/><br/><hr/><br/><i>The Administrix, as an adaptation of a messy character, has a broad mix of different flavours. A historical and scholarly Japanese prince who adored China and established a constitution, a scheming lich/saint princess who manipulates faith and the Tao as a means of power.
+        It's very easy to forget the undead flavourings of a rather clean-looking anime woman, but a number of cards do directly ply on it.
+        <br/>Mirrors Light of Your Life.</i></td>
+  </tr>
 
-      <tr>
-        <td>Wife's Lightning</td>
-        <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Wife's%20Lightning_p.png" height="190" width="250" /></td>
-        <td><i>Rare</i></td>
-        <td><i>Power</i></td>
-        <td>2</td>
-        <td>(<span class="color-y">Innate</span>.) Whenever you play 3 Attacks, gain 2 <span class="color-y">Plated Armor</span>.</td>
-      </tr>
-    </table>
-  </body>
+  <tr>
+    <td>Immortal Grace<br/>神灵之慈悲</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Immortal%20Grace_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 7(8) damage. Draw 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Upgrade all Immortal cards in your hand (deck) for the rest of this combat. <span class="color-p">}</span>
+      <br/><br/>造成 7(8) 点伤害。 抽1张牌。 『 密谋 ：在本场战斗中 升级 你手牌中所有的 {{ 所有的 }} 神灵 牌。』
+      <br/><br/><hr/><br/><i>The trio of Immortal cards are a reference to the highest Taoist divinities, the Three Pure Ones.
+        <br/><br/>Every base class character has a Common Attack that just draws a card and deals damage- Pommel Strike / Quick Slash / Sweeping Beam- and iterating upon that lead to this first of the Immortal cards.</i></td>
+  </tr>
+
+  <tr>
+    <td>Immortal Purity<br/>神灵之纯粹</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Immortal%20Purity_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Gain 7(8) <span class="color-y">Block</span>. Discard 1 card. <span class="color-p">{</span> <span class="color-y">Plot</span>: Upgrade all Immortal cards in your hand (deck) for the rest of this combat. <span class="color-p">}</span>
+      <br/><br/>造成 7(8) 点伤害。 抽1张牌。 『 密谋 ：在本场战斗中 升级 你手牌中所有的 {{ 所有的 }} 神灵 牌。』
+      <br/><br/><hr/><br/><i>The trio of Immortal cards are a reference to the highest Taoist divinities, the Three Pure Ones.
+        <br/><br/>With how wordy the card effects are, cards using this keyword quickly got locked into a corner- which is a shame, since the Claw-style Plot effect easily appeals to many, and would be an ideal starting point for another character concept...</td>
+  </tr>
+
+  <tr>
+    <td>Light of Your Life<br/>汝生之光芒</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Light%20Of%20Your%20Life_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Skill</i></td>
+    <td>1(0)</td>
+    <td><span class="color-y">Transpose</span> one. Draw 1 card. Gain 4 <span class="color-w">Yang</span>.
+      <br/><br/>易转 1张。 抽 1 张牌。 获得4点 阳 。
+      <br/><br/><hr/><br/><i>While most cards in Slay the Spire are not particularly wordy or prosiac, most Touhou spellcards are, and imparting a bit of this as distinguishing identity into The Administrix's cards was a rather deliberate identity point.
+        <br/>Mirrors Funerary Rites.</i></td>
+  </tr>
+
+  <tr>
+    <td>Noble Path<br/>圣道</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Noble%20Path_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 8 damage. Gain 3 <span class="color-l">Yin</span> (twice). Gain 3 <span class="color-w">Yang</span> (twice).
+      <br/><br/>造成 8 点伤害。 获得 3 点 阴 {{ 2次 }}。 获得 3 点 阳 {{ 2次 }}。
+      <br/><br/><hr/><br/><i>A reference to the </i><u>Antinomy of Common Flowers</u> <i>spell cards,</i> 「Glory of the Noble Path that Guides You」<i>, which allude to the Eightfold Path, in the whole Buddhist-distribution notion that forms Shōtoku -> Miko's backstory.
+        <br/><br/>Class colours in the base game manifest on card art as said colour + red, and most mod classes using such as a base mostly work with monochrome paintjobs or minor tweaks, which readily lose distictions and cohesion of sum totals. The Administrix spreads this out to gold and purple, much like her own outfit, plus red-blue card pairs, as the colours of the twelve ranks... though the occasional pink is used alongside lighter blues for the pride flag colours.</td>
+  </tr>
+
+  <tr>
+    <td>Passage of Ages<br/>时代推移</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Passage%20of%20Ages_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 4(6) damage. (Gain 2 <span class="color-l">Yin</span>). <span class="color-p">{</span> <span class="color-y">Plot</span>: Add a <span class="color-y">Nightfall</span> to your hand. <span class="color-p">}</span>
+      <br/><br/>造成 4 {{6}} 点伤害。 {{ 获得 2 点 阴 }}。 『 密谋 ：将一张 夜临 加入你的手牌。』
+      <br/><br/><hr/><br/><i>Gender processes can take endless steps to realize.<br/>Mirrors Centuries Ascent.</i></td></td>
+  </tr>
+
+  <tr>
+    <td>Plate Of Antiquity<br/>古代盘子</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Plate%20of%20Antiquity_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 7(8) damage. Gain 2(3) <span class="color-y">Dexterity</span>. Lose 2(3) <span class="color-y">Dexterity</span> at the end of this turn.
+      <br/><br/>造成 7 {{8}} 点伤害。 获得 2 {{3}} 点 敏捷 。 在回合结束时失去 2 {{3}} 点 敏捷 。
+      <br/><br/><hr/><br/><i>A card calling upon the attendant Mononobe no Futo.
+        <br/>Mirrors Sip of Sparks.</i></td></td>
+  </tr>
+
+  <tr>
+    <td>Quiet Conspiracy<br/>寂静的阴谋</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Quiet%20Conspiracy_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>If the enemy doesn't intend to attack, look at the top 4(5) cards of your draw pile, and discard any of them. Regardless, draw 2 cards.
+      <br/><br/>如果这名敌人的意图不是攻击， 则查看抽牌堆顶部的 4{{5}} 张牌、并丢弃其中任意张牌。 之后不论敌人的意图如何， 抽2张牌。</td>
+  </tr>
+
+  <tr>
+    <td>Rebuke Desires<br/>惩戒欲念</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Rebuke%20Desires_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>0</td>
+    <td>(<span class="color-y">Innate</span>.) Deal 4 damage. If the enemy doesn't intend to attack, gain 1 <span class="color-y">Artifact</span>.
+      <br/><br/>{{ 固有。 }} 造成 4 点伤害。 如果这名敌人的意图不是攻击，获得 1 层 人工制品 。
+      <br/><br/><hr/><br/><i>While it is very thematic for The Administrix to listen for enemy desires, conditional clauses as a subsubtheme could have done with more representation and subsuming some other subsubtheme, considering their additional decision-overhead burden.
+        <br/><br/>This card in particular still readily succeeds for its own purposes, however- there's a lot of Artifact sources for the temporary stats / self-debuffs to work, but they're either conditional, overcosted, or self-debuffing, in stark contrast to just handing it out freely and singularly as many other classes do.</i></td>
+  </tr>
+
+  <tr>
+    <td>Regent's Edict<br/>天子诏书</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Regent's%20Edict_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 4(7) damage. Whenever you play any Regent's Edict[+] three times this combat, steal the enemy's <span class="color-y">Strength</span>.
+      <br/><br/>造成 4 {{7}} 点伤害。 在本场战斗中每打出3次 天子诏书(+) 后，偷取目标敌人的所有 力量。
+      <br/><br/><hr/><br/><i>A vertical cycle of Strength reduction, with Rising Sun's Prince and Girls Do It Better, itself using the mechanic of Cracking Pangu and Feast of Dew.
+        <br/><br/>Worse than a Strike for over half of all hallway fights and elites, so it's not as dominating as it looks. Doesn't steal negative Strength.</i></td>
+  </tr>
+
+  <tr>
+    <td>Seal Away<br/>密封</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Seal%20Away_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Draw 2(4) cards. <span class="color-y">Upgrade</span> all cards in your hand for the rest of this combat. Discard your hand.
+      <br/><br/>抽 2 {{4}} 张牌。 在本场战斗中 升级 手牌中的所有牌。 丢弃你的所有手牌。
+      <br/><br/><hr/><br/><i>A gender card, and a story-in-a-bottle card- for the latter, think of Cathartic Reunion off in </i><u>Kaladesh</u><i>. Whatever strength the mystical arts offered, such hubris still lead to locking one's self away (and to finding strength later on).</i></td>
+  </tr>
+
+  <tr>
+    <td>Shadow Play<br/>影子戏法</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Shadow%20Play_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 6 damage. Draw 2 cards. Discard 1 card. Gain 4 <span class="color-l">Yin</span>. <span class="color-y">Exhaust</span> (not).
+      <br/><br/>造成 6 点伤害。 抽2张牌。 丢弃1张牌。 获得4点 阴 。 消耗 {{不会 消耗}}。
+      <br/><br/><hr/><br/><i>Another story-in-a-bottle card- it <b>is</b> right there in the name. Wage some battles, gain two companions, discard a self, lean to the dark feminine aspect.
+        <br/>Mirrors Trick of the Light.</i></td>
+  </tr>
+
+  <tr>
+    <td>Sip of Sparks<br/>小撮电光</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Sip%20of%20Sparks_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Gain 7(8) <span class="color-y">Block</span>. Gain 2(3) <span class="color-y">Strength</span>. Lose 2(3) <span class="color-y">Strength</span> at the end of this turn.
+      <br/><br/>"获得 7{{8}} 点 格挡 。 获得 2{{3}} 点 力量 。 在回合结束时失去 2{{3}} 点 力量 。
+      <br/><br/><hr/><br/><i>A card calling upon the partner Soga no Tojiko.
+        <br/>Mirrors Plate of Antiquity.</i></td>
+  </tr>
+
+  <tr>
+    <td>Touch of Cinnabar<br/>接触朱砂</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Touch%20of%20Cinnabar_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Gain 2(4) <span class="color-y">Plated Armor</span>. Gain 2 <span class="color-y">Frail</span>. Gain 1 <span class="color-y">Artifact</span>.
+      <br/><br/>获得 2{{4}} 层 多层护甲 。 获得2层 脆弱 。 获得 1 层 人工制品 。
+      <br/><br/><hr/><br/><i>Miko's omake.txt story outlines how she was dissatisfied by the inevitability of death and partook of elixirs of immortality.
+        <br/>Mirrors Mix of Mercury.</i></td>
+  </tr>
+
+  <tr>
+    <td>Transition<br/>转变</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Transition_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Skill</i></td>
+    <td>1(0)</td>
+    <td>Discard 2 cards. Gain [E] next turn. <span class="color-p">{</span> <span class="color-y">Plot</span>: Draw 1 card next turn. <span class="color-p">}</span>
+      <br/><br/>丢弃2张牌。 下回合获得 [R] 。 『 密谋 ：下回合抽1张牌。』
+      <br/><br/><hr/><br/><i>A very unsubtle card about immediate expenditures for delayed benefits. Toyosatomimi is canonically identified as our historical Prince Shōtoku, after all. Doesn't quite mirror Metempsychosis.</i></td>
+  </tr>
+
+  <tr>
+    <td>Trick of the Light<br/>光线把戏</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Trick%20of%20the%20Light_p.png" height="190" width="250" /></td>
+    <td><i>Common</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 7 damage. Discard the top <span class="color-y">Plot</span> card in your draw pile. Gain 4 <span class="color-w">Yang</span>. <span class="color-y">Exhaust</span> (not).
+      <br/><br/>造成 7 点伤害。 丢弃抽牌堆中最靠近顶部的 密谋 牌。 获得 4 点 阳。 消耗 {{不会 消耗}}。
+      <br/><br/><hr/><br/><i>Vaguely inspired by </i><u>Shadowverse</u><i> and its conditional-randomized tutoring.<br/>Mirrors Shadow Play.</i></td>
+  </tr>
+
+  <tr>
+    <td>17-Article Laser<br/>十七条的光芒</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Seventeen%20Article%20Laser_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Attack</i></td>
+    <td>2</td>
+    <td>Deal 17 damage (to ALL enemies). <span class="color-y">Transpose</span> one.
+      <br/><br/>造成 17 点伤害 {{ 对所有敌人造成 17 点伤害 }}。 易转 1张。
+      <br/><br/><hr/><br/><i>A reference to the</i> <u>Ten Desires</u> <i>spell card,</i> 「Laser of Seventeen Articles」. <i>
+        <br/><br/>Took a while to design in terms of supporting an upgrade without losing the nominal reference.</i></td>
+  </tr>
+
+  <tr>
+    <td>Armillary Sphere<br/>浑天仪</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Armillary%20Sphere_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>2</td>
+    <td>Gain 4(5) <span class="color-y">Block</span> next turn. Gain 1(2) <span class="color-y">Artifact</span>. <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain 4(5) <span class="color-y">Block</span>. <span class="color-p">}</span>
+      <br/><br/>下回合获得 4 {{5}} 点 格挡 。 获得 1 {{2}} 层 人工制品 。 『 密谋 ：获得 4 {{5}} 点 格挡 。』
+      <br/><br/><hr/><br/><i>A reference to the</i> <u>Ten Desires</u> <i>spell card,</i> 「Armillary Sphere of Ikaruga-dera」.
+      <br/><br/><i>The Plot effect scales to Dexterity and Frail, despite this not updating properly in the Transpose interface, because "gain exactly 4 Block" looked extremely awkward. Not that the other way wouldn't have merit.</i></td>
+  </tr>
+
+  <tr>
+    <td>Bishamon's Blessing<br/>毘沙门的祝福</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Bishamon's%20Blessing_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td></td>
+    <td><span class="color-y">Unplayable</span>. <span class="color-y">Exhausts</span> when drawn (<span class="color-y">Ethereal</span>). <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain 3 <span class="color-w">Yang</span>. Apply 1 <span class="color-y">Weak</span> to all enemies. Draw 1 card. <span class="color-p">}</span>
+      <br/><br/>不能被打出。 抽到时 消耗 {{虚无}}。 『 密谋 ：获得 3 点 阳。 给予所有敌人1层 虚弱。 抽1张牌。』
+      <br/><br/><hr/><br/><i>Prince Shōtoku prayed to Bishamonten and won a battle over the Mononobe clan, leading to the creation of the temple Chōgosonshi-ji.
+        <br/>Mirrors Guanyin's Blessing. A domain of war easily leaves one weak.</i></td>
+  </tr>
+
+  <tr>
+    <td>Beget Eternity<br/>终致永生</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Beget%20Eternity_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Attack</i></td>
+    <td>3</td>
+    <td>Deal 7(9) damage thrice. Draw 1 additional card next turn. Gain 2(3) <span class="color-y">Strength</span>. <span class="color-y">Exhaust</span>.
+      <br/><br/>造成 7 {{9}} 点伤害三次。 下回合多抽1张牌。 获得 2{{3}} 点 力量 。 消耗 。
+      <br/><br/><hr/><br/><i>The inversion effects on many of the Administrix's cards serve two purposes. First off, they provide a decent duality-invoking visual gimmick and differentiation for material derived from the base game's card art. Secondly, it highlights cards that themselves are noticeably dualistic- either they have self-debuffs attached to buffs, or they indicate cards that reflect both Yin and Yang (directly or through Affinity).
+        This second point is broken for this card in particular, simply because an earlier version provided Affinity and the art / concept was too nice to cut otherwise.</i></td>
+  </tr>
+
+  <tr>
+    <td>Blood Bargain<br/>无血色的蓝宝石</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Blood%20Bargain_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Apply 2 <span class="color-y">Vulnerable</span> (to ALL enemies). Gain 2 <span class="color-y">Frail</span>. If the enemy intends to attack (for each enemy that intends to attack), gain 3 <span class="color-y">Thorns</span> and 3 <span class="color-y">Plated Armor</span>.
+      <br/><br/>给予2层 易伤。 获得2层 脆弱。 如果目标敌人的意图是攻击， 获得3层 多层护甲 和 两点 荆棘。
+      <br/>{{ 给予所有敌人2层 易伤。 获得2层 脆弱。 每有一位意图是攻击的敌人， 获得3层 多层护甲 和 两点 荆棘 }}
+      <br/><br/><hr/><br/><i>This risky card came together quite late in development, and addresses a great number of causes at once. It's the fourth Vulnerable source (to match to four Weak sources), the second if-attack card (to match to two if-not-attack cards), the fifth Frail source (to match five Wilting sources), and a third Armor / Thorns source.</i></td>
+  </tr>
+
+  <tr>
+    <td>Bloodless Sapphire<br/>无血色的蓝宝石</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Bloodless%20Sapphire_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>2</td>
+    <td>Gain 14(18) <span class="color-y">Block</span>. Heal 4(7) HP. Gain 2 <span class="color-y">Wilting</span>. <span class="color-y">Exhaust</span>.
+      <br/><br/>获得 14{{18}} 点 格挡 。 回复 4{{7}} 生命。 获得2层 枯萎 。 消耗 。
+      <br/><br/><hr/><br/><i>Mirrors Fiendish Crimson. Only a slim portion of cards ended up representing the Aka Manto invocation, which is caught between it being sufficiently grim enough for the undead themes and otherwise not really being reflected much in all of Miko's symbolism.</i></td>
+  </tr>
+
+  <tr>
+    <td>Cast Off Regrets<br/>抛却遗憾</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Cast%20Off%20Regrets_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Power</i></td>
+    <td>1(0)</td>
+    <td>Gain 2 <span class="color-y">Frail</span> twice. Whenever you manually discard a card, gain 2 of the higher of your <span class="color-l">Yin</span> and your <span class="color-w">Yang</span>.
+      <br/><br/>获得2层 脆弱 2次。 每当你手动丢弃1张牌， 阴 、 阳 当中更多的那项获得 2 点。
+      <br/><br/><hr/><br/><i>Another unsubtle gender card. Mechanically, a dire (if transient) downside and a rather understated benefit, but one with immense obvious pay-off.</i></td>
+  </tr>
+
+  <tr>
+    <td>Choose Your End<br/>选择你的末路</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Choose%20Your%20End_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 10(14) damage. Add a Red Cloak and Blue Cloak to your hand. <span class="color-y">Exhaust</span>.
+      <br/><br/>造成 10{{14}} 点伤害。 将 红披风 和 蓝披风 各1张加入你的手牌。 消耗 。
+      <br/><br/><hr/><br/><i>A reference to the PS4 port of </i>Urban Legend in Limbo<i>'s extra mode spell card, </i>「Life and Death are Fated ~Choose Your End by Your Own Free Will~」.
+      <br/><br/><i>Something may or may not be made of how ironic such a card name is.</i></td>
+  </tr>
+
+  <tr>
+    <td>Convergence<br/>会聚</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Convergence_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Power</i></td>
+    <td>2</td>
+    <td>Add a(n <span class="color-y">upgraded</span>) <span class="color-y">Daybreak</span> and a(n <span class="color-y">upgraded</span>) <span class="color-y">Nightfall</span> to your hand at the start of each turn.
+      <br/><br/>在每个回合开始时将 日出 和 夜临 各1张加入你的手牌。
+      <br/>{{在每个回合开始时将已 升级 的 日出 和 夜临 各1张加入你的手牌。}}</td>
+  </tr>
+
+  <tr>
+    <td>Dreams Mausoleum<br/>梦之陵寝</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Dreams%20Mausoleum_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>4</td>
+    <td><span class="color-y">Ethereal</span>. Gain 10(14) <span class="color-y">Block</span>. Gain 1 <span class="color-y">Artifact</span>. <span class="color-p">{</span> <span class="color-y">Plot</span>: This card costs 1 [E] less this combat. <span class="color-p">}</span>
+      <br/><br/>虚无 。 获得 !B! 点 格挡 。 获得 !M! 层 人工制品 。 『 密谋 ：这场战斗中这张牌的耗能减少1 [R] 。』
+      <br/><br/><hr/><br/><i>A reference to the Hall of Dreams' Great Mausoleum, a Gensokyo adaptation of Hōryū-ji, and a stage in Ten Desires and the Hopeless Masquerade subseries.
+        <br/><br/>This matches the 4-cost Uncommon cycle in base classes: Blood for Blood, Eviscerate, Force Field.</i></td>
+  </tr>
+
+  <tr>
+    <td>Feast of Dew<br/>露水盛宴</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Feast%20of%20Dew_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Draw 2 cards, then add a copy of this card to your draw pile (hand). <span class="color-y">Exhaust</span>.) Whenever you play any Feast of Dew[+] three times this combat, gain 4 <span class="color-y">Affinity</span>.
+      <br/><br/>抽 2 张牌。 然后将一张此牌的复制品加入你的抽牌堆 {{然后将一张此牌的复制品加入你的手牌}}。 消耗 。 在本场战斗中每打出3次 露水盛宴(+) ，获得 4 点 亲和 。
+      <br/><br/><hr/><br/><i>The undying mystic transcendence of the Xian can extend to subsisting on mist. One of the forms of such listed in the</i> <u>Shenxian Zhuan</u>,<i> or <u>Biographies of Spirit Immortals</u>, outlines how a disciple lost herself after a few days of daring to consume even a few grains of rice.
+        <br/><br/>This is reflected in a card that serves as a slow power source and meagre card draw, though it can still be quite potent.</td>
+  </tr>
+
+  <tr>
+    <td>Fiendish Crimson<br/>残忍猩红</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Fiendish%20Crimson_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Attack</i></td>
+    <td>2</td>
+    <td>Deal 14(18) damage. Heal 4(7) HP. Gain 2 <span class="color-y">Frail</span>. <span class="color-y">Exhaust</span>.
+      <br/><br/>造成 14{{18}} 点伤害。 回复 4{{7}} 生命。 获得2层 脆弱 。 消耗 。
+      <br/><br/><hr/><br/><i>Mirrors Bloodless Sapphire. Most mods at the time added more to Self-Repair for healing cards, rather than Reaper; thus, these passable damage / block cards came forth to match the latter.</td>
+  </tr>
+
+  <tr>
+    <td>Guanyin's Blessing<br/>观音的祝福</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Guanyin's%20Blessing_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td></td>
+    <td><span class="color-y">Unplayable</span>. <span class="color-y">Exhausts</span> when drawn (<span class="color-y">Ethereal</span>). <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain 3 <span class="color-l">Yin</span>. Apply 1 <span class="color-y">Vulnerable</span> to all enemies. Draw 1 card. <span class="color-p">}</span>
+      <br/><br/>不能被打出 。 抽到时 消耗 {{ 虚无 }} 。 『 密谋 ：获得 3 点 阴 。 给予所有敌人1层 易伤。 抽1张牌。』
+      <br/><br/><hr/><br/><i>Prince Shōtoku commissioned the temple Hōryū-ji as an extension of their palace, and the statue of Guanyin there resembles their portraits.
+        <br/><br/>The spellcard </i>「Halo of the Guse Kannon」<i>, as a name and a direct religious allusion, lead to the passive benefit design of this and its mirror, Bishamon's Blessing. Effects-wise, a domain of compassion easily leaves one vulnerable.</i></td>
+  </tr>
+
+  <tr>
+    <td>Harmonic Reverence<br/>谐和崇敬</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Harmonic%20Reverence_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Power</i></td>
+    <td>2</td>
+    <td>Gain 3(4) <span class="color-y">Affinity</span>. Double both your <span class="color-l">Yin</span> and your <span class="color-w">Yang</span>.
+      <br/><br/>获得 3{{4}} 点 亲和 。 翻倍你的 阴 和 阳 。
+      <br/><br/><hr/><br/><i>A reference to the </i>Ten Desires<i> stage 6 subtitle, "Hold Harmony Sacred", itself a direct citation of the first point in Prince Shōtoku's 17-article constitution.
+        <br/><br/>Some minor base-game cycle of 1-cost doubling Skills with exhaust could be argued between Limit Break, Catalyst, and Double Energy, which would thus be stapled onto a second Defragment here.</i></td>
+  </tr>
+
+  <tr>
+    <td>Hidden Power<br/>隐藏之力</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Hidden%20Power_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Power</i></td>
+    <td>0</td>
+    <td>Gain 1(2) <span class="color-y">Affinity</span>. Draw 1 less card next turn.
+      <br/><br/>获得 1{{2}} 点 亲和 。 下个回合少抽1张牌。
+      <br/><br/><hr/><br/><i>A reference to the </i><u>Ten Desires</u><i> stage 5 subtitle, "Blood of Those with Hidden Power".
+        <br/><br/>Incidentally, there's three or more card names that are also Pokemon move names per base class: Body Slam / Headbutt / Rage, Acrobatics / Sucker Punch / Leg Sweep, Blizzard / Recycle / Hyper Beam.</i></td>
+  </tr>
+
+  <tr>
+    <td>Just Rewards<br/>正直的奖赏</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Just%20Rewards_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Attack</i></td>
+    <td>2</td>
+    <td>Deal 10 damage to ALL enemies. Apply 1 <span class="color-y">Vulnerable</span> to ALL enemies. Add 2 <span class="color-y">Daybreak</span>(+)s to your hand.
+      <br/><br/>对所有敌人造成 10 点伤害。 给予所有敌人1层 易伤。 将2张 日出 加入你的手牌 {{ 将2张已 升级 的 日出 加入你的手牌 }} 。
+      <br/><br/><hr/><br/><i>A reference to the</i> Hopeless Masquerade <i>spell card,</i> 「Tradition of Just Rewards」<i>.
+        <br/>A thematic mirror of Wicked Punishment (constitution, 2 cost Y/Y attack), but a mechanical mirror of Katabasis (applies status, creates cards).</i></td>
+  </tr>
+
+  <tr>
+    <td>Katabasis<br/>大败退</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Katabasis_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>X</td>
+    <td>Apply 1 <span class="color-y">Weak</span> X(+1) times. Add an <span class="color-y">upgraded</span> <span class="color-y">Nightfall</span> to your hand each turn for the next X(+1) turns.
+      <br/><br/>给予1层 虚弱 X{{+1}}次。 在接下来的X{{+1}}回合，每个回合都将1张已 升级 的 夜临 加入你的手牌。
+      <br/><br/><hr/><br/><i>A term of Greek rhetoric, with a number of meanings of descent: here, it is meant to reflect a mythical journey into the underworld and back, which is echoed in Miko's feigned death and sealing herself underground.
+        <br/>A thematic mirror of Reach to Heaven (afterlife, x-cost y/y), but a mechanical mirror of Just Rewards (applies status, creates cards).</i></td>
+  </tr>
+
+  <tr>
+    <td>Metempsychosis<br/>轮回</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Metempsychosis_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>0</td>
+    <td>Put a card from your draw pile on top of your draw pile. Gain [E] next turn. Draw 1 less card next turn. Exhaust (not).
+      <br/><br/>将抽牌堆中的一张牌放到抽牌堆的顶部。 下个回合获得 [E]。 下个回合少抽1张牌。 消耗 {{不会 消耗}}。
+      <br/><br/><hr/><br/><i>A term of Greek philosophy, referring to the limbo and reincarnating transfer of a soul between bodies after death.
+        <br/>Another particularly-direct gender metaphor card, essentially, plying on the studious referential nature of many Touhou spell cards.
+        It doubles as a demonstration of the very edges of the Administrix's deck manipulation: across many cards, one can move given cards between the Draw Pile, the Discard Pile, and one's hand in any number of ways
+        except for the most traditional manner of tutoring from the draw pile directly to the hand.</i></td>
+  </tr>
+
+  <tr>
+    <td>Mix of Mercury<br/>混合水银</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Mix%20of%20Mercury_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Gain 2 <span class="color-y">Thorns</span>. Gain 2 <span class="color-y">Wilting</span>. Gain 1(2) <span class="color-y">Artifact</span>.
+      <br/><br/>获得2点 荆棘。 获得2层 枯萎。 获得 1{{2}} 层 人工制品 。
+      <br/><br/><hr/><br/><i>Elixirs of immortality and hormonal treatments both weaken and shape the body towards one's goals (e.g. "not die as a man"). The latter, of course, has proven to be enrichening and productive.
+        <br/>It's amazing how insular minds try to make out other anime alchemists like the Cagliostros as cis.
+        <br/>Mirrors Touch of Cinnabar.</td>
+  </tr>
+
+  <tr>
+    <td>New Wardrobe<br/>新的衣装</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/New%20Wardrobe_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Swap your <span class="color-l">Yin</span> & <span class="color-w">Yang</span>. Deal damage to ALL enemies equal to (4 +) the difference between them.
+      <br/><br/>互换你的 阴 和 阳。 对所有敌人造成 阴 和 阳 之间差值 {{+4}} 的伤害。
+      <br/><br/><hr/><br/><i>The base game mostly withholds scaling visual effects, with the cards effects that do so instead focusing in on quantity and size. The Administrix using discrete steps of different effects for this card and Newborn Divinity were inspired by The Servant using the same for Potential.
+        <br/>Also, this card's name and concept unsubtly invokes gender or something.</i></td>
+  </tr>
+
+  <tr>
+    <td>Overdrive<br/>过载</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Overdrive_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>N/A</td>
+    <td><span class="color-y">Unplayable</span>. <span class="color-p">{</span> <span class="color-y">Plot</span>: Gain [E]. Gain 3(4) <span class="color-y">Strength</span>. Lose 5(6) <span class="color-y">Strength</span> at the end of this turn. <span class="color-y">Exhaust</span>. <span class="color-p">}</span>
+      <br/><br/>不能被打出。 『 密谋 ： 获得 [E] 。 获得 3 {{4}} 点 力量 。 在回合结束时失去 5{{6}} 点 力量 。 消耗 。』
+      <br/><br/><hr/><br/><i>A reference to the </i><u>Ten Desires</u><i> difficulty setting hidden away in its spell card practice mode.</i></td>
+  </tr>
+
+  <tr>
+    <td>Reach to Heaven<br/>抵达天道</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Reach%20to%20Heaven_p.png" height="190" width="250" /></td>    <td><i>Uncommon</i></td>
+    <td><i>Attack</i></td>
+    <td>X</td>
+    <td>Discard X cards. Deal 3(4) damage X times. Deal 3(4) to all enemies X times. Gain 3(4) <span class="color-w">Yang</span> X times.
+      <br/><br/>丢弃 X 张牌。 造成 3{{4}} 点伤害X次。 对所有敌人造成 3{{4}} 点伤害X次。 获得 3{{4}} 点 阳 X次。
+      <br/><br/><hr/><br/><i>To become a celestial is the goal of any hermit in the setting of the Touhou Project, after all.
+        <br/>A thematic mirror of Katabasis, but a mechanical mirror of Wicked Punishment (discard versus draw, gain Y/Y multiple times in one card).</i></td>
+  </tr>
+
+  <tr>
+    <td>Rising Sun's Prince<br/>日出之处的天子</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Rising%20Sun's%20Prince_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 4(6) damage twice. <span class="color-p">{</span> <span class="color-y">Plot</span>: ALL enemies lose 2(3) <span class="color-y">Strength</span> this turn. <span class="color-p">}</span>
+      <br/><br/>造成 4 {{6}} 点伤害两次。 『 密谋 ：所有敌人在本回合失去 2 {{3}} 点 力量 。』
+      <br/><br/><hr/><br/><i>A vertical cycle of Strength reduction. Having access to so many is explicitly meant to counter The Heart- Act 4's particularly pressing excesses make a true ending far more unreliable than, say, winstreaking heartless A15 at top levels of play, which is quite the point of contention. The creator of this mod argues roguelikes are about mastering possibilities and not just jokey Sisyphean story engines, so.</i></td>
+  </tr>
+
+  <tr>
+    <td>Syncretic Plunge<br/>融合骤降</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Syncretic%20Plunge_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Add a(n <span class="color-y">upgraded</span>) <span class="color-y">Nightfall</span> to your hand for every Attack you've played this turn.
+      <br/><br/>本回合每打出过1张攻击牌， 就将1张 夜临 加入你的手牌 {{就将1张已 升级 的 夜临 加入你的手牌}}。
+      <br/><br/><hr/><br/><i>Syncretism refers to the merging of different religions; after Prince Shōtoku's introduction of Buddhism, Shinto and Buddhism intermingled heavily.<br/>
+        <br/>As such, these two cards make cards of one type based on playing cards of another type, intermingling one's effects that turn.</i></td>
+  </tr>
+
+  <tr>
+    <td>Syncretic Surge<br/>融合剧增</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Syncretic%20Surge_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Add a(n <span class="color-y">upgraded</span>) <span class="color-y">Daybreak</span> to your hand for every Skill you've played this turn (including this one).
+      <br/><br/>本回合每打出过1张技能牌 （包括这张）， 就将1张 日出 加入你的手牌 {{就将1张已 升级 的 日出 加入你的手牌}}。
+      <br/><br/><hr/><br/><i>The half-mythologized historical figure of Prince Shōtoku has been integrated into both Buddhist and Shinto beliefs, and the Touhou character adapting such implied yet another secret faith of Taoism.
+        <br/><br/>To be contextualized so heavily is innate to the very nature of Toyosatomimi no Miko, down to how her game of origin is a mechanical mirror of a previous game and directly plies on multiple prior games.</td>
+  </tr>
+
+  <tr>
+    <td>Transcension<br/>超越</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Transcension_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>2</td>
+    <td>Replay the last Attack you played this turn for each 9(7) of the lower of your <span class="color-l">Yin</span> and <span class="color-w">Yang</span>.
+      <br/><br/>重复打出本回合你打出的最后一张攻击牌 （阴 和 阳 中更少的那项每有9点就打出一次）。
+      <br/><br/><hr/><br/><i>While more flexibility and capabilities for Y/Y capstones were desired, this particular card can only replay Attacks so that it can avoid playing itself.</i></td>
+  </tr>
+
+  <tr>
+    <td>Unstable Vigor<br/>不稳定的活力</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Unstable%20Vigor_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 12(13) damage. Gain 2(3) <span class="color-y">Strength</span>. Lose 2(3) <span class="color-y">Strength</span> at the end of this turn. Gain 1 <span class="color-y">Wilting</span>.
+      <br/><br/>造成 12{{13}} 点伤害。 获得 2{{3}} 点 力量。 在回合结束时失去 2{{3}} 点 力量 。 获得1层 枯萎 。
+      <br/><br/><hr/><br/><i>Many character mods have experimented with self-debuffs and self-harm as mechanics, seeing as how The Ironclad's otherwise clean design gets little mileage out of it and The Servant succeeds decently well at it.
+        It is readily a rather awkward point of balance- player-focused percentage wrangling is quite the leap from the base game's granular mathetmatics, cards usually have to be undercosted and pushed, it cuts into the roguelike attrition dynamics.
+        The Administrix providing many sources of debuffs, negating debuffs, and buffs gained through such negation was an attempt to approach this as consistent utility; it is rather scattered in the results, but the occasional card is quite the highlight.</i></td>
+  </tr>
+
+  <tr>
+    <td>Untouchable<br/>不可触碰</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Untouchable_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Skill</i></td>
+    <td>0</td>
+    <td>Apply 1 <span class="color-y">Weak</span>. If the enemy intends to attack, gain 2(3) <span class="color-y">Dexterity</span>, and lose 3(4) <span class="color-y">Dexterity</span> at the end of the turn. <span class="color-y">Exhaust</span>.
+      <br/><br/>给予1层 虚弱 。 如果这名敌人的意图是攻击，获得 2{{3} 点 敏捷 ， 并在回合结束时失去 2{{3}} 点 敏捷 。 消耗 。</td>
+  </tr>
+
+  <tr>
+    <td>Wicked Punishment<br/>邪恶的惩罚</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Wicked%20Punishment_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Attack</i></td>
+    <td>2</td>
+    <td>Deal 6(8) damage twice. Draw 2 cards. Gain 3(4) <span class="color-l">Yin</span> twice.
+      <br/><br/>造成 6 {{8}} 点伤害2次。 抽2张牌。 获得 3 {{4}} 点 阴 2次。
+      <br/><br/><hr/><br/><i>An allusion to the sixth of seventeen articles, the same that Just Rewards alludes to. "To punish evil and reward good"- to judge and act righteously, forgoing prejudice and bribery.
+        <br/><br/>A thematic mirror of Just Rewards (constitution, 2 cost Y/Y attack), but a mechanical mirror of Reach to Heaven (draw versus discard, gain Y/Y multiple times in one card).</i></td>
+  </tr>
+
+  <tr>
+    <td>Wuji<br/>无极</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Wuji_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Power</i></td>
+    <td>2(1)</td>
+    <td>Gain 1 <span class="color-y">Dexterity</span> for each 5 of the lower of your <span class="color-l">Yin</span> or your <span class="color-w">Yang</span>. Lose half of your <span class="color-l">Yin</span> and <span class="color-w">Yang</span>. <span class="color-y">Retain</span>.
+      <br/><br/>阴 、 阳 当中更少的那项，每有5点就使你获得 1 点 敏捷 。 失去一半的 阳 和 阴 。 保留 。
+      <br/><br/><hr/><br/><i>Refers to the primordial, boundless infinity beyond and before Yin and Yang.
+        <br/>Sadly, one of the most troubled cards in design and balance for The Administrix- giving raw defensively scaling stats directly is quite dangerous.</i></td>
+  </tr>
+
+  <tr>
+    <td>Xian Arts<br/>仙术</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Xian%20Arts_p.png" height="190" width="250" /></td>
+    <td><i>Uncommon</i></td>
+    <td><i>Power</i></td>
+    <td>2</td>
+    <td><span class="color-y">Ethereal</span> (not). Whenever you gain any <span class="color-y">Artifact</span>, gain 1 <span class="color-y">Strength</span> and 1 <span class="color-y">Dexterity</span>.
+      <br/><br/> 虚无 {{不是虚无}} 。 每个回合中、当你首次获得任意层 人工制品 时， 获得 1 点 力量 和 1 点 敏捷 。
+      <br/><br/><hr/><br/><i>The Taoist and traditional notion of the </i>xian<i>, established in translation if not intent as "hermits", are those who have obtained supernatural strength and extended lifespans through rigorous training and religious enlightenment. The </i>Shījiě xiān<i> in particular fake their death by substituting their dead bodies with bewitched objects to trick the celestial bureaucracy.
+        In being so close to the fantasy concept of the lich (which has Russian roots with Koschei the Deathless), a few pieces of prose here and there for The Administrix refer to her as such for the sake of direct context.
+        <br/><br/>She definitely doesn't have the standard appearance of most liches, but one shouldn't begrudge those who can pass as alive- instead, all should tear down society's pressures to pass as perfectly normal.</i></td>
+  </tr>
+
+  <tr>
+    <td>Amassed Masks<br/>积聚的面具</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Amassed%20Masks_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Skill</i></td>
+    <td>2</td>
+    <td>Add a random Attack card, Skill card, and Power card into your hand(, then <span class="color-y">upgrade</span> all of them). They all cost 0 this turn. <span class="color-y">Exhaust</span>.
+      <br/><br/>将随机的攻击牌、技能牌、能力牌各1张加入你的手牌， {{ 并将它们 升级 }}。 它们在本回合内的耗能为0。 消耗 。
+      <br/><br/><hr/><br/><i>A card invoking Miko's offspring, Hata no Kokoro.
+        <br/><br/>An echo of the base class cycle of 1(0)-cost uncommon skills that make a card that costs 0 (Infernal Blade, Distraction, White Noise), and how the last of those is the most playable by far.
+        Would most likely be still balanced when costing 3 (most of The Administrix's powers are spectacular at 0), but pushing ally-invocations (and leaving them randomized / scalars) was a deliberate design choice.</i></td>
+  </tr>
+
+  <tr>
+    <td>Battleforged Bonds<br/>战争缔造的团结</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Battleforged%20Bonds_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Skill</i></td>
+    <td>4</td>
+    <td>Gain 4 <span class="color-y">Strength</span> and 4 <span class="color-y">Dexterity</span>. Lose such at the end of this turn. Reduce the cost of all cards in your hand to 0 this turn. <span class="color-y">Exhaust</span>. (<span class="color-y">Retain</span>.)
+      <br/><br/>获得 !M! 点 力量 和 4 点 敏捷 。 在回合结束时失去同等的数值。 你手牌中的所有牌在本回合的耗能变为0。 消耗 。 {{保留}} 。
+      <br/><br/><hr/><br/><i>A card invoking Miko's rival, Hijiri Byakuren. Miko's summons get two cards each, and her close-associates get one.
+        <br/>An attempt to expand on Bullet Time for a character with plenty of card draw herself, though it mostly serves as a combo piece here.</i></td>
+  </tr>
+
+  <tr>
+    <td>Brewing Cloister<br/>酿造回廊</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Brewing%20Cloister_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Skill</i></td>
+    <td>2</td>
+    <td>Gain 16(24) <span class="color-y">Block</span>. Obtain a random non-healing potion. <span class="color-y">Exhaust</span>.
+      <br/><br/>获得 16{{24}} 点 格挡。 得到一瓶随机的非回复类药水。 消耗 。
+      <br/><br/><hr/><br/><i>One of the most subtle mirrors, with Lifeforce Net: a large single-block skill and a random potion, versus a small multi-hit attack and a fixed potion. The non-healing clause lets it be generated randomly by Glamour and Masks.</i></td>
+  </tr>
+
+  <tr>
+    <td>Cosmos Control<br/>操控秩序</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Cosmos%20Control_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Skill</i></td>
+    <td>2</td>
+    <td>Put a card from your discard pile into your hand. Put a card from your hand on top of your draw pile. Both cost 0 until played. <span class="color-y">Exhaust</span> (not).
+      <br/><br/>将弃牌堆中的一张牌放入你的手牌。 将手牌中的一张牌放到你的抽牌堆顶部。 这些牌在被打出之前，耗能变为0。 消耗  {{不会 消耗}}。
+      <br/><br/><hr/><br/><i> A reference to the </i><u>Hidden Masquerade</u><i> title, </i>[Almighty Taoist who Controls the Cosmos].<i>
+        <br/>Designed as a response to the general uselessness of the Silent's card, Set-up.</i></td>
+  </tr>
+
+  <tr>
+    <td>Death by Glamour<br/>死亡的魅力</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Death%20By%20Glamour_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Power</i></td>
+    <td>3</td>
+    <td>At the start of your turn, add a random Rare card to your hand [which costs 0 that turn (this combat)], and discard 1 card.
+      <br/><br/>在你的回合开始时， 将一张随机稀有卡 （本回合内耗能为0 {{本场战斗内耗能为0}}）加入你的手牌，然后丢弃1张牌。
+      <br/><br/><hr/><br/><i>Designed as a response to the mixed and unimpressive nature of the Defect's card, Hello World. The random and heavily scaling / synergistic nature of The Administrix manages to balance out such excess lengths.
+        <br/><br/>Also, subtly mirrors Star Sword Soul- 3 cost per-turn Rare powers, draw versus discard, 0-cost random cards versus continuous specific stat gain.</i></td>
+  </tr>
+
+  <tr>
+    <td>Faithful Flames<br/>忠实的火焰</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Faithful%20Flames_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Power</i></td>
+    <td>2</td>
+    <td>(<span class="color-y">Innate</span>.) Whenever you play 3 Attacks, gain 2 <span class="color-y">Thorns</span>.
+      <br/><br/>{{固有。}} 每当你打出3张攻击牌， 获得 !M! 点 荆棘。
+      <br/><br/><hr/><br/><i>Another card calling upon the servant Mononobe no Futo, akin to the spellcard </i>「Royal Clan's Chaotic Dance」<i>.
+        <br/>Mirrors Wife's Lightning, and experiments with "companion" effects beyond extra entities or free effects each turn.</td>
+  </tr>
+
+  <tr>
+    <td>False Death<br/>假死</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/False%20Death_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Skill</i></td>
+    <td>2</td>
+    <td>Discard your draw pile. Put 2(3) cards from your discard pile ontop of your draw pile. Gain 3 <span class="color-y">Wilting</span>. <span class="color-y">Exhaust</span>.
+      <br/><br/>丢弃整个抽牌堆。 从弃牌堆选择 2{{3}} 张牌放到抽牌堆的顶部。 获得3层 枯萎。 消耗。
+      <br/><br/><hr/><br/><i>Another story-in-a-bottle card. Prior prospects abandoned, companions selected, and with some inevitable pains a seized destiny comes forth.</i></td>
+  </tr>
+
+  <tr>
+    <td>Fear of Death<br/>死亡的恐惧</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Fear%20Of%20Death_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Power</i></td>
+    <td>0</td>
+    <td>Gain 3 <span class="color-y">Frail</span>. Gain 3 <span class="color-y">Wilting</span>. Gain 4(7) <span class="color-y">Artifact</span>. Discard your hand.
+      <br/><br/>获得3层 脆弱。 获得3层 枯萎。 获得 4 {{7}} 层 人工制品。 丢弃你的所有手牌。
+      <br/><br/><hr/><br/><i>Another story-in-a-bottle card. The elixirs of immortality only weakened her body, so she swapped her soul and body with her sword and sealed herself away.</i></td>
+  </tr>
+
+  <tr>
+    <td>Girls Do It Better<br/>女孩子更能干</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Girls%20Do%20It%20Better_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Attack</i></td>
+    <td>2</td>
+    <td>Deal 2 damage 4(7) times. Enemy loses <span class="color-y">Strength</span> equal to two-thirds of your <span class="color-y">Strength</span>, rounded down. <span class="color-y">Exhaust</span>.
+      <br/><br/>造成 2 点伤害 4{{7}} 次。 使这名敌人失去等同于你自身 力量 2/3 的 力量 {向下取整}。 消耗 。
+      <br/><br/><hr/><br/><i>A vertical cycle of Strength reduction, with Regent's Edict and Rising Sun's Prince.
+        <br/>When Miko's design was initially being plotted out, this card was jokingly outlined as "Big Dyke Energy". Alas, a different name was used instead.</i></td>
+  </tr>
+
+  <tr>
+    <td>Have It All<br/>我全都要</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Have%20It%20All_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Attack</i></td>
+    <td>0</td>
+    <td>Gain 1 <span class="color-y">Block</span> (twice). Deal 1 damage to ALL enemies (twice). Gain 1 <span class="color-y">Affinity</span>. Discard 1 card.
+      <br/><br/>获得 1 点 格挡 {{ 2次 }}。 对所有敌人造成 1 点伤害 {{点伤害2次}}。 获得 1 点 亲和 。 丢弃1张牌。
+      <br/><br/><hr/><br/><i>An experiment in a 0-cost Rare attack card. A rather direct reflection of Miko's many themes, flavoured through her royal and extravagant nature.</i></td>
+  </tr>
+
+  <tr>
+    <td>Hope in the Dark<br/>黑暗中的希望</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Hope%20in%20the%20Dark_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Skill</i></td>
+    <td>2</td>
+    <td><span class="color-y">Ethereal</span>. Gain <span class="color-y">Block</span> equal to (one and a half times) the amount of <span class="color-l">Yin</span> you have more of than <span class="color-w">Yang</span>(, rounded down). Remove all of your Debuffs.
+      <br/><br/>虚无 。 获得等同于 阴 比 阳 多出的数值的 格挡 {{多出的数值乘以1.5倍的 格挡 （向下取整）}}。移除自身所有负面状态。
+      <br/><br/><hr/><br/><i>Mirrors Newborn Divinity. Nearly a third of The Administrix's cards ended up as mirrors to one another, in the end- aside from the dualistic themes and balancing Yin & Yang, it was also intended to help with parsing + processing such a massively complex card set. This was most likely not enough to offset it all, but the notion (and resultant identity) is still solid.</i></td>
+  </tr>
+
+  <tr>
+    <td>Immortal Clarity<br/>神灵之透彻</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Immortal%20Clarity_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Power</i></td>
+    <td>1</td>
+    <td>Choose a card. Add a copy of that card into your hand (each turn for the) next (2) turn(s). <span class="color-p">{</span> <span class="color-y">Plot</span>: Upgrade all </span> <span class="color-y">Immortal</span> cards in your hand (deck) for the rest of this combat. <span class="color-p">}</span>
+      <br/><br/>选择1张牌。 下个回合将1张它的复制品加入你的手牌。 『 密谋 ：在本场战斗中 升级 你手牌中所有的 神灵 牌。』
+      <br/><br/>{{ 选择1张牌。 接下来 2 个回合，每个回合都将1张它的复制品加入你的手牌。 『 密谋 ：在本场战斗中 升级 你所有的 神灵 牌。』}}
+      <br/><br/><hr/><br/><i>The trio of Immortal cards are a reference to the highest Taoist divinities, the Three Pure Ones.
+        <br/><br/>A subtheme of The Administrix's card pool ended up being card creation- as part of alchemy themes, as fuel for the Shaku, and as a way to provide additional / randomized utility without parsing burden placed on the card itself. The Daybreaks and Nightfalls ended up being paired with starter card creation, self-replication, random cards by rarity, random cards by type, just-played cards, and this selected card variant.</i></td>
+  </tr>
+
+  <tr>
+    <td>Lifeforce Net<br/>生命力之网</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Lifeforce%20Net_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Attack</i></td>
+    <td>1</td>
+    <td>Deal 4(5) damage to a random enemy twice. Deal 4(5) damage to ALL enemies. Obtain 1 Fairy in a Bottle. <span class="color-y">Exhaust</span>.
+      <br/><br/>对一个随机敌人造成 4{{5}} 点伤害2次。 再对所有敌人造成 4{{5}} 点伤害。 得到1瓶 瓶装精灵 药水。 消耗 。
+      <br/><br/><hr/><br/><i>Gensokyo's animism as default bullet source, here reflected as a mirror to Brewing Cloister.</i></td>
+  </tr>
+
+  <tr>
+    <td>Luminary's Path<br/>圣人的道路</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Luminary's%20Path_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Discard your hand. Draw cards and gain [E] equal to the difference between your <span class="color-l">Yin</span> and your <span class="color-w">Yang</span>, divided by 10 (8). <span class="color-y">Exhaust</span>.
+      <br/><br/>丢弃你的手牌。 抽等同于 阴 、 阳 之间差值除以 10 {{8}} （向下取整）的牌并获得等量的 [R] 。 消耗 。
+      <br/><br/><hr/><br/><i>One particular shame about Yin and Yang's treatment here is that the discrete counting stacks are rather unclean compared to a more modal or lower-base system, and with an explosive scaling nature only five cards ended up counting quantities of Yin and Yang.
+        <br/><br/>Stance systems in other mods have brought up more core complexity issues or don't permit both bias and balance... so a massive overhaul to the overall concept would be nice, some day.</i></td>
+  </tr>
+
+  <tr>
+    <td>Mastermind<br/>珠玑妙算</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Mastermind_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Skill</i></td>
+    <td>1</td>
+    <td>Double all <span class="color-y">Plot</span> effects this turn and next turn. <span class="color-y">Transpose</span> one (two). Draw 1 less card next turn. <span class="color-y">Exhaust</span>.
+      <br/><br/>将你的所有 密谋 效果翻倍，持续两个回合。 易转 2张。 下个回合少抽1张牌。 消耗 。
+      <br/><br/><hr/><br/><i>Originally, this card was intended to match the double-action of the Double Tap / Burst / Amplify cycle, but Plot effects are not as reliable to activate as the others, so it picked up an extended duration + guaranteed effect
+        in exchange for a small downside. Not exactly matching-up anymore, not that said cycle was ever easy to add to.</i></td>
+  </tr>
+
+  <tr>
+    <td>Newborn Divinity<br/>新生的神灵</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Newborn%20Divinity_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Attack</i></td>
+    <td>2</td>
+    <td><span class="color-y">Ethereal</span>. Deal damage equal to 2(3) times the amount of <span class="color-w">Yang</span> you have more of than <span class="color-l">Yin</span>. Remove all of your Debuffs.
+      <br/><br/>虚无。 造成 2 {{3}} 倍你拥有的 阳 比 阴 多出的差值的伤害。 移除自身所有负面状态。
+      <br/><br/><hr/><br/><i>A reference to the <u>Ten Desires</u> spell card,</i> 「Newborn Divine Spirit」.<br/> <i>Mirrors Hope in the Dark.</i></td>
+  </tr>
+
+  <tr>
+    <td>Schism<br/>割裂</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Schism_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Attack</i></td>
+    <td>1(0)</td>
+    <td>Deal damage equal to half your <span class="color-y">Block</span> to ALL enemies. Gain half your current <span class="color-y">Block</span> next turn. Lose all <span class="color-y">Block</span>.
+      <br/><br/>对所有敌人造成你当前 格挡 值一半的伤害。 下个回合获得你当前 格挡 值的一半。 失去所有 格挡 。</td>
+  </tr>
+
+  <tr>
+    <td>Star Sword Soul<br/>星剑之魂</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Star%20Sword%20Soul_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Power</i></td>
+    <td>3</td>
+    <td>(<span class="color-y">Innate.</span>) At the start of your turn, gain 1 <span class="color-y">Affinity</span> and draw 1 additional card. <span class="color-y">Retain</span>.
+      <br/><br/>{{ 固有 }}。 在你的回合开始时， 获得1点 亲和 并多抽1张牌。 保留。
+      <br/><br/><hr/><br/><i>An antique possession of Prince Shōtoku, and Miko's phyllactery-analogue: the </i>Shichiseiken<i>, the ever-mythologized Seven Star Sword.
+        <br/><br/>This card mixes together the 3-cost and 1-cost rare power base class cycles, the former a class-defined per-turn effect and the latter additional card draw: Demon Form / Wraith Form / Echo Form, Brutality / Tools of the Trade / Machine Learning.
+        <br/><br/>Also, mirrors Death by Glamour. Somehow, neither of them actually got "Form" in their names.</i></td>
+  </tr>
+
+  <tr>
+    <td>Ten Desires<br/>十欲</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Ten%20Desires_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Skill</i></td>
+    <td>2</td>
+    <td><span class="color-y">Ethereal</span>. <span class="color-y">Transpose</span> two. Draw cards until you have 10 in your hand. Discard 2 cards. <span class="color-y">Exhaust</span> (not).
+      <br/><br/>虚无。 易转 2张。 抽牌直到你有10张手牌。 丢弃2张牌。 消耗 {{ 不会 消耗 }}。<br/>
+      <br/><br/><hr/><br/><i>A concept so obscure that there seem to be no English resources that can attest to it; possibly syncretized up for the game it serves as a title to.</i></td>
+  </tr>
+
+  <tr>
+    <td>Wife's Lightning</br>妻子的闪电</td>
+    <td><img src="https://raw.githubusercontent.com/regret-index/Administrix-Mod/master/src/main/resources/administrix/admin_images/cards/Wife's%20Lightning_p.png" height="190" width="250" /></td>
+    <td><i>Rare</i></td>
+    <td><i>Power</i></td>
+    <td>2</td>
+    <td>(<span class="color-y">Innate</span>.) Whenever you play 3 Attacks, gain 2 <span class="color-y">Plated Armor</span>.
+      <br/><br/>{{固有}} 。 每当你打出3张攻击牌，获得 !M! 层 多层护甲 。
+      <br/><br/><hr/><br/><i>Another card calling upon the partner Soga no Tojiko, akin to the spellcard </i>「Royal Clan's Chaotic Dance」<i>.<br/> Mirrors Faithful Flames, with Prince Shōtoku's historical consort Tojiko no Iratsume.</td>
+  </tr>
+</table>
+</body>
 </html>
