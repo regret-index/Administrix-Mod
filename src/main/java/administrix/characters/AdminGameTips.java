@@ -22,8 +22,10 @@ public class AdminGameTips extends GameTips {
 
     public void reinitialize() {
         super.initialize();
-        Collections.addAll(axTips, axTipsText.TEXT);
-        Collections.shuffle(axTips);
+        if (Settings.language == Settings.GameLanguage.ENG) {
+            Collections.addAll(axTips, axTipsText.TEXT);
+            Collections.shuffle(axTips);
+        }
     }
 
     public String getTip() {

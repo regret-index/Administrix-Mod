@@ -26,8 +26,8 @@
   * Several custom mechanics tips are available in the English version.
  - Visuals:
   * The Administrix now has several character sprite animations.
-  * The Conductor's Ritual Baton now puts an A and an S beside the
-    the corresponding counters for Attacks and Skills.
+  * The Conductor's Ritual Baton now colour-shades the description
+    to match the two counters it shows.
   * Plot effects now come with a visual effect showing the card name.
   * New effects for activating Yin and Yang.
   * Additional effects for:

@@ -201,7 +201,7 @@
   "AdministrixMod:BloodBargain": {
     "NAME": "破裂的太极图",
     "DESCRIPTION": "给予 !M! 层 易伤 。 NL 获得 !M! 层 脆弱。 NL 如果目标敌人的意图是攻击， 获得 !ax:M2! 层 多层护甲 和 两点 荆棘 。",
-    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 易伤 。 NL 获得 !M! 层 脆弱。 NL 每有一位意图是攻击的敌人， 获得 !ax:M2! 层 多层护甲 和 两点 荆棘 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 易伤 。 NL 获得 !M! 层 脆弱。 NL 每有一位意图是攻击的敌人， 获得 !ax:M2! 层 多层护甲 和 两点 荆棘 。"
   },
   "AdministrixMod:DreamsMausoleum": {
     "NAME": "梦之陵寝",
