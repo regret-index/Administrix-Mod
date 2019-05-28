@@ -94,7 +94,7 @@ public class BloodsoakedVeil extends CustomRelic {
 
     @Override
     public void onExhaust(AbstractCard card) {
-        if (card.cost >= 1) {
+        if (card.cost >= 2) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedBluePower(AbstractDungeon.player, 1), 1));
         }
     }

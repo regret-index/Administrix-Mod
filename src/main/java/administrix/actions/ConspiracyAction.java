@@ -5,6 +5,7 @@ package administrix.actions;
 // and get a more specific UI string. Thanks, megacrit.
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -48,11 +49,7 @@ public class ConspiracyAction
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                 AbstractDungeon.player.drawPile.moveToDiscardPile(c);
                 c.triggerOnManualDiscard();
-                // For some reason, other uses of discards are fine with
-                // MoultingPatch's locator, but this needs a forced use...
-                if (AbstractDungeon.player.hasPower("AdministrixMod:Moulting")) {
-                    AbstractDungeon.player.getPower("AdministrixMod:Moulting").onSpecificTrigger();
-                }
+                GameActionManager.incrementDiscard(false);
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
